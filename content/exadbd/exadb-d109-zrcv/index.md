@@ -24,7 +24,7 @@ Oracle Database Autonomous Recovery Service（以下、リカバリ・サービ�
 
 **前提条件 :**
 
-- [101：ExaDB-D を使おう](../exadb-d101-create-exadb-d){:target="\_blank"} を通じて Oracle Database の作成が完了していること
+- [101：ExaDB-D を使おう](../exadb-d101-create-exadb-d) を通じて Oracle Database の作成が完了していること
 
 - Autonomous Recovery Service(RCV)を利用する場合、Oracle Database 19.16 以上
 
@@ -246,7 +246,7 @@ Allow group <グループ名> to manage recovery-service-family in tenancy
 
 ![img](ExaDB-D_zrcv19.png)
 
-データベース・サービスの新規作成方法は[Oracle Cloud で Oracle Database を使おう](../dbcs101-create-db){:target="\_blank"}で学習できます。
+データベース・サービスの新規作成方法は[Oracle Cloud で Oracle Database を使おう](../dbcs101-create-db)で学習できます。
 <br>
 
 ## B：既存のデータベース・サービスにリカバリ・サービスを有効化
@@ -408,13 +408,13 @@ REDO 転送オプションを有効化すると、リアルタイム REDO 転送
 
 # 参考資料
 
-- [製品サイト] [Oracle Database Autonomous Recovery Service](https://www.oracle.com/jp/database/zero-data-loss-autonomous-recovery-service/){:target="\_blank"}
+- [製品サイト] [Oracle Database Autonomous Recovery Service](https://www.oracle.com/jp/database/zero-data-loss-autonomous-recovery-service/)
 
-- [マニュアル] [Oracle Database Autonomous Recovery Service](https://docs.oracle.com/cd/E83857_01/paas/recovery-service/index.html){:target="\_blank"}
+- [マニュアル] [Oracle Database Autonomous Recovery Service](https://docs.oracle.com/cd/E83857_01/paas/recovery-service/index.html)
 
-- [ブログ] [Zero Data Loss Autonomous Recovery Service (ZRCV) を Exadata Cloud Service へ設定してみてみた](https://qiita.com/shirok/items/c257d52984442a7977f8){:target="\_blank"}
+- [ブログ] [Zero Data Loss Autonomous Recovery Service (ZRCV) を Exadata Cloud Service へ設定してみてみた](https://qiita.com/shirok/items/c257d52984442a7977f8)
 
-- [ブログ] [Autonomous Recovery Service セットアップ・チェックリスト](https://blogs.oracle.com/oracle4engineer/post/ja-autonomous-recovery-service-checklist){:target="\_blank"}
+- [ブログ] [Autonomous Recovery Service セットアップ・チェックリスト](https://blogs.oracle.com/oracle4engineer/post/ja-autonomous-recovery-service-checklist)
   <br>
 
 <br>

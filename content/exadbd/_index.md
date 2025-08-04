@@ -9,7 +9,7 @@ show_excerpts: true
 toc: true
 ---
 
-**Database 編のチュートリアル一覧に[もどる](/){:target="\_blank"}**
+**Database 編のチュートリアル一覧に[もどる](/ocitutorials)**
 <br/>
 
 ---
@@ -22,7 +22,7 @@ toc: true
 **特記事項**
 
 - チュートリアル内の画面ショットについては現在の画面と異なっている場合があります。
-- [OCI チュートリアル入門編](/beginners/)の、準備からその 1、その 2、その 3、その 7 を実施しておくと、理解がスムーズです。
+- [OCI チュートリアル入門編](/ocitutorials/beginners/)の、準備からその 1、その 2、その 3、その 7 を実施しておくと、理解がスムーズです。
 - より詳しく知りたい方は、[OCI 活用資料集](https://oracle-japan.github.io/ocidocs/services/database/)も併せてご確認ください。それぞれのサービスに関する技術詳細資料をまとめ紹介しています。
   <br/>
 
@@ -33,31 +33,31 @@ toc: true
 Oracle Databaseを動かすための最適な基盤として、リリースから10年以上経過し、多くのミッションクリティカルなシステムを支えるExadata !
 OCIであればExadataもサブスクリプションで使えます。インスタンスの作り方から、様々な使い方を学んでいただける内容になっています。
 
-- **[101: ExaDB-D を使おう](./exadb-d101-create-exadb-d/index.md)**
+- **[101: ExaDB-D を使おう](./exadb-d101-create-exadb-d/)**
 
-- **[102: ExaDB-D 上の PDB を管理しよう](./exadb-d102-manage-pdb/index.md)**
+- **[102: ExaDB-D 上の PDB を管理しよう](./exadb-d102-manage-pdb/)**
 
-- **[103: 自動バックアップを設定しよう](./exadb-d103-automatic-backup/index.md)**
+- **[103: 自動バックアップを設定しよう](./exadb-d103-automatic-backup/)**
 
-- **[104: バックアップからリストアしよう](./exadb-d104-backup-restore/index.md)**
+- **[104: バックアップからリストアしよう](./exadb-d104-backup-restore/)**
 
-- **[105: スケーリングしよう](./exadb-d105-scaling/index.md)**
+- **[105: スケーリングしよう](./exadb-d105-scaling/)**
 
-- **[106: データベースのバージョンを指定しよう](./exadb-d106-dbversion/index.md)**
+- **[106: データベースのバージョンを指定しよう](./exadb-d106-dbversion/)**
 
-- **[107: パッチを適用しよう](./exadb-d107-patch/index.md)**
+- **[107: パッチを適用しよう](./exadb-d107-patch/)**
 
-- **[108: Data Guard を構成しよう](./exadb-d108-dataguard/index.md)**
+- **[108: Data Guard を構成しよう](./exadb-d108-dataguard/)**
 
-- **[109: ExaDB-D に Autonomous Recovery Service (RCV/ZRCV) をセットアップしよう](./exadb-d109-zrcv/index.md)**
+- **[109: ExaDB-D に Autonomous Recovery Service (RCV/ZRCV) をセットアップしよう](./exadb-d109-zrcv/)**
 
-- **[110:ExaDB-D のスタンバイ・データベースからバックアップを取得およびリストアしてみよう](./exadb-d110-dataguard-standby-bkup/index.md)**
+- **[110:ExaDB-D のスタンバイ・データベースからバックアップを取得およびリストアしてみよう](./exadb-d110-dataguard-standby-bkup/)**
 
-- **[111:ExaDB-D で ZRCV の長期保管バックアップ（LTR）を作成してみよう](./exadb-d111-ltr/index.md)**
+- **[111:ExaDB-D で ZRCV の長期保管バックアップ（LTR）を作成してみよう](./exadb-d111-ltr/)**
 
 <br/>
 
-**Database 編のチュートリアル一覧に[もどる](/){:target="\_blank"}**
+**Database 編のチュートリアル一覧に[もどる](/ocitutorials)**
 <br/>
 
 <!--
