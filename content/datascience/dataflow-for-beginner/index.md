@@ -18,7 +18,7 @@ lastmod: "2021-09-17"
 
 # ハンズオンの全体像
 
-本ハンズオンは、[Berlin Airbnb データセット](https://www.kaggle.com/brittabettendorf/berlin-airbnb-data)を用いて最適な取引物件を予測する事を行いたいと思います。そのために OCI Data Flow を用いて、以下のことを学習します。
+本ハンズオンは、[Berlin Airbnb データセット](https://www.kaggle.com/code/buddhiniw/airbnb-landscape-in-berlin/notebook#Get-the-raw-dataset)を用いて最適な取引物件を予測する事を行いたいと思います。そのために OCI Data Flow を用いて、以下のことを学習します。
 
 1. Java を使用した ETL
 2. SparkSQL によるデータの簡易的なプロファイリング
@@ -125,7 +125,7 @@ Allow group <your-group> to manage objects in compartment <your-compartment> whe
 
 # 1. Java を使用した ETL
 
-本ハンズオンでは、Creative Commons CC0 1.0 Universal (CC0 1.0)の「Public Domain Dedication」ライセンスに基づいて Kaggle Web サイトからダウンロードされた [Berlin Airbnb データセット](https://www.kaggle.com/brittabettendorf/berlin-airbnb-data)のうち、一部(`listings_summary.csv`)を使用します。拡張子を見れば分かると思いますが、データは CSV フォーマットで提供されます。最初のステップでは、このデータを Parquet[^1]に変換し、以降の処理のために Object Storage(`dataflow-tutorial-result`) に変換後のファイルを格納することを行いたいと思います。
+本ハンズオンでは、Creative Commons CC0 1.0 Universal (CC0 1.0)の「Public Domain Dedication」ライセンスに基づいて Kaggle Web サイトからダウンロードされた [Berlin Airbnb データセット](https://www.kaggle.com/code/buddhiniw/airbnb-landscape-in-berlin/notebook#Get-the-raw-dataset)のうち、一部(`listings_summary.csv`)を使用します。拡張子を見れば分かると思いますが、データは CSV フォーマットで提供されます。最初のステップでは、このデータを Parquet[^1]に変換し、以降の処理のために Object Storage(`dataflow-tutorial-result`) に変換後のファイルを格納することを行いたいと思います。
 
 [^1]: Hadoop のエコシステムで使用可能なファイルフォーマットのこと
 
@@ -306,7 +306,7 @@ Object Storage の`dataflow-logs`というバケット内のリクエスト ID �
 
 ![image34](image34.png)
 
-ダウンロードしたファイルを、[7-Zip](https://sevenzip.osdn.jp/)等を用いて解凍し、中に含まれているログファイルをメモ帳などを用いて開き、以下の内容と一致していれば、[2. SparkSQL によるデータの簡易的なプロファイリング](#2-sparksql-によるデータの簡易的なプロファイリング)は完了です！
+ダウンロードしたファイルを、[7-Zip](https://7-zip.opensource.jp/)等を用いて解凍し、中に含まれているログファイルをメモ帳などを用いて開き、以下の内容と一致していれば、[2. SparkSQL によるデータの簡易的なプロファイリング](#2-sparksql-によるデータの簡易的なプロファイリング)は完了です！
 
 ![image46](image46.png)
 
@@ -469,7 +469,7 @@ Object Storage の `dataflow-logs` というバケット内のリクエスト ID
 
 ![image41](image41.png)
 
-ダウンロードしたファイルを、[7-Zip](https://sevenzip.osdn.jp/) 等を用いて解凍し、中に含まれているログファイルをメモ帳などを用いて開き、以下の内容と一致していれば、[3. PySpark を使用した機械学習](#3-pyspark-を使用した機械学習)は完了です！
+ダウンロードしたファイルを、[7-Zip](https://7-zip.opensource.jp/) 等を用いて解凍し、中に含まれているログファイルをメモ帳などを用いて開き、以下の内容と一致していれば、[3. PySpark を使用した機械学習](#3-pyspark-を使用した機械学習)は完了です！
 
 ![image42](image42.png)
 

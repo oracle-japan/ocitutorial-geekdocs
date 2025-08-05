@@ -50,7 +50,7 @@ OCIの提供するAI Servicesの基本的な操作などをステップバイス
 
 ## 初級編
 
-- **[OCI Data Flow ハンズオン](/ocitutorials/datascience/dataflow-for-beginner/)** [Berlin Airbnb データセット](https://www.kaggle.com/brittabettendorf/berlin-airbnb-data)を用いて、OCI Data Flow における基本的な操作方法を学習します。
+- **[OCI Data Flow ハンズオン](/ocitutorials/datascience/dataflow-for-beginner/)** [Berlin Airbnb データセット](https://www.kaggle.com/code/yaowenling/berlin-airbnb-data-exploration-public/notebook#Step-1:-Load-the-dataset)を用いて、OCI Data Flow における基本的な操作方法を学習します。
 - **[Structured Spark Streaming を体験しよう](/ocitutorials/datascience/dataflow-structured-spark-streaming/)** Structured Spark Streaming を OCI Data Flow とOCI Streaming を使って行う手順を学習します。
 
 # 5. Oracle GoldenGate Stream Analytics チュートリアル
