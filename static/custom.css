@@ -176,7 +176,7 @@ pre, code {
 /* ----------------------------- */
 .gdoc-page {
   background: var(--body-background);
-  padding: 3rem;
+  padding: .7rem 3rem;
   border-radius: 0.4rem;
 }
 
