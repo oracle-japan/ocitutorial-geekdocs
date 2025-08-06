@@ -148,7 +148,7 @@ view premigration_advisor_report.txt
 
 `--schemas`を指定しない、または`--full`を指定することで、データベース全体を指定した確認も可能です。`--outfileprefix`を指定すると出力ファイル名の接頭辞を指定できます。
 
-```
+```text
  ./premigration.sh --connectstring jdbc:oracle:thin:@<ホスト名>:<ポート>:<サービス名> --username <ユーザ名> --targetcloud ATPS --full --reportformat text --outfileprefix <出力ファイルの接頭辞>
 ```
 

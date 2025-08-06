@@ -31,11 +31,11 @@ OCI Network Firewallは2022年7月にリリースされた、パロアルトネ�
 + ユーザーに必要なIAMポリシーが割り当てられていること。ポリシーの詳細は[ドキュメント](https://docs.oracle.com/ja-jp/iaas/Content/network-firewall/overview.htm#iam)を参照ください。
 + OCIチュートリアル「[OCI Network Firewallを構築する](/ocitutorials/security/networkfirewall-setup/) 」にて、以下のNetwork Firewallが動作する環境が構築されていること。
 + ネットワーク・ファイアーウォール・ポリシーからOCI Vaultサービスへのアクセスを許可するため、以下のポリシーが作成されていること。
-```
+```text
 Allow any-user to read secret-family in compartment <compartment_ID> where ALL {request.principal.type='networkfirewallpolicy'} 
 ```
 アクセスできるネットワーク・ファイアーウォール・ポリシーを限定したい場合は以下のように作成します。
-```
+```text
 Allow any-user to read secret-family in compartment <compartment_ID> where ALL {request.principal.type='networkfirewallpolicy', request.principal.id='<Network Firewall Policy OCID>'}
 ```
 
@@ -155,8 +155,8 @@ git --version
 git clone https://github.com/oracle-quickstart/oci-network-firewall.git
 ```
 
-**`oci-network-firewall`**ディレクトリが作成されることを確認します。  
-**`/oci-network-firewall/scripts/create-certificate.sh`**に自己署名証明書を生成するスクリプトがありますので、証明書を発行する対象として適当なドメイン名を指定し、以下のコマンドで証明書を生成します。
+**`oci-network-firewall`** ディレクトリが作成されることを確認します。  
+**`/oci-network-firewall/scripts/create-certificate.sh`** に自己署名証明書を生成するスクリプトがありますので、証明書を発行する対象として適当なドメイン名を指定し、以下のコマンドで証明書を生成します。
 
 
 ```bash
@@ -198,9 +198,9 @@ inst.ocitutorial.com-ssl/certs/inst.ocitutorial.com.fwd.cert.pem: OK
 Inbound SSL Certificate:  inst.ocitutorial.com-ssl/inst.ocitutorial.com.ssl-inbound-inspection.json
 ```
 
-**`inst.ocitutorial.com-ssl`**ディレクトリが作成され、指定した「inst.ocitutorial.com」ドメインに関連するSSL証明書が生成されます。
+**`inst.ocitutorial.com-ssl`** ディレクトリが作成され、指定した「inst.ocitutorial.com」ドメインに関連するSSL証明書が生成されます。
 
-また、**`inst.ocitutorial.com-ssl`**ディレクトリの構成は以下のようになっています。
+また、**`inst.ocitutorial.com-ssl`** ディレクトリの構成は以下のようになっています。
 
 ```
 inst.ocitutorial.com-ssl
@@ -229,11 +229,11 @@ inst.ocitutorial.com-ssl
 ```
 
 このうち、  
-+ サーバーの秘密鍵は**`inst.ocitutorial.com-ssl/private/inst.ocitutorial.com.key.pem`**  
-+ サーバー証明書は**`inst.ocitutorial.com-ssl/certs/inst.ocitutorial.com.inb.cert.pem`**  
++ サーバーの秘密鍵は **`inst.ocitutorial.com-ssl/private/inst.ocitutorial.com.key.pem`**  
++ サーバー証明書は **`inst.ocitutorial.com-ssl/certs/inst.ocitutorial.com.inb.cert.pem`**  
 にそれぞれ配置されます。この2つのパスはこの後apacheのSSLの設定にて使用しますので、それぞれ控えておいてください。
 
-また、**`inst.ocitutorial.com-ssl/inst.ocitutorial.com.ssl-inbound-inspection.json`**は、後にNetwork Firewallが参照するためにVaultに格納する内容です。こちらに関してもcatコマンド等で内容を控えておいてください。
+また、**`inst.ocitutorial.com-ssl/inst.ocitutorial.com.ssl-inbound-inspection.json`** は、後にNetwork Firewallが参照するためにVaultに格納する内容です。こちらに関してもcatコマンド等で内容を控えておいてください。
 
 <br><br>
 
@@ -247,7 +247,7 @@ ApacheをSSLに対応させるモジュールとして、以下コマンドで�
 sudo dnf -y install mod_ssl
 ```
 
-**`/etc/httpd/conf.d/ssl.conf`**が作成されますので、「SSLCertificateFile」と「SSLCertificateKeyFile」に、先ほどのスクリプト実行にてそれぞれ控えておいたサーバー鍵とサーバー証明書のパスに書き換えます。
+**`/etc/httpd/conf.d/ssl.conf`** が作成されますので、「SSLCertificateFile」と「SSLCertificateKeyFile」に、先ほどのスクリプト実行にてそれぞれ控えておいたサーバー鍵とサーバー証明書のパスに書き換えます。
 
 ```bash
 実行例)
@@ -292,7 +292,7 @@ Memory protection checking:     actual (secure)
 Max kernel policy version:      33
 ``` -->
 
-**`/etc/selinux/config`**を編集し、「SELINUX」の値を「**enforcing**」から「**disabled**」へ変更します。
+**`/etc/selinux/config`** を編集し、「SELINUX」の値を「**enforcing**」から「**disabled**」へ変更します。
 
 ```
 実行例)
@@ -370,7 +370,7 @@ https://<コンピュートのパブリックIP>/eicar.html
 ![httpsサイト公開確認3](sslinb16.png)
 
 
-また一方で、**`http://<コンピュートのパブリックIP>/eicar.html`**とHTTPでアクセスするとブロックされることもわかります。
+また一方で、**`http://<コンピュートのパブリックIP>/eicar.html`** とHTTPでアクセスするとブロックされることもわかります。
 
 
 
@@ -397,15 +397,15 @@ Network Firewallが参照するシークレットは以下のようなJSON形式
 }
 ```
 
-手順では証明書を生成した際に**`inst.ocitutorial.com-ssl/inst.ocitutorial.com.ssl-inbound-inspection.json`**として準備されています。この後の手順にてシークレットとしてVaultに保存しますので、あたらめて内容を手元のメモ帳などに控えていることをご確認ください。
+手順では証明書を生成した際に **`inst.ocitutorial.com-ssl/inst.ocitutorial.com.ssl-inbound-inspection.json`** として準備されています。この後の手順にてシークレットとしてVaultに保存しますので、あたらめて内容を手元のメモ帳などに控えていることをご確認ください。
 
 ## 3-2. Vaultの設定
 ### ・Vaultの作成
 
 Vaultを作成します。
-OCIコンソール画面左上のメニューボタンより、**[アイデンティティとセキュリティ] → [キー管理とシークレット管理] → [ボールト]** と移動、**[ボールトの作成]**をクリックします。
+OCIコンソール画面左上のメニューボタンより、**[アイデンティティとセキュリティ] → [キー管理とシークレット管理] → [ボールト]** と移動、**[ボールトの作成]** をクリックします。
 
-作成画面にて以下の項目を入力し、**[ボールトの作成]**をクリックします。
+作成画面にて以下の項目を入力し、**[ボールトの作成]** をクリックします。
 
 ----
 
@@ -542,7 +542,7 @@ OCI内のサーバー（今回はwebsvr4tutorial）のアドレスを管理す�
 
 ## 4-3. Network Firewallへポリシーの適用
 設定した「nfw_pol_sslinb_tutorial」ポリシーをNetwork Firewallに適用します。  
-Network Firewall詳細画面の**`[編集]`** ボタンをクリック、「nfw_pol_sslinb_tutorial」ポリシーを選択し、新しいポリシーを適用します。
+Network Firewall詳細画面の **`[編集]`** ボタンをクリック、「nfw_pol_sslinb_tutorial」ポリシーを選択し、新しいポリシーを適用します。
 
 ![NFWポリシーの適用](sslinb24.png)
 

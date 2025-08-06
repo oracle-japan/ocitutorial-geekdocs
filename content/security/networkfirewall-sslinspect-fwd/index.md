@@ -32,11 +32,11 @@ OCI Network Firewallは2022年7月にリリースされた、パロアルトネ�
 + OCIチュートリアル「[OCI Network Firewallを構築する](/ocitutorials/security/networkfirewall-setup/) 」にて、以下のNetwork Firewallが動作する環境が構築されていること。
   + 本チュートリアルでは、動作確認にWindowsインスタンスを使用します。ただし、Linuxインスタンスでもcurlコマンドを使用して確認が可能です。
 + ネットワーク・ファイアーウォール・ポリシーからOCI Vaultサービスへのアクセスを許可するため、以下のIAMポリシーが作成されていること。
-```
+```text
 Allow any-user to read secret-family in compartment <compartment_ID> where ALL {request.principal.type='networkfirewallpolicy'} 
 ```
 アクセスできるネットワーク・ファイアーウォール・ポリシーを限定したい場合は以下のように作成します。
-```
+```text
 Allow any-user to read secret-family in compartment <compartment_ID> where ALL {request.principal.type='networkfirewallpolicy', request.principal.id='<Network Firewall Policy OCID>'}
 ```
 
@@ -92,8 +92,8 @@ OCI Network Firewallは次世代ファイアウォールとして、TLSトラフ
 git clone https://github.com/oracle-quickstart/oci-network-firewall.git
 ```
 
-**`oci-network-firewall`**ディレクトリが作成されることを確認します。  
-**`/oci-network-firewall/scripts/create-certificate.sh`**に自己署名証明書を生成するスクリプトがありますので、証明書を発行する対象として適当なドメイン名を指定し、以下のコマンドで証明書を生成します。
+**`oci-network-firewall`** ディレクトリが作成されることを確認します。  
+**`/oci-network-firewall/scripts/create-certificate.sh`** に自己署名証明書を生成するスクリプトがありますので、証明書を発行する対象として適当なドメイン名を指定し、以下のコマンドで証明書を生成します。
 
 
 ```bash
@@ -137,9 +137,9 @@ nfw.ocitutorial.com-ssl/certs/nfw.ocitutorial.com.fwd.cert.pem: OK
 Forward proxy SSL Certificate: nfw.ocitutorial.com-ssl/nfw.ocitutorial.com.ssl-forward-proxy.json
 ```
 
-**`nfw.ocitutorial.com-ssl`**ディレクトリが作成され、指定した「nfw.ocitutorial.com」ドメインに関連するSSL証明書が生成されます。
+**`nfw.ocitutorial.com-ssl`** ディレクトリが作成され、指定した「nfw.ocitutorial.com」ドメインに関連するSSL証明書が生成されます。
 
-また、**`nfw.ocitutorial.com-ssl`**ディレクトリの構成は以下のようになっています。
+また、**`nfw.ocitutorial.com-ssl`** ディレクトリの構成は以下のようになっています。
 
 ```
 nfw.ocitutorial.com-ssl
@@ -167,8 +167,8 @@ nfw.ocitutorial.com-ssl
 └── serial.old
 ```
 
-このうち、Network Firewallで使用する証明書は**`nfw.ocitutorial.com-ssl/certs/nfw.ocitutorial.com.fwd.cert.pem`**に配置されます。本チュートリアルでは行いませんが、クライアントに信頼するよう設定を行う際に必要になります。
-また、**`nfw.ocitutorial.com-ssl/nfw.ocitutorial.com.ssl-forward-proxy.json`**は、後にNetwork Firewallが参照するためにVaultに格納するファイルです。こちらは`cat`コマンド等で内容を控えておいてください。
+このうち、Network Firewallで使用する証明書は **`nfw.ocitutorial.com-ssl/certs/nfw.ocitutorial.com.fwd.cert.pem`** に配置されます。本チュートリアルでは行いませんが、クライアントに信頼するよう設定を行う際に必要になります。
+また、**`nfw.ocitutorial.com-ssl/nfw.ocitutorial.com.ssl-forward-proxy.json`** は、後にNetwork Firewallが参照するためにVaultに格納するファイルです。こちらは`cat`コマンド等で内容を控えておいてください。
 
 <br><br>
 
@@ -248,15 +248,15 @@ Network Firewallが参照するシークレットは以下のようなJSON形式
 }
 ```
 
-手順では証明書を生成した際に**`nfw.ocitutorial.com-ssl/nfw.ocitutorial.com.ssl-forward-proxy.json`**として準備されています。この後の手順でVaultにシークレットとして保存しますので、内容を手元のメモ帳やテキストエディタで控えておいてください。
+手順では証明書を生成した際に **`nfw.ocitutorial.com-ssl/nfw.ocitutorial.com.ssl-forward-proxy.json`** として準備されています。この後の手順でVaultにシークレットとして保存しますので、内容を手元のメモ帳やテキストエディタで控えておいてください。
 
 ## 3-2. Vaultの設定
 ### ・Vaultの作成
 
 Vaultを作成します。
-OCIコンソール画面左上のメニューボタンより、**[アイデンティティとセキュリティ] → [キー管理とシークレット管理] → [ボールト]** と移動、**[ボールトの作成]**をクリックします。
+OCIコンソール画面左上のメニューボタンより、**[アイデンティティとセキュリティ] → [キー管理とシークレット管理] → [ボールト]** と移動、**[ボールトの作成]** をクリックします。
 
-作成画面にて以下の項目を入力し、**[ボールトの作成]**をクリックします。
+作成画面にて以下の項目を入力し、**[ボールトの作成]** をクリックします。
 
 ----
 
@@ -296,7 +296,7 @@ Vaiult詳細画面の「シークレット」セクションを選択し、**[�
 + <span style="color: darkblue; ">**`名前`**</span> - secret_nfw4tut
 
 + <span style="color: darkblue; ">**`暗号化キー`**</span> - MEK (作成した暗号化キーを選択)
-+ **`[手動シークレット生成]`**を選択
++ **`[手動シークレット生成]`** を選択
 + <span style="color: darkblue; ">**`シークレット・タイプ・テンプレート`**</span> - プレーン・テキスト
 
 + <span style="color: darkblue; ">**`シークレット・コンテンツ`**</span> - \<JSONファイルの中身をペースト\>
@@ -344,7 +344,7 @@ Vaiult詳細画面の「シークレット」セクションを選択し、**[�
 
 
 ### ・マップされたシークレット
-「マップされたシークレット」セクションより、**[マップされたシークレットの作成]**ボタンから以下を作成します。
+「マップされたシークレット」セクションより、**[マップされたシークレットの作成]** ボタンから以下を作成します。
 
 ----
 
@@ -362,7 +362,7 @@ Vaiult詳細画面の「シークレット」セクションを選択し、**[�
 
 
 ### ・復号化ルール
-「復号化ルール」セクションより、**[復号化ルールの作成]**ボタンから以下を作成します。
+「復号化ルール」セクションより、**[復号化ルールの作成]** ボタンから以下を作成します。
 
 ----
 
@@ -384,7 +384,7 @@ Vaiult詳細画面の「シークレット」セクションを選択し、**[�
 
 ## 4-3. Network Firewallへポリシーの適用
 設定した「nfw_pol_sslfwd_tutorial」ポリシーをNetwork Firewallに適用します。  
-Network Firewall詳細画面の**`[編集]`** ボタンをクリック、「nfw_pol_sslfwd_tutorial」ポリシーを選択し、新しいポリシーを適用します。
+Network Firewall詳細画面の **`[編集]`** ボタンをクリック、「nfw_pol_sslfwd_tutorial」ポリシーを選択し、新しいポリシーを適用します。
 
 ![NFWポリシーの適用](sslfwd11.png)
 

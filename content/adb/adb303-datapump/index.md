@@ -119,35 +119,39 @@ cd ~/mig2adb
 ```sh
 vi expdp_hr.sh
 ```
-    以下よりコピーし、貼り付けてください。
 
-    ```sh
+以下よりコピーし、貼り付けてください。
 
-    #!/bin/sh
+```sh
 
-    expdp \"hr/WelCome123#123#@pdb1 \" \
-    exclude=cluster,db_link \
-    parallel=4 \
-    schemas=hr \
-    compression=all \
-    filesize=1GB \
-    directory=test_dir \
-    dumpfile=export_hr_%u.dmp
+#!/bin/sh
 
-    ```
+expdp \"hr/WelCome123#123#@pdb1 \" \
+exclude=cluster,db_link \
+parallel=4 \
+schemas=hr \
+compression=all \
+filesize=1GB \
+directory=test_dir \
+dumpfile=export_hr_%u.dmp
 
-    編集結果を確認します。
-    ```
-    cat expdp_hr.sh
-    ```
-    ![イメージ](img102.png)
+```
 
-    > - データサイズが大きい場合は、データ転送、ロード性能の向上のため、parallelオプションを利用しましょう。指定する値は少なくとも移行先のADBのECPU数と同じか、それよりも大きい値（2倍から3倍）がおススメです。
-    > - dumpfile句に指定するファイル名にはワイルドカード（%u）を付けてください。複数のファイルを同時に出力することで高速化が可能です。
-    > - filesize句は5GBよりも小さい値を指定してください。ブラウザ経由でオブジェクトストレージに転送できるデータは1ファイル辺り最大5GBの制限があるためです。
-    > - excludeオプションを利用することで、不要なオブジェクトを除いてエクスポートすることが可能です。例えばADWを利用するような分析系のアプリの場合において、性能観点で付与した索引はExadataを利用すると不要になることが多いため、IndexをExcludeの引数に指定します。
-    > - 詳細は[「マニュアル(Autonomous DatabaseでのOracle Data Pumpを使用したデータのインポート)」](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/load-data-data-pump.html#GUID-30DB1EEA-DB45-49EA-9E97-DF49A9968E24)を参照ください。
+編集結果を確認します。
 
+```
+cat expdp_hr.sh
+```
+
+![イメージ](img102.png)
+
+```text
+> - データサイズが大きい場合は、データ転送、ロード性能の向上のため、parallelオプションを利用しましょう。指定する値は少なくとも移行先のADBのECPU数と同じか、それよりも大きい値（2倍から3倍）がおススメです。
+> - dumpfile句に指定するファイル名にはワイルドカード（%u）を付けてください。複数のファイルを同時に出力することで高速化が可能です。
+> - filesize句は5GBよりも小さい値を指定してください。ブラウザ経由でオブジェクトストレージに転送できるデータは1ファイル辺り最大5GBの制限があるためです。
+> - excludeオプションを利用することで、不要なオブジェクトを除いてエクスポートすることが可能です。例えばADWを利用するような分析系のアプリの場合において、性能観点で付与した索引はExadataを利用すると不要になることが多いため、IndexをExcludeの引数に指定します。
+> - 詳細は[「マニュアル(Autonomous DatabaseでのOracle Data Pumpを使用したデータのインポート)」](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/load-data-data-pump.html#GUID-30DB1EEA-DB45-49EA-9E97-DF49A9968E24)を参照ください。
+```
 
 ## 1-3. エクスポートを実施
 
@@ -266,31 +270,33 @@ cd ~/labs/datapump
 ```sh
 vi impdp_hr.sh
 ```
-    以下よりコピーして、貼り付けます。
+以下よりコピーして、貼り付けます。
 
-    ```sh
+```sh
 
-    #!/bin/sh
+#!/bin/sh
 
-    impdp userid=admin/Welcome12345#@atp01_high \
-    credential=WORKSHOP_CREDENTIAL \
-    parallel=4 \
-    schemas=HR \
-    directory=DATA_PUMP_DIR \
-    dumpfile=https://objectstorage.<region>.oraclecloud.com/n/<tenancy>/b/<bucket_name>/o/export_hr_%u.dmp \
-    logfile=DATA_PUMP_DIR:import_hr.log
-    ```
+impdp userid=admin/Welcome12345#@atp01_high \
+credential=WORKSHOP_CREDENTIAL \
+parallel=4 \
+schemas=HR \
+directory=DATA_PUMP_DIR \
+dumpfile=https://objectstorage.<region>.oraclecloud.com/n/<tenancy>/b/<bucket_name>/o/export_hr_%u.dmp \
+logfile=DATA_PUMP_DIR:import_hr.log
+```
 
-    編集結果を確認します
-    ```sh
-    cat impdp_hr.sh
-    ```
-    ![イメージ](img107.png)
+編集結果を確認します
+```sh
+cat impdp_hr.sh
+```
 
-    > - dumpfileの引数を上記ステップで取得したダンプファイルへのアクセスURLに置き換えてください。
-    > - このとき、ファイル名はexport_hr_01.dmpではなく、export_hr_%u.dmp のようにワイルドカード（%u）を付けるようにご注意ください。
-    > - スクリプトを簡素化できるだけでなく、エクスポートの際に分割したファイルを同時に指定しインポートできるのでインポート処理の高速化も可能です。
+![イメージ](img107.png)
 
+```text
+> - dumpfileの引数を上記ステップで取得したダンプファイルへのアクセスURLに置き換えてください。
+> - このとき、ファイル名はexport_hr_01.dmpではなく、export_hr_%u.dmp のようにワイルドカード（%u）を付けるようにご注意ください。
+> - スクリプトを簡素化できるだけでなく、エクスポートの際に分割したファイルを同時に指定しインポートできるのでインポート処理の高速化も可能です。
+```
 
 ## 4-4. インポートを実施
 

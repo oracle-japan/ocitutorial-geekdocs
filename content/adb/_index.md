@@ -18,13 +18,14 @@ toc: true
 
 **特記事項**  
 + チュートリアル内の画面ショットについては現在の画面と異なっている場合があります。
-+ [OCIチュートリアル入門編](/beginners/)の、準備からその1、その2、その3、その7を実施しておくと、理解がスムーズです。  
++ [OCIチュートリアル入門編](../beginners/)の、準備からその1、その2、その3、その7を実施しておくと、理解がスムーズです。  
 + より詳しく知りたい方は、[OCI活用資料集](https://oracle-japan.github.io/ocidocs/services/database/)も併せてご確認ください。それぞれのサービスに関する技術詳細資料をまとめ紹介しています。
 <br/>
 
 ----
 
 <br/>
+
 # <span style="color: brown; ">■ Autonomous Database (ADB)を使ってみよう</span>
 自己稼働・自己保護・自己修復をコンセプトにOracle Database、およびExadataをより身近にご利用いただくべく登場したAutonomous Database ! 
 インスタンスの作成から、運用管理まで一通り学んでいただける内容になっています
@@ -211,13 +212,13 @@ toc: true
     * Autonomous Databaseの基盤であるExadataを専有して利用するAutonomous Database Dedicatedの環境を作成します
 
 <br/>
+
 ----
  + **[ADB ハンズオンラボ](https://community.oracle.com/tech/developers/discussion/4474304/autonomous-database-%E3%83%8F%E3%83%B3%E3%82%BA%E3%82%AA%E3%83%B3%E3%83%A9%E3%83%9C-adb-hol)**    ※旧サイト（順次、本サイトに移行中）
 
-
 <br/>
 
-**Database編のチュートリアル一覧に[もどる](/)**
+**Database編のチュートリアル一覧に[もどる](../)**
 
 <!-- 
 

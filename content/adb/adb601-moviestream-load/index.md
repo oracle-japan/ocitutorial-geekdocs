@@ -493,6 +493,7 @@ GROUP BY segment_name;
 次の章にお進みください。
 
 <br>
+
 [ページトップへ戻る](#anchor0)
 
 

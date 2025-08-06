@@ -146,6 +146,7 @@ PDB1 =
 ```
 <br/>
 編集した内容を確認します。
+
 ```sh
 cat $ORACLE_HOME/network/admin/tnsnames.ora
 ```

@@ -90,7 +90,7 @@ gpJ+zgur/GpC2rR+891hpxcCAwEAAQ==
 
 以下コマンドで暗号鍵を作成し、公開ラッピング・キーで暗号鍵をラッピングします。
 
-```
+```sh
 $ openssl rand 32 > aes_key.bin
 $ openssl pkeyutl -encrypt -in "aes_key.bin" -inkey "publickey.pem" -pubin -out "wrappedkey.bin" -pkeyopt rsa_padding_mode:oaep -pkeyopt rsa_oaep_md:sha256
 ```

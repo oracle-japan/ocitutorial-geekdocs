@@ -44,6 +44,7 @@ Oracle Cloud Infrastructure（OCI） では様々な仮想マシンイメージ�
 - [4. ADBに接続するための設定ファイルの編集](#anchor4)
 
 <br>
+
 **所要時間 :** 約30分
 
 <a id="anchor1"></a>
@@ -209,7 +210,7 @@ Oracle Cloud Infrastructure（OCI） では様々な仮想マシンイメージ�
 # 4. ADBに接続するための設定ファイルの編集
 
 ADBに接続するためには、クレデンシャル・ウォレット（Credential.zipファイル）を仮想マシン上に配置する必要があります。
-クレデンシャルウォレットのダウンロード方法については、[101: ウォレットを利用してADBに接続してみよう](../adb104-connect-using-wallet) の、[1. クレデンシャル・ウォレットのダウンロード](../adb104-connect-using-wallet#anchor1) をご確認ください。
+クレデンシャルウォレットのダウンロード方法については、[104: ウォレットを利用してADBに接続してみよう](../adb104-connect-using-wallet) の、[1. クレデンシャル・ウォレットのダウンロード](../adb104-connect-using-wallet#anchor1) をご確認ください。
 
 1. 仮想マシンにopcユーザでログインします。
 
@@ -351,5 +352,6 @@ ADBに接続するためには、クレデンシャル・ウォレット（Crede
   >設定ファイルの編集が完了した後に、ADBインスタンスに接続する手順は本ハンズオンガイドの [104: ウォレットを利用してADBに接続してみよう](../adb104-connect-using-wallet) の、[3. ADBに接続](../adb104-connect-using-wallet#anchor3) をご確認ください。
 
 <br>
+
 [ページトップへ戻る](#anchor0)
 
