@@ -31,4 +31,4 @@ toc: true
 世界中のどこからでも OCI リージョン間のコンピュート、データベース、アプリケーションの移行をワンクリックで実行できる Full Stack Disaster Recovery !
 100%クラウドネイティブなサービスによる新しいディザスタ・リカバリを体験してみましょう！
 
-- **[101: OCI Full Stack Disaster Recovery (FSDR)を使ってみよう](./fsdr101/index.md)**
+- **[101: OCI Full Stack Disaster Recovery (FSDR)を使ってみよう](./fsdr101/)**
