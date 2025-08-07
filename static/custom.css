@@ -171,15 +171,6 @@ pre, code {
   border-radius: 0.4rem;
 }
 
-/* ----------------------------- */
-/* -- メインコンテンツ */
-/* ----------------------------- */
-.gdoc-page {
-  background: var(--body-background);
-  padding: .7rem 3rem;
-  border-radius: 0.4rem;
-}
-
 
 /* ----------------------------- */
 /* -- wrapper */
@@ -228,9 +219,22 @@ article img {
 /* -- トップページ */
 /* ----------------------------- */
 
-/*----- 見出し１ */
+/*----- 見出し1 */
+.top-page-title {
+  text-align: center;
+  padding: 2rem 3rem;
+  color: #fbf9f8;
+}
+@media screen and (max-width: 41rem) {
+  .top-page-title {
+    padding: 1rem;
+  }
+}
+
+/*----- 見出し2 */
 .gdoc-toppage-header2 {
   padding: 1rem;
   border-left: 8px solid #89B2B0;
   background: #f4f4f4;
+  margin: 1rem 0;
 }

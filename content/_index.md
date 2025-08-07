@@ -5,6 +5,17 @@ geekdocAlign: left
 geekdocAnchor: false
 ---
 
+<h2 class="gdoc-toppage-header2"> 準備 - Oracle Cloud の無料トライアルを申し込む </h2>
+
+-  [Oracle Cloud 無料トライアルを申し込む](https://www.oracle.com/jp/cloud/free/)  
+Oracle Cloud のほとんどのサービスが利用できるトライアル環境を取得することができます。このチュートリアルの内容を試すのに必要になりますので、まずは取得してみましょう。
+※認証のためにSMSが受け取れる電話とクレジット・カードが必要です(希望しない限り課金はされませんのでご安心を!!)  
+- [Oracle Cloud 無料トライアル サインアップガイド](https://faq.oracle.co.jp/app/answers/detail/a_id/6492)
+- [Oracle Cloud 無料トライアルに関するよくある質問(FAQ)](https://www.oracle.com/jp/cloud/free/faq/)
+
+<br>
+
+
 <h2 class="gdoc-toppage-header2"> OCIを触ってみよう</h2>
 
 {{< columns >}}
@@ -25,15 +36,6 @@ LoadBalancer や証明書サービスなどをはじめとした各 OCI サー�
 
 <br>
 
-<h2 class="gdoc-toppage-header2"> 準備 - Oracle Cloud の無料トライアルを申し込む </h2>
-
--  [Oracle Cloud 無料トライアルを申し込む](https://www.oracle.com/jp/cloud/free/)  
-Oracle Cloud のほとんどのサービスが利用できるトライアル環境を取得することができます。このチュートリアルの内容を試すのに必要になりますので、まずは取得してみましょう。
-※認証のためにSMSが受け取れる電話とクレジット・カードが必要です(希望しない限り課金はされませんのでご安心を!!)  
-- [Oracle Cloud 無料トライアル サインアップガイド](https://faq.oracle.co.jp/app/answers/detail/a_id/6492)
-- [Oracle Cloud 無料トライアルに関するよくある質問(FAQ)](https://www.oracle.com/jp/cloud/free/faq/)
-
-<br>
 
 <h2 class="gdoc-toppage-header2"> サービス別チュートリアル一覧 </h2>
 

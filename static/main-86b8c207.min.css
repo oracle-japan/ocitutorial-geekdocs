@@ -1199,7 +1199,9 @@ svg.gdoc-icon {
 .gdoc-page {
 	min-width: 18rem;
 	flex-grow: 1;
-	padding: 0 0
+	background: var(--body-background);
+  	padding: .7rem 3rem;
+  	border-radius: 0.4rem;
 }
 .gdoc-page h1, .gdoc-page h2, .gdoc-page h3, .gdoc-page h4, .gdoc-page h5, .gdoc-page h6 {
 	font-weight: 600
