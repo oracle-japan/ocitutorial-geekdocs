@@ -239,15 +239,6 @@ SRの状況はCloud Supportのサービスリクエストでご覧いただけ�
 
 <a id="anchor7"></a>
 
-# 参考資料
-実際の利用に際しては、以下弊社サポート部門からのガイドをご確認いただくようお願いいたします。
-
-* [Oracle Cloud Support ご利用ガイド ユーザー登録・管理 (PDF)](https://www.oracle.com/a/ocom/docs/cloud-1st-guide-user-2789085-ja.pdf)
-* [Oracle Cloud Support ご利用ガイド SR作成・管理 (PDF)](https://www.oracle.com/a/ocom/docs/cloud-1stguide-sr-2765641-ja.pdf)
-* [Oracle CloudサポートについてのFAQ](https://blogs.oracle.com/supportjp/post/cloud-support-faq)
-
-   <br>
-
 以上で、この章の作業は終了です。
 
 
