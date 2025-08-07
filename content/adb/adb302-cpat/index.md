@@ -113,7 +113,7 @@ DBCSインスタンスのHRスキーマを移行対象に、移行先をAutonomo
 ```
 ![イメージ](img105.png)
 
-+ `--connectstring` 移行元となるデータベースへの接続。[101: Oracle Cloud で Oracle Database を使おう(DBCS)](../dbcs101-create-db)を参考にホスト(HOST)、ポート番号（PORT）、サービス名（SERVICE_NAME）をご確認ください。
++ `--connectstring` 移行元となるデータベースへの接続。[101: Oracle Cloud で Oracle Database を使おう(DBCS)](https://oracle-japan.github.io/ocitutorials/basedb/dbcs101-create-db/)を参考にホスト(HOST)、ポート番号（PORT）、サービス名（SERVICE_NAME）をご確認ください。
 + `--targetcloud` ターゲットデータベースの指定。
   + Autonomous Databaseの場合DedicatedはATPD/ADWD、SharedはATPS/ADWSから選択します。このチュートリアルではATPSを指定しています。
   + Autonomous DatabaseではないPDBロックダウンの設定が行われていないクラウドデータベースの場合はdefaultを指定します。  
