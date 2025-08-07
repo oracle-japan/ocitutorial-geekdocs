@@ -39,7 +39,7 @@ pre, code {
   --code-copy-border-color: #adb4bc;
   --code-copy-success-color: #00c853;
 
-  --accent-color: #e9ecef;
+  --accent-color: #dde3eb;
   --accent-color-lite: #f8f9fa;
 
   --control-icons: #b2bac1;
@@ -222,4 +222,15 @@ article img {
   max-width: 100%;
   max-height: 600px;
   display: block;
+}
+
+/* ----------------------------- */
+/* -- トップページ */
+/* ----------------------------- */
+
+/*----- 見出し１ */
+.gdoc-toppage-header2 {
+  padding: 1rem;
+  border-left: 8px solid #89B2B0;
+  background: #f4f4f4;
 }
