@@ -16,12 +16,12 @@ allow any-user to manage objects in compartment id ocid1.compartment.oc1..xxxxxx
 ```
 
 ```
-    ```:text
+    ```text
     allow any-user to manage objects in compartment id ocid1.compartment.oc1..xxxxxxxxxx where all {request.principal.type='serviceconnector', target.bucket.name='bucket01', request.principal.compartment.id='ocid1.compartment.oc1..xxxxxxxxxx'}
     ```
 ```
 
-```:text
+```text
 allow any-user to manage objects in compartment id ocid1.compartment.oc1..xxxxxxxxxx where all {request.principal.type='serviceconnector', target.bucket.name='bucket01', request.principal.compartment.id='ocid1.compartment.oc1..xxxxxxxxxx'}
 ```
 
@@ -74,14 +74,29 @@ allow any-user to manage objects in compartment id ocid1.compartment.oc1..xxxxxx
 
 ## リンクと画像
 ```
-[リンクテキスト](https://www.oracle.com/)
+- [セクション・リンク（絶対パス: /ocitutorials ）](/ocitutorials/demo/demoPage/)
+- [セクション・リンク（絶対パス: / ）](/demo/demoPage/)
+- [セクション・リンク（相対パス: ../ ）](../)
 
-![代替テキスト](https://www.oracle.com/a/pr/img/rc24-database-23ai.jpg)
+- デモ画像表示（絶対パス: /ocitutorials ）
+    - ![デモ画像表示（絶対パス: /ocitutorials ）](/ocitutorials/demo/demoPage/demoImage.png)
+- デモ画像表示（絶対パス: / ）
+    - ![デモ画像表示（絶対パス: / ）](/demo/demoPage/demoImage.png)
+- デモ画像表示（相対パス: ./ ）
+    - ![デモ画像表示（相対パス: ./ ）](./demoImage.png)
 ```
 
-[リンクテキスト](https://www.oracle.com/)
+- [セクション・リンク（絶対パス: /ocitutorials ）](/ocitutorials/demo/demoPage/)
+- [セクション・リンク（絶対パス: / ）](/demo/demoPage/)
+- [セクション・リンク（相対パス: ../ ）](../)
 
-![代替テキスト](https://www.oracle.com/a/pr/img/rc24-database-23ai.jpg)
+- デモ画像表示（絶対パス: /ocitutorials ）
+    - ![デモ画像表示（絶対パス: /ocitutorials ）](/ocitutorials/demo/demoPage/demoImage.png)
+- デモ画像表示（絶対パス: / ）
+    - ![デモ画像表示（絶対パス: / ）](/demo/demoPage/demoImage.png)
+- デモ画像表示（相対パス: ./ ）
+    - ![デモ画像表示（相対パス: ./ ）](./demoImage.png)
+
 
 
 ## 引用
