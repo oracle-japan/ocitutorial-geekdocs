@@ -6,10 +6,10 @@ order: "111"
 tags:
  - security
 header:
- teaser: "/security/networkfirewall-sslinspect-fwd/sslfwd00.png"
- overlay_image: "/security/networkfirewall-sslinspect-fwd/sslfwd00.png"
+ teaser: "/security/networkfirewall-sslinspect-fwd/sslfwd20.png"
+ overlay_image: "/security/networkfirewall-sslinspect-fwd/sslfwd20.png"
  overlay_filter: rgba(34, 66, 55, 0.7)
-weight: 212
+
 ---
 
 <!-- 
@@ -32,11 +32,11 @@ OCI Network Firewallは2022年7月にリリースされた、パロアルトネ�
 + OCIチュートリアル「[OCI Network Firewallを構築する](/ocitutorials/security/networkfirewall-setup/) 」にて、以下のNetwork Firewallが動作する環境が構築されていること。
   + 本チュートリアルでは、動作確認にWindowsインスタンスを使用します。ただし、Linuxインスタンスでもcurlコマンドを使用して確認が可能です。
 + ネットワーク・ファイアーウォール・ポリシーからOCI Vaultサービスへのアクセスを許可するため、以下のIAMポリシーが作成されていること。
-```text
+```
 Allow any-user to read secret-family in compartment <compartment_ID> where ALL {request.principal.type='networkfirewallpolicy'} 
 ```
 アクセスできるネットワーク・ファイアーウォール・ポリシーを限定したい場合は以下のように作成します。
-```text
+```
 Allow any-user to read secret-family in compartment <compartment_ID> where ALL {request.principal.type='networkfirewallpolicy', request.principal.id='<Network Firewall Policy OCID>'}
 ```
 
@@ -51,7 +51,7 @@ Allow any-user to read secret-family in compartment <compartment_ID> where ALL {
 以下が本チュートリアルで使用する構成図です。
 OCI環境を出入りする通信はNetwork Firewallを経由し、Network Firewallによって監視および検査が行われます。
 
-![構成図](sslfwd00.png)
+![構成図](sslfwd20.png)
 
 OCI内部に作成するインスタンスとして、本チュートリアルではWindowsインスタンスを作成します。Linuxインスタンスでもcurlコマンドを使用すれば同様の操作が可能ですので、[OCI Network Firewallを構築する](/ocitutorials/security/networkfirewall-setup/)で設定した環境を引き続き使用して実施することもできます。
 
@@ -200,7 +200,7 @@ OCIコンソール画面左上のメニューボタンより、**[コンピュ�
 
 WindowsインスタンスにRDPで接続するためには、セキュリティ・リストでRDP通信を許可する必要があります。
 OCIコンソール画面にアクセスし、左上のメニューボタンより、**[ネットワーキング] → [仮想クラウド・ネットワーク] → [VCN4tutorial]** と移動します。  
-VCN詳細画面の「セキュリティ・リスト」セクションからセキュリティ・リスト**「Security List for NFWサブネット」「Default Security List for VCN4tutorial」**をそれぞれ選択し、**[イングレス・ルールの追加]** ボタンより以下のイングレス・ルールを追加します。
+VCN詳細画面の「セキュリティ・リスト」セクションからセキュリティ・リスト **「Security List for NFWサブネット」「Default Security List for VCN4tutorial」** をそれぞれ選択し、**[イングレス・ルールの追加]** ボタンより以下のイングレス・ルールを追加します。
 
 
 ----
@@ -362,7 +362,7 @@ Vaiult詳細画面の「シークレット」セクションを選択し、**[�
 
 
 ### ・復号化ルール
-「復号化ルール」セクションより、**[復号化ルールの作成]** ボタンから以下を作成します。
+「復号化ルール」セクションより、**[復号化ルールの作成]**ボタンから以下を作成します。
 
 ----
 

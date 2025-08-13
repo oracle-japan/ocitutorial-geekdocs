@@ -6,17 +6,11 @@ order: "111"
 tags:
  - security
 header:
- teaser: "/security/networkfirewall-sslinspect-inb/sslinb00.png"
- overlay_image: "/security/networkfirewall-sslinspect-inb/sslinb00.png"
+ teaser: "/security/networkfirewall-sslinspect-inb/sslinb25.png"
+ overlay_image: "/security/networkfirewall-sslinspect-inb/sslinb25.png"
  overlay_filter: rgba(34, 66, 55, 0.7)
-weight: 213
+
 ---
-
-<!-- 
-リンク：
-    [OCI Network FirewallのSSLインスペクション（インバウンドモード）を行う](/ocitutorials/security/networkfirewall-sslinspect-inb/) 
--->
-
 
 OCI Network Firewallは2022年7月にリリースされた、パロアルトネットワークスの次世代ファイアウォール技術を基に構築されたOCIクラウドネイティブのマネージド・ファイアウォール・サービスです。
 主な機能として、URLフィルタリングやSSL/TLS検査などを提供します。  
@@ -31,11 +25,11 @@ OCI Network Firewallは2022年7月にリリースされた、パロアルトネ�
 + ユーザーに必要なIAMポリシーが割り当てられていること。ポリシーの詳細は[ドキュメント](https://docs.oracle.com/ja-jp/iaas/Content/network-firewall/overview.htm#iam)を参照ください。
 + OCIチュートリアル「[OCI Network Firewallを構築する](/ocitutorials/security/networkfirewall-setup/) 」にて、以下のNetwork Firewallが動作する環境が構築されていること。
 + ネットワーク・ファイアーウォール・ポリシーからOCI Vaultサービスへのアクセスを許可するため、以下のポリシーが作成されていること。
-```text
+```
 Allow any-user to read secret-family in compartment <compartment_ID> where ALL {request.principal.type='networkfirewallpolicy'} 
 ```
 アクセスできるネットワーク・ファイアーウォール・ポリシーを限定したい場合は以下のように作成します。
-```text
+```
 Allow any-user to read secret-family in compartment <compartment_ID> where ALL {request.principal.type='networkfirewallpolicy', request.principal.id='<Network Firewall Policy OCID>'}
 ```
 
@@ -50,7 +44,7 @@ Allow any-user to read secret-family in compartment <compartment_ID> where ALL {
 以下が本チュートリアルで使用する構成図です。
 OCI環境を出入りする通信はNetwork Firewallを経由し、Network Firewallによって監視および検査が行われます。
 
-![構成図](sslinb00.png)
+![構成図](sslinb25.png)
 
 この構成図において、本チュートリアルで作成するリソースはOCI Vaultのみです。そのほかのリソースについては、事前に「[OCI Network Firewallを構築する](/ocitutorials/security/networkfirewall-setup/) 」を参考に環境をご準備ください。
 
@@ -229,11 +223,11 @@ inst.ocitutorial.com-ssl
 ```
 
 このうち、  
-+ サーバーの秘密鍵は **`inst.ocitutorial.com-ssl/private/inst.ocitutorial.com.key.pem`**  
-+ サーバー証明書は **`inst.ocitutorial.com-ssl/certs/inst.ocitutorial.com.inb.cert.pem`**  
++ サーバーの秘密鍵は **`inst.ocitutorial.com-ssl/private/inst.ocitutorial.com.key.pem`** 
++ サーバー証明書は **`inst.ocitutorial.com-ssl/certs/inst.ocitutorial.com.inb.cert.pem`**   
 にそれぞれ配置されます。この2つのパスはこの後apacheのSSLの設定にて使用しますので、それぞれ控えておいてください。
 
-また、**`inst.ocitutorial.com-ssl/inst.ocitutorial.com.ssl-inbound-inspection.json`** は、後にNetwork Firewallが参照するためにVaultに格納する内容です。こちらに関してもcatコマンド等で内容を控えておいてください。
+また、 **`inst.ocitutorial.com-ssl/inst.ocitutorial.com.ssl-inbound-inspection.json`** は、後にNetwork Firewallが参照するためにVaultに格納する内容です。こちらに関してもcatコマンド等で内容を控えておいてください。
 
 <br><br>
 
@@ -443,7 +437,7 @@ OCIコンソール画面左上のメニューボタンより、**[アイデン�
 + <span style="color: darkblue; ">**`名前`**</span> - secret_websvr4tut
 
 + <span style="color: darkblue; ">**`暗号化キー`**</span> - MEK (作成した暗号化キーを選択)
-+ **`[手動シークレット生成]`**を選択
++ **`[手動シークレット生成]`** を選択
 + <span style="color: darkblue; ">**`シークレット・タイプ・テンプレート`**</span> - プレーン・テキスト
 
 + <span style="color: darkblue; ">**`シークレット・コンテンツ`**</span> - \<JSONファイルの中身をペースト\>
@@ -488,7 +482,7 @@ OCIコンソール画面左上のメニューボタンより、**[アイデン�
 
 
 ### ・マップされたシークレット
-「マップされたシークレット」セクションより、**[マップされたシークレットの作成]**ボタンから以下を作成します。
+「マップされたシークレット」セクションより、**[マップされたシークレットの作成]** ボタンから以下を作成します。
 
 ----
 
@@ -508,7 +502,7 @@ OCIコンソール画面左上のメニューボタンより、**[アイデン�
 
 OCI内のサーバー（今回はwebsvr4tutorial）のアドレスを管理するリストを作成します。
 
-「アドレス・リスト」セクションより、**[アドレス・リストの作成]**ボタンから以下を作成します。
+「アドレス・リスト」セクションより、**[アドレス・リストの作成]** ボタンから以下を作成します。
 
 ----
 
@@ -520,7 +514,7 @@ OCI内のサーバー（今回はwebsvr4tutorial）のアドレスを管理す�
 ![シークレットの作成](sslinb12.png)
 
 ### ・復号化ルール
-「復号化ルール」セクションより、**[復号化ルールの作成]**ボタンから以下を作成します。
+「復号化ルール」セクションより、**[復号化ルールの作成]** ボタンから以下を作成します。
 
 ----
 

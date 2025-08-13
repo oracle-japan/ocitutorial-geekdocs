@@ -36,37 +36,37 @@ OCI Vaultサービスで管理できる暗号鍵の暗号化アルゴリズム�
 <br>
 
 
-# 1. Vaultの作成
+## 1. Vaultの作成
 
 OCIコンソール → アイデンティティとセキュリティ → ボールト → 「ボールトの作成」ボタンをクリックします。
 
- ![画面ショット1](vault-setup01.png)
+![画面ショット1](vault-setup01.png)
 
 
 Vaultの作成画面で任意の名前を入力し、「ボールトの作成」ボタンをクリックします。
  
- ![画面ショット2](vault-setup02.png)
+![画面ショット2](vault-setup02.png)
 
 1~2分でボールトの作成が完了し、ステータスがアクティブになります。
 
 <br>
 
-# 2. 暗号鍵の作成とインポート
+## 2. 暗号鍵の作成とインポート
 
 作成したボールトの詳細画面の「キーの作成」ボタンをクリックします。
 
- ![画面ショット3](vault-setup03.png)
+![画面ショット3](vault-setup03.png)
 
 「キーの作成」画面にて任意の名前を入力し、「外部キーのインポート」にチェックを入れます。
 
 ※キーのシェイプ、アルゴリズムはデフォルトのAES, 256ビットのまま進めます。
  
- ![画面ショット4](vault-setup04.png)
+![画面ショット4](vault-setup04.png)
 
 
 ラッピング・キー情報が表示されるので、「公開ラッピング・キー」をコピーします。
 
- ![画面ショット5](vault-setup05.png)
+![画面ショット5](vault-setup05.png)
 
 Cloud Shellなど、OpenSSLがインストールされている環境で公開ラッピング・キーをpemファイルとして保存します。
 
@@ -98,7 +98,7 @@ $ openssl pkeyutl -encrypt -in "aes_key.bin" -inkey "publickey.pem" -pubin -out 
 
 ※Cloud Shellの場合、ターミナル右上のメニュー → ダウンロードから、ホームディレクトリにある任意のファイルをダウンロードすることが出来ます。
  
- ![画面ショット11](vault-setup11.png)
+![画面ショット11](vault-setup11.png)
 
 
 
@@ -106,7 +106,7 @@ $ openssl pkeyutl -encrypt -in "aes_key.bin" -inkey "publickey.pem" -pubin -out 
 
 ※ラッピング・アルゴリズムはデフォルトの「RSA_OAEP_SHA256」のまま進めます。
  
- ![画面ショット6](vault-setup06.png)
+![画面ショット6](vault-setup06.png)
 
 
 以上の手順で暗号鍵の作成とインポートは完了です。
