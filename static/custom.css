@@ -208,13 +208,6 @@ div.wrapper.is_home {
 	margin: 0 !important
 }
 
-/*----- 画像 */
-article img {
-  max-width: 100%;
-  max-height: 600px;
-  display: block;
-}
-
 /* ----------------------------- */
 /* -- トップページ */
 /* ----------------------------- */
