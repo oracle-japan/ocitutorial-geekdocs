@@ -8,7 +8,7 @@ tags:
 show_excerpts: true
 toc: true
 ---
-**Database編のチュートリアル一覧に[もどる](/)**
+**チュートリアル一覧に[もどる](../)**
 <br/>
 
 ----

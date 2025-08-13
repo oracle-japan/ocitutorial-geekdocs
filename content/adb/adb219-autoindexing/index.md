@@ -109,17 +109,16 @@ Autonomous Databaseではワークロードを監視して、自動的に索引�
 DBMS_AUTO_INDEXパッケージの詳細については、[Database Administrator’s Guide, 21.7.3 Configuring Automatic Indexing in an Oracle Database](https://docs.oracle.com/en/database/oracle/oracle-database/19/admin/managing-indexes.html#GUID-A8B4BB05-2711-497A-8276-127076DAA518)をご確認ください。
 <br>
 
-    >**参考**
-    >
-    >現在Automatic Indexingが無効か有効かを確認するSQL文は、以下のようになります。無効の場合はAUTO_INDEX_MODEがOFFになっています。
-    >```sql
-    >set linesize 250
-    >column parameter_name for a35
-    >column parameter_value  for a20
-    >column last_modified  for a30
-    >column modified_by  for a15
-    >select * from dba_auto_index_config;
-    >```
+    **参考**
+    現在Automatic Indexingが無効か有効かを確認するSQL文は、以下のようになります。
+    無効の場合はAUTO_INDEX_MODEがOFFになっています。
+    set linesize 250
+    column parameter_name for a35
+    column parameter_value  for a20
+    column last_modified  for a30
+    column modified_by  for a15
+    select * from dba_auto_index_config;
+
 <br>  
 
 <a id="anchor2"></a>

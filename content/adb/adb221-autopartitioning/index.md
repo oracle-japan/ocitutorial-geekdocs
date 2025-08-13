@@ -270,7 +270,7 @@ exec dbms_auto_partition.configure('AUTO_PARTITION_MODE','REPORT ONLY');
 
 実行結果はこちらのようになります。
 
-```sql
+```text
 SQL> exec dbms_auto_partition.configure('AUTO_PARTITION_MODE','REPORT ONLY');
 
 PL/SQL procedure successfully completed.
@@ -326,7 +326,7 @@ PL/SQL procedure successfully completed.
 
 実行した結果はこちらのようになります。  
 
-```
+```text
 =============================================
 ID:     250D1223EDB3235BE063C859000A100A
 Method: LIST(SYS_OP_INTERVAL_HIGH_BOUND("D", INTERVAL '1' MONTH, TIMESTAMP '2020-01-01 00:00:00')) AUTOMATIC

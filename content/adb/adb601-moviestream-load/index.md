@@ -63,6 +63,7 @@ MovieStreamはビジネスを成長させるため、顧客の視聴傾向や適
 ADWでは、ニーズに応じて様々な方法でデータをロードすることができます。本記事では、簡単なスクリプトを使用してオブジェクトストレージからデータをロードします。
 
 1. ADWに**接続サービスHIGH**で接続し、以下のスクリプトを実行します。実行すると、MOVIE_SALES_FACT表が作成されます。
+
 ```sql
 CREATE TABLE MOVIE_SALES_FACT
 (ORDER_NUM NUMBER(38,0) NOT NULL,
@@ -137,13 +138,14 @@ ACTUAL_PRICE NUMBER(38,2),
 QUANTITY_SOLD NUMBER(38,0));
 ```
 
-1. 以下のスクリプトを実行し、置換変数を定義します。
+2. 以下のスクリプトを実行し、置換変数を定義します。
+
 ```sql
 define uri_ms_oss_bucket = 'https://objectstorage.ap-tokyo-1.oraclecloud.com/n/dwcsprod/b/moviestream_data_load_workshop_20210709/o';
 define csv_format_string = '{"type":"csv","skipheaders":"1"}';
 ```
 
-1. 2018年から2020年までの映画売上データをインポートするためのスクリプトを実行します。データファイルは、35個に分かれています。32 ECPUの場合、35ヶ月分の映画販売データをロードするのに、ロードには約4分かかります。
+3. 2018年から2020年までの映画売上データをインポートするためのスクリプトを実行します。データファイルは、35個に分かれています。32 ECPUの場合、35ヶ月分の映画販売データをロードするのに、ロードには約4分かかります。
 ```sql
 BEGIN
 DBMS_CLOUD.COPY_DATA (table_name => 'MOVIE_SALES_FACT',
@@ -154,7 +156,7 @@ END;
 /
 ```
 
-1. データロードの状態を確認するには、データロードジョブを追跡するメタデータ表（USER_LOAD_OPERATIONS）にクエリを実行します。
+4. データロードの状態を確認するには、データロードジョブを追跡するメタデータ表（USER_LOAD_OPERATIONS）にクエリを実行します。
 ```sql
 SELECT
 start_time,
@@ -171,18 +173,18 @@ ORDER BY 1 DESC, 2 DESC
 FETCH FIRST 1 ROWS ONLY;
 ```
 
-1. rows_loadedという列を見ると、オブジェクトストレージにあるcsvファイルから97,890,562行が読み込まれていることがわかります。
+5. rows_loadedという列を見ると、オブジェクトストレージにあるcsvファイルから97,890,562行が読み込まれていることがわかります。
 ![user_load_operations_resultイメージ](user_load_operations_result.png)
 
-1. MOVIE_SALES_FACT表の実際の行数を確認してみます。
+6. MOVIE_SALES_FACT表の実際の行数を確認してみます。
 ```sql
 SELECT COUNT(*) FROM movie_sales_fact;
 ```
 
-1. 上記のクエリを実行すると、97,890,562レコードという値が返され、正しくロードが実行されたことがわかります。
+7. 上記のクエリを実行すると、97,890,562レコードという値が返され、正しくロードが実行されたことがわかります。
 ![movie_sales_fact_countイメージ](movie_sales_fact_count.png)
 
-1. 処理されたデータファイルの数を確認するには、以下のようにログテーブルを参照します。  
+8. 処理されたデータファイルの数を確認するには、以下のようにログテーブルを参照します。  
 ※ファイルの場所は、選択したデータセンターに基づいているため、以下の図とは異なります）。
 ```sql
 SELECT *
@@ -190,7 +192,7 @@ FROM copy$1_log
 WHERE RECORD LIKE '%Data File%' ORDER BY 1;
 ```
 
-1. これにより、以下のように35件リストされます。
+9. これにより、以下のように35件リストされます。
 ![datafile_listイメージ](datafile_list.png)
 
 <a id="anchor2"></a>
@@ -225,7 +227,7 @@ AND segment_name = 'MOVIE_SALES_FACT'
 GROUP BY segment_name;
 ```
 
-1. 以下のように**8.441GB**ほどの領域を使用しています。
+2. 以下のように**8.441GB**ほどの領域を使用しています。
 ![movie_sales_fact_gb1イメージ](movie_sales_fact_gb1.png)
 
 ## 2-3. ステージングテーブルの作成
@@ -235,7 +237,7 @@ GROUP BY segment_name;
 define adj_column_names = '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER';
 ```
 
-1. 以下のコマンドで外部表を作成します。
+2. 以下のコマンドで外部表を作成します。
 ```sql
 BEGIN
 dbms_cloud.create_external_table (
@@ -247,7 +249,7 @@ file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_argentina.csv'
 /
 ```
 
-1. 外部表を検証するため、プロシージャDBMS_CLOUD.VALIDATE_EXTERNAL_TABLEを使用します。デフォルトでは、ソース・ファイル内のすべての行をスキャンし、行が拒否されたときに停止します。なお、この作業は検証目的ですので、後続のその他の国の外部表作成時には行いません。
+3. 外部表を検証するため、プロシージャDBMS_CLOUD.VALIDATE_EXTERNAL_TABLEを使用します。デフォルトでは、ソース・ファイル内のすべての行をスキャンし、行が拒否されたときに停止します。なお、この作業は検証目的ですので、後続のその他の国の外部表作成時には行いません。
 ```sql
 BEGIN
 DBMS_CLOUD.VALIDATE_EXTERNAL_TABLE (table_name => 'MOVIE_FIN_ADJ_ARGENTINA_EXT');
@@ -255,12 +257,12 @@ END;
 /
 ```
 
-1. 検証が成功したのち、以下のクエリでステージングテーブルMOVIE_FIN_ADJ_ARGENTINA_EXT表に何行あるか確認します。
+4. 検証が成功したのち、以下のクエリでステージングテーブルMOVIE_FIN_ADJ_ARGENTINA_EXT表に何行あるか確認します。
 ```sql
 SELECT COUNT(*) FROM movie_fin_adj_argentina_ext;
 ```
 
-1. 正常に実行されていれば、以下のように**1036**という結果が返されます。
+5. 正常に実行されていれば、以下のように**1036**という結果が返されます。
 ![argentina_countイメージ](argentina_count.png)
 
 ## 2-4. ステージングテーブルの使用領域
@@ -275,7 +277,7 @@ AND segment_name=upper('MOVIE_FIN_ADJ_ARGENTINA_EXT')
 GROUP BY segment_name;
 ```
 
-1. 外部表は表として実体を持たないため、以下のように結果は**0**が返されるはずです。
+2. 外部表は表として実体を持たないため、以下のように結果は**0**が返されるはずです。
 ![external_zeroイメージ](external_zero.png)
 
 ## 2-5. MERGEを使用したMovie Salesデータの更新
@@ -298,17 +300,17 @@ MERGE INTO movie_sales_fact a
     COMMIT;
 ```
 
-1. この処理には2~3秒かかります。
+2. この処理には2~3秒かかります。
 ![external_mergeイメージ](external_merge.png)
 
-1. 以下のコマンドで外部表が正しく処理されたか確認します。
+3. 以下のコマンドで外部表が正しく処理されたか確認します。
 ```sql
 SELECT
 SUM(actual_price)
 FROM movie_sales_fact;
 ```
 
-1. 売上高は**160,364,274.19ドル**（前回値160,365,556.83ドル）となり、若干減少したことがわかります。
+4. 売上高は**160,364,274.19ドル**（前回値160,365,556.83ドル）となり、若干減少したことがわかります。
 ![actual_price2イメージ](actual_price2.png)
 
 ## 2-6. Movie Salesデータの使用領域の再確認
@@ -323,7 +325,7 @@ AND segment_name='MOVIE_SALES_FACT'
 GROUP BY segment_name;
 ```
 
-1. 以前の値が8.441GBだったのに対し、以下のようにわずかな使用領域の増加が確認できます。
+2. 以前の値が8.441GBだったのに対し、以下のようにわずかな使用領域の増加が確認できます。
 ![movie_sales_fact_gb2イメージ](movie_sales_fact_gb2.png)
 
 ## 2-7. その他の国の財務調整データの更新
@@ -381,7 +383,7 @@ END;
 /
 ```
 
-1. 国別ファイルごとに更新するプロセスを簡略化するために、プロシージャを作成します。
+2. 国別ファイルごとに更新するプロセスを簡略化するために、プロシージャを作成します。
 ```sql
 CREATE OR REPLACE PROCEDURE RUN_ADJ (letter_in IN VARCHAR2) AUTHID CURRENT_USER
 IS
@@ -399,7 +401,7 @@ END;
 /
 ```
 
-1. 上記で作成したプロシージャを使用し、マージします。
+3. 上記で作成したプロシージャを使用し、マージします。
 ```sql
 BEGIN run_adj('austria'); END;/
 BEGIN run_adj('belarus'); END;/
@@ -449,17 +451,17 @@ BEGIN run_adj('uzbekistan'); END;/
 BEGIN run_adj('venezuela'); END;/
 ```
 
-1. 上記は国ごと約10秒、計4~5分で終了します。続いて以下のコマンドで財務調整が正しく行われたか確認します。
+4. 上記は国ごと約10秒、計4~5分で終了します。続いて以下のコマンドで財務調整が正しく行われたか確認します。
 ```sql
 SELECT
 SUM(actual_price)
 FROM movie_sales_fact;
 ```
 
-1. これにより、当初の160,365,556.83ドルに対し、**160,306,035.62ドル**となり、収益に若干の変化があったことがわかります。
+5. これにより、当初の160,365,556.83ドルに対し、**160,306,035.62ドル**となり、収益に若干の変化があったことがわかります。
 ![actual_price3イメージ](actual_price3.png)
 
-1. ここで使用領域を再度確認してみます。
+6. ここで使用領域を再度確認してみます。
 ```sql
 SELECT
 segment_name,
@@ -470,7 +472,7 @@ AND segment_name=upper('MOVIE_SALES_FACT')
 GROUP BY segment_name;
 ```
 
-1. 以前の値が8.441GBだったのに対し、**8.504GB**でした。大量のデータを更新したのにも関わらず、やはり使用領域の増加はとてもわずかに済んでいます。
+7. 以前の値が8.441GBだったのに対し、**8.504GB**でした。大量のデータを更新したのにも関わらず、やはり使用領域の増加はとてもわずかに済んでいます。
 ![movie_sales_fact_gb3イメージ](movie_sales_fact_gb3.png)
 
 <br>

@@ -344,7 +344,7 @@ BANK_ACCOUNTSと、BANK_TXNSという二つのリレーショナル表から、�
     ```
 
 1. 934と387から2ホップ以下で繋がっている口座のトランザクション数を見てみます。
-
+    ```sql
         %pgql-pgx
         SELECT a.acct_id, a.hop_dist_from_934 AS hops, in_degree(a) + out_degree(a) AS num_transactions FROM MATCH (a) ON bank_graph
         WHERE hops > 0 AND hops <=2 
@@ -354,6 +354,7 @@ BANK_ACCOUNTSと、BANK_TXNSという二つのリレーショナル表から、�
         SELECT a.acct_id, a.hop_dist_from_387 AS hops, in_degree(a) + out_degree(a) AS num_transactions FROM MATCH (a) ON bank_graph
         WHERE hops > 0 AND hops <=2 
         ORDER BY num_transactions DESC
+    ```
 
     934と近い口座として135、そして387と近い口座として534が挙げられます。これらも違法行為に関与している可能性があります。
 

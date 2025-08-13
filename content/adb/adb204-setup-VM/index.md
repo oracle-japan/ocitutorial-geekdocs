@@ -24,7 +24,7 @@ Oracle Cloud Infrastructure（OCI） では様々な仮想マシンイメージ�
 **`Oracle Linux Cloud Developer イメージ`**は、Python、Node.js、Goといった言語や、Oracle Instant Clientなどの各種接続ドライバ、Oracle Cloud Infrastructure CLI(OCI CLI)といった各種ツールがプリインストールされており、アプリケーション開発は勿論、各種検証作業を実施する際にとても便利です。
 
 尚、Oracle Linux Cloud Developer イメージの詳細については [こちら](https://docs.oracle.com/ja-jp/iaas/oracle-linux/developer/index.htm#x86-components) を参照ください。  
-またOracle Cloud Infrastructureに仮想マシン作成する手順詳細に関しては本チュートリアル 入門編の [その3 - インスタンスを作成する](/beginners/creating-compute-instance/) の手順も併せてご確認ください。
+またOracle Cloud Infrastructureに仮想マシン作成する手順詳細に関しては本チュートリアル 入門編の [その3 - インスタンスを作成する](../../beginners/creating-compute-instance/) の手順も併せてご確認ください。
 
 <br>
 

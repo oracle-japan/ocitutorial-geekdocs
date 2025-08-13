@@ -453,7 +453,7 @@ EXEC DBMS_SQLTUNE.DROP_SQLSET('mysh_sts_test');
 
 <BR>
 
-<a id="anchor6"></a>
+<a id="anchor7"></a>
 
 # おわりに
 本記事では、Autonomous Databaseの特徴の一つである自動パッチ適用が、アプリケーションに影響がないかSPAを使用して事前にテストする方法をご紹介しました。繰り返しになりますが、基本的にはパッチ適用はSQL Plan Management(SPM)という機能で実行計画に影響がないよう行われますが、不安な場合はこの方法で1週間前に確認することができます。
