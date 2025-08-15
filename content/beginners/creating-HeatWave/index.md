@@ -3,8 +3,8 @@ title: "その10 - MySQLで高速分析を体験する"
 excerpt: "OCIではMySQLベースのデータウェアハウスサービスであるHeatWaveが使えます！MySQLからレプリケーションでデータ連携もできるため、ETLを使わずにデータウェアハウスを構築することもできます！性能もコストパフォーマンスも非常に高いサービスなので、是非試してみて下さい！"
 order: "100"
 header:
-  teaser: "/beginners/creating-mds/MySQLLogo_teaser.png"
-  overlay_image: "/beginners/creating-mds/MySQLLogo_overlay_image.png"
+  teaser: "/ocitutorials/beginners/creating-mds/MySQLLogo_teaser.png"
+  overlay_image: "/ocitutorials/beginners/creating-mds/MySQLLogo_overlay_image.png"
   overlay_filter: rgba(34, 66, 55, 0.7)
 #link: https://oracle-japan.github.io/ocitutorials/beginners/creating-heatwave/
 ---

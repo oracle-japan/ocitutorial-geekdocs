@@ -32,9 +32,10 @@ geekdocRepo = "https://github.com/oracle-japan/ocitutorial-geekdocs"
    tag = "tags"
 
 [outputs]
-   home = ["HTML", "JSON"]
-   section = ["HTML", "JSON"]
+   home = ["HTML"]
+   section = ["HTML"]
    page = ["HTML"]
+   term = ["HTML"]
 
 [params]
   customCSS = ["./custom.css"]
