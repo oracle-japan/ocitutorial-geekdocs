@@ -1,6 +1,8 @@
 ---
 title: "OCI API Gatewayハンズオン"
 excerpt: "OCI API GatewayはOCI上で提供されるマネージドのAPI管理サービスです。このハンズオンでは、OCI API Gatewayを利用して簡単にAPIを集約・公開する手順をご紹介します。"
+images:
+- /ocitutorials/cloud-native/apigateway-for-beginners/gateway03.jpg
 order: "092"
 tags:
 ---
