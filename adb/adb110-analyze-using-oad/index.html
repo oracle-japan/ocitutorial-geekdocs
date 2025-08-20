@@ -21,18 +21,18 @@ Oracle Analytics Desktop は、Windows OS用とMac OS用がありますが、本
 
   <title>110: Oracle Analytics Desktopを使ってデータを見える化してみよう | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -55,7 +55,7 @@ Oracle Analytics Desktop は、Windows OS用とMac OS用がありますが、本
 目次
 1. Oracle Analytics Desktop をダウンロードする 2. スクリプトをSQLワークシートから実行してビューを作成する 3. Oracle Analytics Desktop から ADB に接続し、データを見える化する 所要時間 : 約30分" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/adb/adb110-analyze-using-oad/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb110-analyze-using-oad/" />
 
 <meta property="article:section" content="Adb" />
     <meta
@@ -85,7 +85,7 @@ Oracle Analytics Desktop は、Windows OS用とMac OS用がありますが、本
       "@type": "TechArticle",
       "articleSection": "Adb",
       "name": "110: Oracle Analytics Desktopを使ってデータを見える化してみよう",
-      "url" : "https://oracle-japan.github.io/ocitutorials/adb/adb110-analyze-using-oad/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb110-analyze-using-oad/",
       "headline": "110: Oracle Analytics Desktopを使ってデータを見える化してみよう",
       "description": "\nはじめに Autonomous Database (ADB) にはさまざまなツールが同梱されており、簡単にご利用いただけますが、 Oracle Analytics Desktop を使うと、ユーザーのPC上から Autonomous Database のデータを見える化できます。\nOracle Analytics Desktop は、デスクトップ・アプリケーションであり、データの探索および見える化するためのツールです。複数のソースからサンプル・データを簡単に検索したり、ローカルのデータセットを分析したり調査することが可能です。\nAutonomous Database は暗号化およびSSL相互認証を利用した接続を前提としており、そのため接続する際はクレデンシャル・ウォレット（Credential.zipファイル）を利用する必要があります。\n本章ではこのOracle Analytics Desktopを使用した Autonomous Database の見える化について確認していきます。\n前提条件\nADBインスタンスが構成済みであること ※ADBインタンスの作成方法については、101:ADBインスタンスを作成してみようをご参照ください。 クレデンシャル・ウォレットを取得済みであること ※クレデンシャル・ウォレットの取得については、104:クレデンシャル・ウォレットを利用して接続してみようを参照ください。\nOracle Analytics Desktop は、Windows OS用とMac OS用がありますが、本章ではWindows OS用 を使って説明します。 Oracle Analytics Desktop をインストールするPCから、プロキシ・サーバーを経由せずに、直接、インターネットに繋がること。 ※Oracle Analytics Desktop はプロキシ対応できません。\n目次\n1. Oracle Analytics Desktop をダウンロードする 2. スクリプトをSQLワークシートから実行してビューを作成する 3. Oracle Analytics Desktop から ADB に接続し、データを見える化する 所要時間 : 約30分",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -95,7 +95,7 @@ Oracle Analytics Desktop は、Windows OS用とMac OS用がありますが、本
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/adb/adb110-analyze-using-oad/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb110-analyze-using-oad/"
       },
       "copyrightHolder" : "OCIチュートリアル",
       "copyrightYear" : "0001",
@@ -105,10 +105,10 @@ Oracle Analytics Desktop は、Windows OS用とMac OS用がありますが、本
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -118,73 +118,73 @@ Oracle Analytics Desktop は、Windows OS用とMac OS用がありますが、本
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/adb/adb110-analyze-using-oad/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb110-analyze-using-oad/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/adb/adb110-analyze-using-oad/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb110-analyze-using-oad/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="110: Oracle Analytics Desktopを使ってデータを見える化してみよう">
   <meta property="og:description" content="はじめに Autonomous Database (ADB) にはさまざまなツールが同梱されており、簡単にご利用いただけますが、 Oracle Analytics Desktop を使うと、ユーザーのPC上から Autonomous Database のデータを見える化できます。
@@ -258,11 +258,11 @@ Oracle Analytics Desktop は、Windows OS用とMac OS用がありますが、本
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -279,7 +279,7 @@ Oracle Analytics Desktop は、Windows OS用とMac OS用がありますが、本
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -291,7 +291,7 @@ Oracle Analytics Desktop は、Windows OS用とMac OS用がありますが、本
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -418,7 +418,7 @@ Oracle Analytics Desktop は、Windows OS用とMac OS用がありますが、本
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/adb/' href='/ocitutorials/adb/'><span itemprop='name'>Oracle Database編 - Autonomous Database (ADB)を使ってみよう</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>110: Oracle Analytics Desktopを使ってデータを見える化してみよう</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/adb/' href='/ocitutorial-geekdocs/adb/'><span itemprop='name'>Oracle Database編 - Autonomous Database (ADB)を使ってみよう</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>110: Oracle Analytics Desktopを使ってデータを見える化してみよう</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -450,7 +450,7 @@ Oracle Analytics Desktop は、Windows OS用とMac OS用がありますが、本
     >
         はじめに
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb110-analyze-using-oad/#はじめに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: はじめに" aria-label="アンカー先: はじめに" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb110-analyze-using-oad/#はじめに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: はじめに" aria-label="アンカー先: はじめに" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -501,7 +501,7 @@ Oracle Analytics Desktop を使うと、ユーザーのPC上から Autonomous Da
     >
         1. Oracle Analytics Desktop をダウンロードする
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb110-analyze-using-oad/#1-oracle-analytics-desktop-をダウンロードする" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. Oracle Analytics Desktop をダウンロードする" aria-label="アンカー先: 1. Oracle Analytics Desktop をダウンロードする" href="#1-oracle-analytics-desktop-%e3%82%92%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb110-analyze-using-oad/#1-oracle-analytics-desktop-をダウンロードする" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. Oracle Analytics Desktop をダウンロードする" aria-label="アンカー先: 1. Oracle Analytics Desktop をダウンロードする" href="#1-oracle-analytics-desktop-%e3%82%92%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -552,7 +552,7 @@ Oracle Analytics Desktop を使うと、ユーザーのPC上から Autonomous Da
     >
         2. スクリプトをSQLワークシートから実行してビューを作成する
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb110-analyze-using-oad/#2-スクリプトをsqlワークシートから実行してビューを作成する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. スクリプトをSQLワークシートから実行してビューを作成する" aria-label="アンカー先: 2. スクリプトをSQLワークシートから実行してビューを作成する" href="#2-%e3%82%b9%e3%82%af%e3%83%aa%e3%83%97%e3%83%88%e3%82%92sql%e3%83%af%e3%83%bc%e3%82%af%e3%82%b7%e3%83%bc%e3%83%88%e3%81%8b%e3%82%89%e5%ae%9f%e8%a1%8c%e3%81%97%e3%81%a6%e3%83%93%e3%83%a5%e3%83%bc%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb110-analyze-using-oad/#2-スクリプトをsqlワークシートから実行してビューを作成する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. スクリプトをSQLワークシートから実行してビューを作成する" aria-label="アンカー先: 2. スクリプトをSQLワークシートから実行してビューを作成する" href="#2-%e3%82%b9%e3%82%af%e3%83%aa%e3%83%97%e3%83%88%e3%82%92sql%e3%83%af%e3%83%bc%e3%82%af%e3%82%b7%e3%83%bc%e3%83%88%e3%81%8b%e3%82%89%e5%ae%9f%e8%a1%8c%e3%81%97%e3%81%a6%e3%83%93%e3%83%a5%e3%83%bc%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -614,7 +614,7 @@ Oracle Analytics Desktop を使うと、ユーザーのPC上から Autonomous Da
     >
         3. Oracle Analytics Desktop から Autonomous Database に接続し、データを見える化する
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb110-analyze-using-oad/#3-oracle-analytics-desktop-から-autonomous-database-に接続しデータを見える化する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. Oracle Analytics Desktop から Autonomous Database に接続し、データを見える化する" aria-label="アンカー先: 3. Oracle Analytics Desktop から Autonomous Database に接続し、データを見える化する" href="#3-oracle-analytics-desktop-%e3%81%8b%e3%82%89-autonomous-database-%e3%81%ab%e6%8e%a5%e7%b6%9a%e3%81%97%e3%83%87%e3%83%bc%e3%82%bf%e3%82%92%e8%a6%8b%e3%81%88%e3%82%8b%e5%8c%96%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb110-analyze-using-oad/#3-oracle-analytics-desktop-から-autonomous-database-に接続しデータを見える化する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. Oracle Analytics Desktop から Autonomous Database に接続し、データを見える化する" aria-label="アンカー先: 3. Oracle Analytics Desktop から Autonomous Database に接続し、データを見える化する" href="#3-oracle-analytics-desktop-%e3%81%8b%e3%82%89-autonomous-database-%e3%81%ab%e6%8e%a5%e7%b6%9a%e3%81%97%e3%83%87%e3%83%bc%e3%82%bf%e3%82%92%e8%a6%8b%e3%81%88%e3%82%8b%e5%8c%96%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -8961,7 +8961,7 @@ Oracle Analytics Desktop を使うと、ユーザーのPC上から Autonomous Da
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/adb/adb109-private-endpoint/"
+      href="/ocitutorial-geekdocs/adb/adb109-private-endpoint/"
       title="109: プライベート・エンドポイントのADBを作成してみよう"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -8973,7 +8973,7 @@ Oracle Analytics Desktop を使うと、ユーザーのPC上から Autonomous Da
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/adb/adb111-select-ai/"
+      href="/ocitutorial-geekdocs/adb/adb111-select-ai/"
       title="111: SELECT AIを試してみよう"
     >
       111: SELECT AIを試してみよう
@@ -9027,7 +9027,7 @@ Oracle Analytics Desktop を使うと、ユーザーのPC上から Autonomous Da
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

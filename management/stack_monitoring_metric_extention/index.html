@@ -22,18 +22,18 @@
 
   <title>Stack Monitoringでメトリック拡張を設定する | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -56,7 +56,7 @@
 リソース・タイプ：コンテナDB 収集方法：SQL 収集頻度：任意の時間 SQL問合せ：SELECT COUNT(*) from ALL_USERS; リソースタイプと収集方法について
 ホストの場合はリソース・タイプをホスト、OSコマンドの場合は収集方法をOSコマンドなどに設定します。 {: .notice–info}" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/management/stack_monitoring_metric_extention/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/management/stack_monitoring_metric_extention/" />
 
 <meta property="article:section" content="Management" />
     <meta
@@ -86,7 +86,7 @@
       "@type": "TechArticle",
       "articleSection": "Management",
       "name": "Stack Monitoringでメトリック拡張を設定する",
-      "url" : "https://oracle-japan.github.io/ocitutorials/management/stack_monitoring_metric_extention/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/management/stack_monitoring_metric_extention/",
       "headline": "Stack Monitoringでメトリック拡張を設定する",
       "description": "チュートリアル概要 :\nこのチュートリアルでは、Stack Monitoring のメトリック拡張を設定する手順をご紹介します。\n所要時間 : 約30分\n前提条件1 : テナンシ上で以下のリソースが作成済であること\nコンパートメント ユーザー ユーザーグループ VCN 対象リソース 前提条件2 : Stack Monitoring が有効化済みであること\nこちらを参考にStack Monitoringを有効化できます。\n前提条件3 : Stack Monitoringで対象リソースが監視されていること こちらを参考にStack Monitoring でBaseDB を監視できます。 こちらを参考にStack Monitoring でCompute を監視できます。 1.メトリック拡張の作成 本チュートリアルでは例としてデータベースに登録されているユーザー数を取得するメトリックを追加します。 「メトリック拡張の作成」をクリックします。 メトリック拡張のプロパティの項目は以下のように設定します。\n名前：ME_任意の名前 表示名：任意の表示名 収集方法のプロパティは以下のように設定します。\nリソース・タイプ：コンテナDB 収集方法：SQL 収集頻度：任意の時間 SQL問合せ：SELECT COUNT(*) from ALL_USERS; リソースタイプと収集方法について\nホストの場合はリソース・タイプをホスト、OSコマンドの場合は収集方法をOSコマンドなどに設定します。 {: .notice–info}",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -96,7 +96,7 @@
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/management/stack_monitoring_metric_extention/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/management/stack_monitoring_metric_extention/"
       },
       "keywords" : [ "management" ],
       "copyrightHolder" : "OCIチュートリアル",
@@ -107,10 +107,10 @@
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -120,73 +120,73 @@
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/management/stack_monitoring_metric_extention/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/management/stack_monitoring_metric_extention/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/management/stack_monitoring_metric_extention/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/management/stack_monitoring_metric_extention/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="Stack Monitoringでメトリック拡張を設定する">
   <meta property="og:description" content="チュートリアル概要 :
@@ -263,11 +263,11 @@
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -284,7 +284,7 @@
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -296,7 +296,7 @@
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -423,7 +423,7 @@
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/management/' href='/ocitutorials/management/'><span itemprop='name'>監視・管理チュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Stack Monitoringでメトリック拡張を設定する</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/management/' href='/ocitutorial-geekdocs/management/'><span itemprop='name'>監視・管理チュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Stack Monitoringでメトリック拡張を設定する</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -490,7 +490,7 @@
     >
         1.メトリック拡張の作成
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/management/stack_monitoring_metric_extention/#1メトリック拡張の作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.メトリック拡張の作成" aria-label="アンカー先: 1.メトリック拡張の作成" href="#1%e3%83%a1%e3%83%88%e3%83%aa%e3%83%83%e3%82%af%e6%8b%a1%e5%bc%b5%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/management/stack_monitoring_metric_extention/#1メトリック拡張の作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.メトリック拡張の作成" aria-label="アンカー先: 1.メトリック拡張の作成" href="#1%e3%83%a1%e3%83%88%e3%83%aa%e3%83%83%e3%82%af%e6%8b%a1%e5%bc%b5%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -565,7 +565,7 @@
     >
         2.メトリック拡張の有効化
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/management/stack_monitoring_metric_extention/#2メトリック拡張の有効化" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.メトリック拡張の有効化" aria-label="アンカー先: 2.メトリック拡張の有効化" href="#2%e3%83%a1%e3%83%88%e3%83%aa%e3%83%83%e3%82%af%e6%8b%a1%e5%bc%b5%e3%81%ae%e6%9c%89%e5%8a%b9%e5%8c%96">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/management/stack_monitoring_metric_extention/#2メトリック拡張の有効化" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.メトリック拡張の有効化" aria-label="アンカー先: 2.メトリック拡張の有効化" href="#2%e3%83%a1%e3%83%88%e3%83%aa%e3%83%83%e3%82%af%e6%8b%a1%e5%bc%b5%e3%81%ae%e6%9c%89%e5%8a%b9%e5%8c%96">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -593,7 +593,7 @@
     >
         3.作成されたメトリックの確認
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/management/stack_monitoring_metric_extention/#3作成されたメトリックの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3.作成されたメトリックの確認" aria-label="アンカー先: 3.作成されたメトリックの確認" href="#3%e4%bd%9c%e6%88%90%e3%81%95%e3%82%8c%e3%81%9f%e3%83%a1%e3%83%88%e3%83%aa%e3%83%83%e3%82%af%e3%81%ae%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/management/stack_monitoring_metric_extention/#3作成されたメトリックの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3.作成されたメトリックの確認" aria-label="アンカー先: 3.作成されたメトリックの確認" href="#3%e4%bd%9c%e6%88%90%e3%81%95%e3%82%8c%e3%81%9f%e3%83%a1%e3%83%88%e3%83%aa%e3%83%83%e3%82%af%e3%81%ae%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -609,7 +609,7 @@
     >
         4.アラームの作成
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/management/stack_monitoring_metric_extention/#4アラームの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.アラームの作成" aria-label="アンカー先: 4.アラームの作成" href="#4%e3%82%a2%e3%83%a9%e3%83%bc%e3%83%a0%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/management/stack_monitoring_metric_extention/#4アラームの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.アラームの作成" aria-label="アンカー先: 4.アラームの作成" href="#4%e3%82%a2%e3%83%a9%e3%83%bc%e3%83%a0%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -8862,7 +8862,7 @@
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/management/stack_monitoring_basedb/"
+      href="/ocitutorial-geekdocs/management/stack_monitoring_basedb/"
       title="Stack Monitoring を使用してBaseDBのメトリックを可視化する"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -8874,7 +8874,7 @@
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/management/logginganalytics_customparser/"
+      href="/ocitutorial-geekdocs/management/logginganalytics_customparser/"
       title="カスタム・パーサーを作成してOCI Logging Analyticsで未対応のログを分析する"
     >
       カスタム・パーサーを作成してOCI Logging Analyticsで未対応のログを分析する
@@ -8928,7 +8928,7 @@
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

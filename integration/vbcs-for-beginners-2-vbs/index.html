@@ -24,18 +24,18 @@ Oracle Cloudにはコンパートメントという考え方があります。
 
   <title>Oracle Integration - Visual Builder Studio でVBCSアプリケーションを管理してみよう | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -60,7 +60,7 @@ Visual Builder Studio用コンパートメントの作成 コンパートメン�
 Oracle Cloudにはコンパートメントという考え方があります。
 コンパートメントは、クラウド・リソース(インスタンス、仮想クラウド・ネットワーク、ブロック・ボリュームなど)を分類整理する論理的な区画で、この単位でアクセス制御を行うことができます。また、OCIコンソール上に表示されるリソースのフィルタとしても機能します。 {: .notice–info}" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/" />
 
 <meta property="article:section" content="Integration" />
     <meta
@@ -92,7 +92,7 @@ Oracle Cloudにはコンパートメントという考え方があります。
       "@type": "TechArticle",
       "articleSection": "Integration",
       "name": "Oracle Integration - Visual Builder Studio でVBCSアプリケーションを管理してみよう",
-      "url" : "https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/",
       "headline": "Oracle Integration - Visual Builder Studio でVBCSアプリケーションを管理してみよう",
       "description": "Visual Builder Studio(VBS)はプロジェクトのアジャイル開発、コラボレーション開発、ソースコード管理、CICDをサポートする機能を提供するPaaSサービスです。VBSはVisual Biulder Cloud Service(VBCS)アプリケーションのプロジェクト管理する機能があり、VBSで管理することによってビジュアル・アプリケーションのバージョン管理、issue管理、チーム開発をサポートすることができます。\nこのチュートリアルでは、VBSを使ってVBCSプロジェクトを作成し、簡単なアプリケーションを作成してマージリクエストの承認をトリガーに更新する手順を学習します。\nVisual Builder Studioについて\nVBSはOracle Cloud Infrastructure(OCI)契約者様は無償でご利用可能です。VBSにはデフォルトでGit Repository、Wikiのメタデータ用に20 GBのストレージが含まれています。尚、ビルドジョブの機能を利用する際は処理を実行するビルド用インスタンスに対して別途課金が発生します。詳細はこちらをご確認ください。 {: .notice–info}\n前提条件 Oracle Integration Cloud インスタンスの作成 が完了している、またはVBCSのインスタンスが作成出来ていること。\n(OICのVBCSを利用する場合) ServiceAdministrator ロールが付与されたユーザーが準備されていること\n(参考) Oracle Integration Roles and Privileges\nhttps:\/\/docs.oracle.com\/en\/cloud\/paas\/integration-cloud\/integration-cloud-auton\/oracle-integration-cloud-roles-and-privileges.html#GUID-44661068-C31A-4AB5-BC24-B4B90F951A34\n0.事前準備 まずはじめにVBSで利用するコンパートメントの作成をします。\nVisual Builder Studio用コンパートメントの作成 コンパートメントについて\nOracle Cloudにはコンパートメントという考え方があります。\nコンパートメントは、クラウド・リソース(インスタンス、仮想クラウド・ネットワーク、ブロック・ボリュームなど)を分類整理する論理的な区画で、この単位でアクセス制御を行うことができます。また、OCIコンソール上に表示されるリソースのフィルタとしても機能します。 {: .notice–info}",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -102,7 +102,7 @@ Oracle Cloudにはコンパートメントという考え方があります。
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/"
       },
       "copyrightHolder" : "OCIチュートリアル",
       "copyrightYear" : "0001",
@@ -112,10 +112,10 @@ Oracle Cloudにはコンパートメントという考え方があります。
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -125,73 +125,73 @@ Oracle Cloudにはコンパートメントという考え方があります。
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="Oracle Integration - Visual Builder Studio でVBCSアプリケーションを管理してみよう">
   <meta property="og:description" content="Visual Builder Studio(VBS)はプロジェクトのアジャイル開発、コラボレーション開発、ソースコード管理、CICDをサポートする機能を提供するPaaSサービスです。VBSはVisual Biulder Cloud Service(VBCS)アプリケーションのプロジェクト管理する機能があり、VBSで管理することによってビジュアル・アプリケーションのバージョン管理、issue管理、チーム開発をサポートすることができます。
@@ -271,11 +271,11 @@ Oracle Cloudにはコンパートメントという考え方があります。
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -292,7 +292,7 @@ Oracle Cloudにはコンパートメントという考え方があります。
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -304,7 +304,7 @@ Oracle Cloudにはコンパートメントという考え方があります。
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -487,7 +487,7 @@ Oracle Cloudにはコンパートメントという考え方があります。
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/integration/' href='/ocitutorials/integration/'><span itemprop='name'>Oracle Integration チュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Oracle Integration - Visual Builder Studio でVBCSアプリケーションを管理してみよう</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/integration/' href='/ocitutorial-geekdocs/integration/'><span itemprop='name'>Oracle Integration チュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Oracle Integration - Visual Builder Studio でVBCSアプリケーションを管理してみよう</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -526,7 +526,7 @@ VBSはOracle Cloud Infrastructure(OCI)契約者様は<b>無償でご利用可能
     >
         前提条件
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#前提条件" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 前提条件" aria-label="アンカー先: 前提条件" href="#%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#前提条件" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 前提条件" aria-label="アンカー先: 前提条件" href="#%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -551,7 +551,7 @@ VBSはOracle Cloud Infrastructure(OCI)契約者様は<b>無償でご利用可能
     >
         0.事前準備
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#0事前準備" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0.事前準備" aria-label="アンカー先: 0.事前準備" href="#0%e4%ba%8b%e5%89%8d%e6%ba%96%e5%82%99">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#0事前準備" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0.事前準備" aria-label="アンカー先: 0.事前準備" href="#0%e4%ba%8b%e5%89%8d%e6%ba%96%e5%82%99">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -561,7 +561,7 @@ VBSはOracle Cloud Infrastructure(OCI)契約者様は<b>無償でご利用可能
     >
         Visual Builder Studio用コンパートメントの作成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#visual-builder-studio用コンパートメントの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Visual Builder Studio用コンパートメントの作成" aria-label="アンカー先: Visual Builder Studio用コンパートメントの作成" href="#visual-builder-studio%e7%94%a8%e3%82%b3%e3%83%b3%e3%83%91%e3%83%bc%e3%83%88%e3%83%a1%e3%83%b3%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#visual-builder-studio用コンパートメントの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Visual Builder Studio用コンパートメントの作成" aria-label="アンカー先: Visual Builder Studio用コンパートメントの作成" href="#visual-builder-studio%e7%94%a8%e3%82%b3%e3%83%b3%e3%83%91%e3%83%bc%e3%83%88%e3%83%a1%e3%83%b3%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -618,7 +618,7 @@ Oracle Cloudにはコンパートメントという考え方があります。<b
     >
         1.ワークショップで利用するアカウント情報の収集
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#1ワークショップで利用するアカウント情報の収集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.ワークショップで利用するアカウント情報の収集" aria-label="アンカー先: 1.ワークショップで利用するアカウント情報の収集" href="#1%e3%83%af%e3%83%bc%e3%82%af%e3%82%b7%e3%83%a7%e3%83%83%e3%83%97%e3%81%a7%e5%88%a9%e7%94%a8%e3%81%99%e3%82%8b%e3%82%a2%e3%82%ab%e3%82%a6%e3%83%b3%e3%83%88%e6%83%85%e5%a0%b1%e3%81%ae%e5%8f%8e%e9%9b%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#1ワークショップで利用するアカウント情報の収集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.ワークショップで利用するアカウント情報の収集" aria-label="アンカー先: 1.ワークショップで利用するアカウント情報の収集" href="#1%e3%83%af%e3%83%bc%e3%82%af%e3%82%b7%e3%83%a7%e3%83%83%e3%83%97%e3%81%a7%e5%88%a9%e7%94%a8%e3%81%99%e3%82%8b%e3%82%a2%e3%82%ab%e3%82%a6%e3%83%b3%e3%83%88%e6%83%85%e5%a0%b1%e3%81%ae%e5%8f%8e%e9%9b%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -658,7 +658,7 @@ Oracle Cloudにはコンパートメントという考え方があります。<b
     >
         1.テナンシOCID
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#1テナンシocid" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.テナンシOCID" aria-label="アンカー先: 1.テナンシOCID" href="#1%e3%83%86%e3%83%8a%e3%83%b3%e3%82%b7ocid">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#1テナンシocid" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.テナンシOCID" aria-label="アンカー先: 1.テナンシOCID" href="#1%e3%83%86%e3%83%8a%e3%83%b3%e3%82%b7ocid">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -680,7 +680,7 @@ Oracle Cloudにはコンパートメントという考え方があります。<b
     >
         2.ユーザOCID
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#2ユーザocid" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.ユーザOCID" aria-label="アンカー先: 2.ユーザOCID" href="#2%e3%83%a6%e3%83%bc%e3%82%b6ocid">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#2ユーザocid" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.ユーザOCID" aria-label="アンカー先: 2.ユーザOCID" href="#2%e3%83%a6%e3%83%bc%e3%82%b6ocid">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -702,7 +702,7 @@ Oracle Cloudにはコンパートメントという考え方があります。<b
     >
         3.リージョン識別子
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#3リージョン識別子" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3.リージョン識別子" aria-label="アンカー先: 3.リージョン識別子" href="#3%e3%83%aa%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3%e8%ad%98%e5%88%a5%e5%ad%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#3リージョン識別子" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3.リージョン識別子" aria-label="アンカー先: 3.リージョン識別子" href="#3%e3%83%aa%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3%e8%ad%98%e5%88%a5%e5%ad%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -727,7 +727,7 @@ Oracle Cloudにはコンパートメントという考え方があります。<b
     >
         4.APIキーの取得
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#4apiキーの取得" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.APIキーの取得" aria-label="アンカー先: 4.APIキーの取得" href="#4api%e3%82%ad%e3%83%bc%e3%81%ae%e5%8f%96%e5%be%97">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#4apiキーの取得" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.APIキーの取得" aria-label="アンカー先: 4.APIキーの取得" href="#4api%e3%82%ad%e3%83%bc%e3%81%ae%e5%8f%96%e5%be%97">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -767,7 +767,7 @@ Oracle Cloudにはコンパートメントという考え方があります。<b
     >
         5.API Signingキーのフィンガープリント
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#5api-signingキーのフィンガープリント" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5.API Signingキーのフィンガープリント" aria-label="アンカー先: 5.API Signingキーのフィンガープリント" href="#5api-signing%e3%82%ad%e3%83%bc%e3%81%ae%e3%83%95%e3%82%a3%e3%83%b3%e3%82%ac%e3%83%bc%e3%83%97%e3%83%aa%e3%83%b3%e3%83%88">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#5api-signingキーのフィンガープリント" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5.API Signingキーのフィンガープリント" aria-label="アンカー先: 5.API Signingキーのフィンガープリント" href="#5api-signing%e3%82%ad%e3%83%bc%e3%81%ae%e3%83%95%e3%82%a3%e3%83%b3%e3%82%ac%e3%83%bc%e3%83%97%e3%83%aa%e3%83%b3%e3%83%88">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -788,7 +788,7 @@ APIキーに表示されているフィンガープリントを確認します�
     >
         6.コンパートメントOCID
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#6コンパートメントocid" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 6.コンパートメントOCID" aria-label="アンカー先: 6.コンパートメントOCID" href="#6%e3%82%b3%e3%83%b3%e3%83%91%e3%83%bc%e3%83%88%e3%83%a1%e3%83%b3%e3%83%88ocid">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#6コンパートメントocid" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 6.コンパートメントOCID" aria-label="アンカー先: 6.コンパートメントOCID" href="#6%e3%82%b3%e3%83%b3%e3%83%91%e3%83%bc%e3%83%88%e3%83%a1%e3%83%b3%e3%83%88ocid">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -810,7 +810,7 @@ APIキーに表示されているフィンガープリントを確認します�
     >
         7.オブジェクト・ストレージ・ネームスペース
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#7オブジェクトストレージネームスペース" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 7.オブジェクト・ストレージ・ネームスペース" aria-label="アンカー先: 7.オブジェクト・ストレージ・ネームスペース" href="#7%e3%82%aa%e3%83%96%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b8%e3%83%8d%e3%83%bc%e3%83%a0%e3%82%b9%e3%83%9a%e3%83%bc%e3%82%b9">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#7オブジェクトストレージネームスペース" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 7.オブジェクト・ストレージ・ネームスペース" aria-label="アンカー先: 7.オブジェクト・ストレージ・ネームスペース" href="#7%e3%82%aa%e3%83%96%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b8%e3%83%8d%e3%83%bc%e3%83%a0%e3%82%b9%e3%83%9a%e3%83%bc%e3%82%b9">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -830,7 +830,7 @@ APIキーに表示されているフィンガープリントを確認します�
     >
         2.Visual Builder Studioのセットアップ
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#2visual-builder-studioのセットアップ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.Visual Builder Studioのセットアップ" aria-label="アンカー先: 2.Visual Builder Studioのセットアップ" href="#2visual-builder-studio%e3%81%ae%e3%82%bb%e3%83%83%e3%83%88%e3%82%a2%e3%83%83%e3%83%97">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#2visual-builder-studioのセットアップ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.Visual Builder Studioのセットアップ" aria-label="アンカー先: 2.Visual Builder Studioのセットアップ" href="#2visual-builder-studio%e3%81%ae%e3%82%bb%e3%83%83%e3%83%88%e3%82%a2%e3%83%83%e3%83%97">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -840,7 +840,7 @@ APIキーに表示されているフィンガープリントを確認します�
     >
         Visual Builder Studioのプロビジョニング
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#visual-builder-studioのプロビジョニング" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Visual Builder Studioのプロビジョニング" aria-label="アンカー先: Visual Builder Studioのプロビジョニング" href="#visual-builder-studio%e3%81%ae%e3%83%97%e3%83%ad%e3%83%93%e3%82%b8%e3%83%a7%e3%83%8b%e3%83%b3%e3%82%b0">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#visual-builder-studioのプロビジョニング" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Visual Builder Studioのプロビジョニング" aria-label="アンカー先: Visual Builder Studioのプロビジョニング" href="#visual-builder-studio%e3%81%ae%e3%83%97%e3%83%ad%e3%83%93%e3%82%b8%e3%83%a7%e3%83%8b%e3%83%b3%e3%82%b0">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -936,7 +936,7 @@ ERR_RESPONSE_HEADERS_TRUNCATED
     >
         Visual Builder Studioのアカウント設定
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#visual-builder-studioのアカウント設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Visual Builder Studioのアカウント設定" aria-label="アンカー先: Visual Builder Studioのアカウント設定" href="#visual-builder-studio%e3%81%ae%e3%82%a2%e3%82%ab%e3%82%a6%e3%83%b3%e3%83%88%e8%a8%ad%e5%ae%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#visual-builder-studioのアカウント設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Visual Builder Studioのアカウント設定" aria-label="アンカー先: Visual Builder Studioのアカウント設定" href="#visual-builder-studio%e3%81%ae%e3%82%a2%e3%82%ab%e3%82%a6%e3%83%b3%e3%83%88%e8%a8%ad%e5%ae%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1044,7 +1044,7 @@ Validateが成功したら&quot;Save&quot;ボタンをクリックします。</
     >
         3.管理先のVBCS環境の設定変更
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#3管理先のvbcs環境の設定変更" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3.管理先のVBCS環境の設定変更" aria-label="アンカー先: 3.管理先のVBCS環境の設定変更" href="#3%e7%ae%a1%e7%90%86%e5%85%88%e3%81%aevbcs%e7%92%b0%e5%a2%83%e3%81%ae%e8%a8%ad%e5%ae%9a%e5%a4%89%e6%9b%b4">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#3管理先のvbcs環境の設定変更" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3.管理先のVBCS環境の設定変更" aria-label="アンカー先: 3.管理先のVBCS環境の設定変更" href="#3%e7%ae%a1%e7%90%86%e5%85%88%e3%81%aevbcs%e7%92%b0%e5%a2%83%e3%81%ae%e8%a8%ad%e5%ae%9a%e5%a4%89%e6%9b%b4">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1076,7 +1076,7 @@ Validateが成功したら&quot;Save&quot;ボタンをクリックします。</
     >
         4.プロジェクトの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#4プロジェクトの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.プロジェクトの作成" aria-label="アンカー先: 4.プロジェクトの作成" href="#4%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#4プロジェクトの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.プロジェクトの作成" aria-label="アンカー先: 4.プロジェクトの作成" href="#4%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1086,7 +1086,7 @@ Validateが成功したら&quot;Save&quot;ボタンをクリックします。</
     >
         プロジェクトの作成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#プロジェクトの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: プロジェクトの作成" aria-label="アンカー先: プロジェクトの作成" href="#%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#プロジェクトの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: プロジェクトの作成" aria-label="アンカー先: プロジェクトの作成" href="#%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1204,7 +1204,7 @@ Validateが成功したら&quot;Save&quot;ボタンをクリックします。</
     >
         ビルド・ジョブの設定
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#ビルドジョブの設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ビルド・ジョブの設定" aria-label="アンカー先: ビルド・ジョブの設定" href="#%e3%83%93%e3%83%ab%e3%83%89%e3%82%b8%e3%83%a7%e3%83%96%e3%81%ae%e8%a8%ad%e5%ae%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#ビルドジョブの設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ビルド・ジョブの設定" aria-label="アンカー先: ビルド・ジョブの設定" href="#%e3%83%93%e3%83%ab%e3%83%89%e3%82%b8%e3%83%a7%e3%83%96%e3%81%ae%e8%a8%ad%e5%ae%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1270,7 +1270,7 @@ UsernameとPasswordの初期値はダミーになっているので、正しい�
     >
         (オプション) プロジェクト・メンバーの追加
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#オプション-プロジェクトメンバーの追加" class="gdoc-page__anchor clip flex align-center" title="アンカー先: (オプション) プロジェクト・メンバーの追加" aria-label="アンカー先: (オプション) プロジェクト・メンバーの追加" href="#%e3%82%aa%e3%83%97%e3%82%b7%e3%83%a7%e3%83%b3-%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%83%a1%e3%83%b3%e3%83%90%e3%83%bc%e3%81%ae%e8%bf%bd%e5%8a%a0">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#オプション-プロジェクトメンバーの追加" class="gdoc-page__anchor clip flex align-center" title="アンカー先: (オプション) プロジェクト・メンバーの追加" aria-label="アンカー先: (オプション) プロジェクト・メンバーの追加" href="#%e3%82%aa%e3%83%97%e3%82%b7%e3%83%a7%e3%83%b3-%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%83%a1%e3%83%b3%e3%83%90%e3%83%bc%e3%81%ae%e8%bf%bd%e5%8a%a0">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1305,7 +1305,7 @@ UsernameとPasswordの初期値はダミーになっているので、正しい�
     >
         Git Repositoryの確認
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#git-repositoryの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Git Repositoryの確認" aria-label="アンカー先: Git Repositoryの確認" href="#git-repository%e3%81%ae%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#git-repositoryの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Git Repositoryの確認" aria-label="アンカー先: Git Repositoryの確認" href="#git-repository%e3%81%ae%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1324,7 +1324,7 @@ UsernameとPasswordの初期値はダミーになっているので、正しい�
     >
         ワークスペースの利用
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#ワークスペースの利用" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ワークスペースの利用" aria-label="アンカー先: ワークスペースの利用" href="#%e3%83%af%e3%83%bc%e3%82%af%e3%82%b9%e3%83%9a%e3%83%bc%e3%82%b9%e3%81%ae%e5%88%a9%e7%94%a8">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#ワークスペースの利用" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ワークスペースの利用" aria-label="アンカー先: ワークスペースの利用" href="#%e3%83%af%e3%83%bc%e3%82%af%e3%82%b9%e3%83%9a%e3%83%bc%e3%82%b9%e3%81%ae%e5%88%a9%e7%94%a8">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1360,7 +1360,7 @@ UsernameとPasswordの初期値はダミーになっているので、正しい�
     >
         5.ビジュアル・アプリケーションの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#5ビジュアルアプリケーションの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5.ビジュアル・アプリケーションの作成" aria-label="アンカー先: 5.ビジュアル・アプリケーションの作成" href="#5%e3%83%93%e3%82%b8%e3%83%a5%e3%82%a2%e3%83%ab%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#5ビジュアルアプリケーションの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5.ビジュアル・アプリケーションの作成" aria-label="アンカー先: 5.ビジュアル・アプリケーションの作成" href="#5%e3%83%93%e3%82%b8%e3%83%a5%e3%82%a2%e3%83%ab%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1375,7 +1375,7 @@ UsernameとPasswordの初期値はダミーになっているので、正しい�
     >
         ビジュアル・アプリケーションの作成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#ビジュアルアプリケーションの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ビジュアル・アプリケーションの作成" aria-label="アンカー先: ビジュアル・アプリケーションの作成" href="#%e3%83%93%e3%82%b8%e3%83%a5%e3%82%a2%e3%83%ab%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#ビジュアルアプリケーションの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ビジュアル・アプリケーションの作成" aria-label="アンカー先: ビジュアル・アプリケーションの作成" href="#%e3%83%93%e3%82%b8%e3%83%a5%e3%82%a2%e3%83%ab%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1396,7 +1396,7 @@ UsernameとPasswordの初期値はダミーになっているので、正しい�
     >
         ビジネス・オブジェクトの作成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#ビジネスオブジェクトの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ビジネス・オブジェクトの作成" aria-label="アンカー先: ビジネス・オブジェクトの作成" href="#%e3%83%93%e3%82%b8%e3%83%8d%e3%82%b9%e3%82%aa%e3%83%96%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#ビジネスオブジェクトの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ビジネス・オブジェクトの作成" aria-label="アンカー先: ビジネス・オブジェクトの作成" href="#%e3%83%93%e3%82%b8%e3%83%8d%e3%82%b9%e3%82%aa%e3%83%96%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1474,7 +1474,7 @@ Import DataのダイアログでダウンロードしたEmployee.csvをドラッ
     >
         ビジネス・オブジェクトを画面へ表示
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#ビジネスオブジェクトを画面へ表示" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ビジネス・オブジェクトを画面へ表示" aria-label="アンカー先: ビジネス・オブジェクトを画面へ表示" href="#%e3%83%93%e3%82%b8%e3%83%8d%e3%82%b9%e3%82%aa%e3%83%96%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%82%92%e7%94%bb%e9%9d%a2%e3%81%b8%e8%a1%a8%e7%a4%ba">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#ビジネスオブジェクトを画面へ表示" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ビジネス・オブジェクトを画面へ表示" aria-label="アンカー先: ビジネス・オブジェクトを画面へ表示" href="#%e3%83%93%e3%82%b8%e3%83%8d%e3%82%b9%e3%82%aa%e3%83%96%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%82%92%e7%94%bb%e9%9d%a2%e3%81%b8%e8%a1%a8%e7%a4%ba">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1521,7 +1521,7 @@ Import DataのダイアログでダウンロードしたEmployee.csvをドラッ
     >
         アプリケーションのプレビュー・共有・デプロイ
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#アプリケーションのプレビュー共有デプロイ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: アプリケーションのプレビュー・共有・デプロイ" aria-label="アンカー先: アプリケーションのプレビュー・共有・デプロイ" href="#%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e3%83%97%e3%83%ac%e3%83%93%e3%83%a5%e3%83%bc%e5%85%b1%e6%9c%89%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#アプリケーションのプレビュー共有デプロイ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: アプリケーションのプレビュー・共有・デプロイ" aria-label="アンカー先: アプリケーションのプレビュー・共有・デプロイ" href="#%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e3%83%97%e3%83%ac%e3%83%93%e3%83%a5%e3%83%bc%e5%85%b1%e6%9c%89%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1531,7 +1531,7 @@ Import DataのダイアログでダウンロードしたEmployee.csvをドラッ
     >
         アプリケーションの確認・共有
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#アプリケーションの確認共有" class="gdoc-page__anchor clip flex align-center" title="アンカー先: アプリケーションの確認・共有" aria-label="アンカー先: アプリケーションの確認・共有" href="#%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e7%a2%ba%e8%aa%8d%e5%85%b1%e6%9c%89">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#アプリケーションの確認共有" class="gdoc-page__anchor clip flex align-center" title="アンカー先: アプリケーションの確認・共有" aria-label="アンカー先: アプリケーションの確認・共有" href="#%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e7%a2%ba%e8%aa%8d%e5%85%b1%e6%9c%89">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1574,7 +1574,7 @@ Import DataのダイアログでダウンロードしたEmployee.csvをドラッ
     >
         アプリケーションのコミット・プッシュ
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#アプリケーションのコミットプッシュ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: アプリケーションのコミット・プッシュ" aria-label="アンカー先: アプリケーションのコミット・プッシュ" href="#%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e3%82%b3%e3%83%9f%e3%83%83%e3%83%88%e3%83%97%e3%83%83%e3%82%b7%e3%83%a5">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#アプリケーションのコミットプッシュ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: アプリケーションのコミット・プッシュ" aria-label="アンカー先: アプリケーションのコミット・プッシュ" href="#%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e3%82%b3%e3%83%9f%e3%83%83%e3%83%88%e3%83%97%e3%83%83%e3%82%b7%e3%83%a5">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1609,7 +1609,7 @@ PushとShareのタイミングは任意です。開発中にデザインを確�
     >
         mainブランチへのマージ
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#mainブランチへのマージ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: mainブランチへのマージ" aria-label="アンカー先: mainブランチへのマージ" href="#main%e3%83%96%e3%83%a9%e3%83%b3%e3%83%81%e3%81%b8%e3%81%ae%e3%83%9e%e3%83%bc%e3%82%b8">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#mainブランチへのマージ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: mainブランチへのマージ" aria-label="アンカー先: mainブランチへのマージ" href="#main%e3%83%96%e3%83%a9%e3%83%b3%e3%83%81%e3%81%b8%e3%81%ae%e3%83%9e%e3%83%bc%e3%82%b8">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1655,7 +1655,7 @@ VBCSコンソール画面の右上にある&quot;Publish&quot;をクリックし
     >
         ライブアプリケーションへのデータ登録
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#ライブアプリケーションへのデータ登録" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ライブアプリケーションへのデータ登録" aria-label="アンカー先: ライブアプリケーションへのデータ登録" href="#%e3%83%a9%e3%82%a4%e3%83%96%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%b8%e3%81%ae%e3%83%87%e3%83%bc%e3%82%bf%e7%99%bb%e9%8c%b2">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#ライブアプリケーションへのデータ登録" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ライブアプリケーションへのデータ登録" aria-label="アンカー先: ライブアプリケーションへのデータ登録" href="#%e3%83%a9%e3%82%a4%e3%83%96%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%b8%e3%81%ae%e3%83%87%e3%83%bc%e3%82%bf%e7%99%bb%e9%8c%b2">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1665,7 +1665,7 @@ VBCSコンソール画面の右上にある&quot;Publish&quot;をクリックし
     >
         データの取得
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#データの取得" class="gdoc-page__anchor clip flex align-center" title="アンカー先: データの取得" aria-label="アンカー先: データの取得" href="#%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e5%8f%96%e5%be%97">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#データの取得" class="gdoc-page__anchor clip flex align-center" title="アンカー先: データの取得" aria-label="アンカー先: データの取得" href="#%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e5%8f%96%e5%be%97">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1682,7 +1682,7 @@ VBCSの画面からビジネス・オブジェクトを開き、メニュー－D
     >
         データ保管用Repositoryの作成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#データ保管用repositoryの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: データ保管用Repositoryの作成" aria-label="アンカー先: データ保管用Repositoryの作成" href="#%e3%83%87%e3%83%bc%e3%82%bf%e4%bf%9d%e7%ae%a1%e7%94%a8repository%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#データ保管用repositoryの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: データ保管用Repositoryの作成" aria-label="アンカー先: データ保管用Repositoryの作成" href="#%e3%83%87%e3%83%bc%e3%82%bf%e4%bf%9d%e7%ae%a1%e7%94%a8repository%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1740,7 +1740,7 @@ VBCSの画面からビジネス・オブジェクトを開き、メニュー－D
     >
         データ登録用ジョブの作成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#データ登録用ジョブの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: データ登録用ジョブの作成" aria-label="アンカー先: データ登録用ジョブの作成" href="#%e3%83%87%e3%83%bc%e3%82%bf%e7%99%bb%e9%8c%b2%e7%94%a8%e3%82%b8%e3%83%a7%e3%83%96%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#データ登録用ジョブの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: データ登録用ジョブの作成" aria-label="アンカー先: データ登録用ジョブの作成" href="#%e3%83%87%e3%83%bc%e3%82%bf%e7%99%bb%e9%8c%b2%e7%94%a8%e3%82%b8%e3%83%a7%e3%83%96%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1844,7 +1844,7 @@ VBCSの画面からビジネス・オブジェクトを開き、メニュー－D
     >
         ジョブのパイプラインへの組み込み
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#ジョブのパイプラインへの組み込み" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ジョブのパイプラインへの組み込み" aria-label="アンカー先: ジョブのパイプラインへの組み込み" href="#%e3%82%b8%e3%83%a7%e3%83%96%e3%81%ae%e3%83%91%e3%82%a4%e3%83%97%e3%83%a9%e3%82%a4%e3%83%b3%e3%81%b8%e3%81%ae%e7%b5%84%e3%81%bf%e8%be%bc%e3%81%bf">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#ジョブのパイプラインへの組み込み" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ジョブのパイプラインへの組み込み" aria-label="アンカー先: ジョブのパイプラインへの組み込み" href="#%e3%82%b8%e3%83%a7%e3%83%96%e3%81%ae%e3%83%91%e3%82%a4%e3%83%97%e3%83%a9%e3%82%a4%e3%83%b3%e3%81%b8%e3%81%ae%e7%b5%84%e3%81%bf%e8%be%bc%e3%81%bf">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1881,7 +1881,7 @@ VBSで作成したビジュアル・アプリケーションのプロジェク�
     >
         コード変更の管理
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#コード変更の管理" class="gdoc-page__anchor clip flex align-center" title="アンカー先: コード変更の管理" aria-label="アンカー先: コード変更の管理" href="#%e3%82%b3%e3%83%bc%e3%83%89%e5%a4%89%e6%9b%b4%e3%81%ae%e7%ae%a1%e7%90%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#コード変更の管理" class="gdoc-page__anchor clip flex align-center" title="アンカー先: コード変更の管理" aria-label="アンカー先: コード変更の管理" href="#%e3%82%b3%e3%83%bc%e3%83%89%e5%a4%89%e6%9b%b4%e3%81%ae%e7%ae%a1%e7%90%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1892,7 +1892,7 @@ VBSで作成したビジュアル・アプリケーションのプロジェク�
     >
         画面の編集
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#画面の編集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 画面の編集" aria-label="アンカー先: 画面の編集" href="#%e7%94%bb%e9%9d%a2%e3%81%ae%e7%b7%a8%e9%9b%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#画面の編集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 画面の編集" aria-label="アンカー先: 画面の編集" href="#%e7%94%bb%e9%9d%a2%e3%81%ae%e7%b7%a8%e9%9b%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1980,7 +1980,7 @@ VBSはプロジェクト管理としてIssue機能を提供しています。VBC
     >
         マージ・リクエストの承認
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-2-vbs/#マージリクエストの承認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: マージ・リクエストの承認" aria-label="アンカー先: マージ・リクエストの承認" href="#%e3%83%9e%e3%83%bc%e3%82%b8%e3%83%aa%e3%82%af%e3%82%a8%e3%82%b9%e3%83%88%e3%81%ae%e6%89%bf%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/#マージリクエストの承認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: マージ・リクエストの承認" aria-label="アンカー先: マージ・リクエストの承認" href="#%e3%83%9e%e3%83%bc%e3%82%b8%e3%83%aa%e3%82%af%e3%82%a8%e3%82%b9%e3%83%88%e3%81%ae%e6%89%bf%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -10284,7 +10284,7 @@ VBSはプロジェクト管理としてIssue機能を提供しています。VBC
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/integration/process-for-beginners-1-wf/"
+      href="/ocitutorial-geekdocs/integration/process-for-beginners-1-wf/"
       title="Oracle Integration - Process で簡単なワークフローを作成してみよう"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -10296,7 +10296,7 @@ VBSはプロジェクト管理としてIssue機能を提供しています。VBC
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/integration/vbcs-for-beginners-1/"
+      href="/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/"
       title="Oracle Integration - Visual Builder で簡単なWebアプリケーションを作成してみよう"
     >
       Oracle Integration - Visual Builder で簡単なWebアプリケーションを作成してみよう
@@ -10350,7 +10350,7 @@ VBSはプロジェクト管理としてIssue機能を提供しています。VBC
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

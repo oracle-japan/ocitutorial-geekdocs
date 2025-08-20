@@ -22,18 +22,18 @@ OCI Network Firewallの説明につきましてはOCIチュートリアル「OCI
 
   <title>ハブアンドスポーク構成でOCI Network Firewallを構築する | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -56,7 +56,7 @@ OCI Network Firewallの説明につきましてはOCIチュートリアル「OCI
 ルーティング設定が少々複雑ですので、設定についてまず確認したい方は「（補足）ルーティングについて」を先にご覧ください。
 1. ネットワーク構築 1-1. VCNの作成 構成図に沿って、ハブのVCN１つとスポークのVCN２つの計３つのVCNを作成します。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/" />
 
 <meta property="article:section" content="Security" />
     <meta
@@ -86,7 +86,7 @@ OCI Network Firewallの説明につきましてはOCIチュートリアル「OCI
       "@type": "TechArticle",
       "articleSection": "Security",
       "name": "ハブアンドスポーク構成でOCI Network Firewallを構築する",
-      "url" : "https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/",
       "headline": "ハブアンドスポーク構成でOCI Network Firewallを構築する",
       "description": " 「OCI Network Firewall」はパロアルトネットワークスの次世代ファイアウォール技術を基に構築されたOCIクラウドネイティブのマネージド・ファイアウォールとなっており、URLフィルタリングやTSL\/SSL検査などの機能を提供します。\nOCI Network Firewallの説明につきましてはOCIチュートリアル「OCI Network Firewallを構築する」を参照ください。\n本チュートリアルではOCI Network Firewallがをハブアンドスポーク構成で構築します。\n所要時間 :\n約80分\n(このうちNetwork Firewallインスタンスの作成に40分ほどかかります) 前提条件 :\nユーザーに必要なIAMポリシーが割り当てられていること。ポリシーの詳細はドキュメントを参照ください。 注意 :\n※チュートリアル内の画面ショットについてはOracle Cloud Infrastructureの現在のコンソール画面と異なっている場合があります。 はじめに 以下が本チュートリアルで作成するNetwork Firewallの構成図と設定です。\nルーティング設定が少々複雑ですので、設定についてまず確認したい方は「（補足）ルーティングについて」を先にご覧ください。\n1. ネットワーク構築 1-1. VCNの作成 構成図に沿って、ハブのVCN１つとスポークのVCN２つの計３つのVCNを作成します。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -96,7 +96,7 @@ OCI Network Firewallの説明につきましてはOCIチュートリアル「OCI
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/"
       },
       "keywords" : [ "security" ],
       "copyrightHolder" : "OCIチュートリアル",
@@ -107,10 +107,10 @@ OCI Network Firewallの説明につきましてはOCIチュートリアル「OCI
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -120,73 +120,73 @@ OCI Network Firewallの説明につきましてはOCIチュートリアル「OCI
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="ハブアンドスポーク構成でOCI Network Firewallを構築する">
   <meta property="og:description" content="「OCI Network Firewall」はパロアルトネットワークスの次世代ファイアウォール技術を基に構築されたOCIクラウドネイティブのマネージド・ファイアウォールとなっており、URLフィルタリングやTSL/SSL検査などの機能を提供します。
@@ -263,11 +263,11 @@ OCI Network Firewallの説明につきましてはOCIチュートリアル「OCI
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -284,7 +284,7 @@ OCI Network Firewallの説明につきましてはOCIチュートリアル「OCI
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -296,7 +296,7 @@ OCI Network Firewallの説明につきましてはOCIチュートリアル「OCI
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -470,7 +470,7 @@ OCI Network Firewallの説明につきましてはOCIチュートリアル「OCI
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/security/' href='/ocitutorials/security/'><span itemprop='name'>OCI セキュリティ チュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>ハブアンドスポーク構成でOCI Network Firewallを構築する</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/security/' href='/ocitutorial-geekdocs/security/'><span itemprop='name'>OCI セキュリティ チュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>ハブアンドスポーク構成でOCI Network Firewallを構築する</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -537,7 +537,7 @@ OCI Network Firewallの説明につきましてはOCIチュートリアル「<a
     >
         はじめに
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/#はじめに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: はじめに" aria-label="アンカー先: はじめに" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/#はじめに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: はじめに" aria-label="アンカー先: はじめに" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -558,7 +558,7 @@ OCI Network Firewallの説明につきましてはOCIチュートリアル「<a
     >
         1. ネットワーク構築
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/#1-ネットワーク構築" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. ネットワーク構築" aria-label="アンカー先: 1. ネットワーク構築" href="#1-%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e6%a7%8b%e7%af%89">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/#1-ネットワーク構築" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. ネットワーク構築" aria-label="アンカー先: 1. ネットワーク構築" href="#1-%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e6%a7%8b%e7%af%89">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -567,7 +567,7 @@ OCI Network Firewallの説明につきましてはOCIチュートリアル「<a
     >
         1-1. VCNの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/#1-1-vcnの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-1. VCNの作成" aria-label="アンカー先: 1-1. VCNの作成" href="#1-1-vcn%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/#1-1-vcnの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-1. VCNの作成" aria-label="アンカー先: 1-1. VCNの作成" href="#1-1-vcn%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -616,7 +616,7 @@ OCI Network Firewallの説明につきましてはOCIチュートリアル「<a
     >
         1-2. DRGの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/#1-2-drgの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-2. DRGの作成" aria-label="アンカー先: 1-2. DRGの作成" href="#1-2-drg%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/#1-2-drgの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-2. DRGの作成" aria-label="アンカー先: 1-2. DRGの作成" href="#1-2-drg%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -644,7 +644,7 @@ DRGの詳細につきましては、ドキュメント「<a
     >
         1-3. DRGアタッチメントの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/#1-3-drgアタッチメントの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-3. DRGアタッチメントの作成" aria-label="アンカー先: 1-3. DRGアタッチメントの作成" href="#1-3-drg%e3%82%a2%e3%82%bf%e3%83%83%e3%83%81%e3%83%a1%e3%83%b3%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/#1-3-drgアタッチメントの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-3. DRGアタッチメントの作成" aria-label="アンカー先: 1-3. DRGアタッチメントの作成" href="#1-3-drg%e3%82%a2%e3%82%bf%e3%83%83%e3%83%81%e3%83%a1%e3%83%b3%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -684,7 +684,7 @@ DRG詳細画面の左リソース欄から[VCNアタッチメント]を選択し
     >
         1-4. ハブVCNの設定
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/#1-4-ハブvcnの設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-4. ハブVCNの設定" aria-label="アンカー先: 1-4. ハブVCNの設定" href="#1-4-%e3%83%8f%e3%83%96vcn%e3%81%ae%e8%a8%ad%e5%ae%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/#1-4-ハブvcnの設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-4. ハブVCNの設定" aria-label="アンカー先: 1-4. ハブVCNの設定" href="#1-4-%e3%83%8f%e3%83%96vcn%e3%81%ae%e8%a8%ad%e5%ae%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -695,7 +695,7 @@ DRG詳細画面の左リソース欄から[VCNアタッチメント]を選択し
     >
         ・サブネットの作成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/#サブネットの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ・サブネットの作成" aria-label="アンカー先: ・サブネットの作成" href="#%e3%82%b5%e3%83%96%e3%83%8d%e3%83%83%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/#サブネットの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ・サブネットの作成" aria-label="アンカー先: ・サブネットの作成" href="#%e3%82%b5%e3%83%96%e3%83%8d%e3%83%83%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -727,7 +727,7 @@ DRG詳細画面の左リソース欄から[VCNアタッチメント]を選択し
     >
         2. Network Firewallの作成
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/#2-network-firewallの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. Network Firewallの作成" aria-label="アンカー先: 2. Network Firewallの作成" href="#2-network-firewall%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/#2-network-firewallの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. Network Firewallの作成" aria-label="アンカー先: 2. Network Firewallの作成" href="#2-network-firewall%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -737,7 +737,7 @@ DRG詳細画面の左リソース欄から[VCNアタッチメント]を選択し
     >
         2-1. ネットワーク・ファイアウォール・ポリシーの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/#2-1-ネットワークファイアウォールポリシーの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-1. ネットワーク・ファイアウォール・ポリシーの作成" aria-label="アンカー先: 2-1. ネットワーク・ファイアウォール・ポリシーの作成" href="#2-1-%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e3%83%95%e3%82%a1%e3%82%a4%e3%82%a2%e3%82%a6%e3%82%a9%e3%83%bc%e3%83%ab%e3%83%9d%e3%83%aa%e3%82%b7%e3%83%bc%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/#2-1-ネットワークファイアウォールポリシーの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-1. ネットワーク・ファイアウォール・ポリシーの作成" aria-label="アンカー先: 2-1. ネットワーク・ファイアウォール・ポリシーの作成" href="#2-1-%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e3%83%95%e3%82%a1%e3%82%a4%e3%82%a2%e3%82%a6%e3%82%a9%e3%83%bc%e3%83%ab%e3%83%9d%e3%83%aa%e3%82%b7%e3%83%bc%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -755,7 +755,7 @@ DRG詳細画面の左リソース欄から[VCNアタッチメント]を選択し
     >
         2-2. Network Firewallインスタンスの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/#2-2-network-firewallインスタンスの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-2. Network Firewallインスタンスの作成" aria-label="アンカー先: 2-2. Network Firewallインスタンスの作成" href="#2-2-network-firewall%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/#2-2-network-firewallインスタンスの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-2. Network Firewallインスタンスの作成" aria-label="アンカー先: 2-2. Network Firewallインスタンスの作成" href="#2-2-network-firewall%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -785,7 +785,7 @@ OCIコンソール画面左上のメニューボタン → [アイデンティ�
     >
         3. VCNのルーティング設定
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/#3-vcnのルーティング設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. VCNのルーティング設定" aria-label="アンカー先: 3. VCNのルーティング設定" href="#3-vcn%e3%81%ae%e3%83%ab%e3%83%bc%e3%83%86%e3%82%a3%e3%83%b3%e3%82%b0%e8%a8%ad%e5%ae%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/#3-vcnのルーティング設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. VCNのルーティング設定" aria-label="アンカー先: 3. VCNのルーティング設定" href="#3-vcn%e3%81%ae%e3%83%ab%e3%83%bc%e3%83%86%e3%82%a3%e3%83%b3%e3%82%b0%e8%a8%ad%e5%ae%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -794,7 +794,7 @@ OCIコンソール画面左上のメニューボタン → [アイデンティ�
     >
         3-1. スポークVCNの設定
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/#3-1-スポークvcnの設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-1. スポークVCNの設定" aria-label="アンカー先: 3-1. スポークVCNの設定" href="#3-1-%e3%82%b9%e3%83%9d%e3%83%bc%e3%82%afvcn%e3%81%ae%e8%a8%ad%e5%ae%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/#3-1-スポークvcnの設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-1. スポークVCNの設定" aria-label="アンカー先: 3-1. スポークVCNの設定" href="#3-1-%e3%82%b9%e3%83%9d%e3%83%bc%e3%82%afvcn%e3%81%ae%e8%a8%ad%e5%ae%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -803,7 +803,7 @@ OCIコンソール画面左上のメニューボタン → [アイデンティ�
     >
         ・サブネットの作成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/#サブネットの作成-1" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ・サブネットの作成" aria-label="アンカー先: ・サブネットの作成" href="#%e3%82%b5%e3%83%96%e3%83%8d%e3%83%83%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90-1">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/#サブネットの作成-1" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ・サブネットの作成" aria-label="アンカー先: ・サブネットの作成" href="#%e3%82%b5%e3%83%96%e3%83%8d%e3%83%83%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90-1">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -848,7 +848,7 @@ OCIコンソール画面左上のメニューボタン → [アイデンティ�
     >
         ・ルート表の設定
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/#ルート表の設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ・ルート表の設定" aria-label="アンカー先: ・ルート表の設定" href="#%e3%83%ab%e3%83%bc%e3%83%88%e8%a1%a8%e3%81%ae%e8%a8%ad%e5%ae%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/#ルート表の設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ・ルート表の設定" aria-label="アンカー先: ・ルート表の設定" href="#%e3%83%ab%e3%83%bc%e3%83%88%e8%a1%a8%e3%81%ae%e8%a8%ad%e5%ae%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -881,7 +881,7 @@ OCIコンソール画面左上のメニューボタン → [アイデンティ�
     >
         3-2. ハブVCNの設定
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/#3-2-ハブvcnの設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-2. ハブVCNの設定" aria-label="アンカー先: 3-2. ハブVCNの設定" href="#3-2-%e3%83%8f%e3%83%96vcn%e3%81%ae%e8%a8%ad%e5%ae%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/#3-2-ハブvcnの設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-2. ハブVCNの設定" aria-label="アンカー先: 3-2. ハブVCNの設定" href="#3-2-%e3%83%8f%e3%83%96vcn%e3%81%ae%e8%a8%ad%e5%ae%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -890,7 +890,7 @@ OCIコンソール画面左上のメニューボタン → [アイデンティ�
     >
         ・ルート表の作成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/#ルート表の作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ・ルート表の作成" aria-label="アンカー先: ・ルート表の作成" href="#%e3%83%ab%e3%83%bc%e3%83%88%e8%a1%a8%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/#ルート表の作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ・ルート表の作成" aria-label="アンカー先: ・ルート表の作成" href="#%e3%83%ab%e3%83%bc%e3%83%88%e8%a1%a8%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -951,7 +951,7 @@ OCIコンソール画面左上のメニューボタン → [アイデンティ�
     >
         3-3. DRGルート表の設定
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/#3-3-drgルート表の設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-3. DRGルート表の設定" aria-label="アンカー先: 3-3. DRGルート表の設定" href="#3-3-drg%e3%83%ab%e3%83%bc%e3%83%88%e8%a1%a8%e3%81%ae%e8%a8%ad%e5%ae%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/#3-3-drgルート表の設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-3. DRGルート表の設定" aria-label="アンカー先: 3-3. DRGルート表の設定" href="#3-3-drg%e3%83%ab%e3%83%bc%e3%83%88%e8%a1%a8%e3%81%ae%e8%a8%ad%e5%ae%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1034,7 +1034,7 @@ DRGルート表の作成画面にて任意の名前を付けた後、「拡張�
     >
         3-4. VCNアタッチメントにDRGルート表をアタッチする
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/#3-4-vcnアタッチメントにdrgルート表をアタッチする" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-4. VCNアタッチメントにDRGルート表をアタッチする" aria-label="アンカー先: 3-4. VCNアタッチメントにDRGルート表をアタッチする" href="#3-4-vcn%e3%82%a2%e3%82%bf%e3%83%83%e3%83%81%e3%83%a1%e3%83%b3%e3%83%88%e3%81%abdrg%e3%83%ab%e3%83%bc%e3%83%88%e8%a1%a8%e3%82%92%e3%82%a2%e3%82%bf%e3%83%83%e3%83%81%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/#3-4-vcnアタッチメントにdrgルート表をアタッチする" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-4. VCNアタッチメントにDRGルート表をアタッチする" aria-label="アンカー先: 3-4. VCNアタッチメントにDRGルート表をアタッチする" href="#3-4-vcn%e3%82%a2%e3%82%bf%e3%83%83%e3%83%81%e3%83%a1%e3%83%b3%e3%83%88%e3%81%abdrg%e3%83%ab%e3%83%bc%e3%83%88%e8%a1%a8%e3%82%92%e3%82%a2%e3%82%bf%e3%83%83%e3%83%81%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1078,7 +1078,7 @@ DRGルート表の作成画面にて任意の名前を付けた後、「拡張�
     >
         4. 疎通を確認するための追加設定
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/#4-疎通を確認するための追加設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. 疎通を確認するための追加設定" aria-label="アンカー先: 4. 疎通を確認するための追加設定" href="#4-%e7%96%8e%e9%80%9a%e3%82%92%e7%a2%ba%e8%aa%8d%e3%81%99%e3%82%8b%e3%81%9f%e3%82%81%e3%81%ae%e8%bf%bd%e5%8a%a0%e8%a8%ad%e5%ae%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/#4-疎通を確認するための追加設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. 疎通を確認するための追加設定" aria-label="アンカー先: 4. 疎通を確認するための追加設定" href="#4-%e7%96%8e%e9%80%9a%e3%82%92%e7%a2%ba%e8%aa%8d%e3%81%99%e3%82%8b%e3%81%9f%e3%82%81%e3%81%ae%e8%bf%bd%e5%8a%a0%e8%a8%ad%e5%ae%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1092,7 +1092,7 @@ Default Security Listではなく、新規に作成したセキュリティリ�
     >
         4-1. ネットワーク・ファイアウォール・ポリシー設定
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/#4-1-ネットワークファイアウォールポリシー設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-1. ネットワーク・ファイアウォール・ポリシー設定" aria-label="アンカー先: 4-1. ネットワーク・ファイアウォール・ポリシー設定" href="#4-1-%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e3%83%95%e3%82%a1%e3%82%a4%e3%82%a2%e3%82%a6%e3%82%a9%e3%83%bc%e3%83%ab%e3%83%9d%e3%83%aa%e3%82%b7%e3%83%bc%e8%a8%ad%e5%ae%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/#4-1-ネットワークファイアウォールポリシー設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-1. ネットワーク・ファイアウォール・ポリシー設定" aria-label="アンカー先: 4-1. ネットワーク・ファイアウォール・ポリシー設定" href="#4-1-%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e3%83%95%e3%82%a1%e3%82%a4%e3%82%a2%e3%82%a6%e3%82%a9%e3%83%bc%e3%83%ab%e3%83%9d%e3%83%aa%e3%82%b7%e3%83%bc%e8%a8%ad%e5%ae%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1135,7 +1135,7 @@ Default Security Listではなく、新規に作成したセキュリティリ�
     >
         4-2. インターネット・ゲートウェイの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/#4-2-インターネットゲートウェイの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-2. インターネット・ゲートウェイの作成" aria-label="アンカー先: 4-2. インターネット・ゲートウェイの作成" href="#4-2-%e3%82%a4%e3%83%b3%e3%82%bf%e3%83%bc%e3%83%8d%e3%83%83%e3%83%88%e3%82%b2%e3%83%bc%e3%83%88%e3%82%a6%e3%82%a7%e3%82%a4%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/#4-2-インターネットゲートウェイの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-2. インターネット・ゲートウェイの作成" aria-label="アンカー先: 4-2. インターネット・ゲートウェイの作成" href="#4-2-%e3%82%a4%e3%83%b3%e3%82%bf%e3%83%bc%e3%83%8d%e3%83%83%e3%83%88%e3%82%b2%e3%83%bc%e3%83%88%e3%82%a6%e3%82%a7%e3%82%a4%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1157,7 +1157,7 @@ Default Security Listではなく、新規に作成したセキュリティリ�
     >
         4-3. ルート表の設定
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/#4-3-ルート表の設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-3. ルート表の設定" aria-label="アンカー先: 4-3. ルート表の設定" href="#4-3-%e3%83%ab%e3%83%bc%e3%83%88%e8%a1%a8%e3%81%ae%e8%a8%ad%e5%ae%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/#4-3-ルート表の設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-3. ルート表の設定" aria-label="アンカー先: 4-3. ルート表の設定" href="#4-3-%e3%83%ab%e3%83%bc%e3%83%88%e8%a1%a8%e3%81%ae%e8%a8%ad%e5%ae%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1178,7 +1178,7 @@ Default Security Listではなく、新規に作成したセキュリティリ�
     >
         4-4. インスタンス作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/#4-4-インスタンス作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-4. インスタンス作成" aria-label="アンカー先: 4-4. インスタンス作成" href="#4-4-%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/#4-4-インスタンス作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-4. インスタンス作成" aria-label="アンカー先: 4-4. インスタンス作成" href="#4-4-%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1212,7 +1212,7 @@ Default Security Listではなく、新規に作成したセキュリティリ�
     >
         5. 疎通を確認する
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/#5-疎通を確認する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5. 疎通を確認する" aria-label="アンカー先: 5. 疎通を確認する" href="#5-%e7%96%8e%e9%80%9a%e3%82%92%e7%a2%ba%e8%aa%8d%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/#5-疎通を確認する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5. 疎通を確認する" aria-label="アンカー先: 5. 疎通を確認する" href="#5-%e7%96%8e%e9%80%9a%e3%82%92%e7%a2%ba%e8%aa%8d%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1240,7 +1240,7 @@ Default Security Listではなく、新規に作成したセキュリティリ�
     >
         （補足）ルーティングについて
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/#補足ルーティングについて" class="gdoc-page__anchor clip flex align-center" title="アンカー先: （補足）ルーティングについて" aria-label="アンカー先: （補足）ルーティングについて" href="#%e8%a3%9c%e8%b6%b3%e3%83%ab%e3%83%bc%e3%83%86%e3%82%a3%e3%83%b3%e3%82%b0%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/#補足ルーティングについて" class="gdoc-page__anchor clip flex align-center" title="アンカー先: （補足）ルーティングについて" aria-label="アンカー先: （補足）ルーティングについて" href="#%e8%a3%9c%e8%b6%b3%e3%83%ab%e3%83%bc%e3%83%86%e3%82%a3%e3%83%b3%e3%82%b0%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1261,7 +1261,7 @@ DRGの詳細を知りたい方は、<a
     >
         ・VCN（サブネット）に適用するVCNルート表
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/#vcnサブネットに適用するvcnルート表" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ・VCN（サブネット）に適用するVCNルート表" aria-label="アンカー先: ・VCN（サブネット）に適用するVCNルート表" href="#vcn%e3%82%b5%e3%83%96%e3%83%8d%e3%83%83%e3%83%88%e3%81%ab%e9%81%a9%e7%94%a8%e3%81%99%e3%82%8bvcn%e3%83%ab%e3%83%bc%e3%83%88%e8%a1%a8">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/#vcnサブネットに適用するvcnルート表" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ・VCN（サブネット）に適用するVCNルート表" aria-label="アンカー先: ・VCN（サブネット）に適用するVCNルート表" href="#vcn%e3%82%b5%e3%83%96%e3%83%8d%e3%83%83%e3%83%88%e3%81%ab%e9%81%a9%e7%94%a8%e3%81%99%e3%82%8bvcn%e3%83%ab%e3%83%bc%e3%83%88%e8%a1%a8">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1283,7 +1283,7 @@ DRGの詳細を知りたい方は、<a
     >
         ・DRGルート表
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/#drgルート表" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ・DRGルート表" aria-label="アンカー先: ・DRGルート表" href="#drg%e3%83%ab%e3%83%bc%e3%83%88%e8%a1%a8">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/#drgルート表" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ・DRGルート表" aria-label="アンカー先: ・DRGルート表" href="#drg%e3%83%ab%e3%83%bc%e3%83%88%e8%a1%a8">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1294,7 +1294,7 @@ DRGの詳細を知りたい方は、<a
     >
         ・DRGアタッチメントに適用するVCNルート表
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/#drgアタッチメントに適用するvcnルート表" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ・DRGアタッチメントに適用するVCNルート表" aria-label="アンカー先: ・DRGアタッチメントに適用するVCNルート表" href="#drg%e3%82%a2%e3%82%bf%e3%83%83%e3%83%81%e3%83%a1%e3%83%b3%e3%83%88%e3%81%ab%e9%81%a9%e7%94%a8%e3%81%99%e3%82%8bvcn%e3%83%ab%e3%83%bc%e3%83%88%e8%a1%a8">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/#drgアタッチメントに適用するvcnルート表" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ・DRGアタッチメントに適用するVCNルート表" aria-label="アンカー先: ・DRGアタッチメントに適用するVCNルート表" href="#drg%e3%82%a2%e3%82%bf%e3%83%83%e3%83%81%e3%83%a1%e3%83%b3%e3%83%88%e3%81%ab%e9%81%a9%e7%94%a8%e3%81%99%e3%82%8bvcn%e3%83%ab%e3%83%bc%e3%83%88%e8%a1%a8">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1305,7 +1305,7 @@ DRGの詳細を知りたい方は、<a
     >
         通信経路まとめ
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-setup-hubspoke/#通信経路まとめ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 通信経路まとめ" aria-label="アンカー先: 通信経路まとめ" href="#%e9%80%9a%e4%bf%a1%e7%b5%8c%e8%b7%af%e3%81%be%e3%81%a8%e3%82%81">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/#通信経路まとめ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 通信経路まとめ" aria-label="アンカー先: 通信経路まとめ" href="#%e9%80%9a%e4%bf%a1%e7%b5%8c%e8%b7%af%e3%81%be%e3%81%a8%e3%82%81">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9559,7 +9559,7 @@ DRGの詳細を知りたい方は、<a
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/security/networkfirewall-setup-tunnelinspection/"
+      href="/ocitutorial-geekdocs/security/networkfirewall-setup-tunnelinspection/"
       title="トンネル検査構成でOCI Network Firewallを構築する"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9571,7 +9571,7 @@ DRGの詳細を知りたい方は、<a
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/security/waf-v1-setup/"
+      href="/ocitutorial-geekdocs/security/waf-v1-setup/"
       title="OCI Web Application Firewallのエッジポリシーを使ってWebサーバを保護する"
     >
       OCI Web Application Firewallのエッジポリシーを使ってWebサーバを保護する
@@ -9625,7 +9625,7 @@ DRGの詳細を知りたい方は、<a
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

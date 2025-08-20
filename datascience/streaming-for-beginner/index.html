@@ -14,18 +14,18 @@
 
   <title>OCI Streaming を動かしてみよう | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -40,7 +40,7 @@
   <meta property="og:description" content="このハンズオンでは、OCI Streaming を使う上での事前準備やいくつかのクライアントツールを用いて、実際に OCI Streaming に対して Pub/Sub を行うことで基本的な操作や特徴を学ぶことができます。
 前提条件 クラウド環境 Oracle Cloud のアカウント（Free Trial）を取得済みであること 最新版の OCI CLI がセットアップされていること Cloud Shell の使用を推奨します 手順 ポリシーの作成 OCI Streaming を使用するためのポリシーを作成します。OCI コンソール左上のハンバーガーメニューから、アイデンティティとセキュリティ &gt; ポリシーと選択します。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/datascience/streaming-for-beginner/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/streaming-for-beginner/" />
 
 <meta property="article:section" content="Datascience" />
     <meta
@@ -66,7 +66,7 @@
       "@type": "TechArticle",
       "articleSection": "Datascience",
       "name": "OCI Streaming を動かしてみよう",
-      "url" : "https://oracle-japan.github.io/ocitutorials/datascience/streaming-for-beginner/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/streaming-for-beginner/",
       "headline": "OCI Streaming を動かしてみよう",
       "description": "このハンズオンでは、OCI Streaming を使う上での事前準備やいくつかのクライアントツールを用いて、実際に OCI Streaming に対して Pub\/Sub を行うことで基本的な操作や特徴を学ぶことができます。\n前提条件 クラウド環境 Oracle Cloud のアカウント（Free Trial）を取得済みであること 最新版の OCI CLI がセットアップされていること Cloud Shell の使用を推奨します 手順 ポリシーの作成 OCI Streaming を使用するためのポリシーを作成します。OCI コンソール左上のハンバーガーメニューから、アイデンティティとセキュリティ \u003e ポリシーと選択します。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -76,7 +76,7 @@
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/datascience/streaming-for-beginner/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/streaming-for-beginner/"
       },
       "keywords" : [ "streaming" ],
       "copyrightHolder" : "OCIチュートリアル",
@@ -87,10 +87,10 @@
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -100,73 +100,73 @@
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/datascience/streaming-for-beginner/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/streaming-for-beginner/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/datascience/streaming-for-beginner/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/streaming-for-beginner/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="OCI Streaming を動かしてみよう">
   <meta property="og:description" content="このハンズオンでは、OCI Streaming を使う上での事前準備やいくつかのクライアントツールを用いて、実際に OCI Streaming に対して Pub/Sub を行うことで基本的な操作や特徴を学ぶことができます。
@@ -228,11 +228,11 @@
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -249,7 +249,7 @@
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -261,7 +261,7 @@
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -393,7 +393,7 @@
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/datascience/' href='/ocitutorials/datascience/'><span itemprop='name'>データサイエンス/ビッグデータチュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>OCI Streaming を動かしてみよう</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/datascience/' href='/ocitutorial-geekdocs/datascience/'><span itemprop='name'>データサイエンス/ビッグデータチュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>OCI Streaming を動かしてみよう</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -434,7 +434,7 @@
     >
         前提条件
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/datascience/streaming-for-beginner/#前提条件" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 前提条件" aria-label="アンカー先: 前提条件" href="#%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/streaming-for-beginner/#前提条件" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 前提条件" aria-label="アンカー先: 前提条件" href="#%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -455,7 +455,7 @@
     >
         手順
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/datascience/streaming-for-beginner/#手順" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 手順" aria-label="アンカー先: 手順" href="#%e6%89%8b%e9%a0%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/streaming-for-beginner/#手順" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 手順" aria-label="アンカー先: 手順" href="#%e6%89%8b%e9%a0%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -464,7 +464,7 @@
     >
         ポリシーの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/datascience/streaming-for-beginner/#ポリシーの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ポリシーの作成" aria-label="アンカー先: ポリシーの作成" href="#%e3%83%9d%e3%83%aa%e3%82%b7%e3%83%bc%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/streaming-for-beginner/#ポリシーの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ポリシーの作成" aria-label="アンカー先: ポリシーの作成" href="#%e3%83%9d%e3%83%aa%e3%82%b7%e3%83%bc%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -487,7 +487,7 @@
     >
         ストリーム・プールの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/datascience/streaming-for-beginner/#ストリームプールの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ストリーム・プールの作成" aria-label="アンカー先: ストリーム・プールの作成" href="#%e3%82%b9%e3%83%88%e3%83%aa%e3%83%bc%e3%83%a0%e3%83%97%e3%83%bc%e3%83%ab%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/streaming-for-beginner/#ストリームプールの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ストリーム・プールの作成" aria-label="アンカー先: ストリーム・プールの作成" href="#%e3%82%b9%e3%83%88%e3%83%aa%e3%83%bc%e3%83%a0%e3%83%97%e3%83%bc%e3%83%ab%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -536,7 +536,7 @@
     >
         ストリームの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/datascience/streaming-for-beginner/#ストリームの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ストリームの作成" aria-label="アンカー先: ストリームの作成" href="#%e3%82%b9%e3%83%88%e3%83%aa%e3%83%bc%e3%83%a0%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/streaming-for-beginner/#ストリームの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ストリームの作成" aria-label="アンカー先: ストリームの作成" href="#%e3%82%b9%e3%83%88%e3%83%aa%e3%83%bc%e3%83%a0%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -575,7 +575,7 @@
     >
         OCI Console を用いたテスト・メッセージの Pub/Sub
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/datascience/streaming-for-beginner/#oci-console-を用いたテストメッセージの-pubsub" class="gdoc-page__anchor clip flex align-center" title="アンカー先: OCI Console を用いたテスト・メッセージの Pub/Sub" aria-label="アンカー先: OCI Console を用いたテスト・メッセージの Pub/Sub" href="#oci-console-%e3%82%92%e7%94%a8%e3%81%84%e3%81%9f%e3%83%86%e3%82%b9%e3%83%88%e3%83%a1%e3%83%83%e3%82%bb%e3%83%bc%e3%82%b8%e3%81%ae-pubsub">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/streaming-for-beginner/#oci-console-を用いたテストメッセージの-pubsub" class="gdoc-page__anchor clip flex align-center" title="アンカー先: OCI Console を用いたテスト・メッセージの Pub/Sub" aria-label="アンカー先: OCI Console を用いたテスト・メッセージの Pub/Sub" href="#oci-console-%e3%82%92%e7%94%a8%e3%81%84%e3%81%9f%e3%83%86%e3%82%b9%e3%83%88%e3%83%a1%e3%83%83%e3%82%bb%e3%83%bc%e3%82%b8%e3%81%ae-pubsub">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -608,7 +608,7 @@
     >
         OCI CLI を用いたメッセージの Pub/Sub
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/datascience/streaming-for-beginner/#oci-cli-を用いたメッセージの-pubsub" class="gdoc-page__anchor clip flex align-center" title="アンカー先: OCI CLI を用いたメッセージの Pub/Sub" aria-label="アンカー先: OCI CLI を用いたメッセージの Pub/Sub" href="#oci-cli-%e3%82%92%e7%94%a8%e3%81%84%e3%81%9f%e3%83%a1%e3%83%83%e3%82%bb%e3%83%bc%e3%82%b8%e3%81%ae-pubsub">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/streaming-for-beginner/#oci-cli-を用いたメッセージの-pubsub" class="gdoc-page__anchor clip flex align-center" title="アンカー先: OCI CLI を用いたメッセージの Pub/Sub" aria-label="アンカー先: OCI CLI を用いたメッセージの Pub/Sub" href="#oci-cli-%e3%82%92%e7%94%a8%e3%81%84%e3%81%9f%e3%83%a1%e3%83%83%e3%82%bb%e3%83%bc%e3%82%b8%e3%81%ae-pubsub">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -714,7 +714,7 @@
     >
         オプション: Kafka Console Client を用いたメッセージの Pub/Sub
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/datascience/streaming-for-beginner/#オプション-kafka-console-client-を用いたメッセージの-pubsub" class="gdoc-page__anchor clip flex align-center" title="アンカー先: オプション: Kafka Console Client を用いたメッセージの Pub/Sub" aria-label="アンカー先: オプション: Kafka Console Client を用いたメッセージの Pub/Sub" href="#%e3%82%aa%e3%83%97%e3%82%b7%e3%83%a7%e3%83%b3-kafka-console-client-%e3%82%92%e7%94%a8%e3%81%84%e3%81%9f%e3%83%a1%e3%83%83%e3%82%bb%e3%83%bc%e3%82%b8%e3%81%ae-pubsub">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/streaming-for-beginner/#オプション-kafka-console-client-を用いたメッセージの-pubsub" class="gdoc-page__anchor clip flex align-center" title="アンカー先: オプション: Kafka Console Client を用いたメッセージの Pub/Sub" aria-label="アンカー先: オプション: Kafka Console Client を用いたメッセージの Pub/Sub" href="#%e3%82%aa%e3%83%97%e3%82%b7%e3%83%a7%e3%83%b3-kafka-console-client-%e3%82%92%e7%94%a8%e3%81%84%e3%81%9f%e3%83%a1%e3%83%83%e3%82%bb%e3%83%bc%e3%82%b8%e3%81%ae-pubsub">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9032,7 +9032,7 @@
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/datascience/dataflow-for-beginner/"
+      href="/ocitutorial-geekdocs/datascience/dataflow-for-beginner/"
       title="OCI Data Flow ハンズオン(初級編)"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9044,7 +9044,7 @@
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/datascience/ggsa-tutorial-for-beginner/"
+      href="/ocitutorial-geekdocs/datascience/ggsa-tutorial-for-beginner/"
       title="Oracle GoldenGate Stream Analytics ハンズオン"
     >
       Oracle GoldenGate Stream Analytics ハンズオン
@@ -9098,7 +9098,7 @@
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

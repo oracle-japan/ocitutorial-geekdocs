@@ -18,18 +18,18 @@ Oracle Container Engine for Kubernetes（以下OKE）は、Oracleのマネージ
 
   <title>Oracle Container Engine for Kubernetes(OKE)をプロビジョニングしよう | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -48,7 +48,7 @@ Oracle Container Engine for Kubernetes（以下OKE）は、Oracleのマネージ
 クラスタ一覧画面で、クラスタの作成をクリックします。
 次のダイアログでクイック作成を選択し、ワークフローの起動をクリックします。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/cloud-native/oke-for-commons/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/oke-for-commons/" />
 
 <meta property="article:section" content="Cloud Native" />
     <meta
@@ -74,7 +74,7 @@ Oracle Container Engine for Kubernetes（以下OKE）は、Oracleのマネージ
       "@type": "TechArticle",
       "articleSection": "Cloud Native",
       "name": "Oracle Container Engine for Kubernetes(OKE)をプロビジョニングしよう",
-      "url" : "https://oracle-japan.github.io/ocitutorials/cloud-native/oke-for-commons/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/oke-for-commons/",
       "headline": "Oracle Container Engine for Kubernetes(OKE)をプロビジョニングしよう",
       "description": "マネージドKubernetesサービスであるOralce Container Engine for Kubernetes(OKE)を中心とした、コンテナ・ネイティブなサービス群です。\nOracle Container Engine for Kubernetes（以下OKE）は、OracleのマネージドKubernetesサービスです。この共通手順では、OCIやOKEを操作するためCLI実行環境の構築（Resource Managerを使用）と、OKEを使ってKubernetesクラスターをプロビジョニングするまでの手順を記します。\n前提条件 クラウド環境 Oracle Cloudのアカウントを取得済みであること ハンズオン環境のイメージ 1.OKEクラスターのプロビジョニング ここでは、OKEクラスターのプロビジョニングを行います。ここでの手順を実施することにより、OKEのコントロールプレーンとKubernetesクラスターの構築が同時に行われます。\nはじめに、OCIコンソール画面左上のハンバーガーメニューを展開し、開発者サービス⇒Kubernetes Clusters (OKE)を選択します。\nクラスタ一覧画面で、クラスタの作成をクリックします。\n次のダイアログでクイック作成を選択し、ワークフローの起動をクリックします。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -84,7 +84,7 @@ Oracle Container Engine for Kubernetes（以下OKE）は、Oracleのマネージ
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/cloud-native/oke-for-commons/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/oke-for-commons/"
       },
       "copyrightHolder" : "OCIチュートリアル",
       "copyrightYear" : "0001",
@@ -94,10 +94,10 @@ Oracle Container Engine for Kubernetes（以下OKE）は、Oracleのマネージ
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -107,73 +107,73 @@ Oracle Container Engine for Kubernetes（以下OKE）は、Oracleのマネージ
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/cloud-native/oke-for-commons/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/oke-for-commons/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/cloud-native/oke-for-commons/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/oke-for-commons/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="Oracle Container Engine for Kubernetes(OKE)をプロビジョニングしよう">
   <meta property="og:description" content="マネージドKubernetesサービスであるOralce Container Engine for Kubernetes(OKE)を中心とした、コンテナ・ネイティブなサービス群です。
@@ -241,11 +241,11 @@ Oracle Container Engine for Kubernetes（以下OKE）は、Oracleのマネージ
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -262,7 +262,7 @@ Oracle Container Engine for Kubernetes（以下OKE）は、Oracleのマネージ
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -274,7 +274,7 @@ Oracle Container Engine for Kubernetes（以下OKE）は、Oracleのマネージ
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -420,7 +420,7 @@ Oracle Container Engine for Kubernetes（以下OKE）は、Oracleのマネージ
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/cloud-native/' href='/ocitutorials/cloud-native/'><span itemprop='name'>Cloud Nativeチュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Oracle Container Engine for Kubernetes(OKE)をプロビジョニングしよう</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/cloud-native/' href='/ocitutorial-geekdocs/cloud-native/'><span itemprop='name'>Cloud Nativeチュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Oracle Container Engine for Kubernetes(OKE)をプロビジョニングしよう</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -453,7 +453,7 @@ Oracle Container Engine for Kubernetes（以下OKE）は、Oracleのマネージ
     >
         前提条件
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/oke-for-commons/#前提条件" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 前提条件" aria-label="アンカー先: 前提条件" href="#%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/oke-for-commons/#前提条件" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 前提条件" aria-label="アンカー先: 前提条件" href="#%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -469,7 +469,7 @@ Oracle Container Engine for Kubernetes（以下OKE）は、Oracleのマネージ
     >
         ハンズオン環境のイメージ
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/oke-for-commons/#ハンズオン環境のイメージ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ハンズオン環境のイメージ" aria-label="アンカー先: ハンズオン環境のイメージ" href="#%e3%83%8f%e3%83%b3%e3%82%ba%e3%82%aa%e3%83%b3%e7%92%b0%e5%a2%83%e3%81%ae%e3%82%a4%e3%83%a1%e3%83%bc%e3%82%b8">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/oke-for-commons/#ハンズオン環境のイメージ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ハンズオン環境のイメージ" aria-label="アンカー先: ハンズオン環境のイメージ" href="#%e3%83%8f%e3%83%b3%e3%82%ba%e3%82%aa%e3%83%b3%e7%92%b0%e5%a2%83%e3%81%ae%e3%82%a4%e3%83%a1%e3%83%bc%e3%82%b8">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -483,7 +483,7 @@ Oracle Container Engine for Kubernetes（以下OKE）は、Oracleのマネージ
     >
         1.OKEクラスターのプロビジョニング
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/oke-for-commons/#1okeクラスターのプロビジョニング" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.OKEクラスターのプロビジョニング" aria-label="アンカー先: 1.OKEクラスターのプロビジョニング" href="#1oke%e3%82%af%e3%83%a9%e3%82%b9%e3%82%bf%e3%83%bc%e3%81%ae%e3%83%97%e3%83%ad%e3%83%93%e3%82%b8%e3%83%a7%e3%83%8b%e3%83%b3%e3%82%b0">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/oke-for-commons/#1okeクラスターのプロビジョニング" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.OKEクラスターのプロビジョニング" aria-label="アンカー先: 1.OKEクラスターのプロビジョニング" href="#1oke%e3%82%af%e3%83%a9%e3%82%b9%e3%82%bf%e3%83%bc%e3%81%ae%e3%83%97%e3%83%ad%e3%83%93%e3%82%b8%e3%83%a7%e3%83%8b%e3%83%b3%e3%82%b0">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -576,7 +576,7 @@ OKEでは、VM、ベアメタル、GPU、HPCなどの様々なシェイプをご
     >
         2.CLI実行環境(Cloud Shell)の準備
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/oke-for-commons/#2cli実行環境cloud-shellの準備" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.CLI実行環境(Cloud Shell)の準備" aria-label="アンカー先: 2.CLI実行環境(Cloud Shell)の準備" href="#2cli%e5%ae%9f%e8%a1%8c%e7%92%b0%e5%a2%83cloud-shell%e3%81%ae%e6%ba%96%e5%82%99">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/oke-for-commons/#2cli実行環境cloud-shellの準備" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.CLI実行環境(Cloud Shell)の準備" aria-label="アンカー先: 2.CLI実行環境(Cloud Shell)の準備" href="#2cli%e5%ae%9f%e8%a1%8c%e7%92%b0%e5%a2%83cloud-shell%e3%81%ae%e6%ba%96%e5%82%99">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -680,7 +680,7 @@ Cloud Shellは、必要なCLIはデフォルトでインストール済みです
     >
         3.kubectlのセットアップ
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/oke-for-commons/#3kubectlのセットアップ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3.kubectlのセットアップ" aria-label="アンカー先: 3.kubectlのセットアップ" href="#3kubectl%e3%81%ae%e3%82%bb%e3%83%83%e3%83%88%e3%82%a2%e3%83%83%e3%83%97">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/oke-for-commons/#3kubectlのセットアップ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3.kubectlのセットアップ" aria-label="アンカー先: 3.kubectlのセットアップ" href="#3kubectl%e3%81%ae%e3%82%bb%e3%83%83%e3%83%88%e3%82%a2%e3%83%83%e3%83%97">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -777,7 +777,7 @@ kubectlコマンドはデフォルトで<code>$HOME/.kube/config</code>という
     >
         4.【オプション】CLI実行環境(VMインスタンス)の作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/oke-for-commons/#4オプションcli実行環境vmインスタンスの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.【オプション】CLI実行環境(VMインスタンス)の作成" aria-label="アンカー先: 4.【オプション】CLI実行環境(VMインスタンス)の作成" href="#4%e3%82%aa%e3%83%97%e3%82%b7%e3%83%a7%e3%83%b3cli%e5%ae%9f%e8%a1%8c%e7%92%b0%e5%a2%83vm%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/oke-for-commons/#4オプションcli実行環境vmインスタンスの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.【オプション】CLI実行環境(VMインスタンス)の作成" aria-label="アンカー先: 4.【オプション】CLI実行環境(VMインスタンス)の作成" href="#4%e3%82%aa%e3%83%97%e3%82%b7%e3%83%a7%e3%83%b3cli%e5%ae%9f%e8%a1%8c%e7%92%b0%e5%a2%83vm%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -788,7 +788,7 @@ OKEを操作するためのクライアントを、Cloud ShellではなくVMイ�
     >
         4-1. OCIコンソールにアクセスする
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/oke-for-commons/#4-1-ociコンソールにアクセスする" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-1. OCIコンソールにアクセスする" aria-label="アンカー先: 4-1. OCIコンソールにアクセスする" href="#4-1-oci%e3%82%b3%e3%83%b3%e3%82%bd%e3%83%bc%e3%83%ab%e3%81%ab%e3%82%a2%e3%82%af%e3%82%bb%e3%82%b9%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/oke-for-commons/#4-1-ociコンソールにアクセスする" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-1. OCIコンソールにアクセスする" aria-label="アンカー先: 4-1. OCIコンソールにアクセスする" href="#4-1-oci%e3%82%b3%e3%83%b3%e3%82%bd%e3%83%bc%e3%83%ab%e3%81%ab%e3%82%a2%e3%82%af%e3%82%bb%e3%82%b9%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -812,7 +812,7 @@ OKEを操作するためのクライアントを、Cloud ShellではなくVMイ�
     >
         4-2. Resource Managerを利用して環境を構築する
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/oke-for-commons/#4-2-resource-managerを利用して環境を構築する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-2. Resource Managerを利用して環境を構築する" aria-label="アンカー先: 4-2. Resource Managerを利用して環境を構築する" href="#4-2-resource-manager%e3%82%92%e5%88%a9%e7%94%a8%e3%81%97%e3%81%a6%e7%92%b0%e5%a2%83%e3%82%92%e6%a7%8b%e7%af%89%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/oke-for-commons/#4-2-resource-managerを利用して環境を構築する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-2. Resource Managerを利用して環境を構築する" aria-label="アンカー先: 4-2. Resource Managerを利用して環境を構築する" href="#4-2-resource-manager%e3%82%92%e5%88%a9%e7%94%a8%e3%81%97%e3%81%a6%e7%92%b0%e5%a2%83%e3%82%92%e6%a7%8b%e7%af%89%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -834,7 +834,7 @@ Resource ManagerではTerraformの形式で構成情報を記述します。
     >
         4-2-1. スタックの作成
     </h4>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/oke-for-commons/#4-2-1-スタックの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-2-1. スタックの作成" aria-label="アンカー先: 4-2-1. スタックの作成" href="#4-2-1-%e3%82%b9%e3%82%bf%e3%83%83%e3%82%af%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/oke-for-commons/#4-2-1-スタックの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-2-1. スタックの作成" aria-label="アンカー先: 4-2-1. スタックの作成" href="#4-2-1-%e3%82%b9%e3%82%bf%e3%83%83%e3%82%af%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -904,7 +904,7 @@ Oracle Cloud Infrastructureは、北米、東京を含む多数のデータセ�
     >
         4-2-2. ジョブの実行
     </h4>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/oke-for-commons/#4-2-2-ジョブの実行" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-2-2. ジョブの実行" aria-label="アンカー先: 4-2-2. ジョブの実行" href="#4-2-2-%e3%82%b8%e3%83%a7%e3%83%96%e3%81%ae%e5%ae%9f%e8%a1%8c">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/oke-for-commons/#4-2-2-ジョブの実行" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-2-2. ジョブの実行" aria-label="アンカー先: 4-2-2. ジョブの実行" href="#4-2-2-%e3%82%b8%e3%83%a7%e3%83%96%e3%81%ae%e5%ae%9f%e8%a1%8c">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -939,7 +939,7 @@ Oracle Cloud Infrastructureは、北米、東京を含む多数のデータセ�
     >
         4-3. CLI実行環境にログインする
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/oke-for-commons/#4-3-cli実行環境にログインする" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-3. CLI実行環境にログインする" aria-label="アンカー先: 4-3. CLI実行環境にログインする" href="#4-3-cli%e5%ae%9f%e8%a1%8c%e7%92%b0%e5%a2%83%e3%81%ab%e3%83%ad%e3%82%b0%e3%82%a4%e3%83%b3%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/oke-for-commons/#4-3-cli実行環境にログインする" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-3. CLI実行環境にログインする" aria-label="アンカー先: 4-3. CLI実行環境にログインする" href="#4-3-cli%e5%ae%9f%e8%a1%8c%e7%92%b0%e5%a2%83%e3%81%ab%e3%83%ad%e3%82%b0%e3%82%a4%e3%83%b3%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1017,7 +1017,7 @@ Oracle Cloud Infrastructureは、北米、東京を含む多数のデータセ�
     >
         4-4. OCI CLIのセットアップ
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/oke-for-commons/#4-4-oci-cliのセットアップ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-4. OCI CLIのセットアップ" aria-label="アンカー先: 4-4. OCI CLIのセットアップ" href="#4-4-oci-cli%e3%81%ae%e3%82%bb%e3%83%83%e3%83%88%e3%82%a2%e3%83%83%e3%83%97">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/oke-for-commons/#4-4-oci-cliのセットアップ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-4. OCI CLIのセットアップ" aria-label="アンカー先: 4-4. OCI CLIのセットアップ" href="#4-4-oci-cli%e3%81%ae%e3%82%bb%e3%83%83%e3%83%88%e3%82%a2%e3%83%83%e3%83%97">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1027,7 +1027,7 @@ Oracle Cloud Infrastructureは、北米、東京を含む多数のデータセ�
     >
         4-4-1. テナンシのOCIDの確認
     </h4>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/oke-for-commons/#4-4-1-テナンシのocidの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-4-1. テナンシのOCIDの確認" aria-label="アンカー先: 4-4-1. テナンシのOCIDの確認" href="#4-4-1-%e3%83%86%e3%83%8a%e3%83%b3%e3%82%b7%e3%81%aeocid%e3%81%ae%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/oke-for-commons/#4-4-1-テナンシのocidの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-4-1. テナンシのOCIDの確認" aria-label="アンカー先: 4-4-1. テナンシのOCIDの確認" href="#4-4-1-%e3%83%86%e3%83%8a%e3%83%b3%e3%82%b7%e3%81%aeocid%e3%81%ae%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1050,7 +1050,7 @@ Oracle Cloud Infrastructureは、北米、東京を含む多数のデータセ�
     >
         4-4-2. ユーザーのOCIDの確認
     </h4>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/oke-for-commons/#4-4-2-ユーザーのocidの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-4-2. ユーザーのOCIDの確認" aria-label="アンカー先: 4-4-2. ユーザーのOCIDの確認" href="#4-4-2-%e3%83%a6%e3%83%bc%e3%82%b6%e3%83%bc%e3%81%aeocid%e3%81%ae%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/oke-for-commons/#4-4-2-ユーザーのocidの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-4-2. ユーザーのOCIDの確認" aria-label="アンカー先: 4-4-2. ユーザーのOCIDの確認" href="#4-4-2-%e3%83%a6%e3%83%bc%e3%82%b6%e3%83%bc%e3%81%aeocid%e3%81%ae%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1073,7 +1073,7 @@ OCIコンソール画面右上の人型のアイコンをクリックし、展�
     >
         4-4-3. OCI CLIのセットアップ
     </h4>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/oke-for-commons/#4-4-3-oci-cliのセットアップ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-4-3. OCI CLIのセットアップ" aria-label="アンカー先: 4-4-3. OCI CLIのセットアップ" href="#4-4-3-oci-cli%e3%81%ae%e3%82%bb%e3%83%83%e3%83%88%e3%82%a2%e3%83%83%e3%83%97">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/oke-for-commons/#4-4-3-oci-cliのセットアップ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-4-3. OCI CLIのセットアップ" aria-label="アンカー先: 4-4-3. OCI CLIのセットアップ" href="#4-4-3-oci-cli%e3%81%ae%e3%82%bb%e3%83%83%e3%83%88%e3%82%a2%e3%83%83%e3%83%97">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9407,7 +9407,7 @@ OCIコンソール画面右上の人型のアイコンをクリックし、展�
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/cloud-native/oke-for-advances/"
+      href="/ocitutorial-geekdocs/cloud-native/oke-for-advances/"
       title="Oracle Container Engine for Kubernetes(OKE)でサンプルマイクロサービスアプリケーションをデプロイしてオブザバビリティツールを利用してみよう"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9419,7 +9419,7 @@ OCIコンソール画面右上の人型のアイコンをクリックし、展�
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/cloud-native/functions-for-beginners/"
+      href="/ocitutorial-geekdocs/cloud-native/functions-for-beginners/"
       title="Oracle Functions ハンズオン"
     >
       Oracle Functions ハンズオン
@@ -9473,7 +9473,7 @@ OCIコンソール画面右上の人型のアイコンをクリックし、展�
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

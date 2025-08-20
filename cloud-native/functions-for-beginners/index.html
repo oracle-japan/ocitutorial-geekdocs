@@ -26,18 +26,18 @@ Oracle Cloudでは、エンドポイントやレジストリにアクセスす�
 
   <title>Oracle Functions ハンズオン | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -64,7 +64,7 @@ Oracle Cloudでは、エンドポイントやレジストリにアクセスす�
 本ハンズオンでは、OCI CLIのセットアップおよびOCIRのログイン時に使用します。
 リージョン リージョンコード ap-tokyo-1 nrt ap-osaka-1 kix ap-melbourne-1 mel us-ashburn-1 iad us-phoenix-1 phx ap-mumbai-1 bom ap-seoul-1 icn ap-sydney-1 syd ca-toronto-1 yyz ca-montreal-1 yul eu-frankfurt-1 fra eu-zurich-1 zrh sa-saopaulo-1 gru sa-vinhedo-1 vcp uk-london-1 lhr sa-santiago-1 scl ap-hyderabad-1 hyd eu-amsterdam-1 ams me-jeddah-1 jed ap-chuncheon-1 yny me-dubai-1 dxb uk-cardiff-1 cwl us-sanjose-1 sjc {% endcapture %}" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/cloud-native/functions-for-beginners/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/functions-for-beginners/" />
 
 <meta property="article:section" content="Cloud Native" />
     <meta
@@ -98,7 +98,7 @@ Oracle Cloudでは、エンドポイントやレジストリにアクセスす�
       "@type": "TechArticle",
       "articleSection": "Cloud Native",
       "name": "Oracle Functions ハンズオン",
-      "url" : "https://oracle-japan.github.io/ocitutorials/cloud-native/functions-for-beginners/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/functions-for-beginners/",
       "headline": "Oracle Functions ハンズオン",
       "description": "Oracle Functionsは、Oracleが提供するオープンソースのFaaSプラットフォームであるFn Projectのマネージドサービスです。\nこのエントリーでは、Oracle Functions環境構築から動作確認までの手順を記します。\n条件 クラウド環境 有効なOracle Cloudアカウントがあること Fn Projectハンズオンが完了していること(このハンズオンの理解を深めるため) 事前準備 注意事項: コンパートメントについて\nOracle Cloudにはコンパートメントという考え方があります。\nコンパートメントは、クラウド・リソース(インスタンス、仮想クラウド・ネットワーク、ブロック・ボリュームなど)を分類整理する論理的な区画で、この単位でアクセス制御を行うことができます。\nまた、OCIコンソール上に表示されるリソースのフィルタとしても機能します。\n今回は、ルートコンパートメントと呼ばれるすべてのリソースを保持するコンパートメントを利用するので、特に意識する必要がありません。 {: .notice–info}\n注意事項: ポリシーについて\nOracle Cloudでは、各ユーザーから各サービスへのアクセスおよび各サービスから他サービスへアクセスを「ポリシー」を利用して制御します。ポリシーは、各リソースに誰がアクセスできるかを指定することができます。 このハンズオンでは、テナンシ管理者を想定してポリシーを設定していきます。 {: .notice–info}\n{% capture notice %}注意事項: リージョンとリージョンコードについて\nOracle Cloudでは、エンドポイントやレジストリにアクセスする際にリージョンおよびリージョンコードを使用する場合があります。\n以下に各リージョンと対応するリージョンコードを記載します。\n本ハンズオンでは、OCI CLIのセットアップおよびOCIRのログイン時に使用します。\nリージョン リージョンコード ap-tokyo-1 nrt ap-osaka-1 kix ap-melbourne-1 mel us-ashburn-1 iad us-phoenix-1 phx ap-mumbai-1 bom ap-seoul-1 icn ap-sydney-1 syd ca-toronto-1 yyz ca-montreal-1 yul eu-frankfurt-1 fra eu-zurich-1 zrh sa-saopaulo-1 gru sa-vinhedo-1 vcp uk-london-1 lhr sa-santiago-1 scl ap-hyderabad-1 hyd eu-amsterdam-1 ams me-jeddah-1 jed ap-chuncheon-1 yny me-dubai-1 dxb uk-cardiff-1 cwl us-sanjose-1 sjc {% endcapture %}",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -108,7 +108,7 @@ Oracle Cloudでは、エンドポイントやレジストリにアクセスす�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/cloud-native/functions-for-beginners/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/functions-for-beginners/"
       },
       "copyrightHolder" : "OCIチュートリアル",
       "copyrightYear" : "0001",
@@ -118,10 +118,10 @@ Oracle Cloudでは、エンドポイントやレジストリにアクセスす�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -131,73 +131,73 @@ Oracle Cloudでは、エンドポイントやレジストリにアクセスす�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/cloud-native/functions-for-beginners/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/functions-for-beginners/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/cloud-native/functions-for-beginners/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/functions-for-beginners/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="Oracle Functions ハンズオン">
   <meta property="og:description" content="Oracle Functionsは、Oracleが提供するオープンソースのFaaSプラットフォームであるFn Projectのマネージドサービスです。
@@ -281,11 +281,11 @@ Oracle Cloudでは、エンドポイントやレジストリにアクセスす�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -302,7 +302,7 @@ Oracle Cloudでは、エンドポイントやレジストリにアクセスす�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -314,7 +314,7 @@ Oracle Cloudでは、エンドポイントやレジストリにアクセスす�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -447,7 +447,7 @@ Oracle Cloudでは、エンドポイントやレジストリにアクセスす�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/cloud-native/' href='/ocitutorials/cloud-native/'><span itemprop='name'>Cloud Nativeチュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Oracle Functions ハンズオン</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/cloud-native/' href='/ocitutorial-geekdocs/cloud-native/'><span itemprop='name'>Cloud Nativeチュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Oracle Functions ハンズオン</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -480,7 +480,7 @@ Oracle Cloudでは、エンドポイントやレジストリにアクセスす�
     >
         条件
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/functions-for-beginners/#条件" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 条件" aria-label="アンカー先: 条件" href="#%e6%9d%a1%e4%bb%b6">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/functions-for-beginners/#条件" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 条件" aria-label="アンカー先: 条件" href="#%e6%9d%a1%e4%bb%b6">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -500,7 +500,7 @@ Oracle Cloudでは、エンドポイントやレジストリにアクセスす�
     >
         事前準備
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/functions-for-beginners/#事前準備" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 事前準備" aria-label="アンカー先: 事前準備" href="#%e4%ba%8b%e5%89%8d%e6%ba%96%e5%82%99">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/functions-for-beginners/#事前準備" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 事前準備" aria-label="アンカー先: 事前準備" href="#%e4%ba%8b%e5%89%8d%e6%ba%96%e5%82%99">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -652,7 +652,7 @@ Oracle Cloudでは、エンドポイントやレジストリにアクセスす�
     >
         1.Cloud Shellのセットアップ
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/functions-for-beginners/#1cloud-shellのセットアップ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.Cloud Shellのセットアップ" aria-label="アンカー先: 1.Cloud Shellのセットアップ" href="#1cloud-shell%e3%81%ae%e3%82%bb%e3%83%83%e3%83%88%e3%82%a2%e3%83%83%e3%83%97">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/functions-for-beginners/#1cloud-shellのセットアップ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.Cloud Shellのセットアップ" aria-label="アンカー先: 1.Cloud Shellのセットアップ" href="#1cloud-shell%e3%81%ae%e3%82%bb%e3%83%83%e3%83%88%e3%82%a2%e3%83%83%e3%83%97">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -752,7 +752,7 @@ Cloud Shellは開発専用ではなく、一時的にOCIコマンドを実行し
     >
         2.Oracle Functions実行環境の構築
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/functions-for-beginners/#2oracle-functions実行環境の構築" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.Oracle Functions実行環境の構築" aria-label="アンカー先: 2.Oracle Functions実行環境の構築" href="#2oracle-functions%e5%ae%9f%e8%a1%8c%e7%92%b0%e5%a2%83%e3%81%ae%e6%a7%8b%e7%af%89">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/functions-for-beginners/#2oracle-functions実行環境の構築" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.Oracle Functions実行環境の構築" aria-label="アンカー先: 2.Oracle Functions実行環境の構築" href="#2oracle-functions%e5%ae%9f%e8%a1%8c%e7%92%b0%e5%a2%83%e3%81%ae%e6%a7%8b%e7%af%89">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -762,7 +762,7 @@ Cloud Shellは開発専用ではなく、一時的にOCIコマンドを実行し
     >
         2-1. Oracle Functionsが利用するVCNの作成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/functions-for-beginners/#2-1-oracle-functionsが利用するvcnの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-1. Oracle Functionsが利用するVCNの作成" aria-label="アンカー先: 2-1. Oracle Functionsが利用するVCNの作成" href="#2-1-oracle-functions%e3%81%8c%e5%88%a9%e7%94%a8%e3%81%99%e3%82%8bvcn%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/functions-for-beginners/#2-1-oracle-functionsが利用するvcnの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-1. Oracle Functionsが利用するVCNの作成" aria-label="アンカー先: 2-1. Oracle Functionsが利用するVCNの作成" href="#2-1-oracle-functions%e3%81%8c%e5%88%a9%e7%94%a8%e3%81%99%e3%82%8bvcn%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -821,7 +821,7 @@ Cloud Shellは開発専用ではなく、一時的にOCIコマンドを実行し
     >
         2-2. Oracle Functionsのアプリケーションの作成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/functions-for-beginners/#2-2-oracle-functionsのアプリケーションの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-2. Oracle Functionsのアプリケーションの作成" aria-label="アンカー先: 2-2. Oracle Functionsのアプリケーションの作成" href="#2-2-oracle-functions%e3%81%ae%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/functions-for-beginners/#2-2-oracle-functionsのアプリケーションの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-2. Oracle Functionsのアプリケーションの作成" aria-label="アンカー先: 2-2. Oracle Functionsのアプリケーションの作成" href="#2-2-oracle-functions%e3%81%ae%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -853,7 +853,7 @@ Cloud Shellは開発専用ではなく、一時的にOCIコマンドを実行し
     >
         2-3. OCI Functionsのサンプルアプリケーション実行
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/functions-for-beginners/#2-3-oci-functionsのサンプルアプリケーション実行" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-3. OCI Functionsのサンプルアプリケーション実行" aria-label="アンカー先: 2-3. OCI Functionsのサンプルアプリケーション実行" href="#2-3-oci-functions%e3%81%ae%e3%82%b5%e3%83%b3%e3%83%97%e3%83%ab%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e5%ae%9f%e8%a1%8c">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/functions-for-beginners/#2-3-oci-functionsのサンプルアプリケーション実行" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-3. OCI Functionsのサンプルアプリケーション実行" aria-label="アンカー先: 2-3. OCI Functionsのサンプルアプリケーション実行" href="#2-3-oci-functions%e3%81%ae%e3%82%b5%e3%83%b3%e3%83%97%e3%83%ab%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e5%ae%9f%e8%a1%8c">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -914,7 +914,7 @@ Cloud Shellは開発専用ではなく、一時的にOCIコマンドを実行し
     >
         【オプション】3.Podman環境で作業する場合
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/functions-for-beginners/#オプション3podman環境で作業する場合" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 【オプション】3.Podman環境で作業する場合" aria-label="アンカー先: 【オプション】3.Podman環境で作業する場合" href="#%e3%82%aa%e3%83%97%e3%82%b7%e3%83%a7%e3%83%b33podman%e7%92%b0%e5%a2%83%e3%81%a7%e4%bd%9c%e6%a5%ad%e3%81%99%e3%82%8b%e5%a0%b4%e5%90%88">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/functions-for-beginners/#オプション3podman環境で作業する場合" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 【オプション】3.Podman環境で作業する場合" aria-label="アンカー先: 【オプション】3.Podman環境で作業する場合" href="#%e3%82%aa%e3%83%97%e3%82%b7%e3%83%a7%e3%83%b33podman%e7%92%b0%e5%a2%83%e3%81%a7%e4%bd%9c%e6%a5%ad%e3%81%99%e3%82%8b%e5%a0%b4%e5%90%88">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9173,7 +9173,7 @@ Cloud Shellを利用している方は、この手順は不要です。<br>
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/cloud-native/oke-for-commons/"
+      href="/ocitutorial-geekdocs/cloud-native/oke-for-commons/"
       title="Oracle Container Engine for Kubernetes(OKE)をプロビジョニングしよう"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9185,7 +9185,7 @@ Cloud Shellを利用している方は、この手順は不要です。<br>
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/cloud-native/functions-apigateway-for-intermediates/"
+      href="/ocitutorial-geekdocs/cloud-native/functions-apigateway-for-intermediates/"
       title="Oracle Functionsを利用したAPI Gatewayの認証"
     >
       Oracle Functionsを利用したAPI Gatewayの認証
@@ -9239,7 +9239,7 @@ Cloud Shellを利用している方は、この手順は不要です。<br>
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

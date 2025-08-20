@@ -18,18 +18,18 @@ https://docs.oracle.com/cd/E83857_01/paas/integration-cloud/books.html (日本�
 
   <title>SFDCからアウトバンドメッセージを受信する | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -48,7 +48,7 @@ Oracle Integration
 https://docs.oracle.com/en/cloud/paas/integration-cloud/books.html
 https://docs.oracle.com/cd/E83857_01/paas/integration-cloud/books.html (日本語翻訳版) インスタンスの作成 Oracle Integration インスタンスの作成済であること。OIC インスタンスの作成方法は、以下の製品マニュアルや日本語チュートリアルをご確認ください。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/integration/app-integration-for-beginners-3-sfdc/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/app-integration-for-beginners-3-sfdc/" />
 
 <meta property="article:section" content="Integration" />
     <meta
@@ -74,7 +74,7 @@ https://docs.oracle.com/cd/E83857_01/paas/integration-cloud/books.html (日本�
       "@type": "TechArticle",
       "articleSection": "Integration",
       "name": "SFDCからアウトバンドメッセージを受信する",
-      "url" : "https://oracle-japan.github.io/ocitutorials/integration/app-integration-for-beginners-3-sfdc/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/integration/app-integration-for-beginners-3-sfdc/",
       "headline": "SFDCからアウトバンドメッセージを受信する",
       "description": "このチュートリアルは、Salesforce(SFDC)側で新規商談(Opportunity)が登録されたら、SFDCのアウトバウンドメッセージが送信され、OIC の統合が起動される一連の動作を確認します。\nこのハンズオンを通じて、以下のポイントを理解することができます。\nSFDC アダプターの実装方法 SFDC アダプター経由で SFDC アウトバンドメッセージを受信する方法 アプリケーション主導のオーケストレーションの実装 ロガーによるログ出力方法 前提条件 バージョン このハンズオンの内容は、Oracle Integration 21.2.3.0.0 (210505.1400.40951) 時点の内容で作成されています。最新の UI とは異なっている場合があります。最新情報については、製品マニュアルをご参照ください。\nOracle Integration\nhttps:\/\/docs.oracle.com\/en\/cloud\/paas\/integration-cloud\/books.html\nhttps:\/\/docs.oracle.com\/cd\/E83857_01\/paas\/integration-cloud\/books.html (日本語翻訳版) インスタンスの作成 Oracle Integration インスタンスの作成済であること。OIC インスタンスの作成方法は、以下の製品マニュアルや日本語チュートリアルをご確認ください。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -84,7 +84,7 @@ https://docs.oracle.com/cd/E83857_01/paas/integration-cloud/books.html (日本�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/integration/app-integration-for-beginners-3-sfdc/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/integration/app-integration-for-beginners-3-sfdc/"
       },
       "copyrightHolder" : "OCIチュートリアル",
       "copyrightYear" : "0001",
@@ -94,10 +94,10 @@ https://docs.oracle.com/cd/E83857_01/paas/integration-cloud/books.html (日本�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -107,73 +107,73 @@ https://docs.oracle.com/cd/E83857_01/paas/integration-cloud/books.html (日本�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/integration/app-integration-for-beginners-3-sfdc/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/app-integration-for-beginners-3-sfdc/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/integration/app-integration-for-beginners-3-sfdc/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/app-integration-for-beginners-3-sfdc/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="SFDCからアウトバンドメッセージを受信する">
   <meta property="og:description" content="このチュートリアルは、Salesforce(SFDC)側で新規商談(Opportunity)が登録されたら、SFDCのアウトバウンドメッセージが送信され、OIC の統合が起動される一連の動作を確認します。
@@ -241,11 +241,11 @@ https://docs.oracle.com/cd/E83857_01/paas/integration-cloud/books.html (日本�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -262,7 +262,7 @@ https://docs.oracle.com/cd/E83857_01/paas/integration-cloud/books.html (日本�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -274,7 +274,7 @@ https://docs.oracle.com/cd/E83857_01/paas/integration-cloud/books.html (日本�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -424,7 +424,7 @@ https://docs.oracle.com/cd/E83857_01/paas/integration-cloud/books.html (日本�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/integration/' href='/ocitutorials/integration/'><span itemprop='name'>Oracle Integration チュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>SFDCからアウトバンドメッセージを受信する</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/integration/' href='/ocitutorial-geekdocs/integration/'><span itemprop='name'>Oracle Integration チュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>SFDCからアウトバンドメッセージを受信する</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -468,7 +468,7 @@ https://docs.oracle.com/cd/E83857_01/paas/integration-cloud/books.html (日本�
     >
         前提条件
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/app-integration-for-beginners-3-sfdc/#前提条件" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 前提条件" aria-label="アンカー先: 前提条件" href="#%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/app-integration-for-beginners-3-sfdc/#前提条件" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 前提条件" aria-label="アンカー先: 前提条件" href="#%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -477,7 +477,7 @@ https://docs.oracle.com/cd/E83857_01/paas/integration-cloud/books.html (日本�
     >
         バージョン
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/app-integration-for-beginners-3-sfdc/#バージョン" class="gdoc-page__anchor clip flex align-center" title="アンカー先: バージョン" aria-label="アンカー先: バージョン" href="#%e3%83%90%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/app-integration-for-beginners-3-sfdc/#バージョン" class="gdoc-page__anchor clip flex align-center" title="アンカー先: バージョン" aria-label="アンカー先: バージョン" href="#%e3%83%90%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -498,7 +498,7 @@ https://docs.oracle.com/cd/E83857_01/paas/integration-cloud/books.html (日本�
     >
         インスタンスの作成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/app-integration-for-beginners-3-sfdc/#インスタンスの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: インスタンスの作成" aria-label="アンカー先: インスタンスの作成" href="#%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/app-integration-for-beginners-3-sfdc/#インスタンスの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: インスタンスの作成" aria-label="アンカー先: インスタンスの作成" href="#%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -523,7 +523,7 @@ https://docs.oracle.com/cd/E83857_01/paas/integration-cloud/books.html (日本�
     >
         事前準備
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/app-integration-for-beginners-3-sfdc/#事前準備" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 事前準備" aria-label="アンカー先: 事前準備" href="#%e4%ba%8b%e5%89%8d%e6%ba%96%e5%82%99">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/app-integration-for-beginners-3-sfdc/#事前準備" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 事前準備" aria-label="アンカー先: 事前準備" href="#%e4%ba%8b%e5%89%8d%e6%ba%96%e5%82%99">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -532,7 +532,7 @@ https://docs.oracle.com/cd/E83857_01/paas/integration-cloud/books.html (日本�
     >
         SFDCアカウントを取得する
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/app-integration-for-beginners-3-sfdc/#sfdcアカウントを取得する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: SFDCアカウントを取得する" aria-label="アンカー先: SFDCアカウントを取得する" href="#sfdc%e3%82%a2%e3%82%ab%e3%82%a6%e3%83%b3%e3%83%88%e3%82%92%e5%8f%96%e5%be%97%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/app-integration-for-beginners-3-sfdc/#sfdcアカウントを取得する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: SFDCアカウントを取得する" aria-label="アンカー先: SFDCアカウントを取得する" href="#sfdc%e3%82%a2%e3%82%ab%e3%82%a6%e3%83%b3%e3%83%88%e3%82%92%e5%8f%96%e5%be%97%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -542,7 +542,7 @@ https://docs.oracle.com/cd/E83857_01/paas/integration-cloud/books.html (日本�
     >
         Developer Edition サインアップ手順
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/app-integration-for-beginners-3-sfdc/#developer-edition-サインアップ手順" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Developer Edition サインアップ手順" aria-label="アンカー先: Developer Edition サインアップ手順" href="#developer-edition-%e3%82%b5%e3%82%a4%e3%83%b3%e3%82%a2%e3%83%83%e3%83%97%e6%89%8b%e9%a0%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/app-integration-for-beginners-3-sfdc/#developer-edition-サインアップ手順" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Developer Edition サインアップ手順" aria-label="アンカー先: Developer Edition サインアップ手順" href="#developer-edition-%e3%82%b5%e3%82%a4%e3%83%b3%e3%82%a2%e3%83%83%e3%83%97%e6%89%8b%e9%a0%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -559,7 +559,7 @@ https://docs.oracle.com/cd/E83857_01/paas/integration-cloud/books.html (日本�
     >
         APIバージョンを確認する
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/app-integration-for-beginners-3-sfdc/#apiバージョンを確認する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: APIバージョンを確認する" aria-label="アンカー先: APIバージョンを確認する" href="#api%e3%83%90%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3%e3%82%92%e7%a2%ba%e8%aa%8d%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/app-integration-for-beginners-3-sfdc/#apiバージョンを確認する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: APIバージョンを確認する" aria-label="アンカー先: APIバージョンを確認する" href="#api%e3%83%90%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3%e3%82%92%e7%a2%ba%e8%aa%8d%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -576,7 +576,7 @@ https://docs.oracle.com/cd/E83857_01/paas/integration-cloud/books.html (日本�
     >
         セキュリティトークンの取得
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/app-integration-for-beginners-3-sfdc/#セキュリティトークンの取得" class="gdoc-page__anchor clip flex align-center" title="アンカー先: セキュリティトークンの取得" aria-label="アンカー先: セキュリティトークンの取得" href="#%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e3%83%88%e3%83%bc%e3%82%af%e3%83%b3%e3%81%ae%e5%8f%96%e5%be%97">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/app-integration-for-beginners-3-sfdc/#セキュリティトークンの取得" class="gdoc-page__anchor clip flex align-center" title="アンカー先: セキュリティトークンの取得" aria-label="アンカー先: セキュリティトークンの取得" href="#%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e3%83%88%e3%83%bc%e3%82%af%e3%83%b3%e3%81%ae%e5%8f%96%e5%be%97">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -598,7 +598,7 @@ https://docs.oracle.com/cd/E83857_01/paas/integration-cloud/books.html (日本�
     >
         ワークフロールールの作成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/app-integration-for-beginners-3-sfdc/#ワークフロールールの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ワークフロールールの作成" aria-label="アンカー先: ワークフロールールの作成" href="#%e3%83%af%e3%83%bc%e3%82%af%e3%83%95%e3%83%ad%e3%83%bc%e3%83%ab%e3%83%bc%e3%83%ab%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/app-integration-for-beginners-3-sfdc/#ワークフロールールの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ワークフロールールの作成" aria-label="アンカー先: ワークフロールールの作成" href="#%e3%83%af%e3%83%bc%e3%82%af%e3%83%95%e3%83%ad%e3%83%bc%e3%83%ab%e3%83%bc%e3%83%ab%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -697,7 +697,7 @@ https://docs.oracle.com/cd/E83857_01/paas/integration-cloud/books.html (日本�
     >
         アウトバウンドメッセージの作成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/app-integration-for-beginners-3-sfdc/#アウトバウンドメッセージの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: アウトバウンドメッセージの作成" aria-label="アンカー先: アウトバウンドメッセージの作成" href="#%e3%82%a2%e3%82%a6%e3%83%88%e3%83%90%e3%82%a6%e3%83%b3%e3%83%89%e3%83%a1%e3%83%83%e3%82%bb%e3%83%bc%e3%82%b8%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/app-integration-for-beginners-3-sfdc/#アウトバウンドメッセージの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: アウトバウンドメッセージの作成" aria-label="アンカー先: アウトバウンドメッセージの作成" href="#%e3%82%a2%e3%82%a6%e3%83%88%e3%83%90%e3%82%a6%e3%83%b3%e3%83%89%e3%83%a1%e3%83%83%e3%82%bb%e3%83%bc%e3%82%b8%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -788,7 +788,7 @@ https://docs.oracle.com/cd/E83857_01/paas/integration-cloud/books.html (日本�
     >
         SFDC接続の作成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/app-integration-for-beginners-3-sfdc/#sfdc接続の作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: SFDC接続の作成" aria-label="アンカー先: SFDC接続の作成" href="#sfdc%e6%8e%a5%e7%b6%9a%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/app-integration-for-beginners-3-sfdc/#sfdc接続の作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: SFDC接続の作成" aria-label="アンカー先: SFDC接続の作成" href="#sfdc%e6%8e%a5%e7%b6%9a%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -935,7 +935,7 @@ Salesforce Adapter - Elimination of WSDL upload task on the Connections page<br>
     >
         統合の作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/app-integration-for-beginners-3-sfdc/#統合の作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 統合の作成" aria-label="アンカー先: 統合の作成" href="#%e7%b5%b1%e5%90%88%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/app-integration-for-beginners-3-sfdc/#統合の作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 統合の作成" aria-label="アンカー先: 統合の作成" href="#%e7%b5%b1%e5%90%88%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -945,7 +945,7 @@ Salesforce Adapter - Elimination of WSDL upload task on the Connections page<br>
     >
         アプリケーション主導のオーケストレーションの作成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/app-integration-for-beginners-3-sfdc/#アプリケーション主導のオーケストレーションの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: アプリケーション主導のオーケストレーションの作成" aria-label="アンカー先: アプリケーション主導のオーケストレーションの作成" href="#%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e4%b8%bb%e5%b0%8e%e3%81%ae%e3%82%aa%e3%83%bc%e3%82%b1%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/app-integration-for-beginners-3-sfdc/#アプリケーション主導のオーケストレーションの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: アプリケーション主導のオーケストレーションの作成" aria-label="アンカー先: アプリケーション主導のオーケストレーションの作成" href="#%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e4%b8%bb%e5%b0%8e%e3%81%ae%e3%82%aa%e3%83%bc%e3%82%b1%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -974,7 +974,7 @@ Salesforce Adapter - Elimination of WSDL upload task on the Connections page<br>
     >
         SFDC 接続の構成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/app-integration-for-beginners-3-sfdc/#sfdc-接続の構成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: SFDC 接続の構成" aria-label="アンカー先: SFDC 接続の構成" href="#sfdc-%e6%8e%a5%e7%b6%9a%e3%81%ae%e6%a7%8b%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/app-integration-for-beginners-3-sfdc/#sfdc-接続の構成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: SFDC 接続の構成" aria-label="アンカー先: SFDC 接続の構成" href="#sfdc-%e6%8e%a5%e7%b6%9a%e3%81%ae%e6%a7%8b%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1014,7 +1014,7 @@ Salesforce Adapter - Elimination of WSDL upload task on the Connections page<br>
     >
         ロガーの構成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/app-integration-for-beginners-3-sfdc/#ロガーの構成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ロガーの構成" aria-label="アンカー先: ロガーの構成" href="#%e3%83%ad%e3%82%ac%e3%83%bc%e3%81%ae%e6%a7%8b%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/app-integration-for-beginners-3-sfdc/#ロガーの構成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ロガーの構成" aria-label="アンカー先: ロガーの構成" href="#%e3%83%ad%e3%82%ac%e3%83%bc%e3%81%ae%e6%a7%8b%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1119,7 +1119,7 @@ Log Messages with a Logger Action
     >
         トラッキングの構成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/app-integration-for-beginners-3-sfdc/#トラッキングの構成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: トラッキングの構成" aria-label="アンカー先: トラッキングの構成" href="#%e3%83%88%e3%83%a9%e3%83%83%e3%82%ad%e3%83%b3%e3%82%b0%e3%81%ae%e6%a7%8b%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/app-integration-for-beginners-3-sfdc/#トラッキングの構成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: トラッキングの構成" aria-label="アンカー先: トラッキングの構成" href="#%e3%83%88%e3%83%a9%e3%83%83%e3%82%ad%e3%83%b3%e3%82%b0%e3%81%ae%e6%a7%8b%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1147,7 +1147,7 @@ Log Messages with a Logger Action
     >
         統合のアクティブ化
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/app-integration-for-beginners-3-sfdc/#統合のアクティブ化" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 統合のアクティブ化" aria-label="アンカー先: 統合のアクティブ化" href="#%e7%b5%b1%e5%90%88%e3%81%ae%e3%82%a2%e3%82%af%e3%83%86%e3%82%a3%e3%83%96%e5%8c%96">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/app-integration-for-beginners-3-sfdc/#統合のアクティブ化" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 統合のアクティブ化" aria-label="アンカー先: 統合のアクティブ化" href="#%e7%b5%b1%e5%90%88%e3%81%ae%e3%82%a2%e3%82%af%e3%83%86%e3%82%a3%e3%83%96%e5%8c%96">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1175,7 +1175,7 @@ Log Messages with a Logger Action
     >
         SFDC アウトバウンドメッセージのエンドポイントURLの更新
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/app-integration-for-beginners-3-sfdc/#sfdc-アウトバウンドメッセージのエンドポイントurlの更新" class="gdoc-page__anchor clip flex align-center" title="アンカー先: SFDC アウトバウンドメッセージのエンドポイントURLの更新" aria-label="アンカー先: SFDC アウトバウンドメッセージのエンドポイントURLの更新" href="#sfdc-%e3%82%a2%e3%82%a6%e3%83%88%e3%83%90%e3%82%a6%e3%83%b3%e3%83%89%e3%83%a1%e3%83%83%e3%82%bb%e3%83%bc%e3%82%b8%e3%81%ae%e3%82%a8%e3%83%b3%e3%83%89%e3%83%9d%e3%82%a4%e3%83%b3%e3%83%88url%e3%81%ae%e6%9b%b4%e6%96%b0">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/app-integration-for-beginners-3-sfdc/#sfdc-アウトバウンドメッセージのエンドポイントurlの更新" class="gdoc-page__anchor clip flex align-center" title="アンカー先: SFDC アウトバウンドメッセージのエンドポイントURLの更新" aria-label="アンカー先: SFDC アウトバウンドメッセージのエンドポイントURLの更新" href="#sfdc-%e3%82%a2%e3%82%a6%e3%83%88%e3%83%90%e3%82%a6%e3%83%b3%e3%83%89%e3%83%a1%e3%83%83%e3%82%bb%e3%83%bc%e3%82%b8%e3%81%ae%e3%82%a8%e3%83%b3%e3%83%89%e3%83%9d%e3%82%a4%e3%83%b3%e3%83%88url%e3%81%ae%e6%9b%b4%e6%96%b0">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1219,7 +1219,7 @@ Log Messages with a Logger Action
     >
         動作確認
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/app-integration-for-beginners-3-sfdc/#動作確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 動作確認" aria-label="アンカー先: 動作確認" href="#%e5%8b%95%e4%bd%9c%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/app-integration-for-beginners-3-sfdc/#動作確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 動作確認" aria-label="アンカー先: 動作確認" href="#%e5%8b%95%e4%bd%9c%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9532,7 +9532,7 @@ Log Messages with a Logger Action
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/integration/vbcs-for-beginners-3-rest/"
+      href="/ocitutorial-geekdocs/integration/vbcs-for-beginners-3-rest/"
       title="REST APIで取得したデータを一覧表示する"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9544,7 +9544,7 @@ Log Messages with a Logger Action
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/integration/vbcs-for-beginners-4-linechart/"
+      href="/ocitutorial-geekdocs/integration/vbcs-for-beginners-4-linechart/"
       title="ビジネス・オブジェクトのデータを折れ線グラフで表示する"
     >
       ビジネス・オブジェクトのデータを折れ線グラフで表示する
@@ -9598,7 +9598,7 @@ Log Messages with a Logger Action
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

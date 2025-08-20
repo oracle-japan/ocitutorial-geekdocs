@@ -17,18 +17,18 @@ Oracle Cloud Infrastructure の環境と、ユーザーアカウントがある�
 
   <title>Oracle Database - Oracle AI Vector Searchを使ってみよう | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -46,7 +46,7 @@ Oracle Cloud Infrastructure の環境と、ユーザーアカウントがある�
 102 : 仮想マシンへOracle Database 23ai Freeをインストールしてみよう
 103 : Oracle AI Vector Searchの基本操作を試してみよう" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/ai-vector-search/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/ai-vector-search/" />
 
 <meta property="article:section" content="Ai Vector Search" />
     <meta
@@ -71,7 +71,7 @@ Oracle Cloud Infrastructure の環境と、ユーザーアカウントがある�
       "@type": "TechArticle",
       "articleSection": "Ai Vector Search",
       "name": "Oracle Database - Oracle AI Vector Searchを使ってみよう",
-      "url" : "https://oracle-japan.github.io/ocitutorials/ai-vector-search/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/ai-vector-search/",
       "headline": "Oracle Database - Oracle AI Vector Searchを使ってみよう",
       "description": "チュートリアル一覧にもどる 前提条件\nOracle Cloud Infrastructure の環境と、ユーザーアカウントがあること(トライアル環境でも実施いただける内容となっています。) 適切なコンパートメントと、そこに対する適切な権限がユーザーに付与されていること 特記事項\nチュートリアル内の画面ショットについては現在の画面と異なっている場合があります。 OCIチュートリアル入門編の、準備からその1を実施しておくと、理解がスムーズです。 より詳しく知りたい方は、OCI活用資料集も併せてご確認ください。それぞれのサービスに関する技術詳細資料をまとめ紹介しています。 ■ Oracle AI Vector Searchを使ってみよう Oracle AI Vector Search機能は、ドキュメント、画像、その他の非構造化データとプライベートなビジネス・データを、移動したり複製したりすることなくセキュアに組み合わせて検索することが出来る機能です。 Oracle AI Vector Searchを使用すると、ビジネス・データにベクトル検索を追加してCohereやChatGPTなどのジェネレーティブAIと組み合わせながら精度の高い分析が可能になります。 以下のチュートリアルではAlways Free ADBの作り方\/仮想マシンへのOracle Database 23ai Freeのインストール方法から、Oracle AI Vector Searchの様々な使い方を学んでいただける内容になっています。 以下のチュートリアルではAlways Free ADBの作り方\/仮想マシンへのOracle Database 23ai Freeのインストール方法から、Oracle AI Vector Searchの様々な使い方を学んでいただける内容になっています。 101 : Always Freeで23aiのADBインスタンスを作成してみよう\n102 : 仮想マシンへOracle Database 23ai Freeをインストールしてみよう\n103 : Oracle AI Vector Searchの基本操作を試してみよう",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -81,7 +81,7 @@ Oracle Cloud Infrastructure の環境と、ユーザーアカウントがある�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/ai-vector-search/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/ai-vector-search/"
       },
       "keywords" : [ "Database" ],
       "copyrightHolder" : "OCIチュートリアル",
@@ -92,10 +92,10 @@ Oracle Cloud Infrastructure の環境と、ユーザーアカウントがある�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -105,73 +105,73 @@ Oracle Cloud Infrastructure の環境と、ユーザーアカウントがある�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/ai-vector-search/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/ai-vector-search/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/ai-vector-search/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/ai-vector-search/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="Oracle Database - Oracle AI Vector Searchを使ってみよう">
   <meta property="og:description" content="チュートリアル一覧にもどる 前提条件
@@ -235,11 +235,11 @@ Oracle Cloud Infrastructure の環境と、ユーザーアカウントがある�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -256,7 +256,7 @@ Oracle Cloud Infrastructure の環境と、ユーザーアカウントがある�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -268,7 +268,7 @@ Oracle Cloud Infrastructure の環境と、ユーザーアカウントがある�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -383,7 +383,7 @@ Oracle Cloud Infrastructure の環境と、ユーザーアカウントがある�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Oracle Database - Oracle AI Vector Searchを使ってみよう</span><meta itemprop='position' content='3' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Oracle Database - Oracle AI Vector Searchを使ってみよう</span><meta itemprop='position' content='3' /></li>
   
 
   
@@ -8756,7 +8756,7 @@ Oracle AI Vector Searchを使用すると、ビジネス・データにベクト
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/vmware/"
+      href="/ocitutorial-geekdocs/vmware/"
       title="Oracle Cloud VMware Solution編"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -8768,7 +8768,7 @@ Oracle AI Vector Searchを使用すると、ビジネス・データにベクト
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/ai-vector-search/ai-vector101-always-free-adb/"
+      href="/ocitutorial-geekdocs/ai-vector-search/ai-vector101-always-free-adb/"
       title="101 : Always Freeで23aiのADBインスタンスを作成してみよう"
     >
       101 : Always Freeで23aiのADBインスタンスを作成してみよう
@@ -8822,7 +8822,7 @@ Oracle AI Vector Searchを使用すると、ビジネス・データにベクト
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

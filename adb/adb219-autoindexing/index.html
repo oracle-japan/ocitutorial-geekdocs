@@ -19,18 +19,18 @@ ATPインスタンスが構成済みであること ※ATPンタンスの作成�
 
   <title>219: Automatic Indexingを体験してみよう  | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -51,7 +51,7 @@ ATPインスタンスが構成済みであること ※ATPンタンスの作成�
 1. スキーマ作成とAutomatic Indexingの有効化 2. ワークロードの実行 3. 自動索引のレポートを確認する 4. 自動索引の削除とAutomatic Indexingの無効化 おわりに 所要時間 : 約1時間
 1. スキーマ作成とAutomatic Indexingの有効化 ここではテストスキーマを作成し、自動索引を有効化します。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/adb/adb219-autoindexing/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb219-autoindexing/" />
 
 <meta property="article:section" content="Adb" />
     <meta
@@ -79,7 +79,7 @@ ATPインスタンスが構成済みであること ※ATPンタンスの作成�
       "@type": "TechArticle",
       "articleSection": "Adb",
       "name": "219: Automatic Indexingを体験してみよう ",
-      "url" : "https://oracle-japan.github.io/ocitutorials/adb/adb219-autoindexing/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb219-autoindexing/",
       "headline": "219: Automatic Indexingを体験してみよう ",
       "description": "\nはじめに 索引を手動で作成するには、データモデル、アプリケーションの動作、データベース内のデータの特性などに関する専門的な知識が必要です。 以前は、DBAがどの索引を作成するかの選択を担当しており、修正や保守を行っていました。しかし、データベースが変更されても保守しきれないこともあり、不要な索引を使用することが性能上の障害となる可能性がありました。\nAutonomous Databaseではワークロードを監視して、自動的に索引の作成や削除などの管理を行う機能であるAutomatic Indexingが利用できます。 本記事では、ATPを作成したのちAutomatic Indexingを利用してみます。\n前提条件：\nATPインスタンスが構成済みであること ※ATPンタンスの作成方法については、ADBインスタンスを作成してみよう を参照してください。 ワークロード・タイプ： トランザクション処理 ECPU数： 4 ストレージ： 1024 CPU Auto Scaling： 無効 それ以外の項目については、ご自身の環境や目的に合わせて選択してください。\n目次：\n1. スキーマ作成とAutomatic Indexingの有効化 2. ワークロードの実行 3. 自動索引のレポートを確認する 4. 自動索引の削除とAutomatic Indexingの無効化 おわりに 所要時間 : 約1時間\n1. スキーマ作成とAutomatic Indexingの有効化 ここではテストスキーマを作成し、自動索引を有効化します。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -89,7 +89,7 @@ ATPインスタンスが構成済みであること ※ATPンタンスの作成�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/adb/adb219-autoindexing/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb219-autoindexing/"
       },
       "copyrightHolder" : "OCIチュートリアル",
       "copyrightYear" : "0001",
@@ -99,10 +99,10 @@ ATPインスタンスが構成済みであること ※ATPンタンスの作成�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -112,73 +112,73 @@ ATPインスタンスが構成済みであること ※ATPンタンスの作成�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/adb/adb219-autoindexing/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb219-autoindexing/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/adb/adb219-autoindexing/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb219-autoindexing/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="219: Automatic Indexingを体験してみよう ">
   <meta property="og:description" content="はじめに 索引を手動で作成するには、データモデル、アプリケーションの動作、データベース内のデータの特性などに関する専門的な知識が必要です。 以前は、DBAがどの索引を作成するかの選択を担当しており、修正や保守を行っていました。しかし、データベースが変更されても保守しきれないこともあり、不要な索引を使用することが性能上の障害となる可能性がありました。
@@ -248,11 +248,11 @@ ATPインスタンスが構成済みであること ※ATPンタンスの作成�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -269,7 +269,7 @@ ATPインスタンスが構成済みであること ※ATPンタンスの作成�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -281,7 +281,7 @@ ATPインスタンスが構成済みであること ※ATPンタンスの作成�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -433,7 +433,7 @@ ATPインスタンスが構成済みであること ※ATPンタンスの作成�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/adb/' href='/ocitutorials/adb/'><span itemprop='name'>Oracle Database編 - Autonomous Database (ADB)を使ってみよう</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>219: Automatic Indexingを体験してみよう </span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/adb/' href='/ocitutorial-geekdocs/adb/'><span itemprop='name'>Oracle Database編 - Autonomous Database (ADB)を使ってみよう</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>219: Automatic Indexingを体験してみよう </span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -465,7 +465,7 @@ ATPインスタンスが構成済みであること ※ATPンタンスの作成�
     >
         はじめに
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb219-autoindexing/#はじめに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: はじめに" aria-label="アンカー先: はじめに" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb219-autoindexing/#はじめに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: はじめに" aria-label="アンカー先: はじめに" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -522,7 +522,7 @@ Autonomous Databaseではワークロードを監視して、自動的に索引�
     >
         1. スキーマ作成とAutomatic Indexingの有効化
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb219-autoindexing/#1-スキーマ作成とautomatic-indexingの有効化" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. スキーマ作成とAutomatic Indexingの有効化" aria-label="アンカー先: 1. スキーマ作成とAutomatic Indexingの有効化" href="#1-%e3%82%b9%e3%82%ad%e3%83%bc%e3%83%9e%e4%bd%9c%e6%88%90%e3%81%a8automatic-indexing%e3%81%ae%e6%9c%89%e5%8a%b9%e5%8c%96">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb219-autoindexing/#1-スキーマ作成とautomatic-indexingの有効化" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. スキーマ作成とAutomatic Indexingの有効化" aria-label="アンカー先: 1. スキーマ作成とAutomatic Indexingの有効化" href="#1-%e3%82%b9%e3%82%ad%e3%83%bc%e3%83%9e%e4%bd%9c%e6%88%90%e3%81%a8automatic-indexing%e3%81%ae%e6%9c%89%e5%8a%b9%e5%8c%96">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -532,7 +532,7 @@ Autonomous Databaseではワークロードを監視して、自動的に索引�
     >
         1-1. SQL*PlusでADBに接続する
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb219-autoindexing/#1-1-sqlplusでadbに接続する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-1. SQL*PlusでADBに接続する" aria-label="アンカー先: 1-1. SQL*PlusでADBに接続する" href="#1-1-sqlplus%e3%81%a7adb%e3%81%ab%e6%8e%a5%e7%b6%9a%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb219-autoindexing/#1-1-sqlplusでadbに接続する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-1. SQL*PlusでADBに接続する" aria-label="アンカー先: 1-1. SQL*PlusでADBに接続する" href="#1-1-sqlplus%e3%81%a7adb%e3%81%ab%e6%8e%a5%e7%b6%9a%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -555,7 +555,7 @@ Autonomous Databaseではワークロードを監視して、自動的に索引�
     >
         1-2. 索引作成の対象になる表の作成と登録
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb219-autoindexing/#1-2-索引作成の対象になる表の作成と登録" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-2. 索引作成の対象になる表の作成と登録" aria-label="アンカー先: 1-2. 索引作成の対象になる表の作成と登録" href="#1-2-%e7%b4%a2%e5%bc%95%e4%bd%9c%e6%88%90%e3%81%ae%e5%af%be%e8%b1%a1%e3%81%ab%e3%81%aa%e3%82%8b%e8%a1%a8%e3%81%ae%e4%bd%9c%e6%88%90%e3%81%a8%e7%99%bb%e9%8c%b2">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb219-autoindexing/#1-2-索引作成の対象になる表の作成と登録" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-2. 索引作成の対象になる表の作成と登録" aria-label="アンカー先: 1-2. 索引作成の対象になる表の作成と登録" href="#1-2-%e7%b4%a2%e5%bc%95%e4%bd%9c%e6%88%90%e3%81%ae%e5%af%be%e8%b1%a1%e3%81%ab%e3%81%aa%e3%82%8b%e8%a1%a8%e3%81%ae%e4%bd%9c%e6%88%90%e3%81%a8%e7%99%bb%e9%8c%b2">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -599,7 +599,7 @@ Autonomous Databaseではワークロードを監視して、自動的に索引�
     >
         1-3. Autonomous Indexingの有効化
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb219-autoindexing/#1-3-autonomous-indexingの有効化" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-3. Autonomous Indexingの有効化" aria-label="アンカー先: 1-3. Autonomous Indexingの有効化" href="#1-3-autonomous-indexing%e3%81%ae%e6%9c%89%e5%8a%b9%e5%8c%96">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb219-autoindexing/#1-3-autonomous-indexingの有効化" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-3. Autonomous Indexingの有効化" aria-label="アンカー先: 1-3. Autonomous Indexingの有効化" href="#1-3-autonomous-indexing%e3%81%ae%e6%9c%89%e5%8a%b9%e5%8c%96">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -629,7 +629,7 @@ select * from dba_auto_index_config;
     >
         2. ワークロードの実行
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb219-autoindexing/#2-ワークロードの実行" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. ワークロードの実行" aria-label="アンカー先: 2. ワークロードの実行" href="#2-%e3%83%af%e3%83%bc%e3%82%af%e3%83%ad%e3%83%bc%e3%83%89%e3%81%ae%e5%ae%9f%e8%a1%8c">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb219-autoindexing/#2-ワークロードの実行" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. ワークロードの実行" aria-label="アンカー先: 2. ワークロードの実行" href="#2-%e3%83%af%e3%83%bc%e3%82%af%e3%83%ad%e3%83%bc%e3%83%89%e3%81%ae%e5%ae%9f%e8%a1%8c">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -639,7 +639,7 @@ select * from dba_auto_index_config;
     >
         2-1. ワークロードの実行
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb219-autoindexing/#2-1-ワークロードの実行" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-1. ワークロードの実行" aria-label="アンカー先: 2-1. ワークロードの実行" href="#2-1-%e3%83%af%e3%83%bc%e3%82%af%e3%83%ad%e3%83%bc%e3%83%89%e3%81%ae%e5%ae%9f%e8%a1%8c">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb219-autoindexing/#2-1-ワークロードの実行" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-1. ワークロードの実行" aria-label="アンカー先: 2-1. ワークロードの実行" href="#2-1-%e3%83%af%e3%83%bc%e3%82%af%e3%83%ad%e3%83%bc%e3%83%89%e3%81%ae%e5%ae%9f%e8%a1%8c">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -685,7 +685,7 @@ select * from dba_auto_index_config;
     >
         2-2. ワークロードの完了を待つ
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb219-autoindexing/#2-2-ワークロードの完了を待つ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-2. ワークロードの完了を待つ" aria-label="アンカー先: 2-2. ワークロードの完了を待つ" href="#2-2-%e3%83%af%e3%83%bc%e3%82%af%e3%83%ad%e3%83%bc%e3%83%89%e3%81%ae%e5%ae%8c%e4%ba%86%e3%82%92%e5%be%85%e3%81%a4">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb219-autoindexing/#2-2-ワークロードの完了を待つ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-2. ワークロードの完了を待つ" aria-label="アンカー先: 2-2. ワークロードの完了を待つ" href="#2-2-%e3%83%af%e3%83%bc%e3%82%af%e3%83%ad%e3%83%bc%e3%83%89%e3%81%ae%e5%ae%8c%e4%ba%86%e3%82%92%e5%be%85%e3%81%a4">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -735,7 +735,7 @@ select * from dba_auto_index_config;
     >
         3. 自動索引のレポートを確認する
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb219-autoindexing/#3-自動索引のレポートを確認する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. 自動索引のレポートを確認する" aria-label="アンカー先: 3. 自動索引のレポートを確認する" href="#3-%e8%87%aa%e5%8b%95%e7%b4%a2%e5%bc%95%e3%81%ae%e3%83%ac%e3%83%9d%e3%83%bc%e3%83%88%e3%82%92%e7%a2%ba%e8%aa%8d%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb219-autoindexing/#3-自動索引のレポートを確認する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. 自動索引のレポートを確認する" aria-label="アンカー先: 3. 自動索引のレポートを確認する" href="#3-%e8%87%aa%e5%8b%95%e7%b4%a2%e5%bc%95%e3%81%ae%e3%83%ac%e3%83%9d%e3%83%bc%e3%83%88%e3%82%92%e7%a2%ba%e8%aa%8d%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -746,7 +746,7 @@ select * from dba_auto_index_config;
     >
         3-1. Automatic Indexingの完了を待つ
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb219-autoindexing/#3-1-automatic-indexingの完了を待つ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-1. Automatic Indexingの完了を待つ" aria-label="アンカー先: 3-1. Automatic Indexingの完了を待つ" href="#3-1-automatic-indexing%e3%81%ae%e5%ae%8c%e4%ba%86%e3%82%92%e5%be%85%e3%81%a4">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb219-autoindexing/#3-1-automatic-indexingの完了を待つ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-1. Automatic Indexingの完了を待つ" aria-label="アンカー先: 3-1. Automatic Indexingの完了を待つ" href="#3-1-automatic-indexing%e3%81%ae%e5%ae%8c%e4%ba%86%e3%82%92%e5%be%85%e3%81%a4">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -773,7 +773,7 @@ select * from dba_auto_index_config;
     >
         3-2. 自動索引のレポートの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb219-autoindexing/#3-2-自動索引のレポートの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-2. 自動索引のレポートの作成" aria-label="アンカー先: 3-2. 自動索引のレポートの作成" href="#3-2-%e8%87%aa%e5%8b%95%e7%b4%a2%e5%bc%95%e3%81%ae%e3%83%ac%e3%83%9d%e3%83%bc%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb219-autoindexing/#3-2-自動索引のレポートの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-2. 自動索引のレポートの作成" aria-label="アンカー先: 3-2. 自動索引のレポートの作成" href="#3-2-%e8%87%aa%e5%8b%95%e7%b4%a2%e5%bc%95%e3%81%ae%e3%83%ac%e3%83%9d%e3%83%bc%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -814,7 +814,7 @@ select * from dba_auto_index_config;
     >
         3-3. 自動索引のレポートを見る
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb219-autoindexing/#3-3-自動索引のレポートを見る" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-3. 自動索引のレポートを見る" aria-label="アンカー先: 3-3. 自動索引のレポートを見る" href="#3-3-%e8%87%aa%e5%8b%95%e7%b4%a2%e5%bc%95%e3%81%ae%e3%83%ac%e3%83%9d%e3%83%bc%e3%83%88%e3%82%92%e8%a6%8b%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb219-autoindexing/#3-3-自動索引のレポートを見る" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-3. 自動索引のレポートを見る" aria-label="アンカー先: 3-3. 自動索引のレポートを見る" href="#3-3-%e8%87%aa%e5%8b%95%e7%b4%a2%e5%bc%95%e3%81%ae%e3%83%ac%e3%83%9d%e3%83%bc%e3%83%88%e3%82%92%e8%a6%8b%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -870,7 +870,7 @@ select * from dba_auto_index_config;
     >
         4. 自動索引の削除とAutomatic Indexingの無効化
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb219-autoindexing/#4-自動索引の削除とautomatic-indexingの無効化" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. 自動索引の削除とAutomatic Indexingの無効化" aria-label="アンカー先: 4. 自動索引の削除とAutomatic Indexingの無効化" href="#4-%e8%87%aa%e5%8b%95%e7%b4%a2%e5%bc%95%e3%81%ae%e5%89%8a%e9%99%a4%e3%81%a8automatic-indexing%e3%81%ae%e7%84%a1%e5%8a%b9%e5%8c%96">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb219-autoindexing/#4-自動索引の削除とautomatic-indexingの無効化" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. 自動索引の削除とAutomatic Indexingの無効化" aria-label="アンカー先: 4. 自動索引の削除とAutomatic Indexingの無効化" href="#4-%e8%87%aa%e5%8b%95%e7%b4%a2%e5%bc%95%e3%81%ae%e5%89%8a%e9%99%a4%e3%81%a8automatic-indexing%e3%81%ae%e7%84%a1%e5%8a%b9%e5%8c%96">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -879,7 +879,7 @@ select * from dba_auto_index_config;
     >
         4-1. 自動索引の削除
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb219-autoindexing/#4-1-自動索引の削除" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-1. 自動索引の削除" aria-label="アンカー先: 4-1. 自動索引の削除" href="#4-1-%e8%87%aa%e5%8b%95%e7%b4%a2%e5%bc%95%e3%81%ae%e5%89%8a%e9%99%a4">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb219-autoindexing/#4-1-自動索引の削除" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-1. 自動索引の削除" aria-label="アンカー先: 4-1. 自動索引の削除" href="#4-1-%e8%87%aa%e5%8b%95%e7%b4%a2%e5%bc%95%e3%81%ae%e5%89%8a%e9%99%a4">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -919,7 +919,7 @@ select * from dba_auto_index_config;
     >
         4-2. Automatic Indexingを無効化する
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb219-autoindexing/#4-2-automatic-indexingを無効化する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-2. Automatic Indexingを無効化する" aria-label="アンカー先: 4-2. Automatic Indexingを無効化する" href="#4-2-automatic-indexing%e3%82%92%e7%84%a1%e5%8a%b9%e5%8c%96%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb219-autoindexing/#4-2-automatic-indexingを無効化する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-2. Automatic Indexingを無効化する" aria-label="アンカー先: 4-2. Automatic Indexingを無効化する" href="#4-2-automatic-indexing%e3%82%92%e7%84%a1%e5%8a%b9%e5%8c%96%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -934,7 +934,7 @@ select * from dba_auto_index_config;
     >
         おわりに
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb219-autoindexing/#おわりに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: おわりに" aria-label="アンカー先: おわりに" href="#%e3%81%8a%e3%82%8f%e3%82%8a%e3%81%ab">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb219-autoindexing/#おわりに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: おわりに" aria-label="アンカー先: おわりに" href="#%e3%81%8a%e3%82%8f%e3%82%8a%e3%81%ab">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -946,7 +946,7 @@ select * from dba_auto_index_config;
     >
         参考資料
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb219-autoindexing/#参考資料" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 参考資料" aria-label="アンカー先: 参考資料" href="#%e5%8f%82%e8%80%83%e8%b3%87%e6%96%99">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb219-autoindexing/#参考資料" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 参考資料" aria-label="アンカー先: 参考資料" href="#%e5%8f%82%e8%80%83%e8%b3%87%e6%96%99">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9216,7 +9216,7 @@ select * from dba_auto_index_config;
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/adb/adb218-refreshable-clone/"
+      href="/ocitutorial-geekdocs/adb/adb218-refreshable-clone/"
       title="218 : リフレッシュ可能クローンを活用しよう"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9228,7 +9228,7 @@ select * from dba_auto_index_config;
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/adb/adb220-autoworkload-replay/"
+      href="/ocitutorial-geekdocs/adb/adb220-autoworkload-replay/"
       title="220 : 自動ワークロード・リプレイによるパッチ適用のテストソリューション"
     >
       220 : 自動ワークロード・リプレイによるパッチ適用のテストソリューション
@@ -9282,7 +9282,7 @@ select * from dba_auto_index_config;
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

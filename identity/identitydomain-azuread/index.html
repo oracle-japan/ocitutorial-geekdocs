@@ -19,18 +19,18 @@ Select an identity domain to sign inのドロップダウンボックスから�
 
   <title>OCI IAM Identity DomainsとAzure ADとの認証連携（外部IDP連携）を設定する | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -50,7 +50,7 @@ Select an identity domain to sign inのドロップダウンボックスから�
 Select an identity domain to sign inのドロップダウンボックスから「Default」を選択し「Next」ボタンをクリックします。
 ログイン画面でOCIテナント管理者のユーザー名とパスワードを入力してサインインします。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/identity/identitydomain-azuread/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/identity/identitydomain-azuread/" />
 
 <meta property="article:section" content="Identity" />
     <meta
@@ -77,7 +77,7 @@ Select an identity domain to sign inのドロップダウンボックスから�
       "@type": "TechArticle",
       "articleSection": "Identity",
       "name": "OCI IAM Identity DomainsとAzure ADとの認証連携（外部IDP連携）を設定する",
-      "url" : "https://oracle-japan.github.io/ocitutorials/identity/identitydomain-azuread/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/identity/identitydomain-azuread/",
       "headline": "OCI IAM Identity DomainsとAzure ADとの認証連携（外部IDP連携）を設定する",
       "description": "2021年にOCIの新しい認証基盤としてOCI IAM Identity Domainsが登場しました。Identity DomainsはOCIのIAMサービスに代わりOCIへのユーザーの認証・認可の役割と、OCIのIdentity Cloud Serviceで提供していた他サービスとの認証連携の機能を提供しています。 本チュートリアルではSAMLによるOCI IAM Identity DomainsとAzure ADとの認証連携（外部IDP連携）を設定する手順を紹介します。Azure ADはMicrosoft社が提供するクラウドベースのIDおよびアクセス管理サービスです。本チュートリアルを完了することでAzure ADにサインオンするだけでOCIにもサインオンが可能になります。\n所要時間 : 60分\n前提条件 : 対象 Azure AD は構築済みとします。\n注意 :\n※チュートリアル内の画面ショットについてはOracle Cloud Infrastructureの現在のコンソール画面と異なっている場合があります。 1. OCI IAM Identity DomainsのSAMLメタデータダウンロード OCI IAM Identity DomainsにてSMALメタデータをダウンロードします。 OCIのログイン画面でクラウド・アカウント名を入力します。\nSelect an identity domain to sign inのドロップダウンボックスから「Default」を選択し「Next」ボタンをクリックします。\nログイン画面でOCIテナント管理者のユーザー名とパスワードを入力してサインインします。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -87,7 +87,7 @@ Select an identity domain to sign inのドロップダウンボックスから�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/identity/identitydomain-azuread/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/identity/identitydomain-azuread/"
       },
       "keywords" : [ "identity" ],
       "copyrightHolder" : "OCIチュートリアル",
@@ -98,10 +98,10 @@ Select an identity domain to sign inのドロップダウンボックスから�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -111,73 +111,73 @@ Select an identity domain to sign inのドロップダウンボックスから�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/identity/identitydomain-azuread/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/identity/identitydomain-azuread/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/identity/identitydomain-azuread/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/identity/identitydomain-azuread/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="OCI IAM Identity DomainsとAzure ADとの認証連携（外部IDP連携）を設定する">
   <meta property="og:description" content="2021年にOCIの新しい認証基盤としてOCI IAM Identity Domainsが登場しました。Identity DomainsはOCIのIAMサービスに代わりOCIへのユーザーの認証・認可の役割と、OCIのIdentity Cloud Serviceで提供していた他サービスとの認証連携の機能を提供しています。 本チュートリアルではSAMLによるOCI IAM Identity DomainsとAzure ADとの認証連携（外部IDP連携）を設定する手順を紹介します。Azure ADはMicrosoft社が提供するクラウドベースのIDおよびアクセス管理サービスです。本チュートリアルを完了することでAzure ADにサインオンするだけでOCIにもサインオンが可能になります。
@@ -248,11 +248,11 @@ Select an identity domain to sign inのドロップダウンボックスから�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -269,7 +269,7 @@ Select an identity domain to sign inのドロップダウンボックスから�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -281,7 +281,7 @@ Select an identity domain to sign inのドロップダウンボックスから�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -409,7 +409,7 @@ Select an identity domain to sign inのドロップダウンボックスから�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/identity/' href='/ocitutorials/identity/'><span itemprop='name'>アイデンティティ チュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>OCI IAM Identity DomainsとAzure ADとの認証連携（外部IDP連携）を設定する</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/identity/' href='/ocitutorial-geekdocs/identity/'><span itemprop='name'>アイデンティティ チュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>OCI IAM Identity DomainsとAzure ADとの認証連携（外部IDP連携）を設定する</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -457,7 +457,7 @@ Select an identity domain to sign inのドロップダウンボックスから�
     >
         1. OCI IAM Identity DomainsのSAMLメタデータダウンロード
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/identity/identitydomain-azuread/#1-oci-iam-identity-domainsのsamlメタデータダウンロード" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. OCI IAM Identity DomainsのSAMLメタデータダウンロード" aria-label="アンカー先: 1. OCI IAM Identity DomainsのSAMLメタデータダウンロード" href="#1-oci-iam-identity-domains%e3%81%aesaml%e3%83%a1%e3%82%bf%e3%83%87%e3%83%bc%e3%82%bf%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/identity/identitydomain-azuread/#1-oci-iam-identity-domainsのsamlメタデータダウンロード" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. OCI IAM Identity DomainsのSAMLメタデータダウンロード" aria-label="アンカー先: 1. OCI IAM Identity DomainsのSAMLメタデータダウンロード" href="#1-oci-iam-identity-domains%e3%81%aesaml%e3%83%a1%e3%82%bf%e3%83%87%e3%83%bc%e3%82%bf%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -515,7 +515,7 @@ Select an identity domain to sign inのドロップダウンボックスから�
     >
         2.Azure AD側でのサービス・プロバイダの登録
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/identity/identitydomain-azuread/#2azure-ad側でのサービスプロバイダの登録" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.Azure AD側でのサービス・プロバイダの登録" aria-label="アンカー先: 2.Azure AD側でのサービス・プロバイダの登録" href="#2azure-ad%e5%81%b4%e3%81%a7%e3%81%ae%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9%e3%83%97%e3%83%ad%e3%83%90%e3%82%a4%e3%83%80%e3%81%ae%e7%99%bb%e9%8c%b2">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/identity/identitydomain-azuread/#2azure-ad側でのサービスプロバイダの登録" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.Azure AD側でのサービス・プロバイダの登録" aria-label="アンカー先: 2.Azure AD側でのサービス・プロバイダの登録" href="#2azure-ad%e5%81%b4%e3%81%a7%e3%81%ae%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9%e3%83%97%e3%83%ad%e3%83%90%e3%82%a4%e3%83%80%e3%81%ae%e7%99%bb%e9%8c%b2">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -674,7 +674,7 @@ SAMLベースのサインオン画面にて、フェデレーションメタデ�
     >
         3.OCI IAM Identity Domains 側でのアイデンティティ・プロバイダの登録
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/identity/identitydomain-azuread/#3oci-iam-identity-domains-側でのアイデンティティプロバイダの登録" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3.OCI IAM Identity Domains 側でのアイデンティティ・プロバイダの登録" aria-label="アンカー先: 3.OCI IAM Identity Domains 側でのアイデンティティ・プロバイダの登録" href="#3oci-iam-identity-domains-%e5%81%b4%e3%81%a7%e3%81%ae%e3%82%a2%e3%82%a4%e3%83%87%e3%83%b3%e3%83%86%e3%82%a3%e3%83%86%e3%82%a3%e3%83%97%e3%83%ad%e3%83%90%e3%82%a4%e3%83%80%e3%81%ae%e7%99%bb%e9%8c%b2">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/identity/identitydomain-azuread/#3oci-iam-identity-domains-側でのアイデンティティプロバイダの登録" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3.OCI IAM Identity Domains 側でのアイデンティティ・プロバイダの登録" aria-label="アンカー先: 3.OCI IAM Identity Domains 側でのアイデンティティ・プロバイダの登録" href="#3oci-iam-identity-domains-%e5%81%b4%e3%81%a7%e3%81%ae%e3%82%a2%e3%82%a4%e3%83%87%e3%83%b3%e3%83%86%e3%82%a3%e3%83%86%e3%82%a3%e3%83%97%e3%83%ad%e3%83%90%e3%82%a4%e3%83%80%e3%81%ae%e7%99%bb%e9%8c%b2">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -731,7 +731,7 @@ IdPの構成にて、Azure AD側でのサービス・プロバイダの登録に
     >
         4.OCI IAM Identity Domains側でのアイデンティティ・プロバイダのアクティブ化
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/identity/identitydomain-azuread/#4oci-iam-identity-domains側でのアイデンティティプロバイダのアクティブ化" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.OCI IAM Identity Domains側でのアイデンティティ・プロバイダのアクティブ化" aria-label="アンカー先: 4.OCI IAM Identity Domains側でのアイデンティティ・プロバイダのアクティブ化" href="#4oci-iam-identity-domains%e5%81%b4%e3%81%a7%e3%81%ae%e3%82%a2%e3%82%a4%e3%83%87%e3%83%b3%e3%83%86%e3%82%a3%e3%83%86%e3%82%a3%e3%83%97%e3%83%ad%e3%83%90%e3%82%a4%e3%83%80%e3%81%ae%e3%82%a2%e3%82%af%e3%83%86%e3%82%a3%e3%83%96%e5%8c%96">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/identity/identitydomain-azuread/#4oci-iam-identity-domains側でのアイデンティティプロバイダのアクティブ化" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.OCI IAM Identity Domains側でのアイデンティティ・プロバイダのアクティブ化" aria-label="アンカー先: 4.OCI IAM Identity Domains側でのアイデンティティ・プロバイダのアクティブ化" href="#4oci-iam-identity-domains%e5%81%b4%e3%81%a7%e3%81%ae%e3%82%a2%e3%82%a4%e3%83%87%e3%83%b3%e3%83%86%e3%82%a3%e3%83%86%e3%82%a3%e3%83%97%e3%83%ad%e3%83%90%e3%82%a4%e3%83%80%e3%81%ae%e3%82%a2%e3%82%af%e3%83%86%e3%82%a3%e3%83%96%e5%8c%96">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -811,7 +811,7 @@ IdP ルール優先度の編集画面にて、左側の優先度列にある上�
     >
         5.動作確認
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/identity/identitydomain-azuread/#5動作確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5.動作確認" aria-label="アンカー先: 5.動作確認" href="#5%e5%8b%95%e4%bd%9c%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/identity/identitydomain-azuread/#5動作確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5.動作確認" aria-label="アンカー先: 5.動作確認" href="#5%e5%8b%95%e4%bd%9c%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9099,7 +9099,7 @@ OCI コンソールに接続できれば成功です。
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/identity/identitydomain-setup-users/"
+      href="/ocitutorial-geekdocs/identity/identitydomain-setup-users/"
       title="OCI IAM Identity Domains - テナント管理者・一般ユーザーを作成する"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9111,7 +9111,7 @@ OCI コンソールに接続できれば成功です。
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/identity/identitydomain-createdomain-alterdomaintype/"
+      href="/ocitutorial-geekdocs/identity/identitydomain-createdomain-alterdomaintype/"
       title="OCI IAM Identity Domainsのドメインの追加とライセンスタイプを変更する"
     >
       OCI IAM Identity Domainsのドメインの追加とライセンスタイプを変更する
@@ -9165,7 +9165,7 @@ OCI コンソールに接続できれば成功です。
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

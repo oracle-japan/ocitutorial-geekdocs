@@ -18,18 +18,18 @@ OCI コンソール画面左上のハンバーガーメニューを展開し、�
 
   <title>Anomaly Detection ハンズオン(初級編) | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -48,7 +48,7 @@ OCIの異常検出サービスは、サーバーレスのマルチ・テナン�
 OCIコンソールからAnomaly Detectionサービスを使う 前提条件 Oracle Cloud のアカウントを取得済みであること ポリシーの設定 OCI Anomaly Detection（異常検出）を利用するために、テナンシ管理者は次の手順に従って、ポリシーを設定する必要があります。
 OCI コンソール画面左上のハンバーガーメニューを展開し、「アイデンティティとセキュリティ」 &gt; 「ポリシー」を選択します。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/datascience/anomaly-detection-for-beginner/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/anomaly-detection-for-beginner/" />
 
 <meta property="article:section" content="Datascience" />
     <meta
@@ -78,7 +78,7 @@ OCI コンソール画面左上のハンバーガーメニューを展開し、�
       "@type": "TechArticle",
       "articleSection": "Datascience",
       "name": "Anomaly Detection ハンズオン(初級編)",
-      "url" : "https://oracle-japan.github.io/ocitutorials/datascience/anomaly-detection-for-beginner/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/anomaly-detection-for-beginner/",
       "headline": "Anomaly Detection ハンズオン(初級編)",
       "description": " Anomaly Detection（異常検出）サービスについて 異常検出とは、データ内のまれな項目、イベント、または観察結果のうち、予想と大きく異なるものを識別することです。 これは、公益事業、航空、輸送、製造などの業界における資産の監視、メンテナンス、予後監視などのいくつかのシナリオに使用できます。\nOracleの異常検出サービスのアルゴリズムは、Oracle が特許を取得した多変量時系列異常検出アルゴリズムであり、元々は Oracle Labs によって開発され、いくつかの業界で使用されてきました。\nOCIの異常検出サービスは、ユーザーがアップロードしたデータを取得し、アルゴリズムを使用してモデルをトレーニングし、カスタマイズされた機械学習モデルを作成し、クラウドでホストします。 その後、ユーザーは新しいデータをエンドポイントに送信して、検出された異常の結果を取得できます。\nOCIの異常検出サービスは、サーバーレスのマルチ・テナント・サービスです。認証されたユーザーはOCI CLI、SDK、または Cloud Console を通じてREST API にアクセスできます。\nOCIコンソールからAnomaly Detectionサービスを使う 前提条件 Oracle Cloud のアカウントを取得済みであること ポリシーの設定 OCI Anomaly Detection（異常検出）を利用するために、テナンシ管理者は次の手順に従って、ポリシーを設定する必要があります。\nOCI コンソール画面左上のハンバーガーメニューを展開し、「アイデンティティとセキュリティ」 \u003e 「ポリシー」を選択します。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -88,7 +88,7 @@ OCI コンソール画面左上のハンバーガーメニューを展開し、�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/datascience/anomaly-detection-for-beginner/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/anomaly-detection-for-beginner/"
       },
       "keywords" : [ "ai" , "anomaly-detection" ],
       "copyrightHolder" : "OCIチュートリアル",
@@ -99,10 +99,10 @@ OCI コンソール画面左上のハンバーガーメニューを展開し、�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -112,73 +112,73 @@ OCI コンソール画面左上のハンバーガーメニューを展開し、�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/datascience/anomaly-detection-for-beginner/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/anomaly-detection-for-beginner/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/datascience/anomaly-detection-for-beginner/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/anomaly-detection-for-beginner/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="Anomaly Detection ハンズオン(初級編)">
   <meta property="og:description" content="Anomaly Detection（異常検出）サービスについて 異常検出とは、データ内のまれな項目、イベント、または観察結果のうち、予想と大きく異なるものを識別することです。 これは、公益事業、航空、輸送、製造などの業界における資産の監視、メンテナンス、予後監視などのいくつかのシナリオに使用できます。
@@ -249,11 +249,11 @@ OCI コンソール画面左上のハンバーガーメニューを展開し、�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -270,7 +270,7 @@ OCI コンソール画面左上のハンバーガーメニューを展開し、�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -282,7 +282,7 @@ OCI コンソール画面左上のハンバーガーメニューを展開し、�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -437,7 +437,7 @@ OCI コンソール画面左上のハンバーガーメニューを展開し、�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/datascience/' href='/ocitutorials/datascience/'><span itemprop='name'>データサイエンス/ビッグデータチュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Anomaly Detection ハンズオン(初級編)</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/datascience/' href='/ocitutorial-geekdocs/datascience/'><span itemprop='name'>データサイエンス/ビッグデータチュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Anomaly Detection ハンズオン(初級編)</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -481,7 +481,7 @@ OCI コンソール画面左上のハンバーガーメニューを展開し、�
     >
         Anomaly Detection（異常検出）サービスについて
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/datascience/anomaly-detection-for-beginner/#anomaly-detection異常検出サービスについて" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Anomaly Detection（異常検出）サービスについて" aria-label="アンカー先: Anomaly Detection（異常検出）サービスについて" href="#anomaly-detection%e7%95%b0%e5%b8%b8%e6%a4%9c%e5%87%ba%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/anomaly-detection-for-beginner/#anomaly-detection異常検出サービスについて" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Anomaly Detection（異常検出）サービスについて" aria-label="アンカー先: Anomaly Detection（異常検出）サービスについて" href="#anomaly-detection%e7%95%b0%e5%b8%b8%e6%a4%9c%e5%87%ba%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -494,7 +494,7 @@ OCIの異常検出サービスは、サーバーレスのマルチ・テナン�
     >
         OCIコンソールからAnomaly Detectionサービスを使う
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/datascience/anomaly-detection-for-beginner/#ociコンソールからanomaly-detectionサービスを使う" class="gdoc-page__anchor clip flex align-center" title="アンカー先: OCIコンソールからAnomaly Detectionサービスを使う" aria-label="アンカー先: OCIコンソールからAnomaly Detectionサービスを使う" href="#oci%e3%82%b3%e3%83%b3%e3%82%bd%e3%83%bc%e3%83%ab%e3%81%8b%e3%82%89anomaly-detection%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9%e3%82%92%e4%bd%bf%e3%81%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/anomaly-detection-for-beginner/#ociコンソールからanomaly-detectionサービスを使う" class="gdoc-page__anchor clip flex align-center" title="アンカー先: OCIコンソールからAnomaly Detectionサービスを使う" aria-label="アンカー先: OCIコンソールからAnomaly Detectionサービスを使う" href="#oci%e3%82%b3%e3%83%b3%e3%82%bd%e3%83%bc%e3%83%ab%e3%81%8b%e3%82%89anomaly-detection%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9%e3%82%92%e4%bd%bf%e3%81%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -503,7 +503,7 @@ OCIの異常検出サービスは、サーバーレスのマルチ・テナン�
     >
         前提条件
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/datascience/anomaly-detection-for-beginner/#前提条件" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 前提条件" aria-label="アンカー先: 前提条件" href="#%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/anomaly-detection-for-beginner/#前提条件" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 前提条件" aria-label="アンカー先: 前提条件" href="#%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -515,7 +515,7 @@ OCIの異常検出サービスは、サーバーレスのマルチ・テナン�
     >
         ポリシーの設定
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/datascience/anomaly-detection-for-beginner/#ポリシーの設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ポリシーの設定" aria-label="アンカー先: ポリシーの設定" href="#%e3%83%9d%e3%83%aa%e3%82%b7%e3%83%bc%e3%81%ae%e8%a8%ad%e5%ae%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/anomaly-detection-for-beginner/#ポリシーの設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ポリシーの設定" aria-label="アンカー先: ポリシーの設定" href="#%e3%83%9d%e3%83%aa%e3%82%b7%e3%83%bc%e3%81%ae%e8%a8%ad%e5%ae%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -566,7 +566,7 @@ OCI コンソール画面左上のハンバーガーメニューを展開し、�
     >
         データの理解とサンプル・データのダウンロード
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/datascience/anomaly-detection-for-beginner/#データの理解とサンプルデータのダウンロード" class="gdoc-page__anchor clip flex align-center" title="アンカー先: データの理解とサンプル・データのダウンロード" aria-label="アンカー先: データの理解とサンプル・データのダウンロード" href="#%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e7%90%86%e8%a7%a3%e3%81%a8%e3%82%b5%e3%83%b3%e3%83%97%e3%83%ab%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/anomaly-detection-for-beginner/#データの理解とサンプルデータのダウンロード" class="gdoc-page__anchor clip flex align-center" title="アンカー先: データの理解とサンプル・データのダウンロード" aria-label="アンカー先: データの理解とサンプル・データのダウンロード" href="#%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e7%90%86%e8%a7%a3%e3%81%a8%e3%82%b5%e3%83%b3%e3%83%97%e3%83%ab%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -577,7 +577,7 @@ OCI コンソール画面左上のハンバーガーメニューを展開し、�
     >
         データの要件
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/datascience/anomaly-detection-for-beginner/#データの要件" class="gdoc-page__anchor clip flex align-center" title="アンカー先: データの要件" aria-label="アンカー先: データの要件" href="#%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e8%a6%81%e4%bb%b6">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/anomaly-detection-for-beginner/#データの要件" class="gdoc-page__anchor clip flex align-center" title="アンカー先: データの要件" aria-label="アンカー先: データの要件" href="#%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e8%a6%81%e4%bb%b6">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -602,7 +602,7 @@ OCI コンソール画面左上のハンバーガーメニューを展開し、�
     >
         データ・フォーマットの要件
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/datascience/anomaly-detection-for-beginner/#データフォーマットの要件" class="gdoc-page__anchor clip flex align-center" title="アンカー先: データ・フォーマットの要件" aria-label="アンカー先: データ・フォーマットの要件" href="#%e3%83%87%e3%83%bc%e3%82%bf%e3%83%95%e3%82%a9%e3%83%bc%e3%83%9e%e3%83%83%e3%83%88%e3%81%ae%e8%a6%81%e4%bb%b6">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/anomaly-detection-for-beginner/#データフォーマットの要件" class="gdoc-page__anchor clip flex align-center" title="アンカー先: データ・フォーマットの要件" aria-label="アンカー先: データ・フォーマットの要件" href="#%e3%83%87%e3%83%bc%e3%82%bf%e3%83%95%e3%82%a9%e3%83%bc%e3%83%9e%e3%83%83%e3%83%88%e3%81%ae%e8%a6%81%e4%bb%b6">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -617,7 +617,7 @@ Oracleオブジェクト・ストレージの場合、サービスはCSV形式�
     >
         CSV形式
     </h4>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/datascience/anomaly-detection-for-beginner/#csv形式" class="gdoc-page__anchor clip flex align-center" title="アンカー先: CSV形式" aria-label="アンカー先: CSV形式" href="#csv%e5%bd%a2%e5%bc%8f">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/anomaly-detection-for-beginner/#csv形式" class="gdoc-page__anchor clip flex align-center" title="アンカー先: CSV形式" aria-label="アンカー先: CSV形式" href="#csv%e5%bd%a2%e5%bc%8f">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -631,7 +631,7 @@ Oracleオブジェクト・ストレージの場合、サービスはCSV形式�
     >
         JSON形式のデータの例
     </h4>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/datascience/anomaly-detection-for-beginner/#json形式のデータの例" class="gdoc-page__anchor clip flex align-center" title="アンカー先: JSON形式のデータの例" aria-label="アンカー先: JSON形式のデータの例" href="#json%e5%bd%a2%e5%bc%8f%e3%81%ae%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e4%be%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/anomaly-detection-for-beginner/#json形式のデータの例" class="gdoc-page__anchor clip flex align-center" title="アンカー先: JSON形式のデータの例" aria-label="アンカー先: JSON形式のデータの例" href="#json%e5%bd%a2%e5%bc%8f%e3%81%ae%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e4%be%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -649,7 +649,7 @@ Oracleオブジェクト・ストレージの場合、サービスはCSV形式�
     >
         サンプル・データのダウンロード
     </h4>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/datascience/anomaly-detection-for-beginner/#サンプルデータのダウンロード" class="gdoc-page__anchor clip flex align-center" title="アンカー先: サンプル・データのダウンロード" aria-label="アンカー先: サンプル・データのダウンロード" href="#%e3%82%b5%e3%83%b3%e3%83%97%e3%83%ab%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/anomaly-detection-for-beginner/#サンプルデータのダウンロード" class="gdoc-page__anchor clip flex align-center" title="アンカー先: サンプル・データのダウンロード" aria-label="アンカー先: サンプル・データのダウンロード" href="#%e3%82%b5%e3%83%b3%e3%83%97%e3%83%ab%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -669,7 +669,7 @@ Oracleオブジェクト・ストレージの場合、サービスはCSV形式�
     >
         Object Storageへのアップロード
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/datascience/anomaly-detection-for-beginner/#object-storageへのアップロード" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Object Storageへのアップロード" aria-label="アンカー先: Object Storageへのアップロード" href="#object-storage%e3%81%b8%e3%81%ae%e3%82%a2%e3%83%83%e3%83%97%e3%83%ad%e3%83%bc%e3%83%89">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/anomaly-detection-for-beginner/#object-storageへのアップロード" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Object Storageへのアップロード" aria-label="アンカー先: Object Storageへのアップロード" href="#object-storage%e3%81%b8%e3%81%ae%e3%82%a2%e3%83%83%e3%83%97%e3%83%ad%e3%83%bc%e3%83%89">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -705,7 +705,7 @@ OCI コンソール画面左上のハンバーガーメニューを展開し、�
     >
         異常検出プロジェクトの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/datascience/anomaly-detection-for-beginner/#異常検出プロジェクトの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 異常検出プロジェクトの作成" aria-label="アンカー先: 異常検出プロジェクトの作成" href="#%e7%95%b0%e5%b8%b8%e6%a4%9c%e5%87%ba%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/anomaly-detection-for-beginner/#異常検出プロジェクトの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 異常検出プロジェクトの作成" aria-label="アンカー先: 異常検出プロジェクトの作成" href="#%e7%95%b0%e5%b8%b8%e6%a4%9c%e5%87%ba%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -715,7 +715,7 @@ OCI コンソール画面左上のハンバーガーメニューを展開し、�
     >
         プロジェクトの作成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/datascience/anomaly-detection-for-beginner/#プロジェクトの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: プロジェクトの作成" aria-label="アンカー先: プロジェクトの作成" href="#%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/anomaly-detection-for-beginner/#プロジェクトの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: プロジェクトの作成" aria-label="アンカー先: プロジェクトの作成" href="#%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -738,7 +738,7 @@ OCI コンソール画面左上のハンバーガーメニューを展開し、�
     >
         データ・アセットの作成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/datascience/anomaly-detection-for-beginner/#データアセットの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: データ・アセットの作成" aria-label="アンカー先: データ・アセットの作成" href="#%e3%83%87%e3%83%bc%e3%82%bf%e3%82%a2%e3%82%bb%e3%83%83%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/anomaly-detection-for-beginner/#データアセットの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: データ・アセットの作成" aria-label="アンカー先: データ・アセットの作成" href="#%e3%83%87%e3%83%bc%e3%82%bf%e3%82%a2%e3%82%bb%e3%83%83%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -772,7 +772,7 @@ OCI コンソール画面左上のハンバーガーメニューを展開し、�
     >
         「モデルの作成とトレーニング」 ボタンを使用して、データ・アセットの作成(オプション)
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/datascience/anomaly-detection-for-beginner/#モデルの作成とトレーニング-ボタンを使用してデータアセットの作成オプション" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 「モデルの作成とトレーニング」 ボタンを使用して、データ・アセットの作成(オプション)" aria-label="アンカー先: 「モデルの作成とトレーニング」 ボタンを使用して、データ・アセットの作成(オプション)" href="#%e3%83%a2%e3%83%87%e3%83%ab%e3%81%ae%e4%bd%9c%e6%88%90%e3%81%a8%e3%83%88%e3%83%ac%e3%83%bc%e3%83%8b%e3%83%b3%e3%82%b0-%e3%83%9c%e3%82%bf%e3%83%b3%e3%82%92%e4%bd%bf%e7%94%a8%e3%81%97%e3%81%a6%e3%83%87%e3%83%bc%e3%82%bf%e3%82%a2%e3%82%bb%e3%83%83%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90%e3%82%aa%e3%83%97%e3%82%b7%e3%83%a7%e3%83%b3">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/anomaly-detection-for-beginner/#モデルの作成とトレーニング-ボタンを使用してデータアセットの作成オプション" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 「モデルの作成とトレーニング」 ボタンを使用して、データ・アセットの作成(オプション)" aria-label="アンカー先: 「モデルの作成とトレーニング」 ボタンを使用して、データ・アセットの作成(オプション)" href="#%e3%83%a2%e3%83%87%e3%83%ab%e3%81%ae%e4%bd%9c%e6%88%90%e3%81%a8%e3%83%88%e3%83%ac%e3%83%bc%e3%83%8b%e3%83%b3%e3%82%b0-%e3%83%9c%e3%82%bf%e3%83%b3%e3%82%92%e4%bd%bf%e7%94%a8%e3%81%97%e3%81%a6%e3%83%87%e3%83%bc%e3%82%bf%e3%82%a2%e3%82%bb%e3%83%83%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90%e3%82%aa%e3%83%97%e3%82%b7%e3%83%a7%e3%83%b3">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -800,7 +800,7 @@ OCI コンソール画面左上のハンバーガーメニューを展開し、�
     >
         異常検出モデルのトレーニングと検出
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/datascience/anomaly-detection-for-beginner/#異常検出モデルのトレーニングと検出" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 異常検出モデルのトレーニングと検出" aria-label="アンカー先: 異常検出モデルのトレーニングと検出" href="#%e7%95%b0%e5%b8%b8%e6%a4%9c%e5%87%ba%e3%83%a2%e3%83%87%e3%83%ab%e3%81%ae%e3%83%88%e3%83%ac%e3%83%bc%e3%83%8b%e3%83%b3%e3%82%b0%e3%81%a8%e6%a4%9c%e5%87%ba">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/anomaly-detection-for-beginner/#異常検出モデルのトレーニングと検出" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 異常検出モデルのトレーニングと検出" aria-label="アンカー先: 異常検出モデルのトレーニングと検出" href="#%e7%95%b0%e5%b8%b8%e6%a4%9c%e5%87%ba%e3%83%a2%e3%83%87%e3%83%ab%e3%81%ae%e3%83%88%e3%83%ac%e3%83%bc%e3%83%8b%e3%83%b3%e3%82%b0%e3%81%a8%e6%a4%9c%e5%87%ba">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -810,7 +810,7 @@ OCI コンソール画面左上のハンバーガーメニューを展開し、�
     >
         モデルの作成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/datascience/anomaly-detection-for-beginner/#モデルの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: モデルの作成" aria-label="アンカー先: モデルの作成" href="#%e3%83%a2%e3%83%87%e3%83%ab%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/anomaly-detection-for-beginner/#モデルの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: モデルの作成" aria-label="アンカー先: モデルの作成" href="#%e3%83%a2%e3%83%87%e3%83%ab%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -873,7 +873,7 @@ FAP = sum(各シグナルの異常の数) / (シグナルの数 * タイムス�
     >
         新しいデータで異常の検出
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/datascience/anomaly-detection-for-beginner/#新しいデータで異常の検出" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 新しいデータで異常の検出" aria-label="アンカー先: 新しいデータで異常の検出" href="#%e6%96%b0%e3%81%97%e3%81%84%e3%83%87%e3%83%bc%e3%82%bf%e3%81%a7%e7%95%b0%e5%b8%b8%e3%81%ae%e6%a4%9c%e5%87%ba">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/anomaly-detection-for-beginner/#新しいデータで異常の検出" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 新しいデータで異常の検出" aria-label="アンカー先: 新しいデータで異常の検出" href="#%e6%96%b0%e3%81%97%e3%81%84%e3%83%87%e3%83%bc%e3%82%bf%e3%81%a7%e7%95%b0%e5%b8%b8%e3%81%ae%e6%a4%9c%e5%87%ba">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -906,7 +906,7 @@ FAP = sum(各シグナルの異常の数) / (シグナルの数 * タイムス�
     >
         グラフの見方
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/datascience/anomaly-detection-for-beginner/#グラフの見方" class="gdoc-page__anchor clip flex align-center" title="アンカー先: グラフの見方" aria-label="アンカー先: グラフの見方" href="#%e3%82%b0%e3%83%a9%e3%83%95%e3%81%ae%e8%a6%8b%e6%96%b9">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/datascience/anomaly-detection-for-beginner/#グラフの見方" class="gdoc-page__anchor clip flex align-center" title="アンカー先: グラフの見方" aria-label="アンカー先: グラフの見方" href="#%e3%82%b0%e3%83%a9%e3%83%95%e3%81%ae%e8%a6%8b%e6%96%b9">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9169,7 +9169,7 @@ FAP = sum(各シグナルの異常の数) / (シグナルの数 * タイムス�
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/datascience/"
+      href="/ocitutorial-geekdocs/datascience/"
       title="データサイエンス/ビッグデータチュートリアル"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9181,7 +9181,7 @@ FAP = sum(各シグナルの異常の数) / (シグナルの数 * タイムス�
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/datascience/anomaly-detection-for-intermediates/"
+      href="/ocitutorial-geekdocs/datascience/anomaly-detection-for-intermediates/"
       title="Anomaly Detection ハンズオン(中級編)"
     >
       Anomaly Detection ハンズオン(中級編)
@@ -9235,7 +9235,7 @@ FAP = sum(各シグナルの異常の数) / (シグナルの数 * タイムス�
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

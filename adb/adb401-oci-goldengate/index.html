@@ -16,18 +16,18 @@ BaseDBの作成については、「101: Oracle Cloud で Oracle Database を使
 
   <title>401 : OCI GoldenGateによるBaseDBからADBへのデータ連携 | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -45,7 +45,7 @@ BaseDBの作成については、「101: Oracle Cloud で Oracle Database を使
 1.ソース・データベースの設定 2.ターゲット・データベースの設定 3.OCI GGデプロイメントの作成 4.データベースの登録 5.Extractの作成 6.チェックポイント表の作成 7.Replicatの作成 8.データ連携の確認 前提条件 : 本チュートリアルではBaseDB、ADBともにデータベースの作成が完了しており、初期データとしてHRスキーマがそれぞれのデータベースにロードされていることを前提にしています。 各データベースの作成方法やデータロードの方法は下記手順をご確認ください。
 BaseDBの作成については、「101: Oracle Cloud で Oracle Database を使おう(BaseDB)」 をご参照ください。 データ連携用のサンプルデータはHRスキーマを使用しています。BaseDBでのHRスキーマ作成方法は、「301: 移行元となるデータベースを作成しよう」 をご参照ください。 ADBの作成については、「101:ADBインスタンスを作成してみよう」 をご参照ください。 ADBの初期データロードについては、「303 : Data Pumpを利用してデータを移行しよう」 をご参照ください。 チュートリアルの便宜上Autonomous Databaseへの接続文字列は「atp01_low」、BaseDBを含めて各ユーザのパスワードはすべて「Welcome#1Welcome#1」とします。 所要時間 : 約60分" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/adb/adb401-oci-goldengate/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb401-oci-goldengate/" />
 
 <meta property="article:section" content="Adb" />
     <meta
@@ -70,7 +70,7 @@ BaseDBの作成については、「101: Oracle Cloud で Oracle Database を使
       "@type": "TechArticle",
       "articleSection": "Adb",
       "name": "401 : OCI GoldenGateによるBaseDBからADBへのデータ連携",
-      "url" : "https://oracle-japan.github.io/ocitutorials/adb/adb401-oci-goldengate/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb401-oci-goldengate/",
       "headline": "401 : OCI GoldenGateによるBaseDBからADBへのデータ連携",
       "description": "\nはじめに Oracle Cloud Infrastructure (OCI) GoldenGateはフルマネージド型のリアルタイムデータ連携サービスとなっています。 OCI GoldenGateサービスは、構成、ワークロード・スケーリング、パッチ適用などの多くの機能を自動化しており、従量課金制で利用することが可能です。そのため時間や場所を選ばずに、低コストでデータの連携、分析ができるようになります。\nこの章では、OCI GoldenGateの作成とBaseDBからADBへのデータ連携の設定について紹介します。 目次 :\n1.ソース・データベースの設定 2.ターゲット・データベースの設定 3.OCI GGデプロイメントの作成 4.データベースの登録 5.Extractの作成 6.チェックポイント表の作成 7.Replicatの作成 8.データ連携の確認 前提条件 : 本チュートリアルではBaseDB、ADBともにデータベースの作成が完了しており、初期データとしてHRスキーマがそれぞれのデータベースにロードされていることを前提にしています。 各データベースの作成方法やデータロードの方法は下記手順をご確認ください。\nBaseDBの作成については、「101: Oracle Cloud で Oracle Database を使おう(BaseDB)」 をご参照ください。 データ連携用のサンプルデータはHRスキーマを使用しています。BaseDBでのHRスキーマ作成方法は、「301: 移行元となるデータベースを作成しよう」 をご参照ください。 ADBの作成については、「101:ADBインスタンスを作成してみよう」 をご参照ください。 ADBの初期データロードについては、「303 : Data Pumpを利用してデータを移行しよう」 をご参照ください。 チュートリアルの便宜上Autonomous Databaseへの接続文字列は「atp01_low」、BaseDBを含めて各ユーザのパスワードはすべて「Welcome#1Welcome#1」とします。 所要時間 : 約60分",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -80,7 +80,7 @@ BaseDBの作成については、「101: Oracle Cloud で Oracle Database を使
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/adb/adb401-oci-goldengate/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb401-oci-goldengate/"
       },
       "copyrightHolder" : "OCIチュートリアル",
       "copyrightYear" : "0001",
@@ -90,10 +90,10 @@ BaseDBの作成については、「101: Oracle Cloud で Oracle Database を使
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -103,73 +103,73 @@ BaseDBの作成については、「101: Oracle Cloud で Oracle Database を使
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/adb/adb401-oci-goldengate/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb401-oci-goldengate/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/adb/adb401-oci-goldengate/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb401-oci-goldengate/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="401 : OCI GoldenGateによるBaseDBからADBへのデータ連携">
   <meta property="og:description" content="はじめに Oracle Cloud Infrastructure (OCI) GoldenGateはフルマネージド型のリアルタイムデータ連携サービスとなっています。 OCI GoldenGateサービスは、構成、ワークロード・スケーリング、パッチ適用などの多くの機能を自動化しており、従量課金制で利用することが可能です。そのため時間や場所を選ばずに、低コストでデータの連携、分析ができるようになります。
@@ -233,11 +233,11 @@ BaseDBの作成については、「101: Oracle Cloud で Oracle Database を使
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -254,7 +254,7 @@ BaseDBの作成については、「101: Oracle Cloud で Oracle Database を使
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -266,7 +266,7 @@ BaseDBの作成については、「101: Oracle Cloud で Oracle Database を使
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -399,7 +399,7 @@ BaseDBの作成については、「101: Oracle Cloud で Oracle Database を使
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/adb/' href='/ocitutorials/adb/'><span itemprop='name'>Oracle Database編 - Autonomous Database (ADB)を使ってみよう</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>401 : OCI GoldenGateによるBaseDBからADBへのデータ連携</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/adb/' href='/ocitutorial-geekdocs/adb/'><span itemprop='name'>Oracle Database編 - Autonomous Database (ADB)を使ってみよう</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>401 : OCI GoldenGateによるBaseDBからADBへのデータ連携</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -431,7 +431,7 @@ BaseDBの作成については、「101: Oracle Cloud で Oracle Database を使
     >
         はじめに
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb401-oci-goldengate/#はじめに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: はじめに" aria-label="アンカー先: はじめに" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb401-oci-goldengate/#はじめに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: はじめに" aria-label="アンカー先: はじめに" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -508,7 +508,7 @@ OCI GoldenGateサービスは、構成、ワークロード・スケーリング
     >
         1. ソース・データベースの設定
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb401-oci-goldengate/#1-ソースデータベースの設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. ソース・データベースの設定" aria-label="アンカー先: 1. ソース・データベースの設定" href="#1-%e3%82%bd%e3%83%bc%e3%82%b9%e3%83%87%e3%83%bc%e3%82%bf%e3%83%99%e3%83%bc%e3%82%b9%e3%81%ae%e8%a8%ad%e5%ae%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb401-oci-goldengate/#1-ソースデータベースの設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. ソース・データベースの設定" aria-label="アンカー先: 1. ソース・データベースの設定" href="#1-%e3%82%bd%e3%83%bc%e3%82%b9%e3%83%87%e3%83%bc%e3%82%bf%e3%83%99%e3%83%bc%e3%82%b9%e3%81%ae%e8%a8%ad%e5%ae%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -567,7 +567,7 @@ ENABLE_GOLDENGATE_REPLICATIONパラメータを設定して、GGが利用する�
     >
         2. ターゲット・データベースの設定
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb401-oci-goldengate/#2-ターゲットデータベースの設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. ターゲット・データベースの設定" aria-label="アンカー先: 2. ターゲット・データベースの設定" href="#2-%e3%82%bf%e3%83%bc%e3%82%b2%e3%83%83%e3%83%88%e3%83%87%e3%83%bc%e3%82%bf%e3%83%99%e3%83%bc%e3%82%b9%e3%81%ae%e8%a8%ad%e5%ae%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb401-oci-goldengate/#2-ターゲットデータベースの設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. ターゲット・データベースの設定" aria-label="アンカー先: 2. ターゲット・データベースの設定" href="#2-%e3%82%bf%e3%83%bc%e3%82%b2%e3%83%83%e3%83%88%e3%83%87%e3%83%bc%e3%82%bf%e3%83%99%e3%83%bc%e3%82%b9%e3%81%ae%e8%a8%ad%e5%ae%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -634,7 +634,7 @@ ENABLE_GOLDENGATE_REPLICATIONパラメータを設定して、GGが利用する�
     >
         3. OCI GGデプロイメントの作成
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb401-oci-goldengate/#3-oci-ggデプロイメントの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. OCI GGデプロイメントの作成" aria-label="アンカー先: 3. OCI GGデプロイメントの作成" href="#3-oci-gg%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4%e3%83%a1%e3%83%b3%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb401-oci-goldengate/#3-oci-ggデプロイメントの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. OCI GGデプロイメントの作成" aria-label="アンカー先: 3. OCI GGデプロイメントの作成" href="#3-oci-gg%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4%e3%83%a1%e3%83%b3%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -736,7 +736,7 @@ ENABLE_GOLDENGATE_REPLICATIONパラメータを設定して、GGが利用する�
     >
         4. データベースの登録
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb401-oci-goldengate/#4-データベースの登録" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. データベースの登録" aria-label="アンカー先: 4. データベースの登録" href="#4-%e3%83%87%e3%83%bc%e3%82%bf%e3%83%99%e3%83%bc%e3%82%b9%e3%81%ae%e7%99%bb%e9%8c%b2">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb401-oci-goldengate/#4-データベースの登録" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. データベースの登録" aria-label="アンカー先: 4. データベースの登録" href="#4-%e3%83%87%e3%83%bc%e3%82%bf%e3%83%99%e3%83%bc%e3%82%b9%e3%81%ae%e7%99%bb%e9%8c%b2">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -804,7 +804,7 @@ BaseDBの場合データベース・システムを選択することでデー�
     >
         5. Extractの作成
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb401-oci-goldengate/#5-extractの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5. Extractの作成" aria-label="アンカー先: 5. Extractの作成" href="#5-extract%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb401-oci-goldengate/#5-extractの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5. Extractの作成" aria-label="アンカー先: 5. Extractの作成" href="#5-extract%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -924,7 +924,7 @@ BaseDBの場合データベース・システムを選択することでデー�
     >
         6. チェックポイント表の作成
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb401-oci-goldengate/#6-チェックポイント表の作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 6. チェックポイント表の作成" aria-label="アンカー先: 6. チェックポイント表の作成" href="#6-%e3%83%81%e3%82%a7%e3%83%83%e3%82%af%e3%83%9d%e3%82%a4%e3%83%b3%e3%83%88%e8%a1%a8%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb401-oci-goldengate/#6-チェックポイント表の作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 6. チェックポイント表の作成" aria-label="アンカー先: 6. チェックポイント表の作成" href="#6-%e3%83%81%e3%82%a7%e3%83%83%e3%82%af%e3%83%9d%e3%82%a4%e3%83%b3%e3%83%88%e8%a1%a8%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -963,7 +963,7 @@ BaseDBの場合データベース・システムを選択することでデー�
     >
         7. Replicatの作成
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb401-oci-goldengate/#7-replicatの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 7. Replicatの作成" aria-label="アンカー先: 7. Replicatの作成" href="#7-replicat%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb401-oci-goldengate/#7-replicatの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 7. Replicatの作成" aria-label="アンカー先: 7. Replicatの作成" href="#7-replicat%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1029,7 +1029,7 @@ BaseDBの場合データベース・システムを選択することでデー�
     >
         8. データ連携の確認
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb401-oci-goldengate/#8-データ連携の確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 8. データ連携の確認" aria-label="アンカー先: 8. データ連携の確認" href="#8-%e3%83%87%e3%83%bc%e3%82%bf%e9%80%a3%e6%90%ba%e3%81%ae%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb401-oci-goldengate/#8-データ連携の確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 8. データ連携の確認" aria-label="アンカー先: 8. データ連携の確認" href="#8-%e3%83%87%e3%83%bc%e3%82%bf%e9%80%a3%e6%90%ba%e3%81%ae%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1061,7 +1061,7 @@ BaseDBの場合データベース・システムを選択することでデー�
     >
         参考資料
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb401-oci-goldengate/#参考資料" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 参考資料" aria-label="アンカー先: 参考資料" href="#%e5%8f%82%e8%80%83%e8%b3%87%e6%96%99">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb401-oci-goldengate/#参考資料" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 参考資料" aria-label="アンカー先: 参考資料" href="#%e5%8f%82%e8%80%83%e8%b3%87%e6%96%99">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9325,7 +9325,7 @@ BaseDBの場合データベース・システムを選択することでデー�
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/adb/adb306-database-migration-online/"
+      href="/ocitutorial-geekdocs/adb/adb306-database-migration-online/"
       title="306 : OCI Database Migration Serviceを使用したデータベースのオンライン移行"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9337,7 +9337,7 @@ BaseDBの場合データベース・システムを選択することでデー�
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/adb/adb402-database-link/"
+      href="/ocitutorial-geekdocs/adb/adb402-database-link/"
       title="402 : Database Linkによる他のデータベースとのデータ連携"
     >
       402 : Database Linkによる他のデータベースとのデータ連携
@@ -9391,7 +9391,7 @@ BaseDBの場合データベース・システムを選択することでデー�
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

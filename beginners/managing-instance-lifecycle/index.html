@@ -21,18 +21,18 @@ Oracle Cloud Infrastructure ハンズオン - 5.インスタンスのライフ�
 
   <title>その5 - インスタンスのライフサイクルを管理する | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -54,7 +54,7 @@ Oracle Cloud Infrastructure ハンズオン - 5.インスタンスのライフ�
 Oracle Cloud Infrastructure ハンズオン - 5.インスタンスのライフサイクル 1. インスタンスの停止、再起動 まずは、インスタンスの停止、再起動処理と、その際に実行される動作について確認していきましょう。
 1-1. ブートボリュームへのファイルの作成 OCIのインスタンスは、すべてブート・ボリュームと呼ばれる永続化されたiSCSIデバイスからネットワーク経由でブート(iPXEブート)されます。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/beginners/managing-instance-lifecycle/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/beginners/managing-instance-lifecycle/" />
 
 <meta property="article:section" content="Beginners" />
     <meta
@@ -83,7 +83,7 @@ Oracle Cloud Infrastructure ハンズオン - 5.インスタンスのライフ�
       "@type": "TechArticle",
       "articleSection": "Beginners",
       "name": "その5 - インスタンスのライフサイクルを管理する",
-      "url" : "https://oracle-japan.github.io/ocitutorials/beginners/managing-instance-lifecycle/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/beginners/managing-instance-lifecycle/",
       "headline": "その5 - インスタンスのライフサイクルを管理する",
       "description": "チュートリアル一覧に戻る : Oracle Cloud Infrastructure チュートリアル\nリソースを必要なときに必要なだけ使える、というのがクラウドのいいところですね。そのために作成したインスタンスはいつでも停止、再起動、終了、再作成といった処理が行えるようになっています。このチュートリアルでは、そのようなインスタンスのライフサイクル管理をどう行うかと、それぞれのステータスで実際にインスタンスがどのような状態になっているのかについて確認していきます。\n所要時間 : 約20分\n前提条件 :\nその3 - インスタンスを作成する を通じてコンピュート・インスタンスの作成が完了していること その4 - ブロック・ボリュームをインスタンスにアタッチする を通じてブロック・ボリュームのアタッチが完了していること 注意 : チュートリアル内の画面ショットについては Oracle Cloud Infrastructure の現在のコンソール画面と異なっている場合があります\n目次 :\nインスタンスの停止、再起動 インスタンスの終了(Terminate) ブート・ボリュームからのインスタンスの再作成 **参考動画：**本チュートリアルの内容をベースとした定期ハンズオンWebinarの録画コンテンツです。操作の流れや解説を動画で確認したい方はご参照ください。\nOracle Cloud Infrastructure ハンズオン - 5.インスタンスのライフサイクル 1. インスタンスの停止、再起動 まずは、インスタンスの停止、再起動処理と、その際に実行される動作について確認していきましょう。\n1-1. ブートボリュームへのファイルの作成 OCIのインスタンスは、すべてブート・ボリュームと呼ばれる永続化されたiSCSIデバイスからネットワーク経由でブート(iPXEブート)されます。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -93,7 +93,7 @@ Oracle Cloud Infrastructure ハンズオン - 5.インスタンスのライフ�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/beginners/managing-instance-lifecycle/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/beginners/managing-instance-lifecycle/"
       },
       "copyrightHolder" : "OCIチュートリアル",
       "copyrightYear" : "0001",
@@ -103,10 +103,10 @@ Oracle Cloud Infrastructure ハンズオン - 5.インスタンスのライフ�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -116,73 +116,73 @@ Oracle Cloud Infrastructure ハンズオン - 5.インスタンスのライフ�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/beginners/managing-instance-lifecycle/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/beginners/managing-instance-lifecycle/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/beginners/managing-instance-lifecycle/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/beginners/managing-instance-lifecycle/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="その5 - インスタンスのライフサイクルを管理する">
   <meta property="og:description" content="チュートリアル一覧に戻る : Oracle Cloud Infrastructure チュートリアル
@@ -256,11 +256,11 @@ Oracle Cloud Infrastructure ハンズオン - 5.インスタンスのライフ�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -277,7 +277,7 @@ Oracle Cloud Infrastructure ハンズオン - 5.インスタンスのライフ�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -289,7 +289,7 @@ Oracle Cloud Infrastructure ハンズオン - 5.インスタンスのライフ�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -421,7 +421,7 @@ Oracle Cloud Infrastructure ハンズオン - 5.インスタンスのライフ�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/beginners/' href='/ocitutorials/beginners/'><span itemprop='name'>Beginners</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>その5 - インスタンスのライフサイクルを管理する</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/beginners/' href='/ocitutorial-geekdocs/beginners/'><span itemprop='name'>Beginners</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>その5 - インスタンスのライフサイクルを管理する</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -495,7 +495,7 @@ Oracle Cloud Infrastructure ハンズオン - 5.インスタンスのライフ�
     >
         1. インスタンスの停止、再起動
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/beginners/managing-instance-lifecycle/#1-インスタンスの停止再起動" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. インスタンスの停止、再起動" aria-label="アンカー先: 1. インスタンスの停止、再起動" href="#1-%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%81%ae%e5%81%9c%e6%ad%a2%e5%86%8d%e8%b5%b7%e5%8b%95">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/beginners/managing-instance-lifecycle/#1-インスタンスの停止再起動" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. インスタンスの停止、再起動" aria-label="アンカー先: 1. インスタンスの停止、再起動" href="#1-%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%81%ae%e5%81%9c%e6%ad%a2%e5%86%8d%e8%b5%b7%e5%8b%95">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -506,7 +506,7 @@ Oracle Cloud Infrastructure ハンズオン - 5.インスタンスのライフ�
     >
         1-1. ブートボリュームへのファイルの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/beginners/managing-instance-lifecycle/#1-1-ブートボリュームへのファイルの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-1. ブートボリュームへのファイルの作成" aria-label="アンカー先: 1-1. ブートボリュームへのファイルの作成" href="#1-1-%e3%83%96%e3%83%bc%e3%83%88%e3%83%9c%e3%83%aa%e3%83%a5%e3%83%bc%e3%83%a0%e3%81%b8%e3%81%ae%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/beginners/managing-instance-lifecycle/#1-1-ブートボリュームへのファイルの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-1. ブートボリュームへのファイルの作成" aria-label="アンカー先: 1-1. ブートボリュームへのファイルの作成" href="#1-1-%e3%83%96%e3%83%bc%e3%83%88%e3%83%9c%e3%83%aa%e3%83%a5%e3%83%bc%e3%83%a0%e3%81%b8%e3%81%ae%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -534,7 +534,7 @@ Oracle Cloud Infrastructure ハンズオン - 5.インスタンスのライフ�
     >
         1-2. インスタンスの停止
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/beginners/managing-instance-lifecycle/#1-2-インスタンスの停止" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-2. インスタンスの停止" aria-label="アンカー先: 1-2. インスタンスの停止" href="#1-2-%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%81%ae%e5%81%9c%e6%ad%a2">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/beginners/managing-instance-lifecycle/#1-2-インスタンスの停止" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-2. インスタンスの停止" aria-label="アンカー先: 1-2. インスタンスの停止" href="#1-2-%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%81%ae%e5%81%9c%e6%ad%a2">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -597,7 +597,7 @@ Oracle Cloud Infrastructure ハンズオン - 5.インスタンスのライフ�
     >
         1-3. インスタンスの起動
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/beginners/managing-instance-lifecycle/#1-3-インスタンスの起動" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-3. インスタンスの起動" aria-label="アンカー先: 1-3. インスタンスの起動" href="#1-3-%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%81%ae%e8%b5%b7%e5%8b%95">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/beginners/managing-instance-lifecycle/#1-3-インスタンスの起動" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-3. インスタンスの起動" aria-label="アンカー先: 1-3. インスタンスの起動" href="#1-3-%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%81%ae%e8%b5%b7%e5%8b%95">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -655,7 +655,7 @@ Oracle Cloud Infrastructure ハンズオン - 5.インスタンスのライフ�
     >
         2. インスタンスの終了(Terminate)
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/beginners/managing-instance-lifecycle/#2-インスタンスの終了terminate" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. インスタンスの終了(Terminate)" aria-label="アンカー先: 2. インスタンスの終了(Terminate)" href="#2-%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%81%ae%e7%b5%82%e4%ba%86terminate">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/beginners/managing-instance-lifecycle/#2-インスタンスの終了terminate" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. インスタンスの終了(Terminate)" aria-label="アンカー先: 2. インスタンスの終了(Terminate)" href="#2-%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%81%ae%e7%b5%82%e4%ba%86terminate">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -754,7 +754,7 @@ OCIコンソール上では、リアルタイムで情報が変化し、削除�
     >
         3. ブート・ボリュームからのインスタンスの再作成
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/beginners/managing-instance-lifecycle/#3-ブートボリュームからのインスタンスの再作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. ブート・ボリュームからのインスタンスの再作成" aria-label="アンカー先: 3. ブート・ボリュームからのインスタンスの再作成" href="#3-%e3%83%96%e3%83%bc%e3%83%88%e3%83%9c%e3%83%aa%e3%83%a5%e3%83%bc%e3%83%a0%e3%81%8b%e3%82%89%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%81%ae%e5%86%8d%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/beginners/managing-instance-lifecycle/#3-ブートボリュームからのインスタンスの再作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. ブート・ボリュームからのインスタンスの再作成" aria-label="アンカー先: 3. ブート・ボリュームからのインスタンスの再作成" href="#3-%e3%83%96%e3%83%bc%e3%83%88%e3%83%9c%e3%83%aa%e3%83%a5%e3%83%bc%e3%83%a0%e3%81%8b%e3%82%89%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%81%ae%e5%86%8d%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9065,7 +9065,7 @@ OCIコンソール上では、リアルタイムで情報が変化し、削除�
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/beginners/attaching-block-volume/"
+      href="/ocitutorial-geekdocs/beginners/attaching-block-volume/"
       title="その4 - ブロック・ボリュームをインスタンスにアタッチする"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9077,7 +9077,7 @@ OCIコンソール上では、リアルタイムで情報が変化し、削除�
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/beginners/using-file-storage/"
+      href="/ocitutorial-geekdocs/beginners/using-file-storage/"
       title="その6 - ファイルストレージサービス(FSS)で共有ネットワークボリュームを利用する"
     >
       その6 - ファイルストレージサービス(FSS)で共有ネットワークボリュームを利用する
@@ -9131,7 +9131,7 @@ OCIコンソール上では、リアルタイムで情報が変化し、削除�
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

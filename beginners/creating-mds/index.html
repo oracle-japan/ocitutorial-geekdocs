@@ -18,18 +18,18 @@ Oracle Cloud Infrastructure の環境(無料トライアルでも可) と、管�
 
   <title>その9 - クラウドでMySQL Databaseを使う | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -48,7 +48,7 @@ Oracle Cloud Infrastructure の環境(無料トライアルでも可) と、管�
 Oracle Cloud Infrastructure の環境(無料トライアルでも可) と、管理権限を持つユーザーアカウントがあること OCIコンソールにアクセスして基本を理解する - Oracle Cloud Infrastructureを使ってみよう(その1) を完了していること クラウドに仮想ネットワーク(VCN)を作る - Oracle Cloud Infrastructureを使ってみよう(その2) を完了していること インスタンスを作成する - Oracle Cloud Infrastructureを使ってみよう(その3) を完了していること 注意 : チュートリアル内の画面ショットについては Oracle Cloud Infrastructure の現在のコンソール画面と異なっている場合があります。 目次：
 1. MySQL Database Service(MDS)とは? 2. MDSの作成 3. セキュリティリストの修正(イングレス・ルールの追加) 4. MySQLクライアント、MySQL Shellのインストール 5. 作成したMDSの確認 1. MySQL Database Service(MDS)とは? MySQL Database Service(MDS)は、MySQL開発チームによるMySQLのマネージドサービスです。オンプレミスのMySQLと100%の互換性があり、MySQL開発ベンダーであるオラクル社からのサポートも受けられます。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/beginners/creating-mds/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/beginners/creating-mds/" />
 
 <meta property="article:section" content="Beginners" />
     <meta
@@ -74,7 +74,7 @@ Oracle Cloud Infrastructure の環境(無料トライアルでも可) と、管�
       "@type": "TechArticle",
       "articleSection": "Beginners",
       "name": "その9 - クラウドでMySQL Databaseを使う",
-      "url" : "https://oracle-japan.github.io/ocitutorials/beginners/creating-mds/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/beginners/creating-mds/",
       "headline": "その9 - クラウドでMySQL Databaseを使う",
       "description": "Oracle Cloud Infrastructure では、MySQL Database Service(MDS)が利用できます。MDSはAlways Freeの対象ではないため、使用するためにはクレジットが必要ですが、トライアルアカウント作成時に付与されるクレジットでも使用可能です。\nこのチュートリアルでは、コンソール画面からMDSのサービスを1つ作成し、コンピュート・インスタンスにMySQLクライアントとMySQL Shellをインストールして、クライアントからMDSへ接続する手順を説明します。\n所要時間 : 約25分 (約15分の待ち時間含む)\n前提条件 :\nOracle Cloud Infrastructure の環境(無料トライアルでも可) と、管理権限を持つユーザーアカウントがあること OCIコンソールにアクセスして基本を理解する - Oracle Cloud Infrastructureを使ってみよう(その1) を完了していること クラウドに仮想ネットワーク(VCN)を作る - Oracle Cloud Infrastructureを使ってみよう(その2) を完了していること インスタンスを作成する - Oracle Cloud Infrastructureを使ってみよう(その3) を完了していること 注意 : チュートリアル内の画面ショットについては Oracle Cloud Infrastructure の現在のコンソール画面と異なっている場合があります。 目次：\n1. MySQL Database Service(MDS)とは? 2. MDSの作成 3. セキュリティリストの修正(イングレス・ルールの追加) 4. MySQLクライアント、MySQL Shellのインストール 5. 作成したMDSの確認 1. MySQL Database Service(MDS)とは? MySQL Database Service(MDS)は、MySQL開発チームによるMySQLのマネージドサービスです。オンプレミスのMySQLと100%の互換性があり、MySQL開発ベンダーであるオラクル社からのサポートも受けられます。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -84,7 +84,7 @@ Oracle Cloud Infrastructure の環境(無料トライアルでも可) と、管�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/beginners/creating-mds/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/beginners/creating-mds/"
       },
       "copyrightHolder" : "OCIチュートリアル",
       "copyrightYear" : "0001",
@@ -94,10 +94,10 @@ Oracle Cloud Infrastructure の環境(無料トライアルでも可) と、管�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -107,73 +107,73 @@ Oracle Cloud Infrastructure の環境(無料トライアルでも可) と、管�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/beginners/creating-mds/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/beginners/creating-mds/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/beginners/creating-mds/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/beginners/creating-mds/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="その9 - クラウドでMySQL Databaseを使う">
   <meta property="og:description" content="Oracle Cloud Infrastructure では、MySQL Database Service(MDS)が利用できます。MDSはAlways Freeの対象ではないため、使用するためにはクレジットが必要ですが、トライアルアカウント作成時に付与されるクレジットでも使用可能です。
@@ -241,11 +241,11 @@ Oracle Cloud Infrastructure の環境(無料トライアルでも可) と、管�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -262,7 +262,7 @@ Oracle Cloud Infrastructure の環境(無料トライアルでも可) と、管�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -274,7 +274,7 @@ Oracle Cloud Infrastructure の環境(無料トライアルでも可) と、管�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -402,7 +402,7 @@ Oracle Cloud Infrastructure の環境(無料トライアルでも可) と、管�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/beginners/' href='/ocitutorials/beginners/'><span itemprop='name'>Beginners</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>その9 - クラウドでMySQL Databaseを使う</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/beginners/' href='/ocitutorial-geekdocs/beginners/'><span itemprop='name'>Beginners</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>その9 - クラウドでMySQL Databaseを使う</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -480,7 +480,7 @@ Oracle Cloud Infrastructure の環境(無料トライアルでも可) と、管�
     >
         1. MySQL Database Service(MDS)とは?
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/beginners/creating-mds/#1-mysql-database-servicemdsとは" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. MySQL Database Service(MDS)とは?" aria-label="アンカー先: 1. MySQL Database Service(MDS)とは?" href="#1-mysql-database-servicemds%e3%81%a8%e3%81%af">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/beginners/creating-mds/#1-mysql-database-servicemdsとは" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. MySQL Database Service(MDS)とは?" aria-label="アンカー先: 1. MySQL Database Service(MDS)とは?" href="#1-mysql-database-servicemds%e3%81%a8%e3%81%af">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -493,7 +493,7 @@ Oracle Cloud Infrastructure の環境(無料トライアルでも可) と、管�
     >
         2. MDSの作成
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/beginners/creating-mds/#2-mdsの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. MDSの作成" aria-label="アンカー先: 2. MDSの作成" href="#2-mds%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/beginners/creating-mds/#2-mdsの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. MDSの作成" aria-label="アンカー先: 2. MDSの作成" href="#2-mds%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -640,7 +640,7 @@ MDSのバックアップの詳細については<a
     >
         3. セキュリティリストの修正(イングレス・ルールの追加)
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/beginners/creating-mds/#3-セキュリティリストの修正イングレスルールの追加" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. セキュリティリストの修正(イングレス・ルールの追加)" aria-label="アンカー先: 3. セキュリティリストの修正(イングレス・ルールの追加)" href="#3-%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e3%83%aa%e3%82%b9%e3%83%88%e3%81%ae%e4%bf%ae%e6%ad%a3%e3%82%a4%e3%83%b3%e3%82%b0%e3%83%ac%e3%82%b9%e3%83%ab%e3%83%bc%e3%83%ab%e3%81%ae%e8%bf%bd%e5%8a%a0">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/beginners/creating-mds/#3-セキュリティリストの修正イングレスルールの追加" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. セキュリティリストの修正(イングレス・ルールの追加)" aria-label="アンカー先: 3. セキュリティリストの修正(イングレス・ルールの追加)" href="#3-%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e3%83%aa%e3%82%b9%e3%83%88%e3%81%ae%e4%bf%ae%e6%ad%a3%e3%82%a4%e3%83%b3%e3%82%b0%e3%83%ac%e3%82%b9%e3%83%ab%e3%83%bc%e3%83%ab%e3%81%ae%e8%bf%bd%e5%8a%a0">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -705,7 +705,7 @@ MDSのバックアップの詳細については<a
     >
         4. MySQLクライアント、MySQL Shellのインストール
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/beginners/creating-mds/#4-mysqlクライアントmysql-shellのインストール" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. MySQLクライアント、MySQL Shellのインストール" aria-label="アンカー先: 4. MySQLクライアント、MySQL Shellのインストール" href="#4-mysql%e3%82%af%e3%83%a9%e3%82%a4%e3%82%a2%e3%83%b3%e3%83%88mysql-shell%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/beginners/creating-mds/#4-mysqlクライアントmysql-shellのインストール" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. MySQLクライアント、MySQL Shellのインストール" aria-label="アンカー先: 4. MySQLクライアント、MySQL Shellのインストール" href="#4-mysql%e3%82%af%e3%83%a9%e3%82%a4%e3%82%a2%e3%83%b3%e3%83%88mysql-shell%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -745,7 +745,7 @@ MDSのバックアップの詳細については<a
     >
         5. 作成したMDSの確認
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/beginners/creating-mds/#5-作成したmdsの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5. 作成したMDSの確認" aria-label="アンカー先: 5. 作成したMDSの確認" href="#5-%e4%bd%9c%e6%88%90%e3%81%97%e3%81%9fmds%e3%81%ae%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/beginners/creating-mds/#5-作成したmdsの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5. 作成したMDSの確認" aria-label="アンカー先: 5. 作成したMDSの確認" href="#5-%e4%bd%9c%e6%88%90%e3%81%97%e3%81%9fmds%e3%81%ae%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9113,7 +9113,7 @@ mysql&gt; exit
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/beginners/using-oracle-database/"
+      href="/ocitutorial-geekdocs/beginners/using-oracle-database/"
       title="その8 - クラウドでOracle Databaseを使う"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9125,7 +9125,7 @@ mysql&gt; exit
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/beginners/acquiring-free-trial/"
+      href="/ocitutorial-geekdocs/beginners/acquiring-free-trial/"
       title="準備 - Oracle Cloud 無料トライアルを申し込む"
     >
       準備 - Oracle Cloud 無料トライアルを申し込む
@@ -9179,7 +9179,7 @@ mysql&gt; exit
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

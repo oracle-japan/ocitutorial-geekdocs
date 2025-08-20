@@ -24,18 +24,18 @@ Oracle Content Management を Headless CMS として使ってみよう【初級�
 
   <title>Oracle Content Managementのコンテンツ・レイアウトを編集しよう | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -61,7 +61,7 @@ CECContentAdministrator CECDeveloperUser CECEnterpriseUser CECRepositoryAdminisr
 以下2つのチュートリアルが完了していること
 Oracle Content Management を Headless CMS として使ってみよう【初級編】 Oracle Content Management を WebCMS として使ってみよう【初級編】 1. 説明 1.1 コンテンツ・レイアウトとは？ コンテンツ・レイアウトとは 作成されたコンテンツ・アイテムの表示形式 を定めたものです。具体的には、Webページにコンテンツ・アイテムを配置した時のレイアウト(=HTML)を定義したものになります。詳細は、下記ドキュメントをご参照ください" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/content-management/71_customize_contentlayout/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/71_customize_contentlayout/" />
 
 <meta property="article:section" content="Content Management" />
     <meta
@@ -94,7 +94,7 @@ Oracle Content Management を Headless CMS として使ってみよう【初級�
       "@type": "TechArticle",
       "articleSection": "Content Management",
       "name": "Oracle Content Managementのコンテンツ・レイアウトを編集しよう",
-      "url" : "https://oracle-japan.github.io/ocitutorials/content-management/71_customize_contentlayout/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/71_customize_contentlayout/",
       "headline": "Oracle Content Managementのコンテンツ・レイアウトを編集しよう",
       "description": "\nこの文書はOracle Content Management(OCM)のコンテンツ・レイアウトの編集し、Web ページ上でのコンテンツ・アイテムの表示形式をカスタマイズする方法をステップ・バイ・ステップで紹介するチュートリアルです\n【お知らせ】\nこの文書は、2023年8月時点での最新バージョン(23.7.2)を元に作成されてます。\nチュートリアル内の画面ショットについてはOracle Content Managementの現在のコンソール画面と異なっている場合があります。\n{: .notice–info}\n前提条件\nOCMインスタンスが作成済であること(以下の作成手順参照)\nOCI IAM Identity Domain環境でOracle Content Managementインスタンスを作成する Oracle Content Management インスタンスを作成する OCM の利用ユーザーに、少なくとも下記4つのOCM インスタンスのアプリケーション・ロールが付与されていること\nCECContentAdministrator CECDeveloperUser CECEnterpriseUser CECRepositoryAdminisrrator [Memo]\nユーザーの作成とアプリケーションロールの付与手順は、OCI IAM Identity Domain環境でOracle Content Managementインスタンスの利用ユーザーを作成するもしくはOracle Content Managementインスタンスの利用ユーザーを作成するをご確認ください。\n以下2つのチュートリアルが完了していること\nOracle Content Management を Headless CMS として使ってみよう【初級編】 Oracle Content Management を WebCMS として使ってみよう【初級編】 1. 説明 1.1 コンテンツ・レイアウトとは？ コンテンツ・レイアウトとは 作成されたコンテンツ・アイテムの表示形式 を定めたものです。具体的には、Webページにコンテンツ・アイテムを配置した時のレイアウト(=HTML)を定義したものになります。詳細は、下記ドキュメントをご参照ください",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -104,7 +104,7 @@ Oracle Content Management を Headless CMS として使ってみよう【初級�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/content-management/71_customize_contentlayout/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/71_customize_contentlayout/"
       },
       "keywords" : [ "OCE" , "OCM" ],
       "copyrightHolder" : "OCIチュートリアル",
@@ -115,10 +115,10 @@ Oracle Content Management を Headless CMS として使ってみよう【初級�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -128,73 +128,73 @@ Oracle Content Management を Headless CMS として使ってみよう【初級�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/content-management/71_customize_contentlayout/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/71_customize_contentlayout/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/content-management/71_customize_contentlayout/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/71_customize_contentlayout/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="Oracle Content Managementのコンテンツ・レイアウトを編集しよう">
   <meta property="og:description" content="この文書はOracle Content Management(OCM)のコンテンツ・レイアウトの編集し、Web ページ上でのコンテンツ・アイテムの表示形式をカスタマイズする方法をステップ・バイ・ステップで紹介するチュートリアルです
@@ -276,11 +276,11 @@ Oracle Content Management を Headless CMS として使ってみよう【初級�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -297,7 +297,7 @@ Oracle Content Management を Headless CMS として使ってみよう【初級�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -309,7 +309,7 @@ Oracle Content Management を Headless CMS として使ってみよう【初級�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -461,7 +461,7 @@ Oracle Content Management を Headless CMS として使ってみよう【初級�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/content-management/' href='/ocitutorials/content-management/'><span itemprop='name'>コンテンツ管理編</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Oracle Content Managementのコンテンツ・レイアウトを編集しよう</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/content-management/' href='/ocitutorial-geekdocs/content-management/'><span itemprop='name'>コンテンツ管理編</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Oracle Content Managementのコンテンツ・レイアウトを編集しよう</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -559,7 +559,7 @@ Oracle Content Management を Headless CMS として使ってみよう【初級�
     >
         1. 説明
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/71_customize_contentlayout/#1-説明" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. 説明" aria-label="アンカー先: 1. 説明" href="#1-%e8%aa%ac%e6%98%8e">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/71_customize_contentlayout/#1-説明" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. 説明" aria-label="アンカー先: 1. 説明" href="#1-%e8%aa%ac%e6%98%8e">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -568,7 +568,7 @@ Oracle Content Management を Headless CMS として使ってみよう【初級�
     >
         1.1 コンテンツ・レイアウトとは？
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/71_customize_contentlayout/#11-コンテンツレイアウトとは" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.1 コンテンツ・レイアウトとは？" aria-label="アンカー先: 1.1 コンテンツ・レイアウトとは？" href="#11-%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%e3%83%ac%e3%82%a4%e3%82%a2%e3%82%a6%e3%83%88%e3%81%a8%e3%81%af">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/71_customize_contentlayout/#11-コンテンツレイアウトとは" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.1 コンテンツ・レイアウトとは？" aria-label="アンカー先: 1.1 コンテンツ・レイアウトとは？" href="#11-%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%e3%83%ac%e3%82%a4%e3%82%a2%e3%82%a6%e3%83%88%e3%81%a8%e3%81%af">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -584,7 +584,7 @@ Oracle Content Management を Headless CMS として使ってみよう【初級�
     >
         1.2 作成済サイトとコンテンツ・タイプの確認
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/71_customize_contentlayout/#12-作成済サイトとコンテンツタイプの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.2 作成済サイトとコンテンツ・タイプの確認" aria-label="アンカー先: 1.2 作成済サイトとコンテンツ・タイプの確認" href="#12-%e4%bd%9c%e6%88%90%e6%b8%88%e3%82%b5%e3%82%a4%e3%83%88%e3%81%a8%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%e3%82%bf%e3%82%a4%e3%83%97%e3%81%ae%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/71_customize_contentlayout/#12-作成済サイトとコンテンツタイプの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.2 作成済サイトとコンテンツ・タイプの確認" aria-label="アンカー先: 1.2 作成済サイトとコンテンツ・タイプの確認" href="#12-%e4%bd%9c%e6%88%90%e6%b8%88%e3%82%b5%e3%82%a4%e3%83%88%e3%81%a8%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%e3%82%bf%e3%82%a4%e3%83%97%e3%81%ae%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -631,7 +631,7 @@ Oracle Content Management を Headless CMS として使ってみよう【初級�
     >
         1.3 サイト・ページ上に配置されているコンポーネントの確認
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/71_customize_contentlayout/#13-サイトページ上に配置されているコンポーネントの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.3 サイト・ページ上に配置されているコンポーネントの確認" aria-label="アンカー先: 1.3 サイト・ページ上に配置されているコンポーネントの確認" href="#13-%e3%82%b5%e3%82%a4%e3%83%88%e3%83%9a%e3%83%bc%e3%82%b8%e4%b8%8a%e3%81%ab%e9%85%8d%e7%bd%ae%e3%81%95%e3%82%8c%e3%81%a6%e3%81%84%e3%82%8b%e3%82%b3%e3%83%b3%e3%83%9d%e3%83%bc%e3%83%8d%e3%83%b3%e3%83%88%e3%81%ae%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/71_customize_contentlayout/#13-サイトページ上に配置されているコンポーネントの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.3 サイト・ページ上に配置されているコンポーネントの確認" aria-label="アンカー先: 1.3 サイト・ページ上に配置されているコンポーネントの確認" href="#13-%e3%82%b5%e3%82%a4%e3%83%88%e3%83%9a%e3%83%bc%e3%82%b8%e4%b8%8a%e3%81%ab%e9%85%8d%e7%bd%ae%e3%81%95%e3%82%8c%e3%81%a6%e3%81%84%e3%82%8b%e3%82%b3%e3%83%b3%e3%83%9d%e3%83%bc%e3%83%8d%e3%83%b3%e3%83%88%e3%81%ae%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -766,7 +766,7 @@ Oracle Content Management を Headless CMS として使ってみよう【初級�
     >
         2. sampleNewsType-overviewの編集
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/71_customize_contentlayout/#2-samplenewstype-overviewの編集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. sampleNewsType-overviewの編集" aria-label="アンカー先: 2. sampleNewsType-overviewの編集" href="#2-samplenewstype-overview%e3%81%ae%e7%b7%a8%e9%9b%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/71_customize_contentlayout/#2-samplenewstype-overviewの編集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. sampleNewsType-overviewの編集" aria-label="アンカー先: 2. sampleNewsType-overviewの編集" href="#2-samplenewstype-overview%e3%81%ae%e7%b7%a8%e9%9b%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -777,7 +777,7 @@ Oracle Content Management を Headless CMS として使ってみよう【初級�
     >
         2.1 コンテンツ・レイアウトの確認
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/71_customize_contentlayout/#21-コンテンツレイアウトの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.1 コンテンツ・レイアウトの確認" aria-label="アンカー先: 2.1 コンテンツ・レイアウトの確認" href="#21-%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%e3%83%ac%e3%82%a4%e3%82%a2%e3%82%a6%e3%83%88%e3%81%ae%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/71_customize_contentlayout/#21-コンテンツレイアウトの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.1 コンテンツ・レイアウトの確認" aria-label="アンカー先: 2.1 コンテンツ・レイアウトの確認" href="#21-%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%e3%83%ac%e3%82%a4%e3%82%a2%e3%82%a6%e3%83%88%e3%81%ae%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -852,7 +852,7 @@ Oracle Content Management を Headless CMS として使ってみよう【初級�
     >
         2.2 layout.html の編集
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/71_customize_contentlayout/#22-layouthtml-の編集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.2 layout.html の編集" aria-label="アンカー先: 2.2 layout.html の編集" href="#22-layouthtml-%e3%81%ae%e7%b7%a8%e9%9b%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/71_customize_contentlayout/#22-layouthtml-の編集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.2 layout.html の編集" aria-label="アンカー先: 2.2 layout.html の編集" href="#22-layouthtml-%e3%81%ae%e7%b7%a8%e9%9b%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -891,7 +891,7 @@ imgタグ内の<code>data-asset-operation</code>は、アセット消費分析(A
     >
         2.3 design.css の編集
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/71_customize_contentlayout/#23-designcss-の編集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.3 design.css の編集" aria-label="アンカー先: 2.3 design.css の編集" href="#23-designcss-%e3%81%ae%e7%b7%a8%e9%9b%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/71_customize_contentlayout/#23-designcss-の編集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.3 design.css の編集" aria-label="アンカー先: 2.3 design.css の編集" href="#23-designcss-%e3%81%ae%e7%b7%a8%e9%9b%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -951,7 +951,7 @@ imgタグ内の<code>data-asset-operation</code>は、アセット消費分析(A
     >
         2.4 編集ファイルのアップロード
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/71_customize_contentlayout/#24-編集ファイルのアップロード" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.4 編集ファイルのアップロード" aria-label="アンカー先: 2.4 編集ファイルのアップロード" href="#24-%e7%b7%a8%e9%9b%86%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%81%ae%e3%82%a2%e3%83%83%e3%83%97%e3%83%ad%e3%83%bc%e3%83%89">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/71_customize_contentlayout/#24-編集ファイルのアップロード" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.4 編集ファイルのアップロード" aria-label="アンカー先: 2.4 編集ファイルのアップロード" href="#24-%e7%b7%a8%e9%9b%86%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%81%ae%e3%82%a2%e3%83%83%e3%83%97%e3%83%ad%e3%83%bc%e3%83%89">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -992,7 +992,7 @@ imgタグ内の<code>data-asset-operation</code>は、アセット消費分析(A
     >
         2.5 確認
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/71_customize_contentlayout/#25-確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.5 確認" aria-label="アンカー先: 2.5 確認" href="#25-%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/71_customize_contentlayout/#25-確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.5 確認" aria-label="アンカー先: 2.5 確認" href="#25-%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1030,7 +1030,7 @@ imgタグ内の<code>data-asset-operation</code>は、アセット消費分析(A
     >
         3. sampleNewsType-detailの編集
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/71_customize_contentlayout/#3-samplenewstype-detailの編集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. sampleNewsType-detailの編集" aria-label="アンカー先: 3. sampleNewsType-detailの編集" href="#3-samplenewstype-detail%e3%81%ae%e7%b7%a8%e9%9b%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/71_customize_contentlayout/#3-samplenewstype-detailの編集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. sampleNewsType-detailの編集" aria-label="アンカー先: 3. sampleNewsType-detailの編集" href="#3-samplenewstype-detail%e3%81%ae%e7%b7%a8%e9%9b%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1041,7 +1041,7 @@ imgタグ内の<code>data-asset-operation</code>は、アセット消費分析(A
     >
         3.1 layout.html、design.cssの編集とアップロード
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/71_customize_contentlayout/#31-layouthtmldesigncssの編集とアップロード" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3.1 layout.html、design.cssの編集とアップロード" aria-label="アンカー先: 3.1 layout.html、design.cssの編集とアップロード" href="#31-layouthtmldesigncss%e3%81%ae%e7%b7%a8%e9%9b%86%e3%81%a8%e3%82%a2%e3%83%83%e3%83%97%e3%83%ad%e3%83%bc%e3%83%89">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/71_customize_contentlayout/#31-layouthtmldesigncssの編集とアップロード" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3.1 layout.html、design.cssの編集とアップロード" aria-label="アンカー先: 3.1 layout.html、design.cssの編集とアップロード" href="#31-layouthtmldesigncss%e3%81%ae%e7%b7%a8%e9%9b%86%e3%81%a8%e3%82%a2%e3%83%83%e3%83%97%e3%83%ad%e3%83%bc%e3%83%89">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1113,7 +1113,7 @@ imgタグ内の<code>data-asset-operation</code>は、アセット消費分析(A
     >
         3.2 確認
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/71_customize_contentlayout/#32-確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3.2 確認" aria-label="アンカー先: 3.2 確認" href="#32-%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/71_customize_contentlayout/#32-確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3.2 確認" aria-label="アンカー先: 3.2 確認" href="#32-%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1151,7 +1151,7 @@ imgタグ内の<code>data-asset-operation</code>は、アセット消費分析(A
     >
         4. 変更内容を公開サイトに適用する
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/71_customize_contentlayout/#4-変更内容を公開サイトに適用する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. 変更内容を公開サイトに適用する" aria-label="アンカー先: 4. 変更内容を公開サイトに適用する" href="#4-%e5%a4%89%e6%9b%b4%e5%86%85%e5%ae%b9%e3%82%92%e5%85%ac%e9%96%8b%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ab%e9%81%a9%e7%94%a8%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/71_customize_contentlayout/#4-変更内容を公開サイトに適用する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. 変更内容を公開サイトに適用する" aria-label="アンカー先: 4. 変更内容を公開サイトに適用する" href="#4-%e5%a4%89%e6%9b%b4%e5%86%85%e5%ae%b9%e3%82%92%e5%85%ac%e9%96%8b%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ab%e9%81%a9%e7%94%a8%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1162,7 +1162,7 @@ imgタグ内の<code>data-asset-operation</code>は、アセット消費分析(A
     >
         4.1 コンテンツ・レイアウトの再公開
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/71_customize_contentlayout/#41-コンテンツレイアウトの再公開" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.1 コンテンツ・レイアウトの再公開" aria-label="アンカー先: 4.1 コンテンツ・レイアウトの再公開" href="#41-%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%e3%83%ac%e3%82%a4%e3%82%a2%e3%82%a6%e3%83%88%e3%81%ae%e5%86%8d%e5%85%ac%e9%96%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/71_customize_contentlayout/#41-コンテンツレイアウトの再公開" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.1 コンテンツ・レイアウトの再公開" aria-label="アンカー先: 4.1 コンテンツ・レイアウトの再公開" href="#41-%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%e3%83%ac%e3%82%a4%e3%82%a2%e3%82%a6%e3%83%88%e3%81%ae%e5%86%8d%e5%85%ac%e9%96%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1203,7 +1203,7 @@ imgタグ内の<code>data-asset-operation</code>は、アセット消費分析(A
     >
         4.2 公開サイトの確認
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/71_customize_contentlayout/#42-公開サイトの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.2 公開サイトの確認" aria-label="アンカー先: 4.2 公開サイトの確認" href="#42-%e5%85%ac%e9%96%8b%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/71_customize_contentlayout/#42-公開サイトの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.2 公開サイトの確認" aria-label="アンカー先: 4.2 公開サイトの確認" href="#42-%e5%85%ac%e9%96%8b%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1242,7 +1242,7 @@ imgタグ内の<code>data-asset-operation</code>は、アセット消費分析(A
     >
         5. 発展課題
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/71_customize_contentlayout/#5-発展課題" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5. 発展課題" aria-label="アンカー先: 5. 発展課題" href="#5-%e7%99%ba%e5%b1%95%e8%aa%b2%e9%a1%8c">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/71_customize_contentlayout/#5-発展課題" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5. 発展課題" aria-label="アンカー先: 5. 発展課題" href="#5-%e7%99%ba%e5%b1%95%e8%aa%b2%e9%a1%8c">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9521,7 +9521,7 @@ imgタグ内の<code>data-asset-operation</code>は、アセット消費分析(A
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/content-management/create_oce_instance/"
+      href="/ocitutorial-geekdocs/content-management/create_oce_instance/"
       title="Oracle Content Managementインスタンスを作成する"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9533,7 +9533,7 @@ imgタグ内の<code>data-asset-operation</code>は、アセット消費分析(A
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/content-management/41_asset_headless/"
+      href="/ocitutorial-geekdocs/content-management/41_asset_headless/"
       title="Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編】"
     >
       Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編】
@@ -9587,7 +9587,7 @@ imgタグ内の<code>data-asset-operation</code>は、アセット消費分析(A
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

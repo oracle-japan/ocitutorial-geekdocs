@@ -22,18 +22,18 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
 
   <title>505 : Autonomous Databaseのバックアップとリストアを体感しよう | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -56,7 +56,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
 自動バックアップが日時で取られているのが確認できます。 特に設定を行わずとも、自動バックアップが構成されています。
 全て増分バックアップになっており、60日ごと取得されているフルバックアップが無いのでは？と思われたかもしれませんが、こちらは誤りではなく、フルバックアップはRMANでは増分バックアップのLevel0となるので、この一覧では全て増分バックアップとして表示されております。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/adb/adb505-backup/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb505-backup/" />
 
 <meta property="article:section" content="Adb" />
     <meta
@@ -86,7 +86,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
       "@type": "TechArticle",
       "articleSection": "Adb",
       "name": "505 : Autonomous Databaseのバックアップとリストアを体感しよう",
-      "url" : "https://oracle-japan.github.io/ocitutorials/adb/adb505-backup/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb505-backup/",
       "headline": "505 : Autonomous Databaseのバックアップとリストアを体感しよう",
       "description": " はじめに Autonomous Databaseでは自動バックアップがオンラインで取得され、取得したバックアップはバックアップを取得したADBにのみリストア可能です。保存期間は最小1日から最大60日で設定をする事が出来ます。インスタンス構成時にデフォルトで有効化されており、無効化することはできません。取得されたバックアップはOracle側で管理され、冗長化されており改変不可のイミュータブルバックアップです。\nユーザ自身がGUIやAPIを介して特定時点にリストアすることが可能です。本チュートリアルにおいても、Point-in-timeリカバリを実施いたします。\n（補足） バックアップ操作中は、データベースは使用可能なままです。ただし、データベースの停止、スケーリング、終了などのライフサイクル管理操作は無効化されます。\n目次 :\nはじめに 自動バックアップの確認 データベースに表を新規作成 タイムスタンプをUTCで確認 Point-in-timeリカバリ ご参考 おわりに 前提条件\nADBインスタンスが構成済みであること ※ADBインタンスの作成方法については、 101:ADBインスタンスを作成してみよう を参照ください。 所要時間 : 約30分\n自動バックアップの確認 Autonomousa Databaseの詳細画面\n下にスクロールして、画面左側のタブのバックアップをクリックし、これまでバックアップ履歴を確認します。\n自動バックアップが日時で取られているのが確認できます。 特に設定を行わずとも、自動バックアップが構成されています。\n全て増分バックアップになっており、60日ごと取得されているフルバックアップが無いのでは？と思われたかもしれませんが、こちらは誤りではなく、フルバックアップはRMANでは増分バックアップのLevel0となるので、この一覧では全て増分バックアップとして表示されております。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -96,7 +96,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/adb/adb505-backup/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb505-backup/"
       },
       "copyrightHolder" : "OCIチュートリアル",
       "copyrightYear" : "0001",
@@ -106,10 +106,10 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -119,73 +119,73 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/adb/adb505-backup/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb505-backup/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/adb/adb505-backup/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb505-backup/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="505 : Autonomous Databaseのバックアップとリストアを体感しよう">
   <meta property="og:description" content="はじめに Autonomous Databaseでは自動バックアップがオンラインで取得され、取得したバックアップはバックアップを取得したADBにのみリストア可能です。保存期間は最小1日から最大60日で設定をする事が出来ます。インスタンス構成時にデフォルトで有効化されており、無効化することはできません。取得されたバックアップはOracle側で管理され、冗長化されており改変不可のイミュータブルバックアップです。
@@ -261,11 +261,11 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -282,7 +282,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -294,7 +294,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -427,7 +427,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/adb/' href='/ocitutorials/adb/'><span itemprop='name'>Oracle Database編 - Autonomous Database (ADB)を使ってみよう</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>505 : Autonomous Databaseのバックアップとリストアを体感しよう</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/adb/' href='/ocitutorial-geekdocs/adb/'><span itemprop='name'>Oracle Database編 - Autonomous Database (ADB)を使ってみよう</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>505 : Autonomous Databaseのバックアップとリストアを体感しよう</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -458,7 +458,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
     >
         はじめに
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb505-backup/#はじめに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: はじめに" aria-label="アンカー先: はじめに" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb505-backup/#はじめに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: はじめに" aria-label="アンカー先: はじめに" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -518,7 +518,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
     >
         自動バックアップの確認
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb505-backup/#自動バックアップの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 自動バックアップの確認" aria-label="アンカー先: 自動バックアップの確認" href="#%e8%87%aa%e5%8b%95%e3%83%90%e3%83%83%e3%82%af%e3%82%a2%e3%83%83%e3%83%97%e3%81%ae%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb505-backup/#自動バックアップの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 自動バックアップの確認" aria-label="アンカー先: 自動バックアップの確認" href="#%e8%87%aa%e5%8b%95%e3%83%90%e3%83%83%e3%82%af%e3%82%a2%e3%83%83%e3%83%97%e3%81%ae%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -551,7 +551,7 @@ RMANを利用しており、ブロック破損のチェックも同時に行わ�
     >
         データベースに表を新規作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb505-backup/#データベースに表を新規作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: データベースに表を新規作成" aria-label="アンカー先: データベースに表を新規作成" href="#%e3%83%87%e3%83%bc%e3%82%bf%e3%83%99%e3%83%bc%e3%82%b9%e3%81%ab%e8%a1%a8%e3%82%92%e6%96%b0%e8%a6%8f%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb505-backup/#データベースに表を新規作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: データベースに表を新規作成" aria-label="アンカー先: データベースに表を新規作成" href="#%e3%83%87%e3%83%bc%e3%82%bf%e3%83%99%e3%83%bc%e3%82%b9%e3%81%ab%e8%a1%a8%e3%82%92%e6%96%b0%e8%a6%8f%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -623,7 +623,7 @@ RMANを利用しており、ブロック破損のチェックも同時に行わ�
     >
         タイムスタンプをUTCで確認
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb505-backup/#タイムスタンプをutcで確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: タイムスタンプをUTCで確認" aria-label="アンカー先: タイムスタンプをUTCで確認" href="#%e3%82%bf%e3%82%a4%e3%83%a0%e3%82%b9%e3%82%bf%e3%83%b3%e3%83%97%e3%82%92utc%e3%81%a7%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb505-backup/#タイムスタンプをutcで確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: タイムスタンプをUTCで確認" aria-label="アンカー先: タイムスタンプをUTCで確認" href="#%e3%82%bf%e3%82%a4%e3%83%a0%e3%82%b9%e3%82%bf%e3%83%b3%e3%83%97%e3%82%92utc%e3%81%a7%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -655,7 +655,7 @@ RMANを利用しており、ブロック破損のチェックも同時に行わ�
     >
         Point-in-timeリカバリ
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb505-backup/#point-in-timeリカバリ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Point-in-timeリカバリ" aria-label="アンカー先: Point-in-timeリカバリ" href="#point-in-time%e3%83%aa%e3%82%ab%e3%83%90%e3%83%aa">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb505-backup/#point-in-timeリカバリ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Point-in-timeリカバリ" aria-label="アンカー先: Point-in-timeリカバリ" href="#point-in-time%e3%83%aa%e3%82%ab%e3%83%90%e3%83%aa">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -713,7 +713,7 @@ RMANを利用しており、ブロック破損のチェックも同時に行わ�
     >
         ご参考
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb505-backup/#ご参考" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ご参考" aria-label="アンカー先: ご参考" href="#%e3%81%94%e5%8f%82%e8%80%83">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb505-backup/#ご参考" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ご参考" aria-label="アンカー先: ご参考" href="#%e3%81%94%e5%8f%82%e8%80%83">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -733,7 +733,7 @@ RMANを利用しており、ブロック破損のチェックも同時に行わ�
     >
         おわりに
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb505-backup/#おわりに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: おわりに" aria-label="アンカー先: おわりに" href="#%e3%81%8a%e3%82%8f%e3%82%8a%e3%81%ab">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb505-backup/#おわりに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: おわりに" aria-label="アンカー先: おわりに" href="#%e3%81%8a%e3%82%8f%e3%82%8a%e3%81%ab">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -8989,7 +8989,7 @@ RMANを利用しており、ブロック破損のチェックも同時に行わ�
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/adb/adb504-audit/"
+      href="/ocitutorial-geekdocs/adb/adb504-audit/"
       title="504 : 監査をしてみよう"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9001,7 +9001,7 @@ RMANを利用しており、ブロック破損のチェックも同時に行わ�
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/adb/adb506-sr/"
+      href="/ocitutorial-geekdocs/adb/adb506-sr/"
       title="506: サポートサービスへの問い合わせ(Service Requestの起票)"
     >
       506: サポートサービスへの問い合わせ(Service Requestの起票)
@@ -9055,7 +9055,7 @@ RMANを利用しており、ブロック破損のチェックも同時に行わ�
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

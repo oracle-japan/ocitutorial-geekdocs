@@ -17,18 +17,18 @@ Oracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Func
 
   <title>Oracle Cloud Infrastructure(OCI) DevOpsことはじめ-Oracle Functions編- | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -46,7 +46,7 @@ Oracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Func
 前提条件 環境 OCI DevOps事前準備が完了していること Oracle Functionsことはじめが完了していること 全体構成 本ハンズオンでは、以下のような環境を構築し、ソースコードの変更が Oracle Functions に自動的に反映されることを確認します。
 事前準備の流れ 1.OCIR の作成 2.ハンズオンに使用する資材のセットアップ 3.アプリケーションの動作確認 1.OCIR の作成 Oracle Functions のコンテナイメージの保存先である OCIR(Oracle Cloud Infrastructure Registry)を作成します。OCI Console 左上のハンバーガーメニューから、開発者サービス &gt; コンテナとアーティファクト &gt; コンテナ・レジストリと選択します。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/cloud-native/devops-for-beginners-functions/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/devops-for-beginners-functions/" />
 
 <meta property="article:section" content="Cloud Native" />
     <meta
@@ -75,7 +75,7 @@ Oracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Func
       "@type": "TechArticle",
       "articleSection": "Cloud Native",
       "name": "Oracle Cloud Infrastructure(OCI) DevOpsことはじめ-Oracle Functions編-",
-      "url" : "https://oracle-japan.github.io/ocitutorials/cloud-native/devops-for-beginners-functions/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/devops-for-beginners-functions/",
       "headline": "Oracle Cloud Infrastructure(OCI) DevOpsことはじめ-Oracle Functions編-",
       "description": "OCI DevOps は、OCI 上に CI\/CD 環境を構築するマネージドサービスです。このハンズオンでは、Oracle Functions に対する CI\/CD パイプラインの構築手順を記します。\nOracle Functions について\nOracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Function as a Service です。詳細は、https:\/\/www.oracle.com\/jp\/cloud-native\/functions\/ をご確認ください。 {: .notice–info}\n前提条件 環境 OCI DevOps事前準備が完了していること Oracle Functionsことはじめが完了していること 全体構成 本ハンズオンでは、以下のような環境を構築し、ソースコードの変更が Oracle Functions に自動的に反映されることを確認します。\n事前準備の流れ 1.OCIR の作成 2.ハンズオンに使用する資材のセットアップ 3.アプリケーションの動作確認 1.OCIR の作成 Oracle Functions のコンテナイメージの保存先である OCIR(Oracle Cloud Infrastructure Registry)を作成します。OCI Console 左上のハンバーガーメニューから、開発者サービス \u003e コンテナとアーティファクト \u003e コンテナ・レジストリと選択します。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -85,7 +85,7 @@ Oracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Func
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/cloud-native/devops-for-beginners-functions/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/devops-for-beginners-functions/"
       },
       "keywords" : [ "devops functions" ],
       "copyrightHolder" : "OCIチュートリアル",
@@ -96,10 +96,10 @@ Oracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Func
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -109,73 +109,73 @@ Oracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Func
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/cloud-native/devops-for-beginners-functions/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/devops-for-beginners-functions/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/cloud-native/devops-for-beginners-functions/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/devops-for-beginners-functions/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="Oracle Cloud Infrastructure(OCI) DevOpsことはじめ-Oracle Functions編-">
   <meta property="og:description" content="OCI DevOps は、OCI 上に CI/CD 環境を構築するマネージドサービスです。このハンズオンでは、Oracle Functions に対する CI/CD パイプラインの構築手順を記します。
@@ -243,11 +243,11 @@ Oracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Func
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -264,7 +264,7 @@ Oracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Func
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -276,7 +276,7 @@ Oracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Func
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -423,7 +423,7 @@ Oracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Func
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/cloud-native/' href='/ocitutorials/cloud-native/'><span itemprop='name'>Cloud Nativeチュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Oracle Cloud Infrastructure(OCI) DevOpsことはじめ-Oracle Functions編-</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/cloud-native/' href='/ocitutorial-geekdocs/cloud-native/'><span itemprop='name'>Cloud Nativeチュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Oracle Cloud Infrastructure(OCI) DevOpsことはじめ-Oracle Functions編-</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -470,7 +470,7 @@ Oracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Func
     >
         前提条件
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/devops-for-beginners-functions/#前提条件" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 前提条件" aria-label="アンカー先: 前提条件" href="#%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/devops-for-beginners-functions/#前提条件" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 前提条件" aria-label="アンカー先: 前提条件" href="#%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -493,7 +493,7 @@ Oracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Func
     >
         全体構成
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/devops-for-beginners-functions/#全体構成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 全体構成" aria-label="アンカー先: 全体構成" href="#%e5%85%a8%e4%bd%93%e6%a7%8b%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/devops-for-beginners-functions/#全体構成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 全体構成" aria-label="アンカー先: 全体構成" href="#%e5%85%a8%e4%bd%93%e6%a7%8b%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -508,7 +508,7 @@ Oracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Func
     >
         事前準備の流れ
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/devops-for-beginners-functions/#事前準備の流れ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 事前準備の流れ" aria-label="アンカー先: 事前準備の流れ" href="#%e4%ba%8b%e5%89%8d%e6%ba%96%e5%82%99%e3%81%ae%e6%b5%81%e3%82%8c">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/devops-for-beginners-functions/#事前準備の流れ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 事前準備の流れ" aria-label="アンカー先: 事前準備の流れ" href="#%e4%ba%8b%e5%89%8d%e6%ba%96%e5%82%99%e3%81%ae%e6%b5%81%e3%82%8c">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -522,7 +522,7 @@ Oracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Func
     >
         1.OCIR の作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/devops-for-beginners-functions/#1ocir-の作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.OCIR の作成" aria-label="アンカー先: 1.OCIR の作成" href="#1ocir-%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/devops-for-beginners-functions/#1ocir-の作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.OCIR の作成" aria-label="アンカー先: 1.OCIR の作成" href="#1ocir-%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -553,7 +553,7 @@ Oracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Func
     >
         2.ハンズオンに使用する資材のセットアップ
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/devops-for-beginners-functions/#2ハンズオンに使用する資材のセットアップ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.ハンズオンに使用する資材のセットアップ" aria-label="アンカー先: 2.ハンズオンに使用する資材のセットアップ" href="#2%e3%83%8f%e3%83%b3%e3%82%ba%e3%82%aa%e3%83%b3%e3%81%ab%e4%bd%bf%e7%94%a8%e3%81%99%e3%82%8b%e8%b3%87%e6%9d%90%e3%81%ae%e3%82%bb%e3%83%83%e3%83%88%e3%82%a2%e3%83%83%e3%83%97">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/devops-for-beginners-functions/#2ハンズオンに使用する資材のセットアップ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.ハンズオンに使用する資材のセットアップ" aria-label="アンカー先: 2.ハンズオンに使用する資材のセットアップ" href="#2%e3%83%8f%e3%83%b3%e3%82%ba%e3%82%aa%e3%83%b3%e3%81%ab%e4%bd%bf%e7%94%a8%e3%81%99%e3%82%8b%e8%b3%87%e6%9d%90%e3%81%ae%e3%82%bb%e3%83%83%e3%83%88%e3%82%a2%e3%83%83%e3%83%97">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -591,7 +591,7 @@ Oracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Func
     >
         3.アプリケーションの動作確認
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/devops-for-beginners-functions/#3アプリケーションの動作確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3.アプリケーションの動作確認" aria-label="アンカー先: 3.アプリケーションの動作確認" href="#3%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e5%8b%95%e4%bd%9c%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/devops-for-beginners-functions/#3アプリケーションの動作確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3.アプリケーションの動作確認" aria-label="アンカー先: 3.アプリケーションの動作確認" href="#3%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e5%8b%95%e4%bd%9c%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -632,7 +632,7 @@ Oracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Func
     >
         全体の流れ
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/devops-for-beginners-functions/#全体の流れ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 全体の流れ" aria-label="アンカー先: 全体の流れ" href="#%e5%85%a8%e4%bd%93%e3%81%ae%e6%b5%81%e3%82%8c">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/devops-for-beginners-functions/#全体の流れ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 全体の流れ" aria-label="アンカー先: 全体の流れ" href="#%e5%85%a8%e4%bd%93%e3%81%ae%e6%b5%81%e3%82%8c">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -647,7 +647,7 @@ Oracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Func
     >
         1. DevOps環境構築
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/devops-for-beginners-functions/#1-devops環境構築" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. DevOps環境構築" aria-label="アンカー先: 1. DevOps環境構築" href="#1-devops%e7%92%b0%e5%a2%83%e6%a7%8b%e7%af%89">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/devops-for-beginners-functions/#1-devops環境構築" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. DevOps環境構築" aria-label="アンカー先: 1. DevOps環境構築" href="#1-devops%e7%92%b0%e5%a2%83%e6%a7%8b%e7%af%89">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -657,7 +657,7 @@ Oracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Func
     >
         1-1.ポリシーの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/devops-for-beginners-functions/#1-1ポリシーの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-1.ポリシーの作成" aria-label="アンカー先: 1-1.ポリシーの作成" href="#1-1%e3%83%9d%e3%83%aa%e3%82%b7%e3%83%bc%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/devops-for-beginners-functions/#1-1ポリシーの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-1.ポリシーの作成" aria-label="アンカー先: 1-1.ポリシーの作成" href="#1-1%e3%83%9d%e3%83%aa%e3%82%b7%e3%83%bc%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -714,7 +714,7 @@ Oracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Func
     >
         1-2.コード・リポジトリ の作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/devops-for-beginners-functions/#1-2コードリポジトリ-の作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-2.コード・リポジトリ の作成" aria-label="アンカー先: 1-2.コード・リポジトリ の作成" href="#1-2%e3%82%b3%e3%83%bc%e3%83%89%e3%83%aa%e3%83%9d%e3%82%b8%e3%83%88%e3%83%aa-%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/devops-for-beginners-functions/#1-2コードリポジトリ-の作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-2.コード・リポジトリ の作成" aria-label="アンカー先: 1-2.コード・リポジトリ の作成" href="#1-2%e3%82%b3%e3%83%bc%e3%83%89%e3%83%aa%e3%83%9d%e3%82%b8%e3%83%88%e3%83%aa-%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -797,7 +797,7 @@ Oracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Func
     >
         1-3.ビルド・パイプラインの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/devops-for-beginners-functions/#1-3ビルドパイプラインの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-3.ビルド・パイプラインの作成" aria-label="アンカー先: 1-3.ビルド・パイプラインの作成" href="#1-3%e3%83%93%e3%83%ab%e3%83%89%e3%83%91%e3%82%a4%e3%83%97%e3%83%a9%e3%82%a4%e3%83%b3%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/devops-for-beginners-functions/#1-3ビルドパイプラインの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-3.ビルド・パイプラインの作成" aria-label="アンカー先: 1-3.ビルド・パイプラインの作成" href="#1-3%e3%83%93%e3%83%ab%e3%83%89%e3%83%91%e3%82%a4%e3%83%97%e3%83%a9%e3%82%a4%e3%83%b3%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -893,7 +893,7 @@ Oracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Func
     >
         1-4.環境の作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/devops-for-beginners-functions/#1-4環境の作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-4.環境の作成" aria-label="アンカー先: 1-4.環境の作成" href="#1-4%e7%92%b0%e5%a2%83%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/devops-for-beginners-functions/#1-4環境の作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-4.環境の作成" aria-label="アンカー先: 1-4.環境の作成" href="#1-4%e7%92%b0%e5%a2%83%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -930,7 +930,7 @@ Oracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Func
     >
         1-5.デプロイメント・パイプラインの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/devops-for-beginners-functions/#1-5デプロイメントパイプラインの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-5.デプロイメント・パイプラインの作成" aria-label="アンカー先: 1-5.デプロイメント・パイプラインの作成" href="#1-5%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4%e3%83%a1%e3%83%b3%e3%83%88%e3%83%91%e3%82%a4%e3%83%97%e3%83%a9%e3%82%a4%e3%83%b3%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/devops-for-beginners-functions/#1-5デプロイメントパイプラインの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-5.デプロイメント・パイプラインの作成" aria-label="アンカー先: 1-5.デプロイメント・パイプラインの作成" href="#1-5%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4%e3%83%a1%e3%83%b3%e3%83%88%e3%83%91%e3%82%a4%e3%83%97%e3%83%a9%e3%82%a4%e3%83%b3%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -983,7 +983,7 @@ Oracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Func
     >
         1-6.ビルド・パイプラインとデプロイメント・パイプラインの連携設定
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/devops-for-beginners-functions/#1-6ビルドパイプラインとデプロイメントパイプラインの連携設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-6.ビルド・パイプラインとデプロイメント・パイプラインの連携設定" aria-label="アンカー先: 1-6.ビルド・パイプラインとデプロイメント・パイプラインの連携設定" href="#1-6%e3%83%93%e3%83%ab%e3%83%89%e3%83%91%e3%82%a4%e3%83%97%e3%83%a9%e3%82%a4%e3%83%b3%e3%81%a8%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4%e3%83%a1%e3%83%b3%e3%83%88%e3%83%91%e3%82%a4%e3%83%97%e3%83%a9%e3%82%a4%e3%83%b3%e3%81%ae%e9%80%a3%e6%90%ba%e8%a8%ad%e5%ae%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/devops-for-beginners-functions/#1-6ビルドパイプラインとデプロイメントパイプラインの連携設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-6.ビルド・パイプラインとデプロイメント・パイプラインの連携設定" aria-label="アンカー先: 1-6.ビルド・パイプラインとデプロイメント・パイプラインの連携設定" href="#1-6%e3%83%93%e3%83%ab%e3%83%89%e3%83%91%e3%82%a4%e3%83%97%e3%83%a9%e3%82%a4%e3%83%b3%e3%81%a8%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4%e3%83%a1%e3%83%b3%e3%83%88%e3%83%91%e3%82%a4%e3%83%97%e3%83%a9%e3%82%a4%e3%83%b3%e3%81%ae%e9%80%a3%e6%90%ba%e8%a8%ad%e5%ae%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1020,7 +1020,7 @@ Oracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Func
     >
         1-7.トリガーの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/devops-for-beginners-functions/#1-7トリガーの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-7.トリガーの作成" aria-label="アンカー先: 1-7.トリガーの作成" href="#1-7%e3%83%88%e3%83%aa%e3%82%ac%e3%83%bc%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/devops-for-beginners-functions/#1-7トリガーの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-7.トリガーの作成" aria-label="アンカー先: 1-7.トリガーの作成" href="#1-7%e3%83%88%e3%83%aa%e3%82%ac%e3%83%bc%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1058,7 +1058,7 @@ Oracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Func
     >
         2.パイプラインの実行
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/devops-for-beginners-functions/#2パイプラインの実行" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.パイプラインの実行" aria-label="アンカー先: 2.パイプラインの実行" href="#2%e3%83%91%e3%82%a4%e3%83%97%e3%83%a9%e3%82%a4%e3%83%b3%e3%81%ae%e5%ae%9f%e8%a1%8c">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/devops-for-beginners-functions/#2パイプラインの実行" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.パイプラインの実行" aria-label="アンカー先: 2.パイプラインの実行" href="#2%e3%83%91%e3%82%a4%e3%83%97%e3%83%a9%e3%82%a4%e3%83%b3%e3%81%ae%e5%ae%9f%e8%a1%8c">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1117,7 +1117,7 @@ Oracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Func
     >
         3.デプロイの確認
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/devops-for-beginners-functions/#3デプロイの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3.デプロイの確認" aria-label="アンカー先: 3.デプロイの確認" href="#3%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4%e3%81%ae%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/devops-for-beginners-functions/#3デプロイの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3.デプロイの確認" aria-label="アンカー先: 3.デプロイの確認" href="#3%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4%e3%81%ae%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1130,7 +1130,7 @@ Oracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Func
     >
         4.【オプション】ビルド構成ファイルの解説
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/devops-for-beginners-functions/#4オプションビルド構成ファイルの解説" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.【オプション】ビルド構成ファイルの解説" aria-label="アンカー先: 4.【オプション】ビルド構成ファイルの解説" href="#4%e3%82%aa%e3%83%97%e3%82%b7%e3%83%a7%e3%83%b3%e3%83%93%e3%83%ab%e3%83%89%e6%a7%8b%e6%88%90%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%81%ae%e8%a7%a3%e8%aa%ac">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/devops-for-beginners-functions/#4オプションビルド構成ファイルの解説" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.【オプション】ビルド構成ファイルの解説" aria-label="アンカー先: 4.【オプション】ビルド構成ファイルの解説" href="#4%e3%82%aa%e3%83%97%e3%82%b7%e3%83%a7%e3%83%b3%e3%83%93%e3%83%ab%e3%83%89%e6%a7%8b%e6%88%90%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%81%ae%e8%a7%a3%e8%aa%ac">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9450,7 +9450,7 @@ Oracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Func
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/cloud-native/devops-for-beginners-oke/"
+      href="/ocitutorial-geekdocs/cloud-native/devops-for-beginners-oke/"
       title="Oracle Cloud Infrastructure(OCI) DevOpsことはじめ-OKE編-"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9462,7 +9462,7 @@ Oracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Func
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/cloud-native/devops-for-commons/"
+      href="/ocitutorial-geekdocs/cloud-native/devops-for-commons/"
       title="Oracle Cloud Infrastructure(OCI) DevOps事前準備"
     >
       Oracle Cloud Infrastructure(OCI) DevOps事前準備
@@ -9516,7 +9516,7 @@ Oracle Functions は、Oracle Cloud Infrastructure(OCI)で提供される、Func
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

@@ -18,18 +18,18 @@
 
   <title>212: Autonomous Database を災害対策構成にしてみよう | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -49,7 +49,7 @@
 目次
 はじめに 1. Autonomous Data Guard 1-1. ローカルAutonomous Data Guard の有効化 1-2. Autonomous Data Guard のスイッチオーバー 1-3. クロスリージョンAutonomous Data Guard 1-4. Autonomous Data Guard のその他の機能 2. バックアップベースのディザスタ・リカバリ 2-1. ローカル・バックアップベースのディザスタ・リカバリ 2-2. クロスリージョン・バックアップベースのディザスタ・リカバリ おわりに 所要時間: 約30分" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/adb/adb212-audg/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb212-audg/" />
 
 <meta property="article:section" content="Adb" />
     <meta
@@ -76,7 +76,7 @@
       "@type": "TechArticle",
       "articleSection": "Adb",
       "name": "212: Autonomous Database を災害対策構成にしてみよう",
-      "url" : "https://oracle-japan.github.io/ocitutorials/adb/adb212-audg/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb212-audg/",
       "headline": "212: Autonomous Database を災害対策構成にしてみよう",
       "description": "\nはじめに Autonomous Database ではReal Application Clusters(RAC)やAutomatic Storage Management(ASM)などの高可用性技術が事前構成済みです。そのため、単一のDBサーバー障害やストレージ障害については、RTO\/RPOがほぼ0(SLO: サービスレベル目標)で復旧させることが可能です。\nそれらに加え、有償オプションとして、大きく2種類の災害対策ソリューションが提供されています。\nそれがAutonomous Data Guardとバックアップベースのディザスタ・リカバリです。Autonomous Data Guard は、本番環境用インスタンス(プライマリ・インスタンス)のスタンバイ・データベースを構成する事ができます。これによって、Autonomous Database インスタンスにデータ保護およびディザスタ・リカバリを実現可能です。Autonomous Data Guard が有効になっている場合、全ノード障害やリージョン障害などの大規模障害の際に、フェイルオーバーやスイッチオーバーが可能なスタンバイ・データベースを提供します。なおAutonomous Data Guard のスタンバイ・データベースへはデータ操作や接続ができません。\nバックアップベースのディザスタ・リカバリは、デフォルトで取得されている自動バックアップのコピーを、本番環境用インスタンスのリージョンと異なるリージョンに保管しておくことができます。こちらもAutonomous Data Guard と同様、リージョン障害時に別のリージョンで本番環境と同等の環境をバックアップから構成することで、ディザスタ・リカバリを実現可能です。\n目次\nはじめに 1. Autonomous Data Guard 1-1. ローカルAutonomous Data Guard の有効化 1-2. Autonomous Data Guard のスイッチオーバー 1-3. クロスリージョンAutonomous Data Guard 1-4. Autonomous Data Guard のその他の機能 2. バックアップベースのディザスタ・リカバリ 2-1. ローカル・バックアップベースのディザスタ・リカバリ 2-2. クロスリージョン・バックアップベースのディザスタ・リカバリ おわりに 所要時間: 約30分",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -86,7 +86,7 @@
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/adb/adb212-audg/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb212-audg/"
       },
       "copyrightHolder" : "OCIチュートリアル",
       "copyrightYear" : "0001",
@@ -96,10 +96,10 @@
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -109,73 +109,73 @@
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/adb/adb212-audg/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb212-audg/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/adb/adb212-audg/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb212-audg/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="212: Autonomous Database を災害対策構成にしてみよう">
   <meta property="og:description" content="はじめに Autonomous Database ではReal Application Clusters(RAC)やAutomatic Storage Management(ASM)などの高可用性技術が事前構成済みです。そのため、単一のDBサーバー障害やストレージ障害については、RTO/RPOがほぼ0(SLO: サービスレベル目標)で復旧させることが可能です。
@@ -243,11 +243,11 @@
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -264,7 +264,7 @@
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -276,7 +276,7 @@
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -415,7 +415,7 @@
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/adb/' href='/ocitutorials/adb/'><span itemprop='name'>Oracle Database編 - Autonomous Database (ADB)を使ってみよう</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>212: Autonomous Database を災害対策構成にしてみよう</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/adb/' href='/ocitutorial-geekdocs/adb/'><span itemprop='name'>Oracle Database編 - Autonomous Database (ADB)を使ってみよう</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>212: Autonomous Database を災害対策構成にしてみよう</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -447,7 +447,7 @@
     >
         はじめに
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb212-audg/#はじめに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: はじめに" aria-label="アンカー先: はじめに" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb212-audg/#はじめに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: はじめに" aria-label="アンカー先: はじめに" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -514,7 +514,7 @@
     >
         1. Autonomous Data Guard
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb212-audg/#1-autonomous-data-guard" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. Autonomous Data Guard" aria-label="アンカー先: 1. Autonomous Data Guard" href="#1-autonomous-data-guard">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb212-audg/#1-autonomous-data-guard" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. Autonomous Data Guard" aria-label="アンカー先: 1. Autonomous Data Guard" href="#1-autonomous-data-guard">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -546,7 +546,7 @@
     >
         1-1. ローカルAutonomous Data Guard の有効化
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb212-audg/#1-1-ローカルautonomous-data-guard-の有効化" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-1. ローカルAutonomous Data Guard の有効化" aria-label="アンカー先: 1-1. ローカルAutonomous Data Guard の有効化" href="#1-1-%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%abautonomous-data-guard-%e3%81%ae%e6%9c%89%e5%8a%b9%e5%8c%96">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb212-audg/#1-1-ローカルautonomous-data-guard-の有効化" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-1. ローカルAutonomous Data Guard の有効化" aria-label="アンカー先: 1-1. ローカルAutonomous Data Guard の有効化" href="#1-1-%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%abautonomous-data-guard-%e3%81%ae%e6%9c%89%e5%8a%b9%e5%8c%96">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -618,7 +618,7 @@
     >
         1-2. Autonomous Data Guard のスイッチオーバー
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb212-audg/#1-2-autonomous-data-guard-のスイッチオーバー" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-2. Autonomous Data Guard のスイッチオーバー" aria-label="アンカー先: 1-2. Autonomous Data Guard のスイッチオーバー" href="#1-2-autonomous-data-guard-%e3%81%ae%e3%82%b9%e3%82%a4%e3%83%83%e3%83%81%e3%82%aa%e3%83%bc%e3%83%90%e3%83%bc">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb212-audg/#1-2-autonomous-data-guard-のスイッチオーバー" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-2. Autonomous Data Guard のスイッチオーバー" aria-label="アンカー先: 1-2. Autonomous Data Guard のスイッチオーバー" href="#1-2-autonomous-data-guard-%e3%81%ae%e3%82%b9%e3%82%a4%e3%83%83%e3%83%81%e3%82%aa%e3%83%bc%e3%83%90%e3%83%bc">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -663,7 +663,7 @@
     >
         1-3. クロスリージョンAutonomous Data Guard
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb212-audg/#1-3-クロスリージョンautonomous-data-guard" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-3. クロスリージョンAutonomous Data Guard" aria-label="アンカー先: 1-3. クロスリージョンAutonomous Data Guard" href="#1-3-%e3%82%af%e3%83%ad%e3%82%b9%e3%83%aa%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3autonomous-data-guard">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb212-audg/#1-3-クロスリージョンautonomous-data-guard" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-3. クロスリージョンAutonomous Data Guard" aria-label="アンカー先: 1-3. クロスリージョンAutonomous Data Guard" href="#1-3-%e3%82%af%e3%83%ad%e3%82%b9%e3%83%aa%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3autonomous-data-guard">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -731,7 +731,7 @@
     >
         1-4. Autonomous Data Guard のその他の機能
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb212-audg/#1-4-autonomous-data-guard-のその他の機能" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-4. Autonomous Data Guard のその他の機能" aria-label="アンカー先: 1-4. Autonomous Data Guard のその他の機能" href="#1-4-autonomous-data-guard-%e3%81%ae%e3%81%9d%e3%81%ae%e4%bb%96%e3%81%ae%e6%a9%9f%e8%83%bd">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb212-audg/#1-4-autonomous-data-guard-のその他の機能" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-4. Autonomous Data Guard のその他の機能" aria-label="アンカー先: 1-4. Autonomous Data Guard のその他の機能" href="#1-4-autonomous-data-guard-%e3%81%ae%e3%81%9d%e3%81%ae%e4%bb%96%e3%81%ae%e6%a9%9f%e8%83%bd">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -790,7 +790,7 @@ Autonomous Data Guard でスタンバイ・データベースを構成する場�
     >
         2. バックアップベースのディザスタ・リカバリ
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb212-audg/#2-バックアップベースのディザスタリカバリ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. バックアップベースのディザスタ・リカバリ" aria-label="アンカー先: 2. バックアップベースのディザスタ・リカバリ" href="#2-%e3%83%90%e3%83%83%e3%82%af%e3%82%a2%e3%83%83%e3%83%97%e3%83%99%e3%83%bc%e3%82%b9%e3%81%ae%e3%83%87%e3%82%a3%e3%82%b6%e3%82%b9%e3%82%bf%e3%83%aa%e3%82%ab%e3%83%90%e3%83%aa">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb212-audg/#2-バックアップベースのディザスタリカバリ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. バックアップベースのディザスタ・リカバリ" aria-label="アンカー先: 2. バックアップベースのディザスタ・リカバリ" href="#2-%e3%83%90%e3%83%83%e3%82%af%e3%82%a2%e3%83%83%e3%83%97%e3%83%99%e3%83%bc%e3%82%b9%e3%81%ae%e3%83%87%e3%82%a3%e3%82%b6%e3%82%b9%e3%82%bf%e3%83%aa%e3%82%ab%e3%83%90%e3%83%aa">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -802,7 +802,7 @@ Autonomous Data Guard でスタンバイ・データベースを構成する場�
     >
         2-1. ローカル・バックアップベースのディザスタ・リカバリ
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb212-audg/#2-1-ローカルバックアップベースのディザスタリカバリ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-1. ローカル・バックアップベースのディザスタ・リカバリ" aria-label="アンカー先: 2-1. ローカル・バックアップベースのディザスタ・リカバリ" href="#2-1-%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%83%90%e3%83%83%e3%82%af%e3%82%a2%e3%83%83%e3%83%97%e3%83%99%e3%83%bc%e3%82%b9%e3%81%ae%e3%83%87%e3%82%a3%e3%82%b6%e3%82%b9%e3%82%bf%e3%83%aa%e3%82%ab%e3%83%90%e3%83%aa">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb212-audg/#2-1-ローカルバックアップベースのディザスタリカバリ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-1. ローカル・バックアップベースのディザスタ・リカバリ" aria-label="アンカー先: 2-1. ローカル・バックアップベースのディザスタ・リカバリ" href="#2-1-%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%83%90%e3%83%83%e3%82%af%e3%82%a2%e3%83%83%e3%83%97%e3%83%99%e3%83%bc%e3%82%b9%e3%81%ae%e3%83%87%e3%82%a3%e3%82%b6%e3%82%b9%e3%82%bf%e3%83%aa%e3%82%ab%e3%83%90%e3%83%aa">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -843,7 +843,7 @@ Autonomous Data Guard でスタンバイ・データベースを構成する場�
     >
         2-2. クロスリージョン・バックアップベースのディザスタ・リカバリ
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb212-audg/#2-2-クロスリージョンバックアップベースのディザスタリカバリ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-2. クロスリージョン・バックアップベースのディザスタ・リカバリ" aria-label="アンカー先: 2-2. クロスリージョン・バックアップベースのディザスタ・リカバリ" href="#2-2-%e3%82%af%e3%83%ad%e3%82%b9%e3%83%aa%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3%e3%83%90%e3%83%83%e3%82%af%e3%82%a2%e3%83%83%e3%83%97%e3%83%99%e3%83%bc%e3%82%b9%e3%81%ae%e3%83%87%e3%82%a3%e3%82%b6%e3%82%b9%e3%82%bf%e3%83%aa%e3%82%ab%e3%83%90%e3%83%aa">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb212-audg/#2-2-クロスリージョンバックアップベースのディザスタリカバリ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-2. クロスリージョン・バックアップベースのディザスタ・リカバリ" aria-label="アンカー先: 2-2. クロスリージョン・バックアップベースのディザスタ・リカバリ" href="#2-2-%e3%82%af%e3%83%ad%e3%82%b9%e3%83%aa%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3%e3%83%90%e3%83%83%e3%82%af%e3%82%a2%e3%83%83%e3%83%97%e3%83%99%e3%83%bc%e3%82%b9%e3%81%ae%e3%83%87%e3%82%a3%e3%82%b6%e3%82%b9%e3%82%bf%e3%83%aa%e3%82%ab%e3%83%90%e3%83%aa">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -892,7 +892,7 @@ Autonomous Data Guard でスタンバイ・データベースを構成する場�
     >
         おわりに
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb212-audg/#おわりに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: おわりに" aria-label="アンカー先: おわりに" href="#%e3%81%8a%e3%82%8f%e3%82%8a%e3%81%ab">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb212-audg/#おわりに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: おわりに" aria-label="アンカー先: おわりに" href="#%e3%81%8a%e3%82%8f%e3%82%8a%e3%81%ab">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9147,7 +9147,7 @@ Autonomous Data Guard でスタンバイ・データベースを構成する場�
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/adb/adb211-clone/"
+      href="/ocitutorial-geekdocs/adb/adb211-clone/"
       title="211: クローン機能を活用しよう"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9159,7 +9159,7 @@ Autonomous Data Guard でスタンバイ・データベースを構成する場�
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/adb/adb213-tac/"
+      href="/ocitutorial-geekdocs/adb/adb213-tac/"
       title="213 : Application Continuityを設定しよう"
     >
       213 : Application Continuityを設定しよう
@@ -9213,7 +9213,7 @@ Autonomous Data Guard でスタンバイ・データベースを構成する場�
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

@@ -20,18 +20,18 @@ Oracle CloudでOracle Databaseを使おう を通じて Oracle Database の作�
 
   <title>106: Data Guardを構成しよう | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -53,7 +53,7 @@ Oracle CloudでOracle Databaseを使おう を通じて Oracle Database の作�
 目次
 1. OCI上でのData Guard構成パターン 2. Data Guardを構成する為の前提条件 3. Data Guardの構成手順 4. Data Guardの切り替え 5. Data Guard構成に含まれるDBの削除方法 **所要時間 :** 約60分 1. OCI上でのData Guard構成パターン Oracle Cloud上でData Guardを利用する際の基本的な構成については、大きく分けて３つのパターンがあります。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/basedb/dbcs106-dataguard/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/basedb/dbcs106-dataguard/" />
 
 <meta property="article:section" content="Basedb" />
     <meta
@@ -82,7 +82,7 @@ Oracle CloudでOracle Databaseを使おう を通じて Oracle Database の作�
       "@type": "TechArticle",
       "articleSection": "Basedb",
       "name": "106: Data Guardを構成しよう",
-      "url" : "https://oracle-japan.github.io/ocitutorials/basedb/dbcs106-dataguard/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/basedb/dbcs106-dataguard/",
       "headline": "106: Data Guardを構成しよう",
       "description": "\nはじめに Data Guardは、Oracle Database自身が持つレプリケーション機能です。 プライマリDBの更新情報（REDOログ）をスタンバイDBに転送し、そのREDOログを使ってリカバリし続けることでプライマリDBと同じ状態を維持します。\nリアルタイムに複製データベースを持つ事ができる為、データベース障害やリージョン障害などのRTO\/RPOを短くすることができ、広範囲な計画停止(メンテナンス)においても切り替えることによって停止時間を極小化することが可能で、災害対策(DR)としてのデータ保護はもちろんのこと、移行やアップグレードの停止時間短縮といった利用用途もあります。\nまた、参照専用として利用可能なActive Data Guardにしたり、一時的に読み書き可能なスナップショット・スタンバイとして利用したりと、普段から利用可能なスタンバイDBを持つことができます。\nここでは、OCI コンソールから Data Guard を構成するまでの手順についてご紹介します。\n前提条件 :\nOracle CloudでOracle Databaseを使おう を通じて Oracle Database の作成が完了していること 注意 チュートリアル内の画面ショットについては現在の画面と異なっている場合があります。\n目次\n1. OCI上でのData Guard構成パターン 2. Data Guardを構成する為の前提条件 3. Data Guardの構成手順 4. Data Guardの切り替え 5. Data Guard構成に含まれるDBの削除方法 **所要時間 :** 約60分 1. OCI上でのData Guard構成パターン Oracle Cloud上でData Guardを利用する際の基本的な構成については、大きく分けて３つのパターンがあります。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -92,7 +92,7 @@ Oracle CloudでOracle Databaseを使おう を通じて Oracle Database の作�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/basedb/dbcs106-dataguard/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/basedb/dbcs106-dataguard/"
       },
       "copyrightHolder" : "OCIチュートリアル",
       "copyrightYear" : "0001",
@@ -102,10 +102,10 @@ Oracle CloudでOracle Databaseを使おう を通じて Oracle Database の作�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -115,73 +115,73 @@ Oracle CloudでOracle Databaseを使おう を通じて Oracle Database の作�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/basedb/dbcs106-dataguard/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/basedb/dbcs106-dataguard/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/basedb/dbcs106-dataguard/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/basedb/dbcs106-dataguard/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="106: Data Guardを構成しよう">
   <meta property="og:description" content="はじめに Data Guardは、Oracle Database自身が持つレプリケーション機能です。 プライマリDBの更新情報（REDOログ）をスタンバイDBに転送し、そのREDOログを使ってリカバリし続けることでプライマリDBと同じ状態を維持します。
@@ -253,11 +253,11 @@ Oracle CloudでOracle Databaseを使おう を通じて Oracle Database の作�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -274,7 +274,7 @@ Oracle CloudでOracle Databaseを使おう を通じて Oracle Database の作�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -286,7 +286,7 @@ Oracle CloudでOracle Databaseを使おう を通じて Oracle Database の作�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -415,7 +415,7 @@ Oracle CloudでOracle Databaseを使おう を通じて Oracle Database の作�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/basedb/' href='/ocitutorials/basedb/'><span itemprop='name'>Oracle Database編 - Base Database Service (BaseDB) を使ってみよう</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>106: Data Guardを構成しよう</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/basedb/' href='/ocitutorial-geekdocs/basedb/'><span itemprop='name'>Oracle Database編 - Base Database Service (BaseDB) を使ってみよう</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>106: Data Guardを構成しよう</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -447,7 +447,7 @@ Oracle CloudでOracle Databaseを使おう を通じて Oracle Database の作�
     >
         はじめに
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/basedb/dbcs106-dataguard/#はじめに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: はじめに" aria-label="アンカー先: はじめに" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/basedb/dbcs106-dataguard/#はじめに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: はじめに" aria-label="アンカー先: はじめに" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -498,7 +498,7 @@ Oracle CloudでOracle Databaseを使おう を通じて Oracle Database の作�
     >
         1. OCI上でのData Guard構成パターン
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/basedb/dbcs106-dataguard/#1-oci上でのdata-guard構成パターン" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. OCI上でのData Guard構成パターン" aria-label="アンカー先: 1. OCI上でのData Guard構成パターン" href="#1-oci%e4%b8%8a%e3%81%a7%e3%81%aedata-guard%e6%a7%8b%e6%88%90%e3%83%91%e3%82%bf%e3%83%bc%e3%83%b3">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/basedb/dbcs106-dataguard/#1-oci上でのdata-guard構成パターン" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. OCI上でのData Guard構成パターン" aria-label="アンカー先: 1. OCI上でのData Guard構成パターン" href="#1-oci%e4%b8%8a%e3%81%a7%e3%81%aedata-guard%e6%a7%8b%e6%88%90%e3%83%91%e3%82%bf%e3%83%bc%e3%83%b3">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -522,7 +522,7 @@ Oracle CloudでOracle Databaseを使おう を通じて Oracle Database の作�
     >
         2. Data Guardを構成する為の前提条件
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/basedb/dbcs106-dataguard/#2-data-guardを構成する為の前提条件" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. Data Guardを構成する為の前提条件" aria-label="アンカー先: 2. Data Guardを構成する為の前提条件" href="#2-data-guard%e3%82%92%e6%a7%8b%e6%88%90%e3%81%99%e3%82%8b%e7%82%ba%e3%81%ae%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/basedb/dbcs106-dataguard/#2-data-guardを構成する為の前提条件" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. Data Guardを構成する為の前提条件" aria-label="アンカー先: 2. Data Guardを構成する為の前提条件" href="#2-data-guard%e3%82%92%e6%a7%8b%e6%88%90%e3%81%99%e3%82%8b%e7%82%ba%e3%81%ae%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -561,7 +561,7 @@ Oracle CloudでOracle Databaseを使おう を通じて Oracle Database の作�
     >
         3. Data Guardの構成手順
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/basedb/dbcs106-dataguard/#3-data-guardの構成手順" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. Data Guardの構成手順" aria-label="アンカー先: 3. Data Guardの構成手順" href="#3-data-guard%e3%81%ae%e6%a7%8b%e6%88%90%e6%89%8b%e9%a0%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/basedb/dbcs106-dataguard/#3-data-guardの構成手順" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. Data Guardの構成手順" aria-label="アンカー先: 3. Data Guardの構成手順" href="#3-data-guard%e3%81%ae%e6%a7%8b%e6%88%90%e6%89%8b%e9%a0%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -622,7 +622,7 @@ Oracle CloudでOracle Databaseを使おう を通じて Oracle Database の作�
     >
         4. Data Guardの切り替え
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/basedb/dbcs106-dataguard/#4-data-guardの切り替え" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. Data Guardの切り替え" aria-label="アンカー先: 4. Data Guardの切り替え" href="#4-data-guard%e3%81%ae%e5%88%87%e3%82%8a%e6%9b%bf%e3%81%88">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/basedb/dbcs106-dataguard/#4-data-guardの切り替え" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. Data Guardの切り替え" aria-label="アンカー先: 4. Data Guardの切り替え" href="#4-data-guard%e3%81%ae%e5%88%87%e3%82%8a%e6%9b%bf%e3%81%88">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -668,7 +668,7 @@ BaseDB では、コンソール上の『回復』というボタンをクリッ�
     >
         5. Data Guard構成に含まれるDBの削除方法
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/basedb/dbcs106-dataguard/#5-data-guard構成に含まれるdbの削除方法" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5. Data Guard構成に含まれるDBの削除方法" aria-label="アンカー先: 5. Data Guard構成に含まれるDBの削除方法" href="#5-data-guard%e6%a7%8b%e6%88%90%e3%81%ab%e5%90%ab%e3%81%be%e3%82%8c%e3%82%8bdb%e3%81%ae%e5%89%8a%e9%99%a4%e6%96%b9%e6%b3%95">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/basedb/dbcs106-dataguard/#5-data-guard構成に含まれるdbの削除方法" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5. Data Guard構成に含まれるDBの削除方法" aria-label="アンカー先: 5. Data Guard構成に含まれるDBの削除方法" href="#5-data-guard%e6%a7%8b%e6%88%90%e3%81%ab%e5%90%ab%e3%81%be%e3%82%8c%e3%82%8bdb%e3%81%ae%e5%89%8a%e9%99%a4%e6%96%b9%e6%b3%95">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -8922,7 +8922,7 @@ BaseDB では、コンソール上の『回復』というボタンをクリッ�
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/basedb/dbcs105-restore/"
+      href="/ocitutorial-geekdocs/basedb/dbcs105-restore/"
       title="105: バックアップからリストアしよう"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -8934,7 +8934,7 @@ BaseDB では、コンソール上の『回復』というボタンをクリッ�
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/basedb/dbcs107-zrcv/"
+      href="/ocitutorial-geekdocs/basedb/dbcs107-zrcv/"
       title="107: Autonomous Recovery Service (RCV/ZRCV) をセットアップしよう"
     >
       107: Autonomous Recovery Service (RCV/ZRCV) をセットアップしよう
@@ -8988,7 +8988,7 @@ BaseDB では、コンソール上の『回復』というボタンをクリッ�
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

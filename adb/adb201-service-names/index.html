@@ -19,18 +19,18 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
 
   <title>201: 接続サービスの理解 | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -50,7 +50,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
 この「接続サービス」は、パラレル実行・同時実行セッション数・リソース割り当て などの制御について事前定義されたもので、ユーザーは接続サービスを選択するだけで、CPUの割当や並列処理をコントロールできます。
 選択可能な接続サービスの種類は、次の通りです。 Autonomous Data Warehouse(ADW) では３種類、Autonomous Transaction Processing(ATP)では5種類あり、ワークロード適したものを選択します。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/adb/adb201-service-names/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb201-service-names/" />
 
 <meta property="article:section" content="Adb" />
     <meta
@@ -77,7 +77,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
       "@type": "TechArticle",
       "articleSection": "Adb",
       "name": "201: 接続サービスの理解",
-      "url" : "https://oracle-japan.github.io/ocitutorials/adb/adb201-service-names/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb201-service-names/",
       "headline": "201: 接続サービスの理解",
       "description": "Autonomous Database では、事前に定義済の接続サービスが用意されています。 本章では、接続サービスの概要をご紹介します。\n所要時間 : 約10分\n前提条件 :\nADBインスタンスが構成済みであること ※ADBインタンスを作成方法については、本ハンズオンガイドの 101:ADBインスタンスを作成してみよう を参照ください。 目次：\n1. 接続サービスとは？ 2. Database ActionsのResource Managerの設定画面にアクセスしよう 3. CPU\/IOの優先度の変更しよう 4. 処理時間\/利用IOの上限を設定しよう 5. 同時実行セッション数の制限が変更できることを確認しよう 1. 接続サービスとは？ 接続サービスの選択 インスタンスに接続する際、Autonomous Databaseはアプリケーションの特性に応じて適切な「接続サービス」を選択する必要があります。\nこの「接続サービス」は、パラレル実行・同時実行セッション数・リソース割り当て などの制御について事前定義されたもので、ユーザーは接続サービスを選択するだけで、CPUの割当や並列処理をコントロールできます。\n選択可能な接続サービスの種類は、次の通りです。 Autonomous Data Warehouse(ADW) では３種類、Autonomous Transaction Processing(ATP)では5種類あり、ワークロード適したものを選択します。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -87,7 +87,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/adb/adb201-service-names/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb201-service-names/"
       },
       "copyrightHolder" : "OCIチュートリアル",
       "copyrightYear" : "0001",
@@ -97,10 +97,10 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -110,73 +110,73 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/adb/adb201-service-names/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb201-service-names/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/adb/adb201-service-names/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb201-service-names/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="201: 接続サービスの理解">
   <meta property="og:description" content="Autonomous Database では、事前に定義済の接続サービスが用意されています。 本章では、接続サービスの概要をご紹介します。
@@ -246,11 +246,11 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -267,7 +267,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -279,7 +279,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -412,7 +412,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/adb/' href='/ocitutorials/adb/'><span itemprop='name'>Oracle Database編 - Autonomous Database (ADB)を使ってみよう</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>201: 接続サービスの理解</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/adb/' href='/ocitutorial-geekdocs/adb/'><span itemprop='name'>Oracle Database編 - Autonomous Database (ADB)を使ってみよう</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>201: 接続サービスの理解</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -479,7 +479,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
     >
         1. 接続サービスとは？
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb201-service-names/#1-接続サービスとは" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. 接続サービスとは？" aria-label="アンカー先: 1. 接続サービスとは？" href="#1-%e6%8e%a5%e7%b6%9a%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9%e3%81%a8%e3%81%af">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb201-service-names/#1-接続サービスとは" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. 接続サービスとは？" aria-label="アンカー先: 1. 接続サービスとは？" href="#1-%e6%8e%a5%e7%b6%9a%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9%e3%81%a8%e3%81%af">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -488,7 +488,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
     >
         接続サービスの選択
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb201-service-names/#接続サービスの選択" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 接続サービスの選択" aria-label="アンカー先: 接続サービスの選択" href="#%e6%8e%a5%e7%b6%9a%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9%e3%81%ae%e9%81%b8%e6%8a%9e">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb201-service-names/#接続サービスの選択" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 接続サービスの選択" aria-label="アンカー先: 接続サービスの選択" href="#%e6%8e%a5%e7%b6%9a%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9%e3%81%ae%e9%81%b8%e6%8a%9e">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -506,7 +506,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
     >
         使い分けの指針、スタートポイント
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb201-service-names/#使い分けの指針スタートポイント" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 使い分けの指針、スタートポイント" aria-label="アンカー先: 使い分けの指針、スタートポイント" href="#%e4%bd%bf%e3%81%84%e5%88%86%e3%81%91%e3%81%ae%e6%8c%87%e9%87%9d%e3%82%b9%e3%82%bf%e3%83%bc%e3%83%88%e3%83%9d%e3%82%a4%e3%83%b3%e3%83%88">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb201-service-names/#使い分けの指針スタートポイント" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 使い分けの指針、スタートポイント" aria-label="アンカー先: 使い分けの指針、スタートポイント" href="#%e4%bd%bf%e3%81%84%e5%88%86%e3%81%91%e3%81%ae%e6%8c%87%e9%87%9d%e3%82%b9%e3%82%bf%e3%83%bc%e3%83%88%e3%83%9d%e3%82%a4%e3%83%b3%e3%83%88">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -607,7 +607,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
     >
         2. Database ActionsのResource Managerの設定画面にアクセスしよう
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb201-service-names/#2-database-actionsのresource-managerの設定画面にアクセスしよう" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. Database ActionsのResource Managerの設定画面にアクセスしよう" aria-label="アンカー先: 2. Database ActionsのResource Managerの設定画面にアクセスしよう" href="#2-database-actions%e3%81%aeresource-manager%e3%81%ae%e8%a8%ad%e5%ae%9a%e7%94%bb%e9%9d%a2%e3%81%ab%e3%82%a2%e3%82%af%e3%82%bb%e3%82%b9%e3%81%97%e3%82%88%e3%81%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb201-service-names/#2-database-actionsのresource-managerの設定画面にアクセスしよう" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. Database ActionsのResource Managerの設定画面にアクセスしよう" aria-label="アンカー先: 2. Database ActionsのResource Managerの設定画面にアクセスしよう" href="#2-database-actions%e3%81%aeresource-manager%e3%81%ae%e8%a8%ad%e5%ae%9a%e7%94%bb%e9%9d%a2%e3%81%ab%e3%82%a2%e3%82%af%e3%82%bb%e3%82%b9%e3%81%97%e3%82%88%e3%81%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -647,7 +647,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
     >
         3. CPU/IOシェアの変更しよう
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb201-service-names/#3-cpuioシェアの変更しよう" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. CPU/IOシェアの変更しよう" aria-label="アンカー先: 3. CPU/IOシェアの変更しよう" href="#3-cpuio%e3%82%b7%e3%82%a7%e3%82%a2%e3%81%ae%e5%a4%89%e6%9b%b4%e3%81%97%e3%82%88%e3%81%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb201-service-names/#3-cpuioシェアの変更しよう" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. CPU/IOシェアの変更しよう" aria-label="アンカー先: 3. CPU/IOシェアの変更しよう" href="#3-cpuio%e3%82%b7%e3%82%a7%e3%82%a2%e3%81%ae%e5%a4%89%e6%9b%b4%e3%81%97%e3%82%88%e3%81%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -694,7 +694,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
     >
         4. 処理時間/利用IOの上限を設定しよう
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb201-service-names/#4-処理時間利用ioの上限を設定しよう" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. 処理時間/利用IOの上限を設定しよう" aria-label="アンカー先: 4. 処理時間/利用IOの上限を設定しよう" href="#4-%e5%87%a6%e7%90%86%e6%99%82%e9%96%93%e5%88%a9%e7%94%a8io%e3%81%ae%e4%b8%8a%e9%99%90%e3%82%92%e8%a8%ad%e5%ae%9a%e3%81%97%e3%82%88%e3%81%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb201-service-names/#4-処理時間利用ioの上限を設定しよう" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. 処理時間/利用IOの上限を設定しよう" aria-label="アンカー先: 4. 処理時間/利用IOの上限を設定しよう" href="#4-%e5%87%a6%e7%90%86%e6%99%82%e9%96%93%e5%88%a9%e7%94%a8io%e3%81%ae%e4%b8%8a%e9%99%90%e3%82%92%e8%a8%ad%e5%ae%9a%e3%81%97%e3%82%88%e3%81%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -726,7 +726,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
     >
         5. 同時実行セッション数の制限が変更できることを確認しよう
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb201-service-names/#5-同時実行セッション数の制限が変更できることを確認しよう" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5. 同時実行セッション数の制限が変更できることを確認しよう" aria-label="アンカー先: 5. 同時実行セッション数の制限が変更できることを確認しよう" href="#5-%e5%90%8c%e6%99%82%e5%ae%9f%e8%a1%8c%e3%82%bb%e3%83%83%e3%82%b7%e3%83%a7%e3%83%b3%e6%95%b0%e3%81%ae%e5%88%b6%e9%99%90%e3%81%8c%e5%a4%89%e6%9b%b4%e3%81%a7%e3%81%8d%e3%82%8b%e3%81%93%e3%81%a8%e3%82%92%e7%a2%ba%e8%aa%8d%e3%81%97%e3%82%88%e3%81%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb201-service-names/#5-同時実行セッション数の制限が変更できることを確認しよう" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5. 同時実行セッション数の制限が変更できることを確認しよう" aria-label="アンカー先: 5. 同時実行セッション数の制限が変更できることを確認しよう" href="#5-%e5%90%8c%e6%99%82%e5%ae%9f%e8%a1%8c%e3%82%bb%e3%83%83%e3%82%b7%e3%83%a7%e3%83%b3%e6%95%b0%e3%81%ae%e5%88%b6%e9%99%90%e3%81%8c%e5%a4%89%e6%9b%b4%e3%81%a7%e3%81%8d%e3%82%8b%e3%81%93%e3%81%a8%e3%82%92%e7%a2%ba%e8%aa%8d%e3%81%97%e3%82%88%e3%81%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9038,7 +9038,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/adb/adb111-select-ai/"
+      href="/ocitutorial-geekdocs/adb/adb111-select-ai/"
       title="111: SELECT AIを試してみよう"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9050,7 +9050,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/adb/adb202-dataload-dbms-cloud/"
+      href="/ocitutorial-geekdocs/adb/adb202-dataload-dbms-cloud/"
       title="202: コマンドラインから大量データをロードしてみよう(DBMS_CLOUD)"
     >
       202: コマンドラインから大量データをロードしてみよう(DBMS_CLOUD)
@@ -9104,7 +9104,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

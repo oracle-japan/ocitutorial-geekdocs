@@ -29,18 +29,18 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
 
   <title>その10: グループ（Oracle Content Management のファイル共有機能を利用しよう） | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -70,7 +70,7 @@ OCM インスタンス内部で作成・管理されるグループ OCM のグ�
 前提条件
 Oracle Content Management インスタンスを作成する OCM の利用ユーザーに OCM インスタンスの CECStandardUser もしくは CECEnterpriseUser アプリケーション・ロールが付与されていること 1. グループを作成する 1.1 パブリックグループを作成する 右上のユーザーアイコンをクリックし、「グループ」 をクリックします。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/content-management/10_group/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/10_group/" />
 
 <meta property="article:section" content="Content Management" />
     <meta
@@ -107,7 +107,7 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
       "@type": "TechArticle",
       "articleSection": "Content Management",
       "name": "その10: グループ（Oracle Content Management のファイル共有機能を利用しよう）",
-      "url" : "https://oracle-japan.github.io/ocitutorials/content-management/10_group/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/10_group/",
       "headline": "その10: グループ（Oracle Content Management のファイル共有機能を利用しよう）",
       "description": "目次に戻る: Oracle Content Management のファイル共有機能を使ってみよう【初級編】\n複数のユーザーをグループとしてまとめることで、フォルダへのメンバー追加などがとても簡単にできるようになります。\n例えば、複数のプロジェクト共有フォルダ へのアクセス権限設定で利用されている グループX があります。このグループXに新規ユーザー（Aさん）を追加するだけで、複数のプロジェクト共有フォルダへのアクセス権限設定を 「まとめて」「抜け漏れなく」「必要最小限の操作」 で付与されます。\n同様に、プロジェクトメンバーであるBさんが人事異動によりこのプロジェクトから外れる場合も、グループXからBさんを外す（グループXから削除する）だけで、複数のプロジェクト共有フォルダへのアクセス権限を 「まとめて」「抜け漏れなく」「必要最小限の操作」 で削除できます。\nこのようにグループを活用することで、各種リソースに対するアクセス権限割り当てなどを効率化できます。\nOCMで利用できるグループは2種類あります\nIDCS グループ\nOracle Identity Cloud Service(IDCS)で作成・管理するグループ IDCS の管理コンソールを利用して管理します。詳細は、IDCS のマニュアルを参照 Manage Oracle Identity Cloud Service Groups 想定されるユースケース お客様環境内の Active Directory で管理する組織情報を利用したアクセス権限設定を行う場合 OCM インスタンスを利用するユーザーに対して、デフォルトでアクセス権限を与えたい場合(就業規則など全従業員がアクセスする全社共有フォルダ) グループ\nOCM インスタンス内部で作成・管理されるグループ OCM のグループメニューより作成・管理（後述） 想定されるユースケース: プロジェクトや作業グループ、チームなど、特定の目的のために構成されたグループ単位で権限設定を行う場合 このチュートリアルでは、OCMインスタンス内部で管理するグループ(=グループ) について説明します。\nグループには3つの考え方があり、目的や用途で使い分けることができます\nパブリック・グループ プライベート・グループ クローズド・グループ グループの表示・閲覧 パブリックグループの検索より誰でも確認可 パブリックグループの検索より誰でも確認可 グループのメンバーのみ確認可\nグループに参加していないメンバーは表示\/閲覧不可 メンバー追加 自分自身でグループに参加可 マネージャ権限を持つメンバーのみ可 マネージャ権限を持つメンバーのみ可 【お知らせ】\nこの文書は、2021年11月時点での最新バージョン(21.11.1)を元に作成されてます。\nチュートリアル内の画面ショットについては、現在のコンソール画面と異なっている場合があります。\n{: .notice–info}\n前提条件\nOracle Content Management インスタンスを作成する OCM の利用ユーザーに OCM インスタンスの CECStandardUser もしくは CECEnterpriseUser アプリケーション・ロールが付与されていること 1. グループを作成する 1.1 パブリックグループを作成する 右上のユーザーアイコンをクリックし、「グループ」 をクリックします。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -117,7 +117,7 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/content-management/10_group/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/10_group/"
       },
       "keywords" : [ "OCE" , "OCM" ],
       "copyrightHolder" : "OCIチュートリアル",
@@ -128,10 +128,10 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -141,73 +141,73 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/content-management/10_group/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/10_group/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/content-management/10_group/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/10_group/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="その10: グループ（Oracle Content Management のファイル共有機能を利用しよう）">
   <meta property="og:description" content="目次に戻る: Oracle Content Management のファイル共有機能を使ってみよう【初級編】
@@ -299,11 +299,11 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -320,7 +320,7 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -332,7 +332,7 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -469,7 +469,7 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/content-management/' href='/ocitutorials/content-management/'><span itemprop='name'>コンテンツ管理編</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>その10: グループ（Oracle Content Management のファイル共有機能を利用しよう）</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/content-management/' href='/ocitutorial-geekdocs/content-management/'><span itemprop='name'>コンテンツ管理編</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>その10: グループ（Oracle Content Management のファイル共有機能を利用しよう）</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -591,7 +591,7 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
     >
         1. グループを作成する
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/10_group/#1-グループを作成する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. グループを作成する" aria-label="アンカー先: 1. グループを作成する" href="#1-%e3%82%b0%e3%83%ab%e3%83%bc%e3%83%97%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/10_group/#1-グループを作成する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. グループを作成する" aria-label="アンカー先: 1. グループを作成する" href="#1-%e3%82%b0%e3%83%ab%e3%83%bc%e3%83%97%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -600,7 +600,7 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
     >
         1.1 パブリックグループを作成する
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/10_group/#11-パブリックグループを作成する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.1 パブリックグループを作成する" aria-label="アンカー先: 1.1 パブリックグループを作成する" href="#11-%e3%83%91%e3%83%96%e3%83%aa%e3%83%83%e3%82%af%e3%82%b0%e3%83%ab%e3%83%bc%e3%83%97%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/10_group/#11-パブリックグループを作成する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.1 パブリックグループを作成する" aria-label="アンカー先: 1.1 パブリックグループを作成する" href="#11-%e3%83%91%e3%83%96%e3%83%aa%e3%83%83%e3%82%af%e3%82%b0%e3%83%ab%e3%83%bc%e3%83%97%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -652,7 +652,7 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
     >
         1.2 プライベートグループを作成する
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/10_group/#12-プライベートグループを作成する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.2 プライベートグループを作成する" aria-label="アンカー先: 1.2 プライベートグループを作成する" href="#12-%e3%83%97%e3%83%a9%e3%82%a4%e3%83%99%e3%83%bc%e3%83%88%e3%82%b0%e3%83%ab%e3%83%bc%e3%83%97%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/10_group/#12-プライベートグループを作成する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.2 プライベートグループを作成する" aria-label="アンカー先: 1.2 プライベートグループを作成する" href="#12-%e3%83%97%e3%83%a9%e3%82%a4%e3%83%99%e3%83%bc%e3%83%88%e3%82%b0%e3%83%ab%e3%83%bc%e3%83%97%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -671,7 +671,7 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
     >
         1.3 クローズドグループを作成する
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/10_group/#13-クローズドグループを作成する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.3 クローズドグループを作成する" aria-label="アンカー先: 1.3 クローズドグループを作成する" href="#13-%e3%82%af%e3%83%ad%e3%83%bc%e3%82%ba%e3%83%89%e3%82%b0%e3%83%ab%e3%83%bc%e3%83%97%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/10_group/#13-クローズドグループを作成する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.3 クローズドグループを作成する" aria-label="アンカー先: 1.3 クローズドグループを作成する" href="#13-%e3%82%af%e3%83%ad%e3%83%bc%e3%82%ba%e3%83%89%e3%82%b0%e3%83%ab%e3%83%bc%e3%83%97%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -690,7 +690,7 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
     >
         2. パブリック・グループに参加する
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/10_group/#2-パブリックグループに参加する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. パブリック・グループに参加する" aria-label="アンカー先: 2. パブリック・グループに参加する" href="#2-%e3%83%91%e3%83%96%e3%83%aa%e3%83%83%e3%82%af%e3%82%b0%e3%83%ab%e3%83%bc%e3%83%97%e3%81%ab%e5%8f%82%e5%8a%a0%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/10_group/#2-パブリックグループに参加する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. パブリック・グループに参加する" aria-label="アンカー先: 2. パブリック・グループに参加する" href="#2-%e3%83%91%e3%83%96%e3%83%aa%e3%83%83%e3%82%af%e3%82%b0%e3%83%ab%e3%83%bc%e3%83%97%e3%81%ab%e5%8f%82%e5%8a%a0%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -699,7 +699,7 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
     >
         2.1 パブリック・グループに参加する
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/10_group/#21-パブリックグループに参加する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.1 パブリック・グループに参加する" aria-label="アンカー先: 2.1 パブリック・グループに参加する" href="#21-%e3%83%91%e3%83%96%e3%83%aa%e3%83%83%e3%82%af%e3%82%b0%e3%83%ab%e3%83%bc%e3%83%97%e3%81%ab%e5%8f%82%e5%8a%a0%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/10_group/#21-パブリックグループに参加する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.1 パブリック・グループに参加する" aria-label="アンカー先: 2.1 パブリック・グループに参加する" href="#21-%e3%83%91%e3%83%96%e3%83%aa%e3%83%83%e3%82%af%e3%82%b0%e3%83%ab%e3%83%bc%e3%83%97%e3%81%ab%e5%8f%82%e5%8a%a0%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -721,7 +721,7 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
     >
         2.2 パブリック・グループへの参加を取り消す
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/10_group/#22-パブリックグループへの参加を取り消す" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.2 パブリック・グループへの参加を取り消す" aria-label="アンカー先: 2.2 パブリック・グループへの参加を取り消す" href="#22-%e3%83%91%e3%83%96%e3%83%aa%e3%83%83%e3%82%af%e3%82%b0%e3%83%ab%e3%83%bc%e3%83%97%e3%81%b8%e3%81%ae%e5%8f%82%e5%8a%a0%e3%82%92%e5%8f%96%e3%82%8a%e6%b6%88%e3%81%99">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/10_group/#22-パブリックグループへの参加を取り消す" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.2 パブリック・グループへの参加を取り消す" aria-label="アンカー先: 2.2 パブリック・グループへの参加を取り消す" href="#22-%e3%83%91%e3%83%96%e3%83%aa%e3%83%83%e3%82%af%e3%82%b0%e3%83%ab%e3%83%bc%e3%83%97%e3%81%b8%e3%81%ae%e5%8f%82%e5%8a%a0%e3%82%92%e5%8f%96%e3%82%8a%e6%b6%88%e3%81%99">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -743,7 +743,7 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
     >
         3. グループにメンバーを追加/削除する
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/10_group/#3-グループにメンバーを追加削除する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. グループにメンバーを追加/削除する" aria-label="アンカー先: 3. グループにメンバーを追加/削除する" href="#3-%e3%82%b0%e3%83%ab%e3%83%bc%e3%83%97%e3%81%ab%e3%83%a1%e3%83%b3%e3%83%90%e3%83%bc%e3%82%92%e8%bf%bd%e5%8a%a0%e5%89%8a%e9%99%a4%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/10_group/#3-グループにメンバーを追加削除する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. グループにメンバーを追加/削除する" aria-label="アンカー先: 3. グループにメンバーを追加/削除する" href="#3-%e3%82%b0%e3%83%ab%e3%83%bc%e3%83%97%e3%81%ab%e3%83%a1%e3%83%b3%e3%83%90%e3%83%bc%e3%82%92%e8%bf%bd%e5%8a%a0%e5%89%8a%e9%99%a4%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9048,7 +9048,7 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/content-management/1_sign_in_oce/"
+      href="/ocitutorial-geekdocs/content-management/1_sign_in_oce/"
       title="その1: OCM インスタンスにサインインする（Oracle Content Management のファイル共有機能を使ってみよう）"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9060,7 +9060,7 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/content-management/11_desktop_application/"
+      href="/ocitutorial-geekdocs/content-management/11_desktop_application/"
       title="その11: デスクトップ・アプリケーション（Oracle Content Management のファイル共有機能を利用しよう）"
     >
       その11: デスクトップ・アプリケーション（Oracle Content Management のファイル共有機能を利用しよう）
@@ -9114,7 +9114,7 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

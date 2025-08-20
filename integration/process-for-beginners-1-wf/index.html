@@ -20,18 +20,18 @@ Process Automation で簡単なワークフローを作成する OIC インス�
 
   <title>Oracle Integration - Process で簡単なワークフローを作成してみよう | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -52,7 +52,7 @@ OIC インスタンスの ServiceAdministrator ロールが付与されたユー
 https://docs.oracle.com/en/cloud/paas/integration-cloud/integration-cloud-auton/oracle-integration-cloud-roles-and-privileges.html#GUID-44661068-C31A-4AB5-BC24-B4B90F951A34
 Process Automation で簡単なワークフローを作成する OIC インスタンスにアクセスする Web ブラウザを開き、提供された OIC インスタンスのURLを入力します。もしくはOCIのコンソールから「開発者サービス」－「アプケーション統合」から作成済みのOICインスタンスを選択し、「サービス・コンソール」からOICコンソールを開きます。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/integration/process-for-beginners-1-wf/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/process-for-beginners-1-wf/" />
 
 <meta property="article:section" content="Integration" />
     <meta
@@ -80,7 +80,7 @@ Process Automation で簡単なワークフローを作成する OIC インス�
       "@type": "TechArticle",
       "articleSection": "Integration",
       "name": "Oracle Integration - Process で簡単なワークフローを作成してみよう",
-      "url" : "https://oracle-japan.github.io/ocitutorials/integration/process-for-beginners-1-wf/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/integration/process-for-beginners-1-wf/",
       "headline": "Oracle Integration - Process で簡単なワークフローを作成してみよう",
       "description": "Oracle Integration(OIC) のプロセス自動化 (Process Automation) 機能を利用して、簡単なワークフローの作成方法をステップ・バイ・ステップで紹介するチュートリアルです。\nここでは、従業員が休暇取得の申請を提出し、その上司が申請内容を承認 or 却下するシンプルな休暇申請ワークフローを作成します。\n前提条件 Oracle Integration Cloud インスタンスの作成 が完了していること Oracle Integration(OIC) を使い始めるための準備作業として、OIC インスタンスの作成が必要になります。 この文書は OIC インスタンスの作成方法を ステップ・バイ・ステップで紹介するチュートリアルです。\nOIC インスタンス作成時のエディションが ENTERPRISE であること\nOIC インスタンスの ServiceAdministrator ロールが付与されたユーザーが準備されていること\n(参考) Oracle Integration Roles and Privileges\nhttps:\/\/docs.oracle.com\/en\/cloud\/paas\/integration-cloud\/integration-cloud-auton\/oracle-integration-cloud-roles-and-privileges.html#GUID-44661068-C31A-4AB5-BC24-B4B90F951A34\nProcess Automation で簡単なワークフローを作成する OIC インスタンスにアクセスする Web ブラウザを開き、提供された OIC インスタンスのURLを入力します。もしくはOCIのコンソールから「開発者サービス」－「アプケーション統合」から作成済みのOICインスタンスを選択し、「サービス・コンソール」からOICコンソールを開きます。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -90,7 +90,7 @@ Process Automation で簡単なワークフローを作成する OIC インス�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/integration/process-for-beginners-1-wf/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/integration/process-for-beginners-1-wf/"
       },
       "copyrightHolder" : "OCIチュートリアル",
       "copyrightYear" : "0001",
@@ -100,10 +100,10 @@ Process Automation で簡単なワークフローを作成する OIC インス�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -113,73 +113,73 @@ Process Automation で簡単なワークフローを作成する OIC インス�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/integration/process-for-beginners-1-wf/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/process-for-beginners-1-wf/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/integration/process-for-beginners-1-wf/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/process-for-beginners-1-wf/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="Oracle Integration - Process で簡単なワークフローを作成してみよう">
   <meta property="og:description" content="Oracle Integration(OIC) のプロセス自動化 (Process Automation) 機能を利用して、簡単なワークフローの作成方法をステップ・バイ・ステップで紹介するチュートリアルです。
@@ -251,11 +251,11 @@ Process Automation で簡単なワークフローを作成する OIC インス�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -272,7 +272,7 @@ Process Automation で簡単なワークフローを作成する OIC インス�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -284,7 +284,7 @@ Process Automation で簡単なワークフローを作成する OIC インス�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -440,7 +440,7 @@ Process Automation で簡単なワークフローを作成する OIC インス�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/integration/' href='/ocitutorials/integration/'><span itemprop='name'>Oracle Integration チュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Oracle Integration - Process で簡単なワークフローを作成してみよう</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/integration/' href='/ocitutorial-geekdocs/integration/'><span itemprop='name'>Oracle Integration チュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Oracle Integration - Process で簡単なワークフローを作成してみよう</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -478,7 +478,7 @@ Process Automation で簡単なワークフローを作成する OIC インス�
     >
         前提条件
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/process-for-beginners-1-wf/#前提条件" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 前提条件" aria-label="アンカー先: 前提条件" href="#%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/process-for-beginners-1-wf/#前提条件" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 前提条件" aria-label="アンカー先: 前提条件" href="#%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -507,7 +507,7 @@ Oracle Integration(OIC) を使い始めるための準備作業として、OIC �
     >
         Process Automation で簡単なワークフローを作成する
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/process-for-beginners-1-wf/#process-automation-で簡単なワークフローを作成する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Process Automation で簡単なワークフローを作成する" aria-label="アンカー先: Process Automation で簡単なワークフローを作成する" href="#process-automation-%e3%81%a7%e7%b0%a1%e5%8d%98%e3%81%aa%e3%83%af%e3%83%bc%e3%82%af%e3%83%95%e3%83%ad%e3%83%bc%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/process-for-beginners-1-wf/#process-automation-で簡単なワークフローを作成する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Process Automation で簡単なワークフローを作成する" aria-label="アンカー先: Process Automation で簡単なワークフローを作成する" href="#process-automation-%e3%81%a7%e7%b0%a1%e5%8d%98%e3%81%aa%e3%83%af%e3%83%bc%e3%82%af%e3%83%95%e3%83%ad%e3%83%bc%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -516,7 +516,7 @@ Oracle Integration(OIC) を使い始めるための準備作業として、OIC �
     >
         OIC インスタンスにアクセスする
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/process-for-beginners-1-wf/#oic-インスタンスにアクセスする" class="gdoc-page__anchor clip flex align-center" title="アンカー先: OIC インスタンスにアクセスする" aria-label="アンカー先: OIC インスタンスにアクセスする" href="#oic-%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%81%ab%e3%82%a2%e3%82%af%e3%82%bb%e3%82%b9%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/process-for-beginners-1-wf/#oic-インスタンスにアクセスする" class="gdoc-page__anchor clip flex align-center" title="アンカー先: OIC インスタンスにアクセスする" aria-label="アンカー先: OIC インスタンスにアクセスする" href="#oic-%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%81%ab%e3%82%a2%e3%82%af%e3%82%bb%e3%82%b9%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -548,7 +548,7 @@ OCIにログインしていない場合はユーザー名とパスワードを�
     >
         プロセス・アプリケーションを作成する
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/process-for-beginners-1-wf/#プロセスアプリケーションを作成する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: プロセス・アプリケーションを作成する" aria-label="アンカー先: プロセス・アプリケーションを作成する" href="#%e3%83%97%e3%83%ad%e3%82%bb%e3%82%b9%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/process-for-beginners-1-wf/#プロセスアプリケーションを作成する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: プロセス・アプリケーションを作成する" aria-label="アンカー先: プロセス・アプリケーションを作成する" href="#%e3%83%97%e3%83%ad%e3%82%bb%e3%82%b9%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -619,7 +619,7 @@ OCIにログインしていない場合はユーザー名とパスワードを�
     >
         アプリケーション・プロパティを編集する
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/process-for-beginners-1-wf/#アプリケーションプロパティを編集する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: アプリケーション・プロパティを編集する" aria-label="アンカー先: アプリケーション・プロパティを編集する" href="#%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3%e3%82%92%e7%b7%a8%e9%9b%86%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/process-for-beginners-1-wf/#アプリケーションプロパティを編集する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: アプリケーション・プロパティを編集する" aria-label="アンカー先: アプリケーション・プロパティを編集する" href="#%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3%e3%82%92%e7%b7%a8%e9%9b%86%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -673,7 +673,7 @@ OCIにログインしていない場合はユーザー名とパスワードを�
     >
         ビジネス・プロセスを作成する
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/process-for-beginners-1-wf/#ビジネスプロセスを作成する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ビジネス・プロセスを作成する" aria-label="アンカー先: ビジネス・プロセスを作成する" href="#%e3%83%93%e3%82%b8%e3%83%8d%e3%82%b9%e3%83%97%e3%83%ad%e3%82%bb%e3%82%b9%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/process-for-beginners-1-wf/#ビジネスプロセスを作成する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ビジネス・プロセスを作成する" aria-label="アンカー先: ビジネス・プロセスを作成する" href="#%e3%83%93%e3%82%b8%e3%83%8d%e3%82%b9%e3%83%97%e3%83%ad%e3%82%bb%e3%82%b9%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -736,7 +736,7 @@ OCIにログインしていない場合はユーザー名とパスワードを�
     >
         ビジネス・プロセスを設計する
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/process-for-beginners-1-wf/#ビジネスプロセスを設計する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ビジネス・プロセスを設計する" aria-label="アンカー先: ビジネス・プロセスを設計する" href="#%e3%83%93%e3%82%b8%e3%83%8d%e3%82%b9%e3%83%97%e3%83%ad%e3%82%bb%e3%82%b9%e3%82%92%e8%a8%ad%e8%a8%88%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/process-for-beginners-1-wf/#ビジネスプロセスを設計する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ビジネス・プロセスを設計する" aria-label="アンカー先: ビジネス・プロセスを設計する" href="#%e3%83%93%e3%82%b8%e3%83%8d%e3%82%b9%e3%83%97%e3%83%ad%e3%82%bb%e3%82%b9%e3%82%92%e8%a8%ad%e8%a8%88%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -746,7 +746,7 @@ OCIにログインしていない場合はユーザー名とパスワードを�
     >
         スイムレーンの作成
     </h4>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/process-for-beginners-1-wf/#スイムレーンの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: スイムレーンの作成" aria-label="アンカー先: スイムレーンの作成" href="#%e3%82%b9%e3%82%a4%e3%83%a0%e3%83%ac%e3%83%bc%e3%83%b3%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/process-for-beginners-1-wf/#スイムレーンの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: スイムレーンの作成" aria-label="アンカー先: スイムレーンの作成" href="#%e3%82%b9%e3%82%a4%e3%83%a0%e3%83%ac%e3%83%bc%e3%83%b3%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -783,7 +783,7 @@ OCIにログインしていない場合はユーザー名とパスワードを�
     >
         休暇取得申請プロセスの設計
     </h4>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/process-for-beginners-1-wf/#休暇取得申請プロセスの設計" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 休暇取得申請プロセスの設計" aria-label="アンカー先: 休暇取得申請プロセスの設計" href="#%e4%bc%91%e6%9a%87%e5%8f%96%e5%be%97%e7%94%b3%e8%ab%8b%e3%83%97%e3%83%ad%e3%82%bb%e3%82%b9%e3%81%ae%e8%a8%ad%e8%a8%88">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/process-for-beginners-1-wf/#休暇取得申請プロセスの設計" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 休暇取得申請プロセスの設計" aria-label="アンカー先: 休暇取得申請プロセスの設計" href="#%e4%bc%91%e6%9a%87%e5%8f%96%e5%be%97%e7%94%b3%e8%ab%8b%e3%83%97%e3%83%ad%e3%82%bb%e3%82%b9%e3%81%ae%e8%a8%ad%e8%a8%88">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -885,7 +885,7 @@ OCIにログインしていない場合はユーザー名とパスワードを�
     >
         Web フォームを作成する
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/process-for-beginners-1-wf/#web-フォームを作成する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Web フォームを作成する" aria-label="アンカー先: Web フォームを作成する" href="#web-%e3%83%95%e3%82%a9%e3%83%bc%e3%83%a0%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/process-for-beginners-1-wf/#web-フォームを作成する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Web フォームを作成する" aria-label="アンカー先: Web フォームを作成する" href="#web-%e3%83%95%e3%82%a9%e3%83%bc%e3%83%a0%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1139,7 +1139,7 @@ OCIにログインしていない場合はユーザー名とパスワードを�
     >
         タスク・プロパティを編集する
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/process-for-beginners-1-wf/#タスクプロパティを編集する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: タスク・プロパティを編集する" aria-label="アンカー先: タスク・プロパティを編集する" href="#%e3%82%bf%e3%82%b9%e3%82%af%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3%e3%82%92%e7%b7%a8%e9%9b%86%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/process-for-beginners-1-wf/#タスクプロパティを編集する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: タスク・プロパティを編集する" aria-label="アンカー先: タスク・プロパティを編集する" href="#%e3%82%bf%e3%82%b9%e3%82%af%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3%e3%82%92%e7%b7%a8%e9%9b%86%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1149,7 +1149,7 @@ OCIにログインしていない場合はユーザー名とパスワードを�
     >
         休暇取得申請の新規作成イベントの編集
     </h4>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/process-for-beginners-1-wf/#休暇取得申請の新規作成イベントの編集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 休暇取得申請の新規作成イベントの編集" aria-label="アンカー先: 休暇取得申請の新規作成イベントの編集" href="#%e4%bc%91%e6%9a%87%e5%8f%96%e5%be%97%e7%94%b3%e8%ab%8b%e3%81%ae%e6%96%b0%e8%a6%8f%e4%bd%9c%e6%88%90%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e3%81%ae%e7%b7%a8%e9%9b%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/process-for-beginners-1-wf/#休暇取得申請の新規作成イベントの編集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 休暇取得申請の新規作成イベントの編集" aria-label="アンカー先: 休暇取得申請の新規作成イベントの編集" href="#%e4%bc%91%e6%9a%87%e5%8f%96%e5%be%97%e7%94%b3%e8%ab%8b%e3%81%ae%e6%96%b0%e8%a6%8f%e4%bd%9c%e6%88%90%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e3%81%ae%e7%b7%a8%e9%9b%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1196,7 +1196,7 @@ OCIにログインしていない場合はユーザー名とパスワードを�
     >
         休暇取得申請の承認タスクの編集
     </h4>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/process-for-beginners-1-wf/#休暇取得申請の承認タスクの編集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 休暇取得申請の承認タスクの編集" aria-label="アンカー先: 休暇取得申請の承認タスクの編集" href="#%e4%bc%91%e6%9a%87%e5%8f%96%e5%be%97%e7%94%b3%e8%ab%8b%e3%81%ae%e6%89%bf%e8%aa%8d%e3%82%bf%e3%82%b9%e3%82%af%e3%81%ae%e7%b7%a8%e9%9b%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/process-for-beginners-1-wf/#休暇取得申請の承認タスクの編集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 休暇取得申請の承認タスクの編集" aria-label="アンカー先: 休暇取得申請の承認タスクの編集" href="#%e4%bc%91%e6%9a%87%e5%8f%96%e5%be%97%e7%94%b3%e8%ab%8b%e3%81%ae%e6%89%bf%e8%aa%8d%e3%82%bf%e3%82%b9%e3%82%af%e3%81%ae%e7%b7%a8%e9%9b%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1259,7 +1259,7 @@ OCIにログインしていない場合はユーザー名とパスワードを�
     >
         休暇取得申請の再提出タスクの編集
     </h4>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/process-for-beginners-1-wf/#休暇取得申請の再提出タスクの編集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 休暇取得申請の再提出タスクの編集" aria-label="アンカー先: 休暇取得申請の再提出タスクの編集" href="#%e4%bc%91%e6%9a%87%e5%8f%96%e5%be%97%e7%94%b3%e8%ab%8b%e3%81%ae%e5%86%8d%e6%8f%90%e5%87%ba%e3%82%bf%e3%82%b9%e3%82%af%e3%81%ae%e7%b7%a8%e9%9b%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/process-for-beginners-1-wf/#休暇取得申請の再提出タスクの編集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 休暇取得申請の再提出タスクの編集" aria-label="アンカー先: 休暇取得申請の再提出タスクの編集" href="#%e4%bc%91%e6%9a%87%e5%8f%96%e5%be%97%e7%94%b3%e8%ab%8b%e3%81%ae%e5%86%8d%e6%8f%90%e5%87%ba%e3%82%bf%e3%82%b9%e3%82%af%e3%81%ae%e7%b7%a8%e9%9b%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1299,7 +1299,7 @@ OCIにログインしていない場合はユーザー名とパスワードを�
     >
         ゲートウェイを編集する
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/process-for-beginners-1-wf/#ゲートウェイを編集する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ゲートウェイを編集する" aria-label="アンカー先: ゲートウェイを編集する" href="#%e3%82%b2%e3%83%bc%e3%83%88%e3%82%a6%e3%82%a7%e3%82%a4%e3%82%92%e7%b7%a8%e9%9b%86%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/process-for-beginners-1-wf/#ゲートウェイを編集する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ゲートウェイを編集する" aria-label="アンカー先: ゲートウェイを編集する" href="#%e3%82%b2%e3%83%bc%e3%83%88%e3%82%a6%e3%82%a7%e3%82%a4%e3%82%92%e7%b7%a8%e9%9b%86%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1314,7 +1314,7 @@ OCIにログインしていない場合はユーザー名とパスワードを�
     >
         データ・アソシエーションの確認
     </h4>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/process-for-beginners-1-wf/#データアソシエーションの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: データ・アソシエーションの確認" aria-label="アンカー先: データ・アソシエーションの確認" href="#%e3%83%87%e3%83%bc%e3%82%bf%e3%82%a2%e3%82%bd%e3%82%b7%e3%82%a8%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/process-for-beginners-1-wf/#データアソシエーションの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: データ・アソシエーションの確認" aria-label="アンカー先: データ・アソシエーションの確認" href="#%e3%83%87%e3%83%bc%e3%82%bf%e3%82%a2%e3%82%bd%e3%82%b7%e3%82%a8%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1342,7 +1342,7 @@ OCIにログインしていない場合はユーザー名とパスワードを�
     >
         「承認？」ゲートウェイの編集
     </h4>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/process-for-beginners-1-wf/#承認ゲートウェイの編集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 「承認？」ゲートウェイの編集" aria-label="アンカー先: 「承認？」ゲートウェイの編集" href="#%e6%89%bf%e8%aa%8d%e3%82%b2%e3%83%bc%e3%83%88%e3%82%a6%e3%82%a7%e3%82%a4%e3%81%ae%e7%b7%a8%e9%9b%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/process-for-beginners-1-wf/#承認ゲートウェイの編集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 「承認？」ゲートウェイの編集" aria-label="アンカー先: 「承認？」ゲートウェイの編集" href="#%e6%89%bf%e8%aa%8d%e3%82%b2%e3%83%bc%e3%83%88%e3%82%a6%e3%82%a7%e3%82%a4%e3%81%ae%e7%b7%a8%e9%9b%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1378,7 +1378,7 @@ OCIにログインしていない場合はユーザー名とパスワードを�
     >
         プロセス・アプリケーションをテストする
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/process-for-beginners-1-wf/#プロセスアプリケーションをテストする" class="gdoc-page__anchor clip flex align-center" title="アンカー先: プロセス・アプリケーションをテストする" aria-label="アンカー先: プロセス・アプリケーションをテストする" href="#%e3%83%97%e3%83%ad%e3%82%bb%e3%82%b9%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%82%92%e3%83%86%e3%82%b9%e3%83%88%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/process-for-beginners-1-wf/#プロセスアプリケーションをテストする" class="gdoc-page__anchor clip flex align-center" title="アンカー先: プロセス・アプリケーションをテストする" aria-label="アンカー先: プロセス・アプリケーションをテストする" href="#%e3%83%97%e3%83%ad%e3%82%bb%e3%82%b9%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%82%92%e3%83%86%e3%82%b9%e3%83%88%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1472,7 +1472,7 @@ OCIにログインしていない場合はユーザー名とパスワードを�
     >
         タスク・アクションのラベルを変更する
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/process-for-beginners-1-wf/#タスクアクションのラベルを変更する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: タスク・アクションのラベルを変更する" aria-label="アンカー先: タスク・アクションのラベルを変更する" href="#%e3%82%bf%e3%82%b9%e3%82%af%e3%82%a2%e3%82%af%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e3%83%a9%e3%83%99%e3%83%ab%e3%82%92%e5%a4%89%e6%9b%b4%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/process-for-beginners-1-wf/#タスクアクションのラベルを変更する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: タスク・アクションのラベルを変更する" aria-label="アンカー先: タスク・アクションのラベルを変更する" href="#%e3%82%bf%e3%82%b9%e3%82%af%e3%82%a2%e3%82%af%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e3%83%a9%e3%83%99%e3%83%ab%e3%82%92%e5%a4%89%e6%9b%b4%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1519,7 +1519,7 @@ OCIにログインしていない場合はユーザー名とパスワードを�
     >
         プロセス・アプリケーションを本番環境にアクティブ化する
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/process-for-beginners-1-wf/#プロセスアプリケーションを本番環境にアクティブ化する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: プロセス・アプリケーションを本番環境にアクティブ化する" aria-label="アンカー先: プロセス・アプリケーションを本番環境にアクティブ化する" href="#%e3%83%97%e3%83%ad%e3%82%bb%e3%82%b9%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%82%92%e6%9c%ac%e7%95%aa%e7%92%b0%e5%a2%83%e3%81%ab%e3%82%a2%e3%82%af%e3%83%86%e3%82%a3%e3%83%96%e5%8c%96%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/process-for-beginners-1-wf/#プロセスアプリケーションを本番環境にアクティブ化する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: プロセス・アプリケーションを本番環境にアクティブ化する" aria-label="アンカー先: プロセス・アプリケーションを本番環境にアクティブ化する" href="#%e3%83%97%e3%83%ad%e3%82%bb%e3%82%b9%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%82%92%e6%9c%ac%e7%95%aa%e7%92%b0%e5%a2%83%e3%81%ab%e3%82%a2%e3%82%af%e3%83%86%e3%82%a3%e3%83%96%e5%8c%96%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1572,7 +1572,7 @@ OCIにログインしていない場合はユーザー名とパスワードを�
     >
         本番環境のプロセス・アプリケーションを利用するユーザーを設定する
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/process-for-beginners-1-wf/#本番環境のプロセスアプリケーションを利用するユーザーを設定する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 本番環境のプロセス・アプリケーションを利用するユーザーを設定する" aria-label="アンカー先: 本番環境のプロセス・アプリケーションを利用するユーザーを設定する" href="#%e6%9c%ac%e7%95%aa%e7%92%b0%e5%a2%83%e3%81%ae%e3%83%97%e3%83%ad%e3%82%bb%e3%82%b9%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%82%92%e5%88%a9%e7%94%a8%e3%81%99%e3%82%8b%e3%83%a6%e3%83%bc%e3%82%b6%e3%83%bc%e3%82%92%e8%a8%ad%e5%ae%9a%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/process-for-beginners-1-wf/#本番環境のプロセスアプリケーションを利用するユーザーを設定する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 本番環境のプロセス・アプリケーションを利用するユーザーを設定する" aria-label="アンカー先: 本番環境のプロセス・アプリケーションを利用するユーザーを設定する" href="#%e6%9c%ac%e7%95%aa%e7%92%b0%e5%a2%83%e3%81%ae%e3%83%97%e3%83%ad%e3%82%bb%e3%82%b9%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%82%92%e5%88%a9%e7%94%a8%e3%81%99%e3%82%8b%e3%83%a6%e3%83%bc%e3%82%b6%e3%83%bc%e3%82%92%e8%a8%ad%e5%ae%9a%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1620,7 +1620,7 @@ OCIにログインしていない場合はユーザー名とパスワードを�
     >
         確認：休暇承認プロセスを実行する
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/process-for-beginners-1-wf/#確認休暇承認プロセスを実行する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 確認：休暇承認プロセスを実行する" aria-label="アンカー先: 確認：休暇承認プロセスを実行する" href="#%e7%a2%ba%e8%aa%8d%e4%bc%91%e6%9a%87%e6%89%bf%e8%aa%8d%e3%83%97%e3%83%ad%e3%82%bb%e3%82%b9%e3%82%92%e5%ae%9f%e8%a1%8c%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/process-for-beginners-1-wf/#確認休暇承認プロセスを実行する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 確認：休暇承認プロセスを実行する" aria-label="アンカー先: 確認：休暇承認プロセスを実行する" href="#%e7%a2%ba%e8%aa%8d%e4%bc%91%e6%9a%87%e6%89%bf%e8%aa%8d%e3%83%97%e3%83%ad%e3%82%bb%e3%82%b9%e3%82%92%e5%ae%9f%e8%a1%8c%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9898,7 +9898,7 @@ OCIにログインしていない場合はユーザー名とパスワードを�
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/integration/process-for-beginners-2-dmodel/"
+      href="/ocitutorial-geekdocs/integration/process-for-beginners-2-dmodel/"
       title="Oracle Integration - Process でデシジョン・モデルを作成してみよう"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9910,7 +9910,7 @@ OCIにログインしていない場合はユーザー名とパスワードを�
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/integration/vbcs-for-beginners-2-vbs/"
+      href="/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/"
       title="Oracle Integration - Visual Builder Studio でVBCSアプリケーションを管理してみよう"
     >
       Oracle Integration - Visual Builder Studio でVBCSアプリケーションを管理してみよう
@@ -9964,7 +9964,7 @@ OCIにログインしていない場合はユーザー名とパスワードを�
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

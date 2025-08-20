@@ -18,18 +18,18 @@ OCIは、NFSのマネージドサービスである ファイル・ストレー�
 
   <title>ブロック・ボリュームでファイル共有ストレージを構築する | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -48,7 +48,7 @@ OCIは、NFSのマネージドサービスである ファイル・ストレー�
 本チュートリアルは、 GitHub のパブリックレポジトリ（ tutorial_bvnfs ）から公開されている Terraform スクリプトを リソース・マネージャ に読み込ませて作成する スタック を使用し、以下構成のNFSでサービスするファイル共有ストレージを自動構築（図中の Deployment target 範囲）した後、NFSファイルシステム性能をNFSクライアントから実行する IOR と mdtest で検証します。
 この IOR と mdtest の検証結果は、 OCI HPCテクニカルTips集 の HPC/GPUクラスタ向けファイル共有ストレージの最適な構築手法 の 2-1. コストパフォーマンスによる比較 を参照してください。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/hpc/spinup-nfs-server/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-nfs-server/" />
 
 <meta property="article:section" content="Hpc" />
     <meta
@@ -74,7 +74,7 @@ OCIは、NFSのマネージドサービスである ファイル・ストレー�
       "@type": "TechArticle",
       "articleSection": "Hpc",
       "name": "ブロック・ボリュームでファイル共有ストレージを構築する",
-      "url" : "https://oracle-japan.github.io/ocitutorials/hpc/spinup-nfs-server/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-nfs-server/",
       "headline": "ブロック・ボリュームでファイル共有ストレージを構築する",
       "description": " 0. 概要 ブロック・ボリューム は、以下の特徴からHPCクラスタやGPUクラスタのファイル共有ストレージとして使用するNFSサーバのストレージに最適なサービスです。\n同一 可用性ドメイン 内の異なる フォルト・ドメイン に複数のレプリカを持ち高い可用性を実現 ディスク装置にNVMe SSDを採用することで高いスループットとIOPSを実現 また、ベア・メタル・シェイプ BM.Optimized3.36 は、50 GbpsのTCP\/IP接続用ポートを2個搭載し、それぞれをiSCSI接続の ブロック・ボリューム アクセス用途とNFSクライアントへのNFSサービス用途に割当てることで、コストパフォーマンスの高いNFSサーバ用インスタンスとして利用することが可能です。\nOCIは、NFSのマネージドサービスである ファイル・ストレージ も提供していますが、本チュートリアルのように ブロック・ボリューム とベア・メタル・シェイプ BM.Optimized3.36 を使用してNFSでサービスするファイル共有ストレージ（以降ブロック・ボリュームNFSサーバと呼称）を構築することで、 ファイル・ストレージ よりも格段にコストパフォーマンスを引き上げることが出来ます。\nファイル・ストレージ とブロック・ボリュームNFSサーバの比較詳細は、 OCI HPCテクニカルTips集 の HPC\/GPUクラスタ向けファイル共有ストレージの最適な構築手法 を参照してください。\n本チュートリアルは、 GitHub のパブリックレポジトリ（ tutorial_bvnfs ）から公開されている Terraform スクリプトを リソース・マネージャ に読み込ませて作成する スタック を使用し、以下構成のNFSでサービスするファイル共有ストレージを自動構築（図中の Deployment target 範囲）した後、NFSファイルシステム性能をNFSクライアントから実行する IOR と mdtest で検証します。\nこの IOR と mdtest の検証結果は、 OCI HPCテクニカルTips集 の HPC\/GPUクラスタ向けファイル共有ストレージの最適な構築手法 の 2-1. コストパフォーマンスによる比較 を参照してください。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -84,7 +84,7 @@ OCIは、NFSのマネージドサービスである ファイル・ストレー�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/hpc/spinup-nfs-server/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-nfs-server/"
       },
       "copyrightHolder" : "OCIチュートリアル",
       "copyrightYear" : "0001",
@@ -94,10 +94,10 @@ OCIは、NFSのマネージドサービスである ファイル・ストレー�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -107,73 +107,73 @@ OCIは、NFSのマネージドサービスである ファイル・ストレー�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/hpc/spinup-nfs-server/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-nfs-server/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/hpc/spinup-nfs-server/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-nfs-server/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="ブロック・ボリュームでファイル共有ストレージを構築する">
   <meta property="og:description" content="0. 概要 ブロック・ボリューム は、以下の特徴からHPCクラスタやGPUクラスタのファイル共有ストレージとして使用するNFSサーバのストレージに最適なサービスです。
@@ -241,11 +241,11 @@ OCIは、NFSのマネージドサービスである ファイル・ストレー�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -262,7 +262,7 @@ OCIは、NFSのマネージドサービスである ファイル・ストレー�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -274,7 +274,7 @@ OCIは、NFSのマネージドサービスである ファイル・ストレー�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -428,7 +428,7 @@ OCIは、NFSのマネージドサービスである ファイル・ストレー�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/hpc/' href='/ocitutorials/hpc/'><span itemprop='name'>OCI HPCポータル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>ブロック・ボリュームでファイル共有ストレージを構築する</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/hpc/' href='/ocitutorial-geekdocs/hpc/'><span itemprop='name'>OCI HPCポータル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>ブロック・ボリュームでファイル共有ストレージを構築する</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -464,7 +464,7 @@ table, th, td {
     >
         0. 概要
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-nfs-server/#0-概要" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0. 概要" aria-label="アンカー先: 0. 概要" href="#0-%e6%a6%82%e8%a6%81">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-nfs-server/#0-概要" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0. 概要" aria-label="アンカー先: 0. 概要" href="#0-%e6%a6%82%e8%a6%81">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -598,7 +598,7 @@ table, th, td {
     >
         1. 事前準備
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-nfs-server/#1-事前準備" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. 事前準備" aria-label="アンカー先: 1. 事前準備" href="#1-%e4%ba%8b%e5%89%8d%e6%ba%96%e5%82%99">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-nfs-server/#1-事前準備" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. 事前準備" aria-label="アンカー先: 1. 事前準備" href="#1-%e4%ba%8b%e5%89%8d%e6%ba%96%e5%82%99">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -607,7 +607,7 @@ table, th, td {
     >
         1-0. 概要
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-nfs-server/#1-0-概要" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-0. 概要" aria-label="アンカー先: 1-0. 概要" href="#1-0-%e6%a6%82%e8%a6%81">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-nfs-server/#1-0-概要" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-0. 概要" aria-label="アンカー先: 1-0. 概要" href="#1-0-%e6%a6%82%e8%a6%81">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -628,7 +628,7 @@ table, th, td {
     >
         1-1. 構成ソース・プロバイダ作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-nfs-server/#1-1-構成ソースプロバイダ作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-1. 構成ソース・プロバイダ作成" aria-label="アンカー先: 1-1. 構成ソース・プロバイダ作成" href="#1-1-%e6%a7%8b%e6%88%90%e3%82%bd%e3%83%bc%e3%82%b9%e3%83%97%e3%83%ad%e3%83%90%e3%82%a4%e3%83%80%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-nfs-server/#1-1-構成ソースプロバイダ作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-1. 構成ソース・プロバイダ作成" aria-label="アンカー先: 1-1. 構成ソース・プロバイダ作成" href="#1-1-%e6%a7%8b%e6%88%90%e3%82%bd%e3%83%bc%e3%82%b9%e3%83%97%e3%83%ad%e3%83%90%e3%82%a4%e3%83%80%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -648,7 +648,7 @@ table, th, td {
     >
         1-2. IAMポリシー作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-nfs-server/#1-2-iamポリシー作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-2. IAMポリシー作成" aria-label="アンカー先: 1-2. IAMポリシー作成" href="#1-2-iam%e3%83%9d%e3%83%aa%e3%82%b7%e3%83%bc%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-nfs-server/#1-2-iamポリシー作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-2. IAMポリシー作成" aria-label="アンカー先: 1-2. IAMポリシー作成" href="#1-2-iam%e3%83%9d%e3%83%aa%e3%82%b7%e3%83%bc%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -686,7 +686,7 @@ table, th, td {
     >
         1-3. スタック作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-nfs-server/#1-3-スタック作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-3. スタック作成" aria-label="アンカー先: 1-3. スタック作成" href="#1-3-%e3%82%b9%e3%82%bf%e3%83%83%e3%82%af%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-nfs-server/#1-3-スタック作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-3. スタック作成" aria-label="アンカー先: 1-3. スタック作成" href="#1-3-%e3%82%b9%e3%82%bf%e3%83%83%e3%82%af%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -768,7 +768,7 @@ table, th, td {
     >
         2.ブロック・ボリュームNFSサーバ構築
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-nfs-server/#2ブロックボリュームnfsサーバ構築" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.ブロック・ボリュームNFSサーバ構築" aria-label="アンカー先: 2.ブロック・ボリュームNFSサーバ構築" href="#2%e3%83%96%e3%83%ad%e3%83%83%e3%82%af%e3%83%9c%e3%83%aa%e3%83%a5%e3%83%bc%e3%83%a0nfs%e3%82%b5%e3%83%bc%e3%83%90%e6%a7%8b%e7%af%89">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-nfs-server/#2ブロックボリュームnfsサーバ構築" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.ブロック・ボリュームNFSサーバ構築" aria-label="アンカー先: 2.ブロック・ボリュームNFSサーバ構築" href="#2%e3%83%96%e3%83%ad%e3%83%83%e3%82%af%e3%83%9c%e3%83%aa%e3%83%a5%e3%83%bc%e3%83%a0nfs%e3%82%b5%e3%83%bc%e3%83%90%e6%a7%8b%e7%af%89">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -813,7 +813,7 @@ table, th, td {
     >
         3. ブロック・ボリュームNFSサーバ確認
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-nfs-server/#3-ブロックボリュームnfsサーバ確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. ブロック・ボリュームNFSサーバ確認" aria-label="アンカー先: 3. ブロック・ボリュームNFSサーバ確認" href="#3-%e3%83%96%e3%83%ad%e3%83%83%e3%82%af%e3%83%9c%e3%83%aa%e3%83%a5%e3%83%bc%e3%83%a0nfs%e3%82%b5%e3%83%bc%e3%83%90%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-nfs-server/#3-ブロックボリュームnfsサーバ確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. ブロック・ボリュームNFSサーバ確認" aria-label="アンカー先: 3. ブロック・ボリュームNFSサーバ確認" href="#3-%e3%83%96%e3%83%ad%e3%83%83%e3%82%af%e3%83%9c%e3%83%aa%e3%83%a5%e3%83%bc%e3%83%a0nfs%e3%82%b5%e3%83%bc%e3%83%90%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -822,7 +822,7 @@ table, th, td {
     >
         3-0. 概要
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-nfs-server/#3-0-概要" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-0. 概要" aria-label="アンカー先: 3-0. 概要" href="#3-0-%e6%a6%82%e8%a6%81">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-nfs-server/#3-0-概要" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-0. 概要" aria-label="アンカー先: 3-0. 概要" href="#3-0-%e6%a6%82%e8%a6%81">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -832,7 +832,7 @@ table, th, td {
     >
         3-1. NFSサーバログイン
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-nfs-server/#3-1-nfsサーバログイン" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-1. NFSサーバログイン" aria-label="アンカー先: 3-1. NFSサーバログイン" href="#3-1-nfs%e3%82%b5%e3%83%bc%e3%83%90%e3%83%ad%e3%82%b0%e3%82%a4%e3%83%b3">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-nfs-server/#3-1-nfsサーバログイン" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-1. NFSサーバログイン" aria-label="アンカー先: 3-1. NFSサーバログイン" href="#3-1-nfs%e3%82%b5%e3%83%bc%e3%83%90%e3%83%ad%e3%82%b0%e3%82%a4%e3%83%b3">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -842,7 +842,7 @@ table, th, td {
     >
         3-2. cloud-init完了確認
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-nfs-server/#3-2-cloud-init完了確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-2. cloud-init完了確認" aria-label="アンカー先: 3-2. cloud-init完了確認" href="#3-2-cloud-init%e5%ae%8c%e4%ba%86%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-nfs-server/#3-2-cloud-init完了確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-2. cloud-init完了確認" aria-label="アンカー先: 3-2. cloud-init完了確認" href="#3-2-cloud-init%e5%ae%8c%e4%ba%86%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -859,7 +859,7 @@ table, th, td {
     >
         3-3. NFSサーバOS再起動
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-nfs-server/#3-3-nfsサーバos再起動" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-3. NFSサーバOS再起動" aria-label="アンカー先: 3-3. NFSサーバOS再起動" href="#3-3-nfs%e3%82%b5%e3%83%bc%e3%83%90os%e5%86%8d%e8%b5%b7%e5%8b%95">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-nfs-server/#3-3-nfsサーバos再起動" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-3. NFSサーバOS再起動" aria-label="アンカー先: 3-3. NFSサーバOS再起動" href="#3-3-nfs%e3%82%b5%e3%83%bc%e3%83%90os%e5%86%8d%e8%b5%b7%e5%8b%95">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -870,7 +870,7 @@ table, th, td {
     >
         3-4. NFSサーバファイルシステム確認
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-nfs-server/#3-4-nfsサーバファイルシステム確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-4. NFSサーバファイルシステム確認" aria-label="アンカー先: 3-4. NFSサーバファイルシステム確認" href="#3-4-nfs%e3%82%b5%e3%83%bc%e3%83%90%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-nfs-server/#3-4-nfsサーバファイルシステム確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-4. NFSサーバファイルシステム確認" aria-label="アンカー先: 3-4. NFSサーバファイルシステム確認" href="#3-4-nfs%e3%82%b5%e3%83%bc%e3%83%90%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -884,7 +884,7 @@ table, th, td {
     >
         3-5. NFSサーバNFSサービス確認
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-nfs-server/#3-5-nfsサーバnfsサービス確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-5. NFSサーバNFSサービス確認" aria-label="アンカー先: 3-5. NFSサーバNFSサービス確認" href="#3-5-nfs%e3%82%b5%e3%83%bc%e3%83%90nfs%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-nfs-server/#3-5-nfsサーバnfsサービス確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-5. NFSサーバNFSサービス確認" aria-label="アンカー先: 3-5. NFSサーバNFSサービス確認" href="#3-5-nfs%e3%82%b5%e3%83%bc%e3%83%90nfs%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -912,7 +912,7 @@ table, th, td {
     >
         4. NFSクライアント設定
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-nfs-server/#4-nfsクライアント設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. NFSクライアント設定" aria-label="アンカー先: 4. NFSクライアント設定" href="#4-nfs%e3%82%af%e3%83%a9%e3%82%a4%e3%82%a2%e3%83%b3%e3%83%88%e8%a8%ad%e5%ae%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-nfs-server/#4-nfsクライアント設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. NFSクライアント設定" aria-label="アンカー先: 4. NFSクライアント設定" href="#4-nfs%e3%82%af%e3%83%a9%e3%82%a4%e3%82%a2%e3%83%b3%e3%83%88%e8%a8%ad%e5%ae%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -929,7 +929,7 @@ table, th, td {
     >
         5. ファイルシステムベンチマーク
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-nfs-server/#5-ファイルシステムベンチマーク" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5. ファイルシステムベンチマーク" aria-label="アンカー先: 5. ファイルシステムベンチマーク" href="#5-%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%83%99%e3%83%b3%e3%83%81%e3%83%9e%e3%83%bc%e3%82%af">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-nfs-server/#5-ファイルシステムベンチマーク" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5. ファイルシステムベンチマーク" aria-label="アンカー先: 5. ファイルシステムベンチマーク" href="#5-%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%83%99%e3%83%b3%e3%83%81%e3%83%9e%e3%83%bc%e3%82%af">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -938,7 +938,7 @@ table, th, td {
     >
         5-0. ファイルシステムベンチマーク概要
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-nfs-server/#5-0-ファイルシステムベンチマーク概要" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5-0. ファイルシステムベンチマーク概要" aria-label="アンカー先: 5-0. ファイルシステムベンチマーク概要" href="#5-0-%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%83%99%e3%83%b3%e3%83%81%e3%83%9e%e3%83%bc%e3%82%af%e6%a6%82%e8%a6%81">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-nfs-server/#5-0-ファイルシステムベンチマーク概要" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5-0. ファイルシステムベンチマーク概要" aria-label="アンカー先: 5-0. ファイルシステムベンチマーク概要" href="#5-0-%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%83%99%e3%83%b3%e3%83%81%e3%83%9e%e3%83%bc%e3%82%af%e6%a6%82%e8%a6%81">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -963,7 +963,7 @@ table, th, td {
     >
         5-1. NFSクライアント用インスタンス作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-nfs-server/#5-1-nfsクライアント用インスタンス作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5-1. NFSクライアント用インスタンス作成" aria-label="アンカー先: 5-1. NFSクライアント用インスタンス作成" href="#5-1-nfs%e3%82%af%e3%83%a9%e3%82%a4%e3%82%a2%e3%83%b3%e3%83%88%e7%94%a8%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-nfs-server/#5-1-nfsクライアント用インスタンス作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5-1. NFSクライアント用インスタンス作成" aria-label="アンカー先: 5-1. NFSクライアント用インスタンス作成" href="#5-1-nfs%e3%82%af%e3%83%a9%e3%82%a4%e3%82%a2%e3%83%b3%e3%83%88%e7%94%a8%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -983,7 +983,7 @@ table, th, td {
     >
         5-2. OpenMPIインストール
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-nfs-server/#5-2-openmpiインストール" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5-2. OpenMPIインストール" aria-label="アンカー先: 5-2. OpenMPIインストール" href="#5-2-openmpi%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-nfs-server/#5-2-openmpiインストール" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5-2. OpenMPIインストール" aria-label="アンカー先: 5-2. OpenMPIインストール" href="#5-2-openmpi%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1013,7 +1013,7 @@ table, th, td {
     >
         5-3. IO500インストール
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-nfs-server/#5-3-io500インストール" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5-3. IO500インストール" aria-label="アンカー先: 5-3. IO500インストール" href="#5-3-io500%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-nfs-server/#5-3-io500インストール" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5-3. IO500インストール" aria-label="アンカー先: 5-3. IO500インストール" href="#5-3-io500%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1029,7 +1029,7 @@ table, th, td {
     >
         5-4. ファイルシステムベンチマーク実行
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-nfs-server/#5-4-ファイルシステムベンチマーク実行" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5-4. ファイルシステムベンチマーク実行" aria-label="アンカー先: 5-4. ファイルシステムベンチマーク実行" href="#5-4-%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%83%99%e3%83%b3%e3%83%81%e3%83%9e%e3%83%bc%e3%82%af%e5%ae%9f%e8%a1%8c">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-nfs-server/#5-4-ファイルシステムベンチマーク実行" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5-4. ファイルシステムベンチマーク実行" aria-label="アンカー先: 5-4. ファイルシステムベンチマーク実行" href="#5-4-%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%83%99%e3%83%b3%e3%83%81%e3%83%9e%e3%83%bc%e3%82%af%e5%ae%9f%e8%a1%8c">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1103,7 +1103,7 @@ table, th, td {
     >
         6. スタックの破棄
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-nfs-server/#6-スタックの破棄" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 6. スタックの破棄" aria-label="アンカー先: 6. スタックの破棄" href="#6-%e3%82%b9%e3%82%bf%e3%83%83%e3%82%af%e3%81%ae%e7%a0%b4%e6%a3%84">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-nfs-server/#6-スタックの破棄" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 6. スタックの破棄" aria-label="アンカー先: 6. スタックの破棄" href="#6-%e3%82%b9%e3%82%bf%e3%83%83%e3%82%af%e3%81%ae%e7%a0%b4%e6%a3%84">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9383,7 +9383,7 @@ table, th, td {
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/hpc/spinup-nfs-server-fss/"
+      href="/ocitutorial-geekdocs/hpc/spinup-nfs-server-fss/"
       title="ファイル・ストレージでファイル共有ストレージを構築する"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9395,7 +9395,7 @@ table, th, td {
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/hpc/spinup-nfs-server-nvme/"
+      href="/ocitutorial-geekdocs/hpc/spinup-nfs-server-nvme/"
       title="短期保存データ用高速ファイル共有ストレージを構築する"
     >
       短期保存データ用高速ファイル共有ストレージを構築する
@@ -9449,7 +9449,7 @@ table, th, td {
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

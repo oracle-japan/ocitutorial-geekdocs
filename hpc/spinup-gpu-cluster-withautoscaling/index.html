@@ -16,18 +16,18 @@ GPUクラスタのワークロード実行環境は、機械学習環境のデ�
 
   <title>GPUクラスタを構築する(オンデマンドクラスタ自動構築編) | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -44,7 +44,7 @@ GPUクラスタのワークロード実行環境は、機械学習環境のデ�
 NVIDIA A100 40 GBを8枚搭載するGPUノード（ BM.GPU4.8 ） インターコネクト: クラスタ・ネットワーク （ノード当たり100 Gbps x 16） インターネットからSSH接続可能なBastionノード OS: Oracle Linux 7.9 コンテナランタイム: Enroot ジョブスケジューラ: Slurm &#43; Pyxis オンデマンドクラスタ機能： クラスタオートスケーリング ファイル・ストレージ によるGPUクラスタ内ホームディレクトリ共有 LDAPによるクラスタ内ユーザ統合管理 またこのチュートリアルは、デプロイしたGPUクラスタで複数ノードに跨るGPU間の通信性能を NCCL（NVIDIA Collective Communication Library） の通信性能計測プログラム（ NCCL Tests ）で検証後、分散機械学習のサンプルプログラムを実行します。
 GPUクラスタのワークロード実行環境は、機械学習環境のデファクトスタンダードである Dokcer コンテナを利用し、コンテナランタイムに Enroot 、ジョブスケジューラに Slurm を採用し、コンテナの操作（インポート・起動・終了等）をジョブスケジューラからコンテナランタイムに指示する Slurm のプラグイン Pyxis を使用します。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/hpc/spinup-gpu-cluster-withautoscaling/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-gpu-cluster-withautoscaling/" />
 
 <meta property="article:section" content="Hpc" />
     <meta
@@ -68,7 +68,7 @@ GPUクラスタのワークロード実行環境は、機械学習環境のデ�
       "@type": "TechArticle",
       "articleSection": "Hpc",
       "name": "GPUクラスタを構築する(オンデマンドクラスタ自動構築編)",
-      "url" : "https://oracle-japan.github.io/ocitutorials/hpc/spinup-gpu-cluster-withautoscaling/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-gpu-cluster-withautoscaling/",
       "headline": "GPUクラスタを構築する(オンデマンドクラスタ自動構築編)",
       "description": "Oracle Cloud Infrastructure（以降OCIと記載）は、8枚の NVIDIA A100 40\/80 GBと総帯域幅1.6 Tbps（100 Gbps x 16）のRDMA対応ネットワークインタフェースを搭載するベアメタルGPUシェイプ BM.GPU4.8\/BM.GPU.GM4.8 とこれらを接続する クラスタ・ネットワーク を提供しており、1ノードには搭載しきれない多数のGPUを必要とする大規模なAIや機械学習のワークロードを実行するGPUクラスタを構築するには最適なクラウドサービスです。\nこのチュートリアルは、 マーケットプレイス から無償で利用可能な HPCクラスタスタック を利用し、以下構成のオンデマンドGPUクラスタを構築します。\nNVIDIA A100 40 GBを8枚搭載するGPUノード（ BM.GPU4.8 ） インターコネクト: クラスタ・ネットワーク （ノード当たり100 Gbps x 16） インターネットからSSH接続可能なBastionノード OS: Oracle Linux 7.9 コンテナランタイム: Enroot ジョブスケジューラ: Slurm \u002b Pyxis オンデマンドクラスタ機能： クラスタオートスケーリング ファイル・ストレージ によるGPUクラスタ内ホームディレクトリ共有 LDAPによるクラスタ内ユーザ統合管理 またこのチュートリアルは、デプロイしたGPUクラスタで複数ノードに跨るGPU間の通信性能を NCCL（NVIDIA Collective Communication Library） の通信性能計測プログラム（ NCCL Tests ）で検証後、分散機械学習のサンプルプログラムを実行します。\nGPUクラスタのワークロード実行環境は、機械学習環境のデファクトスタンダードである Dokcer コンテナを利用し、コンテナランタイムに Enroot 、ジョブスケジューラに Slurm を採用し、コンテナの操作（インポート・起動・終了等）をジョブスケジューラからコンテナランタイムに指示する Slurm のプラグイン Pyxis を使用します。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -78,7 +78,7 @@ GPUクラスタのワークロード実行環境は、機械学習環境のデ�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/hpc/spinup-gpu-cluster-withautoscaling/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-gpu-cluster-withautoscaling/"
       },
       "copyrightHolder" : "OCIチュートリアル",
       "copyrightYear" : "0001",
@@ -88,10 +88,10 @@ GPUクラスタのワークロード実行環境は、機械学習環境のデ�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -101,73 +101,73 @@ GPUクラスタのワークロード実行環境は、機械学習環境のデ�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/hpc/spinup-gpu-cluster-withautoscaling/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-gpu-cluster-withautoscaling/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/hpc/spinup-gpu-cluster-withautoscaling/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-gpu-cluster-withautoscaling/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="GPUクラスタを構築する(オンデマンドクラスタ自動構築編)">
   <meta property="og:description" content="Oracle Cloud Infrastructure（以降OCIと記載）は、8枚の NVIDIA A100 40/80 GBと総帯域幅1.6 Tbps（100 Gbps x 16）のRDMA対応ネットワークインタフェースを搭載するベアメタルGPUシェイプ BM.GPU4.8/BM.GPU.GM4.8 とこれらを接続する クラスタ・ネットワーク を提供しており、1ノードには搭載しきれない多数のGPUを必要とする大規模なAIや機械学習のワークロードを実行するGPUクラスタを構築するには最適なクラウドサービスです。
@@ -231,11 +231,11 @@ GPUクラスタのワークロード実行環境は、機械学習環境のデ�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -252,7 +252,7 @@ GPUクラスタのワークロード実行環境は、機械学習環境のデ�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -264,7 +264,7 @@ GPUクラスタのワークロード実行環境は、機械学習環境のデ�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -416,7 +416,7 @@ GPUクラスタのワークロード実行環境は、機械学習環境のデ�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/hpc/' href='/ocitutorials/hpc/'><span itemprop='name'>OCI HPCポータル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>GPUクラスタを構築する(オンデマンドクラスタ自動構築編)</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/hpc/' href='/ocitutorial-geekdocs/hpc/'><span itemprop='name'>OCI HPCポータル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>GPUクラスタを構築する(オンデマンドクラスタ自動構築編)</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -516,7 +516,7 @@ GPUクラスタのワークロード実行環境は、機械学習環境のデ�
     >
         1.  HPCクラスタスタック
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-gpu-cluster-withautoscaling/#1--hpcクラスタスタック" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.  HPCクラスタスタック" aria-label="アンカー先: 1.  HPCクラスタスタック" href="#1--hpc%e3%82%af%e3%83%a9%e3%82%b9%e3%82%bf%e3%82%b9%e3%82%bf%e3%83%83%e3%82%af">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-gpu-cluster-withautoscaling/#1--hpcクラスタスタック" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.  HPCクラスタスタック" aria-label="アンカー先: 1.  HPCクラスタスタック" href="#1--hpc%e3%82%af%e3%83%a9%e3%82%b9%e3%82%bf%e3%82%b9%e3%82%bf%e3%83%83%e3%82%af">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -525,7 +525,7 @@ GPUクラスタのワークロード実行環境は、機械学習環境のデ�
     >
         1-0. 概要
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-gpu-cluster-withautoscaling/#1-0-概要" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-0. 概要" aria-label="アンカー先: 1-0. 概要" href="#1-0-%e6%a6%82%e8%a6%81">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-gpu-cluster-withautoscaling/#1-0-概要" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-0. 概要" aria-label="アンカー先: 1-0. 概要" href="#1-0-%e6%a6%82%e8%a6%81">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -577,7 +577,7 @@ GPUクラスタのワークロード実行環境は、機械学習環境のデ�
     >
         1-1. インスタンス・プリンシパル認証関連設定
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-gpu-cluster-withautoscaling/#1-1-インスタンスプリンシパル認証関連設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-1. インスタンス・プリンシパル認証関連設定" aria-label="アンカー先: 1-1. インスタンス・プリンシパル認証関連設定" href="#1-1-%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%83%97%e3%83%aa%e3%83%b3%e3%82%b7%e3%83%91%e3%83%ab%e8%aa%8d%e8%a8%bc%e9%96%a2%e9%80%a3%e8%a8%ad%e5%ae%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-gpu-cluster-withautoscaling/#1-1-インスタンスプリンシパル認証関連設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-1. インスタンス・プリンシパル認証関連設定" aria-label="アンカー先: 1-1. インスタンス・プリンシパル認証関連設定" href="#1-1-%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%83%97%e3%83%aa%e3%83%b3%e3%82%b7%e3%83%91%e3%83%ab%e8%aa%8d%e8%a8%bc%e9%96%a2%e9%80%a3%e8%a8%ad%e5%ae%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -607,7 +607,7 @@ GPUクラスタのワークロード実行環境は、機械学習環境のデ�
     >
         1-2. スタックの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-gpu-cluster-withautoscaling/#1-2-スタックの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-2. スタックの作成" aria-label="アンカー先: 1-2. スタックの作成" href="#1-2-%e3%82%b9%e3%82%bf%e3%83%83%e3%82%af%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-gpu-cluster-withautoscaling/#1-2-スタックの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-2. スタックの作成" aria-label="アンカー先: 1-2. スタックの作成" href="#1-2-%e3%82%b9%e3%82%bf%e3%83%83%e3%82%af%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -794,7 +794,7 @@ GPUクラスタのワークロード実行環境は、機械学習環境のデ�
     >
         1-3. スタックの計画
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-gpu-cluster-withautoscaling/#1-3-スタックの計画" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-3. スタックの計画" aria-label="アンカー先: 1-3. スタックの計画" href="#1-3-%e3%82%b9%e3%82%bf%e3%83%83%e3%82%af%e3%81%ae%e8%a8%88%e7%94%bb">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-gpu-cluster-withautoscaling/#1-3-スタックの計画" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-3. スタックの計画" aria-label="アンカー先: 1-3. スタックの計画" href="#1-3-%e3%82%b9%e3%82%bf%e3%83%83%e3%82%af%e3%81%ae%e8%a8%88%e7%94%bb">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -839,7 +839,7 @@ GPUクラスタのワークロード実行環境は、機械学習環境のデ�
     >
         1-4. スタックの適用
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-gpu-cluster-withautoscaling/#1-4-スタックの適用" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-4. スタックの適用" aria-label="アンカー先: 1-4. スタックの適用" href="#1-4-%e3%82%b9%e3%82%bf%e3%83%83%e3%82%af%e3%81%ae%e9%81%a9%e7%94%a8">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-gpu-cluster-withautoscaling/#1-4-スタックの適用" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-4. スタックの適用" aria-label="アンカー先: 1-4. スタックの適用" href="#1-4-%e3%82%b9%e3%82%bf%e3%83%83%e3%82%af%e3%81%ae%e9%81%a9%e7%94%a8">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -887,7 +887,7 @@ GPUクラスタのワークロード実行環境は、機械学習環境のデ�
     >
         2. Bastionノード確認・設定変更
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-gpu-cluster-withautoscaling/#2-bastionノード確認設定変更" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. Bastionノード確認・設定変更" aria-label="アンカー先: 2. Bastionノード確認・設定変更" href="#2-bastion%e3%83%8e%e3%83%bc%e3%83%89%e7%a2%ba%e8%aa%8d%e8%a8%ad%e5%ae%9a%e5%a4%89%e6%9b%b4">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-gpu-cluster-withautoscaling/#2-bastionノード確認設定変更" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. Bastionノード確認・設定変更" aria-label="アンカー先: 2. Bastionノード確認・設定変更" href="#2-bastion%e3%83%8e%e3%83%bc%e3%83%89%e7%a2%ba%e8%aa%8d%e8%a8%ad%e5%ae%9a%e5%a4%89%e6%9b%b4">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -933,7 +933,7 @@ GPUクラスタのワークロード実行環境は、機械学習環境のデ�
     >
         3. LDAPユーザ作成・確認
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-gpu-cluster-withautoscaling/#3-ldapユーザ作成確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. LDAPユーザ作成・確認" aria-label="アンカー先: 3. LDAPユーザ作成・確認" href="#3-ldap%e3%83%a6%e3%83%bc%e3%82%b6%e4%bd%9c%e6%88%90%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-gpu-cluster-withautoscaling/#3-ldapユーザ作成確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. LDAPユーザ作成・確認" aria-label="アンカー先: 3. LDAPユーザ作成・確認" href="#3-ldap%e3%83%a6%e3%83%bc%e3%82%b6%e4%bd%9c%e6%88%90%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -974,7 +974,7 @@ GPUクラスタのワークロード実行環境は、機械学習環境のデ�
     >
         4. オンデマンドGPUクラスタ稼働確認（NCCL通信性能検証）
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-gpu-cluster-withautoscaling/#4-オンデマンドgpuクラスタ稼働確認nccl通信性能検証" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. オンデマンドGPUクラスタ稼働確認（NCCL通信性能検証）" aria-label="アンカー先: 4. オンデマンドGPUクラスタ稼働確認（NCCL通信性能検証）" href="#4-%e3%82%aa%e3%83%b3%e3%83%87%e3%83%9e%e3%83%b3%e3%83%89gpu%e3%82%af%e3%83%a9%e3%82%b9%e3%82%bf%e7%a8%bc%e5%83%8d%e7%a2%ba%e8%aa%8dnccl%e9%80%9a%e4%bf%a1%e6%80%a7%e8%83%bd%e6%a4%9c%e8%a8%bc">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-gpu-cluster-withautoscaling/#4-オンデマンドgpuクラスタ稼働確認nccl通信性能検証" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. オンデマンドGPUクラスタ稼働確認（NCCL通信性能検証）" aria-label="アンカー先: 4. オンデマンドGPUクラスタ稼働確認（NCCL通信性能検証）" href="#4-%e3%82%aa%e3%83%b3%e3%83%87%e3%83%9e%e3%83%b3%e3%83%89gpu%e3%82%af%e3%83%a9%e3%82%b9%e3%82%bf%e7%a8%bc%e5%83%8d%e7%a2%ba%e8%aa%8dnccl%e9%80%9a%e4%bf%a1%e6%80%a7%e8%83%bd%e6%a4%9c%e8%a8%bc">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -983,7 +983,7 @@ GPUクラスタのワークロード実行環境は、機械学習環境のデ�
     >
         4-0. 概要
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-gpu-cluster-withautoscaling/#4-0-概要" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-0. 概要" aria-label="アンカー先: 4-0. 概要" href="#4-0-%e6%a6%82%e8%a6%81">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-gpu-cluster-withautoscaling/#4-0-概要" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-0. 概要" aria-label="アンカー先: 4-0. 概要" href="#4-0-%e6%a6%82%e8%a6%81">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -994,7 +994,7 @@ GPUクラスタのワークロード実行環境は、機械学習環境のデ�
     >
         4-1. ジョブスクリプト作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-gpu-cluster-withautoscaling/#4-1-ジョブスクリプト作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-1. ジョブスクリプト作成" aria-label="アンカー先: 4-1. ジョブスクリプト作成" href="#4-1-%e3%82%b8%e3%83%a7%e3%83%96%e3%82%b9%e3%82%af%e3%83%aa%e3%83%97%e3%83%88%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-gpu-cluster-withautoscaling/#4-1-ジョブスクリプト作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-1. ジョブスクリプト作成" aria-label="アンカー先: 4-1. ジョブスクリプト作成" href="#4-1-%e3%82%b8%e3%83%a7%e3%83%96%e3%82%b9%e3%82%af%e3%83%aa%e3%83%97%e3%83%88%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1016,7 +1016,7 @@ GPUクラスタのワークロード実行環境は、機械学習環境のデ�
     >
         4-2. ジョブ投入
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-gpu-cluster-withautoscaling/#4-2-ジョブ投入" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-2. ジョブ投入" aria-label="アンカー先: 4-2. ジョブ投入" href="#4-2-%e3%82%b8%e3%83%a7%e3%83%96%e6%8a%95%e5%85%a5">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-gpu-cluster-withautoscaling/#4-2-ジョブ投入" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-2. ジョブ投入" aria-label="アンカー先: 4-2. ジョブ投入" href="#4-2-%e3%82%b8%e3%83%a7%e3%83%96%e6%8a%95%e5%85%a5">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1032,7 +1032,7 @@ GPUクラスタのワークロード実行環境は、機械学習環境のデ�
     >
         4-3. GPUクラスタデプロイ状況確認
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-gpu-cluster-withautoscaling/#4-3-gpuクラスタデプロイ状況確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-3. GPUクラスタデプロイ状況確認" aria-label="アンカー先: 4-3. GPUクラスタデプロイ状況確認" href="#4-3-gpu%e3%82%af%e3%83%a9%e3%82%b9%e3%82%bf%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4%e7%8a%b6%e6%b3%81%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-gpu-cluster-withautoscaling/#4-3-gpuクラスタデプロイ状況確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-3. GPUクラスタデプロイ状況確認" aria-label="アンカー先: 4-3. GPUクラスタデプロイ状況確認" href="#4-3-gpu%e3%82%af%e3%83%a9%e3%82%b9%e3%82%bf%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4%e7%8a%b6%e6%b3%81%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1063,7 +1063,7 @@ GPUクラスタのワークロード実行環境は、機械学習環境のデ�
     >
         4-4. ジョブ結果確認
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-gpu-cluster-withautoscaling/#4-4-ジョブ結果確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-4. ジョブ結果確認" aria-label="アンカー先: 4-4. ジョブ結果確認" href="#4-4-%e3%82%b8%e3%83%a7%e3%83%96%e7%b5%90%e6%9e%9c%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-gpu-cluster-withautoscaling/#4-4-ジョブ結果確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-4. ジョブ結果確認" aria-label="アンカー先: 4-4. ジョブ結果確認" href="#4-4-%e3%82%b8%e3%83%a7%e3%83%96%e7%b5%90%e6%9e%9c%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1080,7 +1080,7 @@ GPUクラスタのワークロード実行環境は、機械学習環境のデ�
     >
         4-5. GPUクラスタ削除確認
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-gpu-cluster-withautoscaling/#4-5-gpuクラスタ削除確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-5. GPUクラスタ削除確認" aria-label="アンカー先: 4-5. GPUクラスタ削除確認" href="#4-5-gpu%e3%82%af%e3%83%a9%e3%82%b9%e3%82%bf%e5%89%8a%e9%99%a4%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-gpu-cluster-withautoscaling/#4-5-gpuクラスタ削除確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-5. GPUクラスタ削除確認" aria-label="アンカー先: 4-5. GPUクラスタ削除確認" href="#4-5-gpu%e3%82%af%e3%83%a9%e3%82%b9%e3%82%bf%e5%89%8a%e9%99%a4%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1098,7 +1098,7 @@ OCIコンソールで、想定通りGPUクラスタが削除されているこ�
     >
         5. MultiWorkerMirroredStrategyサンプルプログラム実行
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-gpu-cluster-withautoscaling/#5-multiworkermirroredstrategyサンプルプログラム実行" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5. MultiWorkerMirroredStrategyサンプルプログラム実行" aria-label="アンカー先: 5. MultiWorkerMirroredStrategyサンプルプログラム実行" href="#5-multiworkermirroredstrategy%e3%82%b5%e3%83%b3%e3%83%97%e3%83%ab%e3%83%97%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%a0%e5%ae%9f%e8%a1%8c">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-gpu-cluster-withautoscaling/#5-multiworkermirroredstrategyサンプルプログラム実行" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5. MultiWorkerMirroredStrategyサンプルプログラム実行" aria-label="アンカー先: 5. MultiWorkerMirroredStrategyサンプルプログラム実行" href="#5-multiworkermirroredstrategy%e3%82%b5%e3%83%b3%e3%83%97%e3%83%ab%e3%83%97%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%a0%e5%ae%9f%e8%a1%8c">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1107,7 +1107,7 @@ OCIコンソールで、想定通りGPUクラスタが削除されているこ�
     >
         5-0. 概要
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-gpu-cluster-withautoscaling/#5-0-概要" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5-0. 概要" aria-label="アンカー先: 5-0. 概要" href="#5-0-%e6%a6%82%e8%a6%81">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-gpu-cluster-withautoscaling/#5-0-概要" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5-0. 概要" aria-label="アンカー先: 5-0. 概要" href="#5-0-%e6%a6%82%e8%a6%81">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1122,7 +1122,7 @@ OCIコンソールで、想定通りGPUクラスタが削除されているこ�
     >
         5-1. プログラム作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-gpu-cluster-withautoscaling/#5-1-プログラム作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5-1. プログラム作成" aria-label="アンカー先: 5-1. プログラム作成" href="#5-1-%e3%83%97%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%a0%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-gpu-cluster-withautoscaling/#5-1-プログラム作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5-1. プログラム作成" aria-label="アンカー先: 5-1. プログラム作成" href="#5-1-%e3%83%97%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%a0%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1250,7 +1250,7 @@ OCIコンソールで、想定通りGPUクラスタが削除されているこ�
     >
         5-2. ジョブ投入・結果確認
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-gpu-cluster-withautoscaling/#5-2-ジョブ投入結果確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5-2. ジョブ投入・結果確認" aria-label="アンカー先: 5-2. ジョブ投入・結果確認" href="#5-2-%e3%82%b8%e3%83%a7%e3%83%96%e6%8a%95%e5%85%a5%e7%b5%90%e6%9e%9c%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-gpu-cluster-withautoscaling/#5-2-ジョブ投入結果確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5-2. ジョブ投入・結果確認" aria-label="アンカー先: 5-2. ジョブ投入・結果確認" href="#5-2-%e3%82%b8%e3%83%a7%e3%83%96%e6%8a%95%e5%85%a5%e7%b5%90%e6%9e%9c%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1283,7 +1283,7 @@ OCIコンソールで、想定通りGPUクラスタが削除されているこ�
     >
         6. スタックの破棄
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/spinup-gpu-cluster-withautoscaling/#6-スタックの破棄" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 6. スタックの破棄" aria-label="アンカー先: 6. スタックの破棄" href="#6-%e3%82%b9%e3%82%bf%e3%83%83%e3%82%af%e3%81%ae%e7%a0%b4%e6%a3%84">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/spinup-gpu-cluster-withautoscaling/#6-スタックの破棄" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 6. スタックの破棄" aria-label="アンカー先: 6. スタックの破棄" href="#6-%e3%82%b9%e3%82%bf%e3%83%83%e3%82%af%e3%81%ae%e7%a0%b4%e6%a3%84">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9579,7 +9579,7 @@ OCIコンソールで、想定通りGPUクラスタが削除されているこ�
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/hpc/spinup-gpu-cluster-withstack/"
+      href="/ocitutorial-geekdocs/hpc/spinup-gpu-cluster-withstack/"
       title="GPUクラスタを構築する(スタティッククラスタ自動構築編)"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9591,7 +9591,7 @@ OCIコンソールで、想定通りGPUクラスタが削除されているこ�
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/hpc/spinup-gpu-cluster-withubuntu/"
+      href="/ocitutorial-geekdocs/hpc/spinup-gpu-cluster-withubuntu/"
       title="GPUクラスタを構築する(Ubuntu OS編)"
     >
       GPUクラスタを構築する(Ubuntu OS編)
@@ -9645,7 +9645,7 @@ OCIコンソールで、想定通りGPUクラスタが削除されているこ�
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

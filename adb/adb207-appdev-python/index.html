@@ -24,18 +24,18 @@ export TNS_ADMIN=/home/oracle/labs/wallets export ORAUSER=admin export ORAPASS=W
 
   <title>207: PythonによるADB上でのアプリ開発 | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -60,7 +60,7 @@ oracleユーザにスイッチします。一旦rootユーザに切り替えて�
 -- rootユーザにスイッチ sudo -s -- oracleユーザにスイッチ sudo su - oracle ADBへの接続情報をOS環境変数として設定します。
 export TNS_ADMIN=/home/oracle/labs/wallets export ORAUSER=admin export ORAPASS=Welcome12345# export ORATNS=atp01_low export WALLETPASS=Welcome12345# サンプルスクリプトが配置されているディレクトリに移動します。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/adb/adb207-appdev-python/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb207-appdev-python/" />
 
 <meta property="article:section" content="Adb" />
     <meta
@@ -92,7 +92,7 @@ export TNS_ADMIN=/home/oracle/labs/wallets export ORAUSER=admin export ORAPASS=W
       "@type": "TechArticle",
       "articleSection": "Adb",
       "name": "207: PythonによるADB上でのアプリ開発",
-      "url" : "https://oracle-japan.github.io/ocitutorials/adb/adb207-appdev-python/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb207-appdev-python/",
       "headline": "207: PythonによるADB上でのアプリ開発",
       "description": "Pythonとは、汎用のプログラミング言語である。コードがシンプルで扱いやすく設計されており、C言語などに比べて、さまざまなプログラムを分かりやすく、少ないコード行数で書けるといった特徴がある。（ウィキペディアより引用）\nPythonでAutonomous Databaseを利用する際には、cx_Oracleというモジュールを利用します。\n尚、Python言語自体の使い方を説明するものではありません。\n所要時間 : 約10分\n前提条件 :\nADBインスタンスが構成済みであること ※ADBインタンスを作成方法については、本ハンズオンガイドの 101:ADBインスタンスを作成してみよう を参照ください。 開発用の仮想マシンが構成済みであり、仮想マシンからADBインスタンスへのアクセスが可能であること 仮想マシンのoracleユーザのホームディレクトリ配下にlabsフォルダをアップロード済みであること labs.zip をダウンロード アップロード方法については こちら をご確認ください。 目次\n1. ADBに接続してみよう 2. ADB上のデータを操作してみよう 1. ADBに接続してみよう まずPythonでADBに接続し、ADBのバージョンを確認してみます。\n尚、事前にこちらを実施し、SQL*plusで接続できていることを前提に記載しています。\nTera Termを利用してopcユーザで仮想マシンにログインします。\noracleユーザにスイッチします。一旦rootユーザに切り替えてから、oracleユーザに切り替えます。\n-- rootユーザにスイッチ sudo -s -- oracleユーザにスイッチ sudo su - oracle ADBへの接続情報をOS環境変数として設定します。\nexport TNS_ADMIN=\/home\/oracle\/labs\/wallets export ORAUSER=admin export ORAPASS=Welcome12345# export ORATNS=atp01_low export WALLETPASS=Welcome12345# サンプルスクリプトが配置されているディレクトリに移動します。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -102,7 +102,7 @@ export TNS_ADMIN=/home/oracle/labs/wallets export ORAUSER=admin export ORAPASS=W
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/adb/adb207-appdev-python/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb207-appdev-python/"
       },
       "copyrightHolder" : "OCIチュートリアル",
       "copyrightYear" : "0001",
@@ -112,10 +112,10 @@ export TNS_ADMIN=/home/oracle/labs/wallets export ORAUSER=admin export ORAPASS=W
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -125,73 +125,73 @@ export TNS_ADMIN=/home/oracle/labs/wallets export ORAUSER=admin export ORAPASS=W
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/adb/adb207-appdev-python/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb207-appdev-python/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/adb/adb207-appdev-python/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb207-appdev-python/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="207: PythonによるADB上でのアプリ開発">
   <meta property="og:description" content="Pythonとは、汎用のプログラミング言語である。コードがシンプルで扱いやすく設計されており、C言語などに比べて、さまざまなプログラムを分かりやすく、少ないコード行数で書けるといった特徴がある。（ウィキペディアより引用）
@@ -271,11 +271,11 @@ export TNS_ADMIN=/home/oracle/labs/wallets export ORAUSER=admin export ORAPASS=W
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -292,7 +292,7 @@ export TNS_ADMIN=/home/oracle/labs/wallets export ORAUSER=admin export ORAPASS=W
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -304,7 +304,7 @@ export TNS_ADMIN=/home/oracle/labs/wallets export ORAUSER=admin export ORAPASS=W
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -429,7 +429,7 @@ export TNS_ADMIN=/home/oracle/labs/wallets export ORAUSER=admin export ORAPASS=W
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/adb/' href='/ocitutorials/adb/'><span itemprop='name'>Oracle Database編 - Autonomous Database (ADB)を使ってみよう</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>207: PythonによるADB上でのアプリ開発</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/adb/' href='/ocitutorial-geekdocs/adb/'><span itemprop='name'>Oracle Database編 - Autonomous Database (ADB)を使ってみよう</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>207: PythonによるADB上でのアプリ開発</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -498,7 +498,7 @@ export TNS_ADMIN=/home/oracle/labs/wallets export ORAUSER=admin export ORAPASS=W
     >
         1. ADBに接続してみよう
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb207-appdev-python/#1-adbに接続してみよう" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. ADBに接続してみよう" aria-label="アンカー先: 1. ADBに接続してみよう" href="#1-adb%e3%81%ab%e6%8e%a5%e7%b6%9a%e3%81%97%e3%81%a6%e3%81%bf%e3%82%88%e3%81%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb207-appdev-python/#1-adbに接続してみよう" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. ADBに接続してみよう" aria-label="アンカー先: 1. ADBに接続してみよう" href="#1-adb%e3%81%ab%e6%8e%a5%e7%b6%9a%e3%81%97%e3%81%a6%e3%81%bf%e3%82%88%e3%81%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -568,7 +568,7 @@ export TNS_ADMIN=/home/oracle/labs/wallets export ORAUSER=admin export ORAPASS=W
     >
         2. ADB上のデータを操作してみよう
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb207-appdev-python/#2-adb上のデータを操作してみよう" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. ADB上のデータを操作してみよう" aria-label="アンカー先: 2. ADB上のデータを操作してみよう" href="#2-adb%e4%b8%8a%e3%81%ae%e3%83%87%e3%83%bc%e3%82%bf%e3%82%92%e6%93%8d%e4%bd%9c%e3%81%97%e3%81%a6%e3%81%bf%e3%82%88%e3%81%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb207-appdev-python/#2-adb上のデータを操作してみよう" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. ADB上のデータを操作してみよう" aria-label="アンカー先: 2. ADB上のデータを操作してみよう" href="#2-adb%e4%b8%8a%e3%81%ae%e3%83%87%e3%83%bc%e3%82%bf%e3%82%92%e6%93%8d%e4%bd%9c%e3%81%97%e3%81%a6%e3%81%bf%e3%82%88%e3%81%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -8890,7 +8890,7 @@ export TNS_ADMIN=/home/oracle/labs/wallets export ORAUSER=admin export ORAPASS=W
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/adb/adb206-appdev-nodejs/"
+      href="/ocitutorial-geekdocs/adb/adb206-appdev-nodejs/"
       title="206: Node.jsによるADB上でのアプリ開発"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -8902,7 +8902,7 @@ export TNS_ADMIN=/home/oracle/labs/wallets export ORAUSER=admin export ORAPASS=W
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/adb/adb208-oml-notebook/"
+      href="/ocitutorial-geekdocs/adb/adb208-oml-notebook/"
       title="208: Oracle Machine Learningで機械学習をしよう"
     >
       208: Oracle Machine Learningで機械学習をしよう
@@ -8956,7 +8956,7 @@ export TNS_ADMIN=/home/oracle/labs/wallets export ORAUSER=admin export ORAPASS=W
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

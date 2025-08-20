@@ -20,18 +20,18 @@ v1.x系では、各Organizationの作業として、①Endorsementを行うPeer�
 
   <title>Chaincodeをデプロイする | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -52,7 +52,7 @@ v2.x系
 v1.x系では、各Organizationの作業として、①Endorsementを行うPeerへのChaincodeのインストールおよび ②Chaincode定義のApprove、③Channelレベルの作業として、必要数のApproveが得られていることを前提として、代表する単一のOrganizationがChaincode定義をCommit、の3段階のオペレーションによって実施され、Chaincodeが実行可能になります。
 0.2 このチュートリアルでのブロックチェーン・ネットワーク構成 このチュートリアルの例では、 Founder2104 というFounderインスタンス（=Organization）と、 Member2104 というParticipantインスタンス（=Organization）から成るブロックチェーン・ネットワークとなっています。また、ch1という名前のChannelに、サンプルChaincodeをデプロイします。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/blockchain/03_1_deploy_chaincode/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/blockchain/03_1_deploy_chaincode/" />
 
 <meta property="article:section" content="Blockchain" />
     <meta
@@ -80,7 +80,7 @@ v1.x系では、各Organizationの作業として、①Endorsementを行うPeer�
       "@type": "TechArticle",
       "articleSection": "Blockchain",
       "name": "Chaincodeをデプロイする",
-      "url" : "https://oracle-japan.github.io/ocitutorials/blockchain/03_1_deploy_chaincode/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/blockchain/03_1_deploy_chaincode/",
       "headline": "Chaincodeをデプロイする",
       "description": "この文書ではOracle Blockchain Platform（OBP）でChaincodeをデプロイし、実行可能にする方法をステップ・バイ・ステップで紹介するチュートリアルです。\nこの文書は、2022年11月時点での最新バージョン(22.3.2)を元に作成されています。 前提 :\nOracle Blockchain Platform のインスタンス作成を完了 Channelの作成を完了 0. 前提の理解 0.1 Hyperledger FabricにおけるChaincodeのデプロイ OBPはパーミッション型のブロックチェーンプロトコルであるHyperledger Fabricをベースとしたブロックチェーンプラットフォームです。 ブロックチェーン台帳に対して実行されるビジネスロジックであるChaincodeのデプロイのプロセスは、バージョン1.x系とバージョン2.x系で以下のように異なっています。そのため、このチュートリアルではv1.x系用の手順とv2.x系用の手順を併記しています。自身のお使いのOracle Blockchain PlatformインスタンスのベースとしているHyperledger Fabricのバージョンに合わせ、適切なほうをご利用ください。\nv1.x系\nv1.x系では、①各Organizationの作業として、Endorsementを行うPeerへのChaincodeのインストール、②Channelレベルの作業として、代表する単一のOrganizationがChaincodeをインスタンス化（instantiate）、の2段階のオペレーションによって実施され、Chaincodeが実行可能になります。\nv2.x系\nv1.x系では、各Organizationの作業として、①Endorsementを行うPeerへのChaincodeのインストールおよび ②Chaincode定義のApprove、③Channelレベルの作業として、必要数のApproveが得られていることを前提として、代表する単一のOrganizationがChaincode定義をCommit、の3段階のオペレーションによって実施され、Chaincodeが実行可能になります。\n0.2 このチュートリアルでのブロックチェーン・ネットワーク構成 このチュートリアルの例では、 Founder2104 というFounderインスタンス（=Organization）と、 Member2104 というParticipantインスタンス（=Organization）から成るブロックチェーン・ネットワークとなっています。また、ch1という名前のChannelに、サンプルChaincodeをデプロイします。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -90,7 +90,7 @@ v1.x系では、各Organizationの作業として、①Endorsementを行うPeer�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/blockchain/03_1_deploy_chaincode/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/blockchain/03_1_deploy_chaincode/"
       },
       "keywords" : [ "Blockchain" ],
       "copyrightHolder" : "OCIチュートリアル",
@@ -101,10 +101,10 @@ v1.x系では、各Organizationの作業として、①Endorsementを行うPeer�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -114,73 +114,73 @@ v1.x系では、各Organizationの作業として、①Endorsementを行うPeer�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/blockchain/03_1_deploy_chaincode/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/blockchain/03_1_deploy_chaincode/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/blockchain/03_1_deploy_chaincode/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/blockchain/03_1_deploy_chaincode/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="Chaincodeをデプロイする">
   <meta property="og:description" content="この文書ではOracle Blockchain Platform（OBP）でChaincodeをデプロイし、実行可能にする方法をステップ・バイ・ステップで紹介するチュートリアルです。
@@ -253,11 +253,11 @@ v1.x系では、各Organizationの作業として、①Endorsementを行うPeer�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -274,7 +274,7 @@ v1.x系では、各Organizationの作業として、①Endorsementを行うPeer�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -286,7 +286,7 @@ v1.x系では、各Organizationの作業として、①Endorsementを行うPeer�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -430,7 +430,7 @@ v1.x系では、各Organizationの作業として、①Endorsementを行うPeer�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/blockchain/' href='/ocitutorials/blockchain/'><span itemprop='name'>Oracle Blockchain Platformチュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Chaincodeをデプロイする</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/blockchain/' href='/ocitutorial-geekdocs/blockchain/'><span itemprop='name'>Oracle Blockchain Platformチュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Chaincodeをデプロイする</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -489,7 +489,7 @@ v1.x系では、各Organizationの作業として、①Endorsementを行うPeer�
     >
         0. 前提の理解
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/blockchain/03_1_deploy_chaincode/#0-前提の理解" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0. 前提の理解" aria-label="アンカー先: 0. 前提の理解" href="#0-%e5%89%8d%e6%8f%90%e3%81%ae%e7%90%86%e8%a7%a3">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/blockchain/03_1_deploy_chaincode/#0-前提の理解" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0. 前提の理解" aria-label="アンカー先: 0. 前提の理解" href="#0-%e5%89%8d%e6%8f%90%e3%81%ae%e7%90%86%e8%a7%a3">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -498,7 +498,7 @@ v1.x系では、各Organizationの作業として、①Endorsementを行うPeer�
     >
         0.1 Hyperledger FabricにおけるChaincodeのデプロイ
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/blockchain/03_1_deploy_chaincode/#01-hyperledger-fabricにおけるchaincodeのデプロイ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0.1 Hyperledger FabricにおけるChaincodeのデプロイ" aria-label="アンカー先: 0.1 Hyperledger FabricにおけるChaincodeのデプロイ" href="#01-hyperledger-fabric%e3%81%ab%e3%81%8a%e3%81%91%e3%82%8bchaincode%e3%81%ae%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/blockchain/03_1_deploy_chaincode/#01-hyperledger-fabricにおけるchaincodeのデプロイ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0.1 Hyperledger FabricにおけるChaincodeのデプロイ" aria-label="アンカー先: 0.1 Hyperledger FabricにおけるChaincodeのデプロイ" href="#01-hyperledger-fabric%e3%81%ab%e3%81%8a%e3%81%91%e3%82%8bchaincode%e3%81%ae%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -519,7 +519,7 @@ v1.x系では、各Organizationの作業として、①Endorsementを行うPeer�
     >
         0.2 このチュートリアルでのブロックチェーン・ネットワーク構成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/blockchain/03_1_deploy_chaincode/#02-このチュートリアルでのブロックチェーンネットワーク構成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0.2 このチュートリアルでのブロックチェーン・ネットワーク構成" aria-label="アンカー先: 0.2 このチュートリアルでのブロックチェーン・ネットワーク構成" href="#02-%e3%81%93%e3%81%ae%e3%83%81%e3%83%a5%e3%83%bc%e3%83%88%e3%83%aa%e3%82%a2%e3%83%ab%e3%81%a7%e3%81%ae%e3%83%96%e3%83%ad%e3%83%83%e3%82%af%e3%83%81%e3%82%a7%e3%83%bc%e3%83%b3%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e6%a7%8b%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/blockchain/03_1_deploy_chaincode/#02-このチュートリアルでのブロックチェーンネットワーク構成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0.2 このチュートリアルでのブロックチェーン・ネットワーク構成" aria-label="アンカー先: 0.2 このチュートリアルでのブロックチェーン・ネットワーク構成" href="#02-%e3%81%93%e3%81%ae%e3%83%81%e3%83%a5%e3%83%bc%e3%83%88%e3%83%aa%e3%82%a2%e3%83%ab%e3%81%a7%e3%81%ae%e3%83%96%e3%83%ad%e3%83%83%e3%82%af%e3%83%81%e3%82%a7%e3%83%bc%e3%83%b3%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e6%a7%8b%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -530,7 +530,7 @@ v1.x系では、各Organizationの作業として、①Endorsementを行うPeer�
     >
         1.サンプルChaincodeの準備
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/blockchain/03_1_deploy_chaincode/#1サンプルchaincodeの準備" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.サンプルChaincodeの準備" aria-label="アンカー先: 1.サンプルChaincodeの準備" href="#1%e3%82%b5%e3%83%b3%e3%83%97%e3%83%abchaincode%e3%81%ae%e6%ba%96%e5%82%99">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/blockchain/03_1_deploy_chaincode/#1サンプルchaincodeの準備" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.サンプルChaincodeの準備" aria-label="アンカー先: 1.サンプルChaincodeの準備" href="#1%e3%82%b5%e3%83%b3%e3%83%97%e3%83%abchaincode%e3%81%ae%e6%ba%96%e5%82%99">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -565,7 +565,7 @@ v1.x系では、各Organizationの作業として、①Endorsementを行うPeer�
     >
         2. Hyperledger Fabric v2.x系でのChaincodeのデプロイ
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/blockchain/03_1_deploy_chaincode/#2-hyperledger-fabric-v2x系でのchaincodeのデプロイ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. Hyperledger Fabric v2.x系でのChaincodeのデプロイ" aria-label="アンカー先: 2. Hyperledger Fabric v2.x系でのChaincodeのデプロイ" href="#2-hyperledger-fabric-v2x%e7%b3%bb%e3%81%a7%e3%81%aechaincode%e3%81%ae%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/blockchain/03_1_deploy_chaincode/#2-hyperledger-fabric-v2x系でのchaincodeのデプロイ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. Hyperledger Fabric v2.x系でのChaincodeのデプロイ" aria-label="アンカー先: 2. Hyperledger Fabric v2.x系でのChaincodeのデプロイ" href="#2-hyperledger-fabric-v2x%e7%b3%bb%e3%81%a7%e3%81%aechaincode%e3%81%ae%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -574,7 +574,7 @@ v1.x系では、各Organizationの作業として、①Endorsementを行うPeer�
     >
         2.1. Chaincodeのインストール
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/blockchain/03_1_deploy_chaincode/#21-chaincodeのインストール" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.1. Chaincodeのインストール" aria-label="アンカー先: 2.1. Chaincodeのインストール" href="#21-chaincode%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/blockchain/03_1_deploy_chaincode/#21-chaincodeのインストール" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.1. Chaincodeのインストール" aria-label="アンカー先: 2.1. Chaincodeのインストール" href="#21-chaincode%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -636,7 +636,7 @@ v1.x系では、各Organizationの作業として、①Endorsementを行うPeer�
     >
         2.2. Chaincodeのデプロイ（ApproveとCommit）
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/blockchain/03_1_deploy_chaincode/#22-chaincodeのデプロイapproveとcommit" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.2. Chaincodeのデプロイ（ApproveとCommit）" aria-label="アンカー先: 2.2. Chaincodeのデプロイ（ApproveとCommit）" href="#22-chaincode%e3%81%ae%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4approve%e3%81%a8commit">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/blockchain/03_1_deploy_chaincode/#22-chaincodeのデプロイapproveとcommit" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.2. Chaincodeのデプロイ（ApproveとCommit）" aria-label="アンカー先: 2.2. Chaincodeのデプロイ（ApproveとCommit）" href="#22-chaincode%e3%81%ae%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4approve%e3%81%a8commit">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -691,7 +691,7 @@ Oracle Blockchain Platformのデプロイ操作では、Hyperledger FabricのCha
     >
         2.3. Chaincodeの初期化
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/blockchain/03_1_deploy_chaincode/#23-chaincodeの初期化" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.3. Chaincodeの初期化" aria-label="アンカー先: 2.3. Chaincodeの初期化" href="#23-chaincode%e3%81%ae%e5%88%9d%e6%9c%9f%e5%8c%96">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/blockchain/03_1_deploy_chaincode/#23-chaincodeの初期化" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.3. Chaincodeの初期化" aria-label="アンカー先: 2.3. Chaincodeの初期化" href="#23-chaincode%e3%81%ae%e5%88%9d%e6%9c%9f%e5%8c%96">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -713,7 +713,7 @@ Oracle Blockchain Platformのデプロイ操作では、Hyperledger FabricのCha
     >
         3. Hyperledger Fabric v1.x系でのChaincodeのデプロイ
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/blockchain/03_1_deploy_chaincode/#3-hyperledger-fabric-v1x系でのchaincodeのデプロイ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. Hyperledger Fabric v1.x系でのChaincodeのデプロイ" aria-label="アンカー先: 3. Hyperledger Fabric v1.x系でのChaincodeのデプロイ" href="#3-hyperledger-fabric-v1x%e7%b3%bb%e3%81%a7%e3%81%aechaincode%e3%81%ae%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/blockchain/03_1_deploy_chaincode/#3-hyperledger-fabric-v1x系でのchaincodeのデプロイ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. Hyperledger Fabric v1.x系でのChaincodeのデプロイ" aria-label="アンカー先: 3. Hyperledger Fabric v1.x系でのChaincodeのデプロイ" href="#3-hyperledger-fabric-v1x%e7%b3%bb%e3%81%a7%e3%81%aechaincode%e3%81%ae%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -722,7 +722,7 @@ Oracle Blockchain Platformのデプロイ操作では、Hyperledger FabricのCha
     >
         3.1. Chaincodeのインストール
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/blockchain/03_1_deploy_chaincode/#31-chaincodeのインストール" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3.1. Chaincodeのインストール" aria-label="アンカー先: 3.1. Chaincodeのインストール" href="#31-chaincode%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/blockchain/03_1_deploy_chaincode/#31-chaincodeのインストール" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3.1. Chaincodeのインストール" aria-label="アンカー先: 3.1. Chaincodeのインストール" href="#31-chaincode%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -778,7 +778,7 @@ Oracle Blockchain Platformのデプロイ操作では、Hyperledger FabricのCha
     >
         3.2. ChaincodeのInstantiate
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/blockchain/03_1_deploy_chaincode/#32-chaincodeのinstantiate" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3.2. ChaincodeのInstantiate" aria-label="アンカー先: 3.2. ChaincodeのInstantiate" href="#32-chaincode%e3%81%aeinstantiate">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/blockchain/03_1_deploy_chaincode/#32-chaincodeのinstantiate" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3.2. ChaincodeのInstantiate" aria-label="アンカー先: 3.2. ChaincodeのInstantiate" href="#32-chaincode%e3%81%aeinstantiate">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -829,7 +829,7 @@ Oracle Blockchain Platformのデプロイ操作では、Hyperledger FabricのCha
     >
         4. 参考リンク
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/blockchain/03_1_deploy_chaincode/#4-参考リンク" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. 参考リンク" aria-label="アンカー先: 4. 参考リンク" href="#4-%e5%8f%82%e8%80%83%e3%83%aa%e3%83%b3%e3%82%af">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/blockchain/03_1_deploy_chaincode/#4-参考リンク" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. 参考リンク" aria-label="アンカー先: 4. 参考リンク" href="#4-%e5%8f%82%e8%80%83%e3%83%aa%e3%83%b3%e3%82%af">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9083,7 +9083,7 @@ Oracle Blockchain Platformのデプロイ操作では、Hyperledger FabricのCha
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/blockchain/91_1_app_builder_vsc_start/"
+      href="/ocitutorial-geekdocs/blockchain/91_1_app_builder_vsc_start/"
       title="Blockchain App Builder（Visual Studio Code拡張版）の基本的な使い方"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9095,7 +9095,7 @@ Oracle Blockchain Platformのデプロイ操作では、Hyperledger FabricのCha
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/blockchain/02_1_create_channel/"
+      href="/ocitutorial-geekdocs/blockchain/02_1_create_channel/"
       title="Channelを作成し、インスタンスおよびPeerノードを参加させる"
     >
       Channelを作成し、インスタンスおよびPeerノードを参加させる
@@ -9149,7 +9149,7 @@ Oracle Blockchain Platformのデプロイ操作では、Hyperledger FabricのCha
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

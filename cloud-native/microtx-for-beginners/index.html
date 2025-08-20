@@ -25,18 +25,18 @@ Oracle Cloud Infrastructureの基本操作はチュートリアル : OCIコン�
 
   <title>Oracle Transaction Manager for Microservices(MicroTx)を体験してみよう | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -62,7 +62,7 @@ Oracle Cloud Infrastructureの基本操作はチュートリアル : OCIコン�
 ゴールを確認する はじめに、手順を最後まで実施したときにどのような環境が作られるか確認して、ゴールの全体像を掴んでおきましょう。
 手順を最後まで行うと、下図のような環境が構成されます。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/" />
 
 <meta property="article:section" content="Cloud Native" />
     <meta
@@ -95,7 +95,7 @@ Oracle Cloud Infrastructureの基本操作はチュートリアル : OCIコン�
       "@type": "TechArticle",
       "articleSection": "Cloud Native",
       "name": "Oracle Transaction Manager for Microservices(MicroTx)を体験してみよう",
-      "url" : "https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/",
       "headline": "Oracle Transaction Manager for Microservices(MicroTx)を体験してみよう",
       "description": "このチュートリアルでは、別々のデータベースを持つ2つのサンプルアプリケーション間の分散トランザンクションについて、Oracle Transaction Manager for Microservices(MicroTx)を利用しながら一貫性を確保する体験をしていただく内容になっています。\nこのチュートリアルには以下のサービスが含まれます。\nOracle Container Engine for Kubernetes（略称：OKE）: : マネージドなKuberentesクラスタを提供するクラウドサービスです。 Oracle Transaction Manager for Microservices（略称：MicroTx）: : Oracleが提供する分散トランザクションマネージャです。 Oracle Autonomous Transaction Processing（略称：ATP）: : 運用がすべて自動化された自律型データベースサービスです。 MicroTxについて\nMicroTxは現在Free版での提供となり、商用環境ではご利用頂けません。(評価\/検証目的でのご利用となります)\n今回のハンズオンもFree版のMicroTxを利用します。\n商用環境でご利用いただけるMicroTxは後日リリース予定です。\n{: .notice–warning}\n前提条件 チュートリアルを開始する前に以下を準備してください。\nOracle Cloudのアカウントを取得済みであること\nOKEハンズオン事前準備を実施済みであること\nOracle Cloud Infrastructureの基本操作はチュートリアル : OCIコンソールにアクセスして基本を理解するをご確認ください。\nゴールを確認する はじめに、手順を最後まで実施したときにどのような環境が作られるか確認して、ゴールの全体像を掴んでおきましょう。\n手順を最後まで行うと、下図のような環境が構成されます。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -105,7 +105,7 @@ Oracle Cloud Infrastructureの基本操作はチュートリアル : OCIコン�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/"
       },
       "copyrightHolder" : "OCIチュートリアル",
       "copyrightYear" : "0001",
@@ -115,10 +115,10 @@ Oracle Cloud Infrastructureの基本操作はチュートリアル : OCIコン�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -128,73 +128,73 @@ Oracle Cloud Infrastructureの基本操作はチュートリアル : OCIコン�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="Oracle Transaction Manager for Microservices(MicroTx)を体験してみよう">
   <meta property="og:description" content="このチュートリアルでは、別々のデータベースを持つ2つのサンプルアプリケーション間の分散トランザンクションについて、Oracle Transaction Manager for Microservices(MicroTx)を利用しながら一貫性を確保する体験をしていただく内容になっています。
@@ -276,11 +276,11 @@ Oracle Cloud Infrastructureの基本操作はチュートリアル : OCIコン�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -297,7 +297,7 @@ Oracle Cloud Infrastructureの基本操作はチュートリアル : OCIコン�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -309,7 +309,7 @@ Oracle Cloud Infrastructureの基本操作はチュートリアル : OCIコン�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -481,7 +481,7 @@ Oracle Cloud Infrastructureの基本操作はチュートリアル : OCIコン�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/cloud-native/' href='/ocitutorials/cloud-native/'><span itemprop='name'>Cloud Nativeチュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Oracle Transaction Manager for Microservices(MicroTx)を体験してみよう</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/cloud-native/' href='/ocitutorial-geekdocs/cloud-native/'><span itemprop='name'>Cloud Nativeチュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Oracle Transaction Manager for Microservices(MicroTx)を体験してみよう</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -536,7 +536,7 @@ MicroTxは現在Free版での提供となり、商用環境ではご利用頂け
     >
         前提条件
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#前提条件" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 前提条件" aria-label="アンカー先: 前提条件" href="#%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#前提条件" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 前提条件" aria-label="アンカー先: 前提条件" href="#%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -564,7 +564,7 @@ MicroTxは現在Free版での提供となり、商用環境ではご利用頂け
     >
         ゴールを確認する
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#ゴールを確認する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ゴールを確認する" aria-label="アンカー先: ゴールを確認する" href="#%e3%82%b4%e3%83%bc%e3%83%ab%e3%82%92%e7%a2%ba%e8%aa%8d%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#ゴールを確認する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ゴールを確認する" aria-label="アンカー先: ゴールを確認する" href="#%e3%82%b4%e3%83%bc%e3%83%ab%e3%82%92%e7%a2%ba%e8%aa%8d%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -603,7 +603,7 @@ MicroTxは現在Free版での提供となり、商用環境ではご利用頂け
     >
         0.事前準備
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#0事前準備" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0.事前準備" aria-label="アンカー先: 0.事前準備" href="#0%e4%ba%8b%e5%89%8d%e6%ba%96%e5%82%99">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#0事前準備" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0.事前準備" aria-label="アンカー先: 0.事前準備" href="#0%e4%ba%8b%e5%89%8d%e6%ba%96%e5%82%99">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -656,7 +656,7 @@ MicroTxは現在Free版での提供となり、商用環境ではご利用頂け
     >
         0-1. Identity Cloud Serviceの機密アプリケーション作成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#0-1-identity-cloud-serviceの機密アプリケーション作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0-1. Identity Cloud Serviceの機密アプリケーション作成" aria-label="アンカー先: 0-1. Identity Cloud Serviceの機密アプリケーション作成" href="#0-1-identity-cloud-service%e3%81%ae%e6%a9%9f%e5%af%86%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#0-1-identity-cloud-serviceの機密アプリケーション作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0-1. Identity Cloud Serviceの機密アプリケーション作成" aria-label="アンカー先: 0-1. Identity Cloud Serviceの機密アプリケーション作成" href="#0-1-identity-cloud-service%e3%81%ae%e6%a9%9f%e5%af%86%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -816,7 +816,7 @@ Allowed Grant Type|<code>Resource Owner</code>/<code>Client Credencials</code>/<
     >
         0-2. jwks_urlの確認
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#0-2-jwks_urlの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0-2. jwks_urlの確認" aria-label="アンカー先: 0-2. jwks_urlの確認" href="#0-2-jwks_url%e3%81%ae%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#0-2-jwks_urlの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0-2. jwks_urlの確認" aria-label="アンカー先: 0-2. jwks_urlの確認" href="#0-2-jwks_url%e3%81%ae%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -859,7 +859,7 @@ Allowed Grant Type|<code>Resource Owner</code>/<code>Client Credencials</code>/<
     >
         0-3. その他必要アイテムの取得
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#0-3-その他必要アイテムの取得" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0-3. その他必要アイテムの取得" aria-label="アンカー先: 0-3. その他必要アイテムの取得" href="#0-3-%e3%81%9d%e3%81%ae%e4%bb%96%e5%bf%85%e8%a6%81%e3%82%a2%e3%82%a4%e3%83%86%e3%83%a0%e3%81%ae%e5%8f%96%e5%be%97">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#0-3-その他必要アイテムの取得" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0-3. その他必要アイテムの取得" aria-label="アンカー先: 0-3. その他必要アイテムの取得" href="#0-3-%e3%81%9d%e3%81%ae%e4%bb%96%e5%bf%85%e8%a6%81%e3%82%a2%e3%82%a4%e3%83%86%e3%83%a0%e3%81%ae%e5%8f%96%e5%be%97">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -895,7 +895,7 @@ Allowed Grant Type|<code>Resource Owner</code>/<code>Client Credencials</code>/<
     >
         0-3-1. ユーザ名の確認
     </h4>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#0-3-1-ユーザ名の確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0-3-1. ユーザ名の確認" aria-label="アンカー先: 0-3-1. ユーザ名の確認" href="#0-3-1-%e3%83%a6%e3%83%bc%e3%82%b6%e5%90%8d%e3%81%ae%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#0-3-1-ユーザ名の確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0-3-1. ユーザ名の確認" aria-label="アンカー先: 0-3-1. ユーザ名の確認" href="#0-3-1-%e3%83%a6%e3%83%bc%e3%82%b6%e5%90%8d%e3%81%ae%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -912,7 +912,7 @@ Allowed Grant Type|<code>Resource Owner</code>/<code>Client Credencials</code>/<
     >
         0-3-2. 認証トークンの作成
     </h4>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#0-3-2-認証トークンの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0-3-2. 認証トークンの作成" aria-label="アンカー先: 0-3-2. 認証トークンの作成" href="#0-3-2-%e8%aa%8d%e8%a8%bc%e3%83%88%e3%83%bc%e3%82%af%e3%83%b3%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#0-3-2-認証トークンの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0-3-2. 認証トークンの作成" aria-label="アンカー先: 0-3-2. 認証トークンの作成" href="#0-3-2-%e8%aa%8d%e8%a8%bc%e3%83%88%e3%83%bc%e3%82%af%e3%83%b3%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -974,7 +974,7 @@ Allowed Grant Type|<code>Resource Owner</code>/<code>Client Credencials</code>/<
     >
         0-3-3. テナンシ名とオブジェクト・ストレージ・ネームスペースの確認
     </h4>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#0-3-3-テナンシ名とオブジェクトストレージネームスペースの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0-3-3. テナンシ名とオブジェクト・ストレージ・ネームスペースの確認" aria-label="アンカー先: 0-3-3. テナンシ名とオブジェクト・ストレージ・ネームスペースの確認" href="#0-3-3-%e3%83%86%e3%83%8a%e3%83%b3%e3%82%b7%e5%90%8d%e3%81%a8%e3%82%aa%e3%83%96%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b8%e3%83%8d%e3%83%bc%e3%83%a0%e3%82%b9%e3%83%9a%e3%83%bc%e3%82%b9%e3%81%ae%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#0-3-3-テナンシ名とオブジェクトストレージネームスペースの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0-3-3. テナンシ名とオブジェクト・ストレージ・ネームスペースの確認" aria-label="アンカー先: 0-3-3. テナンシ名とオブジェクト・ストレージ・ネームスペースの確認" href="#0-3-3-%e3%83%86%e3%83%8a%e3%83%b3%e3%82%b7%e5%90%8d%e3%81%a8%e3%82%aa%e3%83%96%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b8%e3%83%8d%e3%83%bc%e3%83%a0%e3%82%b9%e3%83%9a%e3%83%bc%e3%82%b9%e3%81%ae%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -998,7 +998,7 @@ Allowed Grant Type|<code>Resource Owner</code>/<code>Client Credencials</code>/<
     >
         0-3-4. コンパートメントOCIDの確認
     </h4>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#0-3-4-コンパートメントocidの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0-3-4. コンパートメントOCIDの確認" aria-label="アンカー先: 0-3-4. コンパートメントOCIDの確認" href="#0-3-4-%e3%82%b3%e3%83%b3%e3%83%91%e3%83%bc%e3%83%88%e3%83%a1%e3%83%b3%e3%83%88ocid%e3%81%ae%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#0-3-4-コンパートメントocidの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0-3-4. コンパートメントOCIDの確認" aria-label="アンカー先: 0-3-4. コンパートメントOCIDの確認" href="#0-3-4-%e3%82%b3%e3%83%b3%e3%83%91%e3%83%bc%e3%83%88%e3%83%a1%e3%83%b3%e3%83%88ocid%e3%81%ae%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1031,7 +1031,7 @@ Allowed Grant Type|<code>Resource Owner</code>/<code>Client Credencials</code>/<
     >
         0-3-5. サンプルアプリケーションレポジトリのクローン
     </h4>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#0-3-5-サンプルアプリケーションレポジトリのクローン" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0-3-5. サンプルアプリケーションレポジトリのクローン" aria-label="アンカー先: 0-3-5. サンプルアプリケーションレポジトリのクローン" href="#0-3-5-%e3%82%b5%e3%83%b3%e3%83%97%e3%83%ab%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%83%ac%e3%83%9d%e3%82%b8%e3%83%88%e3%83%aa%e3%81%ae%e3%82%af%e3%83%ad%e3%83%bc%e3%83%b3">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#0-3-5-サンプルアプリケーションレポジトリのクローン" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0-3-5. サンプルアプリケーションレポジトリのクローン" aria-label="アンカー先: 0-3-5. サンプルアプリケーションレポジトリのクローン" href="#0-3-5-%e3%82%b5%e3%83%b3%e3%83%97%e3%83%ab%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%83%ac%e3%83%9d%e3%82%b8%e3%83%88%e3%83%aa%e3%81%ae%e3%82%af%e3%83%ad%e3%83%bc%e3%83%b3">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1049,7 +1049,7 @@ Allowed Grant Type|<code>Resource Owner</code>/<code>Client Credencials</code>/<
     >
         1.MicroTxのデプロイ
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#1microtxのデプロイ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.MicroTxのデプロイ" aria-label="アンカー先: 1.MicroTxのデプロイ" href="#1microtx%e3%81%ae%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#1microtxのデプロイ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.MicroTxのデプロイ" aria-label="アンカー先: 1.MicroTxのデプロイ" href="#1microtx%e3%81%ae%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1070,7 +1070,7 @@ Allowed Grant Type|<code>Resource Owner</code>/<code>Client Credencials</code>/<
     >
         1-1. 動的グループとポリシーの設定
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#1-1-動的グループとポリシーの設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-1. 動的グループとポリシーの設定" aria-label="アンカー先: 1-1. 動的グループとポリシーの設定" href="#1-1-%e5%8b%95%e7%9a%84%e3%82%b0%e3%83%ab%e3%83%bc%e3%83%97%e3%81%a8%e3%83%9d%e3%83%aa%e3%82%b7%e3%83%bc%e3%81%ae%e8%a8%ad%e5%ae%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#1-1-動的グループとポリシーの設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-1. 動的グループとポリシーの設定" aria-label="アンカー先: 1-1. 動的グループとポリシーの設定" href="#1-1-%e5%8b%95%e7%9a%84%e3%82%b0%e3%83%ab%e3%83%bc%e3%83%97%e3%81%a8%e3%83%9d%e3%83%aa%e3%82%b7%e3%83%bc%e3%81%ae%e8%a8%ad%e5%ae%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1188,7 +1188,7 @@ Oracle Cloud Infrastrctureには動的グループという考え方がありま
     >
         1-2. OKEクラスタの作成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#1-2-okeクラスタの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-2. OKEクラスタの作成" aria-label="アンカー先: 1-2. OKEクラスタの作成" href="#1-2-oke%e3%82%af%e3%83%a9%e3%82%b9%e3%82%bf%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#1-2-okeクラスタの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-2. OKEクラスタの作成" aria-label="アンカー先: 1-2. OKEクラスタの作成" href="#1-2-oke%e3%82%af%e3%83%a9%e3%82%b9%e3%82%bf%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1385,7 +1385,7 @@ Oracle Cloud Infrastrctureには動的グループという考え方がありま
     >
         1-3. MicroTxバイナリのダウンロード
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#1-3-microtxバイナリのダウンロード" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-3. MicroTxバイナリのダウンロード" aria-label="アンカー先: 1-3. MicroTxバイナリのダウンロード" href="#1-3-microtx%e3%83%90%e3%82%a4%e3%83%8a%e3%83%aa%e3%81%ae%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#1-3-microtxバイナリのダウンロード" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-3. MicroTxバイナリのダウンロード" aria-label="アンカー先: 1-3. MicroTxバイナリのダウンロード" href="#1-3-microtx%e3%83%90%e3%82%a4%e3%83%8a%e3%83%aa%e3%81%ae%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1461,7 +1461,7 @@ Cloud Shellの右端にある歯車マークをクリックし、<code>アップ
     >
         1-4. サンプルアプリケーションのコンテナイメージビルド
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#1-4-サンプルアプリケーションのコンテナイメージビルド" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-4. サンプルアプリケーションのコンテナイメージビルド" aria-label="アンカー先: 1-4. サンプルアプリケーションのコンテナイメージビルド" href="#1-4-%e3%82%b5%e3%83%b3%e3%83%97%e3%83%ab%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e3%82%b3%e3%83%b3%e3%83%86%e3%83%8a%e3%82%a4%e3%83%a1%e3%83%bc%e3%82%b8%e3%83%93%e3%83%ab%e3%83%89">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#1-4-サンプルアプリケーションのコンテナイメージビルド" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-4. サンプルアプリケーションのコンテナイメージビルド" aria-label="アンカー先: 1-4. サンプルアプリケーションのコンテナイメージビルド" href="#1-4-%e3%82%b5%e3%83%b3%e3%83%97%e3%83%ab%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e3%82%b3%e3%83%b3%e3%83%86%e3%83%8a%e3%82%a4%e3%83%a1%e3%83%bc%e3%82%b8%e3%83%93%e3%83%ab%e3%83%89">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1665,7 +1665,7 @@ Cloud Shellの右端にある歯車マークをクリックし、<code>アップ
     >
         1-5. MicroTxのhelm chartの編集
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#1-5-microtxのhelm-chartの編集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-5. MicroTxのhelm chartの編集" aria-label="アンカー先: 1-5. MicroTxのhelm chartの編集" href="#1-5-microtx%e3%81%aehelm-chart%e3%81%ae%e7%b7%a8%e9%9b%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#1-5-microtxのhelm-chartの編集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-5. MicroTxのhelm chartの編集" aria-label="アンカー先: 1-5. MicroTxのhelm chartの編集" href="#1-5-microtx%e3%81%aehelm-chart%e3%81%ae%e7%b7%a8%e9%9b%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1756,7 +1756,7 @@ MicroTxはhelmを利用してインストールされるため、ここでは<co
     >
         1-6. istioctlのインストール
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#1-6-istioctlのインストール" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-6. istioctlのインストール" aria-label="アンカー先: 1-6. istioctlのインストール" href="#1-6-istioctl%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#1-6-istioctlのインストール" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-6. istioctlのインストール" aria-label="アンカー先: 1-6. istioctlのインストール" href="#1-6-istioctl%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1785,7 +1785,7 @@ MicroTxはhelmを利用してインストールされるため、ここでは<co
     >
         1-7. MicroTxのデプロイ
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#1-7-microtxのデプロイ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-7. MicroTxのデプロイ" aria-label="アンカー先: 1-7. MicroTxのデプロイ" href="#1-7-microtx%e3%81%ae%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#1-7-microtxのデプロイ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-7. MicroTxのデプロイ" aria-label="アンカー先: 1-7. MicroTxのデプロイ" href="#1-7-microtx%e3%81%ae%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1990,7 +1990,7 @@ OCIRのレジストリは<code>&lt;ご自身が利用されているリージョ
     >
         2.サンプルアプリケーションのデプロイ
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#2サンプルアプリケーションのデプロイ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.サンプルアプリケーションのデプロイ" aria-label="アンカー先: 2.サンプルアプリケーションのデプロイ" href="#2%e3%82%b5%e3%83%b3%e3%83%97%e3%83%ab%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#2サンプルアプリケーションのデプロイ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.サンプルアプリケーションのデプロイ" aria-label="アンカー先: 2.サンプルアプリケーションのデプロイ" href="#2%e3%82%b5%e3%83%b3%e3%83%97%e3%83%ab%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -2006,7 +2006,7 @@ OCIRのレジストリは<code>&lt;ご自身が利用されているリージョ
     >
         2-1. ATPインスタンスの作成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#2-1-atpインスタンスの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-1. ATPインスタンスの作成" aria-label="アンカー先: 2-1. ATPインスタンスの作成" href="#2-1-atp%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#2-1-atpインスタンスの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-1. ATPインスタンスの作成" aria-label="アンカー先: 2-1. ATPインスタンスの作成" href="#2-1-atp%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -2037,7 +2037,7 @@ OCI Service Operator for Kubernetes(OSOK)については<a
     >
         2-1-1. Operator SDKおよびオペレータ・ライフサイクル・マネージャ(OLM)のインストール
     </h4>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#2-1-1-operator-sdkおよびオペレータライフサイクルマネージャolmのインストール" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-1-1. Operator SDKおよびオペレータ・ライフサイクル・マネージャ(OLM)のインストール" aria-label="アンカー先: 2-1-1. Operator SDKおよびオペレータ・ライフサイクル・マネージャ(OLM)のインストール" href="#2-1-1-operator-sdk%e3%81%8a%e3%82%88%e3%81%b3%e3%82%aa%e3%83%9a%e3%83%ac%e3%83%bc%e3%82%bf%e3%83%a9%e3%82%a4%e3%83%95%e3%82%b5%e3%82%a4%e3%82%af%e3%83%ab%e3%83%9e%e3%83%8d%e3%83%bc%e3%82%b8%e3%83%a3olm%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#2-1-1-operator-sdkおよびオペレータライフサイクルマネージャolmのインストール" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-1-1. Operator SDKおよびオペレータ・ライフサイクル・マネージャ(OLM)のインストール" aria-label="アンカー先: 2-1-1. Operator SDKおよびオペレータ・ライフサイクル・マネージャ(OLM)のインストール" href="#2-1-1-operator-sdk%e3%81%8a%e3%82%88%e3%81%b3%e3%82%aa%e3%83%9a%e3%83%ac%e3%83%bc%e3%82%bf%e3%83%a9%e3%82%a4%e3%83%95%e3%82%b5%e3%82%a4%e3%82%af%e3%83%ab%e3%83%9e%e3%83%8d%e3%83%bc%e3%82%b8%e3%83%a3olm%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -2123,7 +2123,7 @@ Operator SDKについては<a
     >
         2-1-2. ATPのプロビジョニング
     </h4>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#2-1-2-atpのプロビジョニング" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-1-2. ATPのプロビジョニング" aria-label="アンカー先: 2-1-2. ATPのプロビジョニング" href="#2-1-2-atp%e3%81%ae%e3%83%97%e3%83%ad%e3%83%93%e3%82%b8%e3%83%a7%e3%83%8b%e3%83%b3%e3%82%b0">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#2-1-2-atpのプロビジョニング" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-1-2. ATPのプロビジョニング" aria-label="アンカー先: 2-1-2. ATPのプロビジョニング" href="#2-1-2-atp%e3%81%ae%e3%83%97%e3%83%ad%e3%83%93%e3%82%b8%e3%83%a7%e3%83%8b%e3%83%b3%e3%82%b0">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -2261,7 +2261,7 @@ Manifestファイルの<code>dbName</code>はテナンシで一意になりま�
     >
         2-1-3. 【オプション】<code>app.yaml</code>の更新
     </h4>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#2-1-3-オプションappyamlの更新" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-1-3. 【オプション】app.yamlの更新" aria-label="アンカー先: 2-1-3. 【オプション】app.yamlの更新" href="#2-1-3-%e3%82%aa%e3%83%97%e3%82%b7%e3%83%a7%e3%83%b3appyaml%e3%81%ae%e6%9b%b4%e6%96%b0">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#2-1-3-オプションappyamlの更新" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-1-3. 【オプション】app.yamlの更新" aria-label="アンカー先: 2-1-3. 【オプション】app.yamlの更新" href="#2-1-3-%e3%82%aa%e3%83%97%e3%82%b7%e3%83%a7%e3%83%b3appyaml%e3%81%ae%e6%9b%b4%e6%96%b0">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -2619,7 +2619,7 @@ Manifestファイルの<code>dbName</code>はテナンシで一意になりま�
     >
         2-2. JaegerとKialiのインストール
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#2-2-jaegerとkialiのインストール" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-2. JaegerとKialiのインストール" aria-label="アンカー先: 2-2. JaegerとKialiのインストール" href="#2-2-jaeger%e3%81%a8kiali%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#2-2-jaegerとkialiのインストール" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-2. JaegerとKialiのインストール" aria-label="アンカー先: 2-2. JaegerとKialiのインストール" href="#2-2-jaeger%e3%81%a8kiali%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -2664,7 +2664,7 @@ JaegerとKialiにもインストールされるコンポーネントがありま
     >
         2-3. サンプルアプリケーションのデプロイ
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#2-3-サンプルアプリケーションのデプロイ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-3. サンプルアプリケーションのデプロイ" aria-label="アンカー先: 2-3. サンプルアプリケーションのデプロイ" href="#2-3-%e3%82%b5%e3%83%b3%e3%83%97%e3%83%ab%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#2-3-サンプルアプリケーションのデプロイ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-3. サンプルアプリケーションのデプロイ" aria-label="アンカー先: 2-3. サンプルアプリケーションのデプロイ" href="#2-3-%e3%82%b5%e3%83%b3%e3%83%97%e3%83%ab%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -2721,7 +2721,7 @@ JaegerとKialiにもインストールされるコンポーネントがありま
     >
         3.MicroTxを体験しよう
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#3microtxを体験しよう" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3.MicroTxを体験しよう" aria-label="アンカー先: 3.MicroTxを体験しよう" href="#3microtx%e3%82%92%e4%bd%93%e9%a8%93%e3%81%97%e3%82%88%e3%81%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#3microtxを体験しよう" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3.MicroTxを体験しよう" aria-label="アンカー先: 3.MicroTxを体験しよう" href="#3microtx%e3%82%92%e4%bd%93%e9%a8%93%e3%81%97%e3%82%88%e3%81%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -2787,7 +2787,7 @@ MicroProfile LRAについては、<a
     >
         3-1. 動作確認
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#3-1-動作確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-1. 動作確認" aria-label="アンカー先: 3-1. 動作確認" href="#3-1-%e5%8b%95%e4%bd%9c%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#3-1-動作確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-1. 動作確認" aria-label="アンカー先: 3-1. 動作確認" href="#3-1-%e5%8b%95%e4%bd%9c%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -2943,7 +2943,7 @@ ATPを確認してみましょう。</p>
     >
         3-2. 正常パターンをJaegerとKialiで確認
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#3-2-正常パターンをjaegerとkialiで確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-2. 正常パターンをJaegerとKialiで確認" aria-label="アンカー先: 3-2. 正常パターンをJaegerとKialiで確認" href="#3-2-%e6%ad%a3%e5%b8%b8%e3%83%91%e3%82%bf%e3%83%bc%e3%83%b3%e3%82%92jaeger%e3%81%a8kiali%e3%81%a7%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#3-2-正常パターンをjaegerとkialiで確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-2. 正常パターンをJaegerとKialiで確認" aria-label="アンカー先: 3-2. 正常パターンをJaegerとKialiで確認" href="#3-2-%e6%ad%a3%e5%b8%b8%e3%83%91%e3%82%bf%e3%83%bc%e3%83%b3%e3%82%92jaeger%e3%81%a8kiali%e3%81%a7%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -3076,7 +3076,7 @@ MictoTxには必須ではありませんが、内部挙動の可視化のため�
     >
         3-3. 異常パターンをJaegerとKialiで確認
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#3-3-異常パターンをjaegerとkialiで確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-3. 異常パターンをJaegerとKialiで確認" aria-label="アンカー先: 3-3. 異常パターンをJaegerとKialiで確認" href="#3-3-%e7%95%b0%e5%b8%b8%e3%83%91%e3%82%bf%e3%83%bc%e3%83%b3%e3%82%92jaeger%e3%81%a8kiali%e3%81%a7%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#3-3-異常パターンをjaegerとkialiで確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-3. 異常パターンをJaegerとKialiで確認" aria-label="アンカー先: 3-3. 異常パターンをJaegerとKialiで確認" href="#3-3-%e7%95%b0%e5%b8%b8%e3%83%91%e3%82%bf%e3%83%bc%e3%83%b3%e3%82%92jaeger%e3%81%a8kiali%e3%81%a7%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -3145,7 +3145,7 @@ Hotelアプリケーションは一旦<code>PROVISIONAL</code>(仮予約)の状�
     >
         3-4. 【オプション】再度試したい方
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#3-4-オプション再度試したい方" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-4. 【オプション】再度試したい方" aria-label="アンカー先: 3-4. 【オプション】再度試したい方" href="#3-4-%e3%82%aa%e3%83%97%e3%82%b7%e3%83%a7%e3%83%b3%e5%86%8d%e5%ba%a6%e8%a9%a6%e3%81%97%e3%81%9f%e3%81%84%e6%96%b9">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#3-4-オプション再度試したい方" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-4. 【オプション】再度試したい方" aria-label="アンカー先: 3-4. 【オプション】再度試したい方" href="#3-4-%e3%82%aa%e3%83%97%e3%82%b7%e3%83%a7%e3%83%b3%e5%86%8d%e5%ba%a6%e8%a9%a6%e3%81%97%e3%81%9f%e3%81%84%e6%96%b9">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -3171,7 +3171,7 @@ Hotelアプリケーションは一旦<code>PROVISIONAL</code>(仮予約)の状�
     >
         4.まとめ
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/microtx-for-beginners/#4まとめ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.まとめ" aria-label="アンカー先: 4.まとめ" href="#4%e3%81%be%e3%81%a8%e3%82%81">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/microtx-for-beginners/#4まとめ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.まとめ" aria-label="アンカー先: 4.まとめ" href="#4%e3%81%be%e3%81%a8%e3%82%81">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -11422,7 +11422,7 @@ MictoTxを利用することで、マイクロサービスにおける分散ト�
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/cloud-native/functions-vmshape-for-intermediates/"
+      href="/ocitutorial-geekdocs/cloud-native/functions-vmshape-for-intermediates/"
       title="Oracle Functionsを利用した仮想マシン (VM) のシェイプ変更"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -11434,7 +11434,7 @@ MictoTxを利用することで、マイクロサービスにおける分散ト�
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/cloud-native/wls-for-oci-migration/"
+      href="/ocitutorial-geekdocs/cloud-native/wls-for-oci-migration/"
       title="WebLogic Server for OCIにアプリケーションを移行してみよう"
     >
       WebLogic Server for OCIにアプリケーションを移行してみよう
@@ -11488,7 +11488,7 @@ MictoTxを利用することで、マイクロサービスにおける分散ト�
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

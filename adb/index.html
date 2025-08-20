@@ -17,18 +17,18 @@ Autonomous Database (ADB)は、対象システムの処理特性に応じて以�
 
   <title>Oracle Database編 - Autonomous Database (ADB)を使ってみよう | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -46,7 +46,7 @@ Oracle Cloud Infrastructure の環境と、ユーザーアカウントがある�
 Autonomous Database (ADB)は、対象システムの処理特性に応じて以下を選択できます。本チュートリアルでは、ATPを対象に記載していますが、その他に関しても基本的な操作は同じです。
 分析系システムを対象とするAutonmous Data Warehouse (ADW) 汎用的な用途で利用可能なAutonomous Transaction Processing (ATP) 主にJSONデータを扱うシステムに適したAutonomous JSON Database (AJD) Oracle APEXアプリケーション開発用に構築されているAPEX Application Development (APEX) 基礎編 101: ADBインスタンスを作成してみよう" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/adb/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/" />
 
 <meta property="article:section" content="Adb" />
     <meta
@@ -71,7 +71,7 @@ Autonomous Database (ADB)は、対象システムの処理特性に応じて以�
       "@type": "TechArticle",
       "articleSection": "Adb",
       "name": "Oracle Database編 - Autonomous Database (ADB)を使ってみよう",
-      "url" : "https://oracle-japan.github.io/ocitutorials/adb/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/adb/",
       "headline": "Oracle Database編 - Autonomous Database (ADB)を使ってみよう",
       "description": "チュートリアル一覧にもどる 前提条件\nOracle Cloud Infrastructure の環境と、ユーザーアカウントがあること(トライアル環境でも実施いただける内容となっています。) 適切なコンパートメントと、そこに対する適切な権限がユーザーに付与されていること 特記事項\nチュートリアル内の画面ショットについては現在の画面と異なっている場合があります。 OCIチュートリアル入門編の、準備からその1、その2、その3、その7を実施しておくと、理解がスムーズです。 より詳しく知りたい方は、OCI活用資料集も併せてご確認ください。それぞれのサービスに関する技術詳細資料をまとめ紹介しています。 ■ Autonomous Database (ADB)を使ってみよう 自己稼働・自己保護・自己修復をコンセプトにOracle Database、およびExadataをより身近にご利用いただくべく登場したAutonomous Database ! インスタンスの作成から、運用管理まで一通り学んでいただける内容になっています\nAutonomous Database (ADB)は、対象システムの処理特性に応じて以下を選択できます。本チュートリアルでは、ATPを対象に記載していますが、その他に関しても基本的な操作は同じです。\n分析系システムを対象とするAutonmous Data Warehouse (ADW) 汎用的な用途で利用可能なAutonomous Transaction Processing (ATP) 主にJSONデータを扱うシステムに適したAutonomous JSON Database (AJD) Oracle APEXアプリケーション開発用に構築されているAPEX Application Development (APEX) 基礎編 101: ADBインスタンスを作成してみよう",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -81,7 +81,7 @@ Autonomous Database (ADB)は、対象システムの処理特性に応じて以�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/adb/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/adb/"
       },
       "keywords" : [ "Database" ],
       "copyrightHolder" : "OCIチュートリアル",
@@ -92,10 +92,10 @@ Autonomous Database (ADB)は、対象システムの処理特性に応じて以�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -105,73 +105,73 @@ Autonomous Database (ADB)は、対象システムの処理特性に応じて以�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/adb/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/adb/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="Oracle Database編 - Autonomous Database (ADB)を使ってみよう">
   <meta property="og:description" content="チュートリアル一覧にもどる 前提条件
@@ -235,11 +235,11 @@ Autonomous Database (ADB)は、対象システムの処理特性に応じて以�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -256,7 +256,7 @@ Autonomous Database (ADB)は、対象システムの処理特性に応じて以�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -268,7 +268,7 @@ Autonomous Database (ADB)は、対象システムの処理特性に応じて以�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -394,7 +394,7 @@ Autonomous Database (ADB)は、対象システムの処理特性に応じて以�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Oracle Database編 - Autonomous Database (ADB)を使ってみよう</span><meta itemprop='position' content='3' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Oracle Database編 - Autonomous Database (ADB)を使ってみよう</span><meta itemprop='position' content='3' /></li>
   
 
   
@@ -458,7 +458,7 @@ Autonomous Database (ADB)は、対象システムの処理特性に応じて以�
     >
         <span style="color: brown; ">■ Autonomous Database (ADB)を使ってみよう</span>
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/#-autonomous-database-adbを使ってみよう" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ■ Autonomous Database (ADB)を使ってみよう" aria-label="アンカー先: ■ Autonomous Database (ADB)を使ってみよう" href="#-autonomous-database-adb%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%a6%e3%81%bf%e3%82%88%e3%81%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/#-autonomous-database-adbを使ってみよう" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ■ Autonomous Database (ADB)を使ってみよう" aria-label="アンカー先: ■ Autonomous Database (ADB)を使ってみよう" href="#-autonomous-database-adb%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%a6%e3%81%bf%e3%82%88%e3%81%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -477,7 +477,7 @@ Autonomous Database (ADB)は、対象システムの処理特性に応じて以�
     >
         基礎編
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/#基礎編" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 基礎編" aria-label="アンカー先: 基礎編" href="#%e5%9f%ba%e7%a4%8e%e7%b7%a8">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/#基礎編" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 基礎編" aria-label="アンカー先: 基礎編" href="#%e5%9f%ba%e7%a4%8e%e7%b7%a8">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -588,7 +588,7 @@ Autonomous Database (ADB)は、対象システムの処理特性に応じて以�
     >
         実践編
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/#実践編" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 実践編" aria-label="アンカー先: 実践編" href="#%e5%ae%9f%e8%b7%b5%e7%b7%a8">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/#実践編" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 実践編" aria-label="アンカー先: 実践編" href="#%e5%ae%9f%e8%b7%b5%e7%b7%a8">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -788,7 +788,7 @@ Autonomous Database (ADB)は、対象システムの処理特性に応じて以�
     >
         データ移行編
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/#データ移行編" class="gdoc-page__anchor clip flex align-center" title="アンカー先: データ移行編" aria-label="アンカー先: データ移行編" href="#%e3%83%87%e3%83%bc%e3%82%bf%e7%a7%bb%e8%a1%8c%e7%b7%a8">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/#データ移行編" class="gdoc-page__anchor clip flex align-center" title="アンカー先: データ移行編" aria-label="アンカー先: データ移行編" href="#%e3%83%87%e3%83%bc%e3%82%bf%e7%a7%bb%e8%a1%8c%e7%b7%a8">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -853,7 +853,7 @@ Autonomous Database (ADB)は、対象システムの処理特性に応じて以�
     >
         データ連携編
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/#データ連携編" class="gdoc-page__anchor clip flex align-center" title="アンカー先: データ連携編" aria-label="アンカー先: データ連携編" href="#%e3%83%87%e3%83%bc%e3%82%bf%e9%80%a3%e6%90%ba%e7%b7%a8">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/#データ連携編" class="gdoc-page__anchor clip flex align-center" title="アンカー先: データ連携編" aria-label="アンカー先: データ連携編" href="#%e3%83%87%e3%83%bc%e3%82%bf%e9%80%a3%e6%90%ba%e7%b7%a8">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -918,7 +918,7 @@ Autonomous Database (ADB)は、対象システムの処理特性に応じて以�
     >
         運用管理編
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/#運用管理編" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 運用管理編" aria-label="アンカー先: 運用管理編" href="#%e9%81%8b%e7%94%a8%e7%ae%a1%e7%90%86%e7%b7%a8">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/#運用管理編" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 運用管理編" aria-label="アンカー先: 運用管理編" href="#%e9%81%8b%e7%94%a8%e7%ae%a1%e7%90%86%e7%b7%a8">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -983,7 +983,7 @@ Autonomous Database (ADB)は、対象システムの処理特性に応じて以�
     >
         ビジネスシナリオ編
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/#ビジネスシナリオ編" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ビジネスシナリオ編" aria-label="アンカー先: ビジネスシナリオ編" href="#%e3%83%93%e3%82%b8%e3%83%8d%e3%82%b9%e3%82%b7%e3%83%8a%e3%83%aa%e3%82%aa%e7%b7%a8">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/#ビジネスシナリオ編" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ビジネスシナリオ編" aria-label="アンカー先: ビジネスシナリオ編" href="#%e3%83%93%e3%82%b8%e3%83%8d%e3%82%b9%e3%82%b7%e3%83%8a%e3%83%aa%e3%82%aa%e7%b7%a8">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1021,7 +1021,7 @@ Autonomous Database (ADB)は、対象システムの処理特性に応じて以�
     >
         Autonomous Database Dedicated (専有環境)編
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/#autonomous-database-dedicated-専有環境編" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Autonomous Database Dedicated (専有環境)編" aria-label="アンカー先: Autonomous Database Dedicated (専有環境)編" href="#autonomous-database-dedicated-%e5%b0%82%e6%9c%89%e7%92%b0%e5%a2%83%e7%b7%a8">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/#autonomous-database-dedicated-専有環境編" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Autonomous Database Dedicated (専有環境)編" aria-label="アンカー先: Autonomous Database Dedicated (専有環境)編" href="#autonomous-database-dedicated-%e5%b0%82%e6%9c%89%e7%92%b0%e5%a2%83%e7%b7%a8">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9302,7 +9302,7 @@ Autonomous Database (ADB)は、対象システムの処理特性に応じて以�
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/ai-vector-search/ai-vector109-oracletext/"
+      href="/ocitutorial-geekdocs/ai-vector-search/ai-vector109-oracletext/"
       title="109 : Oracle Database で全文検索してみよう"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9314,7 +9314,7 @@ Autonomous Database (ADB)は、対象システムの処理特性に応じて以�
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/adb/adb101-provisioning/"
+      href="/ocitutorial-geekdocs/adb/adb101-provisioning/"
       title="101: ADBインスタンスを作成してみよう"
     >
       101: ADBインスタンスを作成してみよう
@@ -9368,7 +9368,7 @@ Autonomous Database (ADB)は、対象システムの処理特性に応じて以�
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

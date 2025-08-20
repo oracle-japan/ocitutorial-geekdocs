@@ -22,18 +22,18 @@ Oracle Cloud Infrastructure ハンズオン - 3.コンピュート・インス�
 
   <title>その3 - インスタンスを作成する | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -56,7 +56,7 @@ Oracle Cloud Infrastructure ハンズオン - 3.コンピュート・インス�
 今回はコンソールから、一番小さなシェイプ(1 OCPU)の仮想マシン(VM)タイプの Oracle Linux 7 のインスタンスを1つ作成します。
 コンソールメニューから コンピュート → インスタンス を選択し、インスタンスの作成 ボタンを押します" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/beginners/creating-compute-instance/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/beginners/creating-compute-instance/" />
 
 <meta property="article:section" content="Beginners" />
     <meta
@@ -86,7 +86,7 @@ Oracle Cloud Infrastructure ハンズオン - 3.コンピュート・インス�
       "@type": "TechArticle",
       "articleSection": "Beginners",
       "name": "その3 - インスタンスを作成する",
-      "url" : "https://oracle-japan.github.io/ocitutorials/beginners/creating-compute-instance/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/beginners/creating-compute-instance/",
       "headline": "その3 - インスタンスを作成する",
       "description": "チュートリアル一覧に戻る : Oracle Cloud Infrastructure チュートリアル\nこの章では、作成済みの仮想クラウド・ネットワーク(VCN)の中にコンピュート・インスタンスを作成していきます。\n所要時間 : 約20分\n前提条件 :\nその2 - クラウドに仮想ネットワーク(VCN)を作る を通じて仮想クラウド・ネットワーク(VCN)の作成が完了していること 注意 : チュートリアル内の画面ショットについては Oracle Cloud Infrastructure の現在のコンソール画面と異なっている場合があります\n目次：\n1. 新規仮想マシンインスタンスの作成 2. 作成したインスタンス詳細情報の確認 3. インスタンスへの接続 **参考動画：**本チュートリアルの内容をベースとした定期ハンズオンWebinarの録画コンテンツです。操作の流れや解説を動画で確認したい方はご参照ください。\nOracle Cloud Infrastructure ハンズオン - 3.コンピュート・インスタンス 1. 新規仮想マシンインスタンスの作成 第2章で作成した仮想コンピュート・ネットワーク(VCN)に、新しくインスタンスを作成していきます。\n今回はコンソールから、一番小さなシェイプ(1 OCPU)の仮想マシン(VM)タイプの Oracle Linux 7 のインスタンスを1つ作成します。\nコンソールメニューから コンピュート → インスタンス を選択し、インスタンスの作成 ボタンを押します",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -96,7 +96,7 @@ Oracle Cloud Infrastructure ハンズオン - 3.コンピュート・インス�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/beginners/creating-compute-instance/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/beginners/creating-compute-instance/"
       },
       "copyrightHolder" : "OCIチュートリアル",
       "copyrightYear" : "0001",
@@ -106,10 +106,10 @@ Oracle Cloud Infrastructure ハンズオン - 3.コンピュート・インス�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -119,73 +119,73 @@ Oracle Cloud Infrastructure ハンズオン - 3.コンピュート・インス�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/beginners/creating-compute-instance/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/beginners/creating-compute-instance/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/beginners/creating-compute-instance/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/beginners/creating-compute-instance/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="その3 - インスタンスを作成する">
   <meta property="og:description" content="チュートリアル一覧に戻る : Oracle Cloud Infrastructure チュートリアル
@@ -261,11 +261,11 @@ Oracle Cloud Infrastructure ハンズオン - 3.コンピュート・インス�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -282,7 +282,7 @@ Oracle Cloud Infrastructure ハンズオン - 3.コンピュート・インス�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -294,7 +294,7 @@ Oracle Cloud Infrastructure ハンズオン - 3.コンピュート・インス�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -422,7 +422,7 @@ Oracle Cloud Infrastructure ハンズオン - 3.コンピュート・インス�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/beginners/' href='/ocitutorials/beginners/'><span itemprop='name'>Beginners</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>その3 - インスタンスを作成する</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/beginners/' href='/ocitutorial-geekdocs/beginners/'><span itemprop='name'>Beginners</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>その3 - インスタンスを作成する</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -490,7 +490,7 @@ Oracle Cloud Infrastructure ハンズオン - 3.コンピュート・インス�
     >
         1. 新規仮想マシンインスタンスの作成
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/beginners/creating-compute-instance/#1-新規仮想マシンインスタンスの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. 新規仮想マシンインスタンスの作成" aria-label="アンカー先: 1. 新規仮想マシンインスタンスの作成" href="#1-%e6%96%b0%e8%a6%8f%e4%bb%ae%e6%83%b3%e3%83%9e%e3%82%b7%e3%83%b3%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/beginners/creating-compute-instance/#1-新規仮想マシンインスタンスの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. 新規仮想マシンインスタンスの作成" aria-label="アンカー先: 1. 新規仮想マシンインスタンスの作成" href="#1-%e6%96%b0%e8%a6%8f%e4%bb%ae%e6%83%b3%e3%83%9e%e3%82%b7%e3%83%b3%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -637,7 +637,7 @@ Oracle Cloud Infrastructure ハンズオン - 3.コンピュート・インス�
     >
         2. 作成したインスタンス詳細情報の確認
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/beginners/creating-compute-instance/#2-作成したインスタンス詳細情報の確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. 作成したインスタンス詳細情報の確認" aria-label="アンカー先: 2. 作成したインスタンス詳細情報の確認" href="#2-%e4%bd%9c%e6%88%90%e3%81%97%e3%81%9f%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e8%a9%b3%e7%b4%b0%e6%83%85%e5%a0%b1%e3%81%ae%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/beginners/creating-compute-instance/#2-作成したインスタンス詳細情報の確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. 作成したインスタンス詳細情報の確認" aria-label="アンカー先: 2. 作成したインスタンス詳細情報の確認" href="#2-%e4%bd%9c%e6%88%90%e3%81%97%e3%81%9f%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e8%a9%b3%e7%b4%b0%e6%83%85%e5%a0%b1%e3%81%ae%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -670,7 +670,7 @@ Oracle Cloud Infrastructure ハンズオン - 3.コンピュート・インス�
     >
         3. インスタンスへの接続
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/beginners/creating-compute-instance/#3-インスタンスへの接続" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. インスタンスへの接続" aria-label="アンカー先: 3. インスタンスへの接続" href="#3-%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%81%b8%e3%81%ae%e6%8e%a5%e7%b6%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/beginners/creating-compute-instance/#3-インスタンスへの接続" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. インスタンスへの接続" aria-label="アンカー先: 3. インスタンスへの接続" href="#3-%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%81%b8%e3%81%ae%e6%8e%a5%e7%b6%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -719,7 +719,7 @@ opc ユーザーは、sudo により root 権限を取得することが可能�
     >
         OS上のファイアウォール・ルールの設定
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/beginners/creating-compute-instance/#os上のファイアウォールルールの設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: OS上のファイアウォール・ルールの設定" aria-label="アンカー先: OS上のファイアウォール・ルールの設定" href="#os%e4%b8%8a%e3%81%ae%e3%83%95%e3%82%a1%e3%82%a4%e3%82%a2%e3%82%a6%e3%82%a9%e3%83%bc%e3%83%ab%e3%83%ab%e3%83%bc%e3%83%ab%e3%81%ae%e8%a8%ad%e5%ae%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/beginners/creating-compute-instance/#os上のファイアウォールルールの設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: OS上のファイアウォール・ルールの設定" aria-label="アンカー先: OS上のファイアウォール・ルールの設定" href="#os%e4%b8%8a%e3%81%ae%e3%83%95%e3%82%a1%e3%82%a4%e3%82%a2%e3%82%a6%e3%82%a9%e3%83%bc%e3%83%ab%e3%83%ab%e3%83%bc%e3%83%ab%e3%81%ae%e8%a8%ad%e5%ae%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -8977,7 +8977,7 @@ opc ユーザーは、sudo により root 権限を取得することが可能�
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/beginners/creating-vcn/"
+      href="/ocitutorial-geekdocs/beginners/creating-vcn/"
       title="その2 - クラウドに仮想ネットワーク(VCN)を作る"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -8989,7 +8989,7 @@ opc ユーザーは、sudo により root 権限を取得することが可能�
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/beginners/attaching-block-volume/"
+      href="/ocitutorial-geekdocs/beginners/attaching-block-volume/"
       title="その4 - ブロック・ボリュームをインスタンスにアタッチする"
     >
       その4 - ブロック・ボリュームをインスタンスにアタッチする
@@ -9043,7 +9043,7 @@ opc ユーザーは、sudo により root 権限を取得することが可能�
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

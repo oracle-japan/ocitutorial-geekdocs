@@ -43,18 +43,18 @@ NFSサーバ DenceIOタイプ
 
   <title>HPC/GPUクラスタ向けファイル共有ストレージの最適な構築手法 | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -98,7 +98,7 @@ NFSサーバ DenceIOタイプ
 ※3）マウント・ターゲット の最大スループット値を元に記載しています。
 ※4）IOR の測定値を元に記載しています。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/hpc/tech-knowhow/howto-configure-sharedstorage/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/tech-knowhow/howto-configure-sharedstorage/" />
 
 <meta property="article:section" content="Hpc" />
     <meta
@@ -149,7 +149,7 @@ NFSサーバ DenceIOタイプ
       "@type": "TechArticle",
       "articleSection": "Hpc",
       "name": "HPC/GPUクラスタ向けファイル共有ストレージの最適な構築手法",
-      "url" : "https://oracle-japan.github.io/ocitutorials/hpc/tech-knowhow/howto-configure-sharedstorage/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/tech-knowhow/howto-configure-sharedstorage/",
       "headline": "HPC/GPUクラスタ向けファイル共有ストレージの最適な構築手法",
       "description": " 0. 概要 HPC\/GPUクラスタと共に利用するファイル共有ストレージは、その構築手法を決定する際に以下の評価項目を考慮する必要があります。\n計算\/GPUノードの複数ノード同時アクセス時性能 ランニングコスト ストレージに格納するデータの可用性 ファイル共有ストレージサービスの可用性 システム構築・運用のしやすさ 本テクニカルTipsは、HPC\/GPUクラスタ向けにNFSでサービスするファイル共有ストレージを構築することを念頭に、いくつかのファイル共有ストレージ構築手法を紹介し、上記評価基準を元にどの手法を採用すればよいか、その考慮点を解説します。\nNFSでサービスするファイル共有ストレージを構築する際の最初の考慮点は、マネージドのNFSサービスである ファイル・ストレージ を使用する方法と、 ベア・メタル・インスタンス とストレージサービスで構築する方法（以降\u0022ベア・メタル・インスタンスNFSサーバ\u0022と呼称）の、どちらを採用するかです。\nここで ファイル・ストレージ を採用する場合は、性能要件に合わせて マウント・ターゲット に標準タイプ（以降\u0022標準FSS\u0022と呼称）とHigh Performanceタイプ（以降\u0022高性能FSS\u0022と呼称）（※1）のどちらを使用するかを考慮します。\n※1）High Performanceタイプの マウント・ターゲット は、その性能違いで3種類存在しますが、本テクニカルTipsでは読み取りスループット設定が80 Gbpsで性能が最も高い HPMT-80 を前提に解説します。\nHigh Performanceタイプの マウント・ターゲット 詳細は、 ここ を参照して下さい。\nまたベア・メタル・インスタンスNFSサーバを採用する場合は、以下2種類のどちらにするかを考慮します。\nストレージに ブロック・ボリューム を使用しこれをベア・メタル・インスタンスにアタッチする方法（以降\u0022ブロック・ボリュームNFSサーバ”と呼称） ベア・メタル・インスタンス にNVMe SSDドライブを搭載するDenceIOシェイプを使用する方法（以降”DenceIO NFSサーバ”と呼称） 以上より、本テクニカルTipsで解説するファイル共有ストレージは、以下4種類です。\n構築手法 使用するサービス NFSサーバ ストレージ 保存対象\nデータ\n（※2） ターゲット\nスループット\nレンジ 標準FSS ファイル・ストレージ 標準\nマウント・ターゲット ファイル・システム 長期保存\nデータ 120 MiB\/s\n（※3） 高性能FSS ファイル・ストレージ High Performance\nマウント・ターゲット ファイル・システム 長期保存\nデータ 10 GiB\/s\n（※3） ブロック・ボリューム\nNFSサーバ ベア・メタル・インスタンス\n\u002b\nブロック・ボリューム BM.Optimized3.36 ブロック・ボリューム 中期保存\nデータ 5 GiB\/s\n（※4） DenceIO\nNFSサーバ DenceIOタイプ\nベア・メタル・インスタンス BM.DenseIO.E5.128 NVMe SSD\nローカルディスク 短期保存\nデータ 10 GiB\/s\n（※4） ※2）対象の構築手法が提供するデータ可用性レベルに応じて分類しています。（データ可用性が低いほど短期保存データ用ファイル共有ストレージに分類）\n※3）マウント・ターゲット の最大スループット値を元に記載しています。\n※4）IOR の測定値を元に記載しています。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -159,7 +159,7 @@ NFSサーバ DenceIOタイプ
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/hpc/tech-knowhow/howto-configure-sharedstorage/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/tech-knowhow/howto-configure-sharedstorage/"
       },
       "copyrightHolder" : "OCIチュートリアル",
       "copyrightYear" : "0001",
@@ -169,10 +169,10 @@ NFSサーバ DenceIOタイプ
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -182,73 +182,73 @@ NFSサーバ DenceIOタイプ
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/hpc/tech-knowhow/howto-configure-sharedstorage/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/tech-knowhow/howto-configure-sharedstorage/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/hpc/tech-knowhow/howto-configure-sharedstorage/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/tech-knowhow/howto-configure-sharedstorage/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="HPC/GPUクラスタ向けファイル共有ストレージの最適な構築手法">
   <meta property="og:description" content="0. 概要 HPC/GPUクラスタと共に利用するファイル共有ストレージは、その構築手法を決定する際に以下の評価項目を考慮する必要があります。
@@ -366,11 +366,11 @@ NFSサーバ DenceIOタイプ
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -387,7 +387,7 @@ NFSサーバ DenceIOタイプ
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -399,7 +399,7 @@ NFSサーバ DenceIOタイプ
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -536,7 +536,7 @@ NFSサーバ DenceIOタイプ
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/hpc/' href='/ocitutorials/hpc/'><span itemprop='name'>OCI HPCポータル</span></a><meta itemprop='position' content='4' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>HPC/GPUクラスタ向けファイル共有ストレージの最適な構築手法</span><meta itemprop='position' content='5' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/hpc/' href='/ocitutorial-geekdocs/hpc/'><span itemprop='name'>OCI HPCポータル</span></a><meta itemprop='position' content='4' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>HPC/GPUクラスタ向けファイル共有ストレージの最適な構築手法</span><meta itemprop='position' content='5' /></li>
   
 
   
@@ -573,7 +573,7 @@ NFSサーバ DenceIOタイプ
     >
         0. 概要
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/tech-knowhow/howto-configure-sharedstorage/#0-概要" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0. 概要" aria-label="アンカー先: 0. 概要" href="#0-%e6%a6%82%e8%a6%81">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/tech-knowhow/howto-configure-sharedstorage/#0-概要" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0. 概要" aria-label="アンカー先: 0. 概要" href="#0-%e6%a6%82%e8%a6%81">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -700,7 +700,7 @@ High Performanceタイプの <strong>マウント・ターゲット</strong> 詳
     >
         1. ベア・メタル・インスタンスNFSサーバ構成
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/tech-knowhow/howto-configure-sharedstorage/#1-ベアメタルインスタンスnfsサーバ構成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. ベア・メタル・インスタンスNFSサーバ構成" aria-label="アンカー先: 1. ベア・メタル・インスタンスNFSサーバ構成" href="#1-%e3%83%99%e3%82%a2%e3%83%a1%e3%82%bf%e3%83%ab%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9nfs%e3%82%b5%e3%83%bc%e3%83%90%e6%a7%8b%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/tech-knowhow/howto-configure-sharedstorage/#1-ベアメタルインスタンスnfsサーバ構成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. ベア・メタル・インスタンスNFSサーバ構成" aria-label="アンカー先: 1. ベア・メタル・インスタンスNFSサーバ構成" href="#1-%e3%83%99%e3%82%a2%e3%83%a1%e3%82%bf%e3%83%ab%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9nfs%e3%82%b5%e3%83%bc%e3%83%90%e6%a7%8b%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -709,7 +709,7 @@ High Performanceタイプの <strong>マウント・ターゲット</strong> 詳
     >
         1-0. 概要
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/tech-knowhow/howto-configure-sharedstorage/#1-0-概要" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-0. 概要" aria-label="アンカー先: 1-0. 概要" href="#1-0-%e6%a6%82%e8%a6%81">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/tech-knowhow/howto-configure-sharedstorage/#1-0-概要" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-0. 概要" aria-label="アンカー先: 1-0. 概要" href="#1-0-%e6%a6%82%e8%a6%81">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -719,7 +719,7 @@ High Performanceタイプの <strong>マウント・ターゲット</strong> 詳
     >
         1-1. ブロック・ボリュームNFSサーバ構成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/tech-knowhow/howto-configure-sharedstorage/#1-1-ブロックボリュームnfsサーバ構成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-1. ブロック・ボリュームNFSサーバ構成" aria-label="アンカー先: 1-1. ブロック・ボリュームNFSサーバ構成" href="#1-1-%e3%83%96%e3%83%ad%e3%83%83%e3%82%af%e3%83%9c%e3%83%aa%e3%83%a5%e3%83%bc%e3%83%a0nfs%e3%82%b5%e3%83%bc%e3%83%90%e6%a7%8b%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/tech-knowhow/howto-configure-sharedstorage/#1-1-ブロックボリュームnfsサーバ構成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-1. ブロック・ボリュームNFSサーバ構成" aria-label="アンカー先: 1-1. ブロック・ボリュームNFSサーバ構成" href="#1-1-%e3%83%96%e3%83%ad%e3%83%83%e3%82%af%e3%83%9c%e3%83%aa%e3%83%a5%e3%83%bc%e3%83%a0nfs%e3%82%b5%e3%83%bc%e3%83%90%e6%a7%8b%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -748,7 +748,7 @@ High Performanceタイプの <strong>マウント・ターゲット</strong> 詳
     >
         1-2. DenceIO NFSサーバ構成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/tech-knowhow/howto-configure-sharedstorage/#1-2-denceio-nfsサーバ構成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-2. DenceIO NFSサーバ構成" aria-label="アンカー先: 1-2. DenceIO NFSサーバ構成" href="#1-2-denceio-nfs%e3%82%b5%e3%83%bc%e3%83%90%e6%a7%8b%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/tech-knowhow/howto-configure-sharedstorage/#1-2-denceio-nfsサーバ構成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-2. DenceIO NFSサーバ構成" aria-label="アンカー先: 1-2. DenceIO NFSサーバ構成" href="#1-2-denceio-nfs%e3%82%b5%e3%83%bc%e3%83%90%e6%a7%8b%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -778,7 +778,7 @@ High Performanceタイプの <strong>マウント・ターゲット</strong> 詳
     >
         2. 各構築手法の比較
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/tech-knowhow/howto-configure-sharedstorage/#2-各構築手法の比較" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. 各構築手法の比較" aria-label="アンカー先: 2. 各構築手法の比較" href="#2-%e5%90%84%e6%a7%8b%e7%af%89%e6%89%8b%e6%b3%95%e3%81%ae%e6%af%94%e8%bc%83">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/tech-knowhow/howto-configure-sharedstorage/#2-各構築手法の比較" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. 各構築手法の比較" aria-label="アンカー先: 2. 各構築手法の比較" href="#2-%e5%90%84%e6%a7%8b%e7%af%89%e6%89%8b%e6%b3%95%e3%81%ae%e6%af%94%e8%bc%83">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -787,7 +787,7 @@ High Performanceタイプの <strong>マウント・ターゲット</strong> 詳
     >
         2.0 概要
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/tech-knowhow/howto-configure-sharedstorage/#20-概要" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.0 概要" aria-label="アンカー先: 2.0 概要" href="#20-%e6%a6%82%e8%a6%81">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/tech-knowhow/howto-configure-sharedstorage/#20-概要" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.0 概要" aria-label="アンカー先: 2.0 概要" href="#20-%e6%a6%82%e8%a6%81">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -811,7 +811,7 @@ High Performanceタイプの <strong>マウント・ターゲット</strong> 詳
     >
         2-1. コストパフォーマンスによる比較
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/tech-knowhow/howto-configure-sharedstorage/#2-1-コストパフォーマンスによる比較" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-1. コストパフォーマンスによる比較" aria-label="アンカー先: 2-1. コストパフォーマンスによる比較" href="#2-1-%e3%82%b3%e3%82%b9%e3%83%88%e3%83%91%e3%83%95%e3%82%a9%e3%83%bc%e3%83%9e%e3%83%b3%e3%82%b9%e3%81%ab%e3%82%88%e3%82%8b%e6%af%94%e8%bc%83">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/tech-knowhow/howto-configure-sharedstorage/#2-1-コストパフォーマンスによる比較" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-1. コストパフォーマンスによる比較" aria-label="アンカー先: 2-1. コストパフォーマンスによる比較" href="#2-1-%e3%82%b3%e3%82%b9%e3%83%88%e3%83%91%e3%83%95%e3%82%a9%e3%83%bc%e3%83%9e%e3%83%b3%e3%82%b9%e3%81%ab%e3%82%88%e3%82%8b%e6%af%94%e8%bc%83">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -937,7 +937,7 @@ High Performanceタイプの <strong>マウント・ターゲット</strong> 詳
     >
         2-2 可用性による比較
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/tech-knowhow/howto-configure-sharedstorage/#2-2-可用性による比較" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-2 可用性による比較" aria-label="アンカー先: 2-2 可用性による比較" href="#2-2-%e5%8f%af%e7%94%a8%e6%80%a7%e3%81%ab%e3%82%88%e3%82%8b%e6%af%94%e8%bc%83">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/tech-knowhow/howto-configure-sharedstorage/#2-2-可用性による比較" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-2 可用性による比較" aria-label="アンカー先: 2-2 可用性による比較" href="#2-2-%e5%8f%af%e7%94%a8%e6%80%a7%e3%81%ab%e3%82%88%e3%82%8b%e6%af%94%e8%bc%83">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1001,7 +1001,7 @@ High Performanceタイプの <strong>マウント・ターゲット</strong> 詳
     >
         2.3 運用性による比較
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/tech-knowhow/howto-configure-sharedstorage/#23-運用性による比較" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.3 運用性による比較" aria-label="アンカー先: 2.3 運用性による比較" href="#23-%e9%81%8b%e7%94%a8%e6%80%a7%e3%81%ab%e3%82%88%e3%82%8b%e6%af%94%e8%bc%83">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/tech-knowhow/howto-configure-sharedstorage/#23-運用性による比較" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.3 運用性による比較" aria-label="アンカー先: 2.3 運用性による比較" href="#23-%e9%81%8b%e7%94%a8%e6%80%a7%e3%81%ab%e3%82%88%e3%82%8b%e6%af%94%e8%bc%83">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9289,7 +9289,7 @@ High Performanceタイプの <strong>マウント・ターゲット</strong> 詳
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/hpc/benchmark/openfoam-tuning/"
+      href="/ocitutorial-geekdocs/hpc/benchmark/openfoam-tuning/"
       title="CFD解析フローのコストパフォーマンを向上させるOpenFOAM関連Tips"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9301,7 +9301,7 @@ High Performanceタイプの <strong>マウント・ターゲット</strong> 詳
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/hpc/benchmark/run-hpl/"
+      href="/ocitutorial-geekdocs/hpc/benchmark/run-hpl/"
       title="HPL実行方法（BM.Optimized3.36編）"
     >
       HPL実行方法（BM.Optimized3.36編）
@@ -9355,7 +9355,7 @@ High Performanceタイプの <strong>マウント・ターゲット</strong> 詳
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

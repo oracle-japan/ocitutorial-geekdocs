@@ -22,18 +22,18 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
 
   <title>その13: 圧縮ファイルによる複数ファイルの一括登録（Oracle Content Management のファイル共有機能を使ってみよう） | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -56,7 +56,7 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
 テストフォルダ サブフォルダ2 テスト文書2.docx サブフォルダ3 テスト文書3.docx テスト文書1.docx 【注意事項】
 圧縮ファイルを作成する際は、UTF-8形式で作成します。UTF-8以外の形式（例えばShift-JIS）で作成された圧縮ファイルの場合、OCM内での解凍処理がエラーとなります。詳細は Extract Multiple Files From A Compressed File、および Doc ID 2863638.1 をご確認ください" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/content-management/13_upload_multiple_files/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/13_upload_multiple_files/" />
 
 <meta property="article:section" content="Content Management" />
     <meta
@@ -86,7 +86,7 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
       "@type": "TechArticle",
       "articleSection": "Content Management",
       "name": "その13: 圧縮ファイルによる複数ファイルの一括登録（Oracle Content Management のファイル共有機能を使ってみよう）",
-      "url" : "https://oracle-japan.github.io/ocitutorials/content-management/13_upload_multiple_files/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/13_upload_multiple_files/",
       "headline": "その13: 圧縮ファイルによる複数ファイルの一括登録（Oracle Content Management のファイル共有機能を使ってみよう）",
       "description": "目次に戻る: Oracle Content Management のファイル共有機能を使ってみよう【初級編】\nローカル環境から、クラウド上の OCM にファイルを登録する方法は複数あります。ここでは、圧縮ファイル（ZIP形式のファイル） を利用し、複数のフォルダやファイルをまとめて登録・更新する方法を紹介します\n【お知らせ】\nこの文書は、2022年4月時点での最新バージョン(22.4.3)を元に作成されてます。\nチュートリアル内の画面ショットについては、現在のコンソール画面と異なっている場合があります。\n{: .notice–info}\n前提条件\nOracle Content Management インスタンスを作成する OCM の利用ユーザーに OCM インスタンスの CECStandardUser もしくは CECEnterpriseUser アプリケーション・ロールが付与されていること ADMINISTRATION:システム→一般→ファイルとアセットの制限 で、ファイル・タイプ（拡張子）で zip が登録されていないこと（ブロックされていないこと） 1. 圧縮ファイルを準備する クライアント環境で圧縮ファイルを準備します。ここでは以下の階層のフォルダおよびファイルを用意し、圧縮します。圧縮後のファイル名は 「テストフォルダアーカイブ.zip」 です\nテストフォルダ サブフォルダ2 テスト文書2.docx サブフォルダ3 テスト文書3.docx テスト文書1.docx 【注意事項】\n圧縮ファイルを作成する際は、UTF-8形式で作成します。UTF-8以外の形式（例えばShift-JIS）で作成された圧縮ファイルの場合、OCM内での解凍処理がエラーとなります。詳細は Extract Multiple Files From A Compressed File、および Doc ID 2863638.1 をご確認ください",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -96,7 +96,7 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/content-management/13_upload_multiple_files/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/13_upload_multiple_files/"
       },
       "keywords" : [ "OCE" , "OCM" ],
       "copyrightHolder" : "OCIチュートリアル",
@@ -107,10 +107,10 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -120,73 +120,73 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/content-management/13_upload_multiple_files/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/13_upload_multiple_files/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/content-management/13_upload_multiple_files/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/13_upload_multiple_files/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="その13: 圧縮ファイルによる複数ファイルの一括登録（Oracle Content Management のファイル共有機能を使ってみよう）">
   <meta property="og:description" content="目次に戻る: Oracle Content Management のファイル共有機能を使ってみよう【初級編】
@@ -264,11 +264,11 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -285,7 +285,7 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -297,7 +297,7 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -427,7 +427,7 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/content-management/' href='/ocitutorials/content-management/'><span itemprop='name'>コンテンツ管理編</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>その13: 圧縮ファイルによる複数ファイルの一括登録（Oracle Content Management のファイル共有機能を使ってみよう）</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/content-management/' href='/ocitutorial-geekdocs/content-management/'><span itemprop='name'>コンテンツ管理編</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>その13: 圧縮ファイルによる複数ファイルの一括登録（Oracle Content Management のファイル共有機能を使ってみよう）</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -490,7 +490,7 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
     >
         1. 圧縮ファイルを準備する
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/13_upload_multiple_files/#1-圧縮ファイルを準備する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. 圧縮ファイルを準備する" aria-label="アンカー先: 1. 圧縮ファイルを準備する" href="#1-%e5%9c%a7%e7%b8%ae%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92%e6%ba%96%e5%82%99%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/13_upload_multiple_files/#1-圧縮ファイルを準備する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. 圧縮ファイルを準備する" aria-label="アンカー先: 1. 圧縮ファイルを準備する" href="#1-%e5%9c%a7%e7%b8%ae%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92%e6%ba%96%e5%82%99%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -528,7 +528,7 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
     >
         2. 圧縮ファイルをOCM内で解凍する
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/13_upload_multiple_files/#2-圧縮ファイルをocm内で解凍する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. 圧縮ファイルをOCM内で解凍する" aria-label="アンカー先: 2. 圧縮ファイルをOCM内で解凍する" href="#2-%e5%9c%a7%e7%b8%ae%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92ocm%e5%86%85%e3%81%a7%e8%a7%a3%e5%87%8d%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/13_upload_multiple_files/#2-圧縮ファイルをocm内で解凍する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. 圧縮ファイルをOCM内で解凍する" aria-label="アンカー先: 2. 圧縮ファイルをOCM内で解凍する" href="#2-%e5%9c%a7%e7%b8%ae%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92ocm%e5%86%85%e3%81%a7%e8%a7%a3%e5%87%8d%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -548,7 +548,7 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
     >
         2.1 「新規フォルダの作成」を選択して解凍する
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/13_upload_multiple_files/#21-新規フォルダの作成を選択して解凍する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.1 「新規フォルダの作成」を選択して解凍する" aria-label="アンカー先: 2.1 「新規フォルダの作成」を選択して解凍する" href="#21-%e6%96%b0%e8%a6%8f%e3%83%95%e3%82%a9%e3%83%ab%e3%83%80%e3%81%ae%e4%bd%9c%e6%88%90%e3%82%92%e9%81%b8%e6%8a%9e%e3%81%97%e3%81%a6%e8%a7%a3%e5%87%8d%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/13_upload_multiple_files/#21-新規フォルダの作成を選択して解凍する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.1 「新規フォルダの作成」を選択して解凍する" aria-label="アンカー先: 2.1 「新規フォルダの作成」を選択して解凍する" href="#21-%e6%96%b0%e8%a6%8f%e3%83%95%e3%82%a9%e3%83%ab%e3%83%80%e3%81%ae%e4%bd%9c%e6%88%90%e3%82%92%e9%81%b8%e6%8a%9e%e3%81%97%e3%81%a6%e8%a7%a3%e5%87%8d%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -594,7 +594,7 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
     >
         2.2 「既存フォルダの選択」→「既存のファイルを置換」を選択して解凍する
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/13_upload_multiple_files/#22-既存フォルダの選択既存のファイルを置換を選択して解凍する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.2 「既存フォルダの選択」→「既存のファイルを置換」を選択して解凍する" aria-label="アンカー先: 2.2 「既存フォルダの選択」→「既存のファイルを置換」を選択して解凍する" href="#22-%e6%97%a2%e5%ad%98%e3%83%95%e3%82%a9%e3%83%ab%e3%83%80%e3%81%ae%e9%81%b8%e6%8a%9e%e6%97%a2%e5%ad%98%e3%81%ae%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92%e7%bd%ae%e6%8f%9b%e3%82%92%e9%81%b8%e6%8a%9e%e3%81%97%e3%81%a6%e8%a7%a3%e5%87%8d%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/13_upload_multiple_files/#22-既存フォルダの選択既存のファイルを置換を選択して解凍する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.2 「既存フォルダの選択」→「既存のファイルを置換」を選択して解凍する" aria-label="アンカー先: 2.2 「既存フォルダの選択」→「既存のファイルを置換」を選択して解凍する" href="#22-%e6%97%a2%e5%ad%98%e3%83%95%e3%82%a9%e3%83%ab%e3%83%80%e3%81%ae%e9%81%b8%e6%8a%9e%e6%97%a2%e5%ad%98%e3%81%ae%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92%e7%bd%ae%e6%8f%9b%e3%82%92%e9%81%b8%e6%8a%9e%e3%81%97%e3%81%a6%e8%a7%a3%e5%87%8d%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -641,7 +641,7 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
     >
         2.3 「既存フォルダの選択」→「重複ファイルを無視」を選択して解凍する
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/13_upload_multiple_files/#23-既存フォルダの選択重複ファイルを無視を選択して解凍する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.3 「既存フォルダの選択」→「重複ファイルを無視」を選択して解凍する" aria-label="アンカー先: 2.3 「既存フォルダの選択」→「重複ファイルを無視」を選択して解凍する" href="#23-%e6%97%a2%e5%ad%98%e3%83%95%e3%82%a9%e3%83%ab%e3%83%80%e3%81%ae%e9%81%b8%e6%8a%9e%e9%87%8d%e8%a4%87%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92%e7%84%a1%e8%a6%96%e3%82%92%e9%81%b8%e6%8a%9e%e3%81%97%e3%81%a6%e8%a7%a3%e5%87%8d%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/13_upload_multiple_files/#23-既存フォルダの選択重複ファイルを無視を選択して解凍する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.3 「既存フォルダの選択」→「重複ファイルを無視」を選択して解凍する" aria-label="アンカー先: 2.3 「既存フォルダの選択」→「重複ファイルを無視」を選択して解凍する" href="#23-%e6%97%a2%e5%ad%98%e3%83%95%e3%82%a9%e3%83%ab%e3%83%80%e3%81%ae%e9%81%b8%e6%8a%9e%e9%87%8d%e8%a4%87%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92%e7%84%a1%e8%a6%96%e3%82%92%e9%81%b8%e6%8a%9e%e3%81%97%e3%81%a6%e8%a7%a3%e5%87%8d%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -671,7 +671,7 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
     >
         2.4 「既存フォルダの選択」→「両方のファイルを維持」を選択して解凍する
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/13_upload_multiple_files/#24-既存フォルダの選択両方のファイルを維持を選択して解凍する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.4 「既存フォルダの選択」→「両方のファイルを維持」を選択して解凍する" aria-label="アンカー先: 2.4 「既存フォルダの選択」→「両方のファイルを維持」を選択して解凍する" href="#24-%e6%97%a2%e5%ad%98%e3%83%95%e3%82%a9%e3%83%ab%e3%83%80%e3%81%ae%e9%81%b8%e6%8a%9e%e4%b8%a1%e6%96%b9%e3%81%ae%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92%e7%b6%ad%e6%8c%81%e3%82%92%e9%81%b8%e6%8a%9e%e3%81%97%e3%81%a6%e8%a7%a3%e5%87%8d%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/13_upload_multiple_files/#24-既存フォルダの選択両方のファイルを維持を選択して解凍する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.4 「既存フォルダの選択」→「両方のファイルを維持」を選択して解凍する" aria-label="アンカー先: 2.4 「既存フォルダの選択」→「両方のファイルを維持」を選択して解凍する" href="#24-%e6%97%a2%e5%ad%98%e3%83%95%e3%82%a9%e3%83%ab%e3%83%80%e3%81%ae%e9%81%b8%e6%8a%9e%e4%b8%a1%e6%96%b9%e3%81%ae%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92%e7%b6%ad%e6%8c%81%e3%82%92%e9%81%b8%e6%8a%9e%e3%81%97%e3%81%a6%e8%a7%a3%e5%87%8d%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -8951,7 +8951,7 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/content-management/12_mobile_application/"
+      href="/ocitutorial-geekdocs/content-management/12_mobile_application/"
       title="その12: モバイル・アプリケーション（Oracle Content Management のファイル共有機能を利用しよう）"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -8963,7 +8963,7 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/content-management/14_external_user/"
+      href="/ocitutorial-geekdocs/content-management/14_external_user/"
       title="その14: 外部ユーザー（Oracle Content Management のファイル共有機能を利用しよう）"
     >
       その14: 外部ユーザー（Oracle Content Management のファイル共有機能を利用しよう）
@@ -9017,7 +9017,7 @@ Oracle Content Management インスタンスを作成する OCM の利用ユー�
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

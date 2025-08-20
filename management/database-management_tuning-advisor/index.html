@@ -23,18 +23,18 @@
 
   <title>OCI Database ManagementのSQLチューニング・アドバイザでパフォーマンス・チューニングをする | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -58,7 +58,7 @@
 1.1 サンプル・スキーマのダウンロード こちらからデータベースのバージョンに合わせたスクリプトをダウンロードし、oracleディレクトリに配置します。（今回はBaseDBのバージョンが19.2なのでOracle Database Sample Schemas 19.2をダウンロード）
 1.2 PDBの接続先情報を追加 tnsnames.oraにPDBの接続情報がない場合は、PDBの接続情報を追加します。 Base DBにログインし、oracleユーザに切り替えます。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/management/database-management_tuning-advisor/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/management/database-management_tuning-advisor/" />
 
 <meta property="article:section" content="Management" />
     <meta
@@ -89,7 +89,7 @@
       "@type": "TechArticle",
       "articleSection": "Management",
       "name": "OCI Database ManagementのSQLチューニング・アドバイザでパフォーマンス・チューニングをする",
-      "url" : "https://oracle-japan.github.io/ocitutorials/management/database-management_tuning-advisor/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/management/database-management_tuning-advisor/",
       "headline": "OCI Database ManagementのSQLチューニング・アドバイザでパフォーマンス・チューニングをする",
       "description": "チュートリアル概要 :\nこのチュートリアルでは、OCI Database ManagementのSQLチューニング・アドバイザでSQLのパフォーマンス・チューニングをする手順をご紹介します。\n所要時間 : 約60分\n前提条件1 : テナンシ上で以下のリソースが作成済であること\nコンパートメント ユーザー ユーザーグループ VCN BaseDB 前提条件2 : Database Management が有効化済みであること\nこちらを参考にDatabase Managementを有効化できます。\n注意\n監視対象のBaseDBがStandard Editionの場合、SQLチューニング・アドバイザを含むパフォーマンスに関連する機能をご利用いただけませんのでご注意ください。 {: .notice–info}\n1.データの作成 Oracle Databaseにはトレーニングやデモに使用できるサンプル・スキーマが提供されています。 今回はサンプル・スキーマとして提供されているSHスキーマに対してSQL文を実行し、チューニング・アドバイザでパフォーマンスを改善する手順をご紹介します。\n1.1 サンプル・スキーマのダウンロード こちらからデータベースのバージョンに合わせたスクリプトをダウンロードし、oracleディレクトリに配置します。（今回はBaseDBのバージョンが19.2なのでOracle Database Sample Schemas 19.2をダウンロード）\n1.2 PDBの接続先情報を追加 tnsnames.oraにPDBの接続情報がない場合は、PDBの接続情報を追加します。 Base DBにログインし、oracleユーザに切り替えます。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -99,7 +99,7 @@
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/management/database-management_tuning-advisor/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/management/database-management_tuning-advisor/"
       },
       "copyrightHolder" : "OCIチュートリアル",
       "copyrightYear" : "0001",
@@ -109,10 +109,10 @@
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -122,73 +122,73 @@
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/management/database-management_tuning-advisor/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/management/database-management_tuning-advisor/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/management/database-management_tuning-advisor/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/management/database-management_tuning-advisor/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="OCI Database ManagementのSQLチューニング・アドバイザでパフォーマンス・チューニングをする">
   <meta property="og:description" content="チュートリアル概要 :
@@ -266,11 +266,11 @@
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -287,7 +287,7 @@
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -299,7 +299,7 @@
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -437,7 +437,7 @@
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/management/' href='/ocitutorials/management/'><span itemprop='name'>監視・管理チュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>OCI Database ManagementのSQLチューニング・アドバイザでパフォーマンス・チューニングをする</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/management/' href='/ocitutorial-geekdocs/management/'><span itemprop='name'>監視・管理チュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>OCI Database ManagementのSQLチューニング・アドバイザでパフォーマンス・チューニングをする</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -487,7 +487,7 @@
     >
         1.データの作成
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/management/database-management_tuning-advisor/#1データの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.データの作成" aria-label="アンカー先: 1.データの作成" href="#1%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/management/database-management_tuning-advisor/#1データの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.データの作成" aria-label="アンカー先: 1.データの作成" href="#1%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -501,7 +501,7 @@
     >
         1.1 サンプル・スキーマのダウンロード
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/management/database-management_tuning-advisor/#11-サンプルスキーマのダウンロード" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.1 サンプル・スキーマのダウンロード" aria-label="アンカー先: 1.1 サンプル・スキーマのダウンロード" href="#11-%e3%82%b5%e3%83%b3%e3%83%97%e3%83%ab%e3%82%b9%e3%82%ad%e3%83%bc%e3%83%9e%e3%81%ae%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/management/database-management_tuning-advisor/#11-サンプルスキーマのダウンロード" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.1 サンプル・スキーマのダウンロード" aria-label="アンカー先: 1.1 サンプル・スキーマのダウンロード" href="#11-%e3%82%b5%e3%83%b3%e3%83%97%e3%83%ab%e3%82%b9%e3%82%ad%e3%83%bc%e3%83%9e%e3%81%ae%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -514,7 +514,7 @@
     >
         1.2 PDBの接続先情報を追加
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/management/database-management_tuning-advisor/#12-pdbの接続先情報を追加" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.2 PDBの接続先情報を追加" aria-label="アンカー先: 1.2 PDBの接続先情報を追加" href="#12-pdb%e3%81%ae%e6%8e%a5%e7%b6%9a%e5%85%88%e6%83%85%e5%a0%b1%e3%82%92%e8%bf%bd%e5%8a%a0">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/management/database-management_tuning-advisor/#12-pdbの接続先情報を追加" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.2 PDBの接続先情報を追加" aria-label="アンカー先: 1.2 PDBの接続先情報を追加" href="#12-pdb%e3%81%ae%e6%8e%a5%e7%b6%9a%e5%85%88%e6%83%85%e5%a0%b1%e3%82%92%e8%bf%bd%e5%8a%a0">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -536,7 +536,7 @@ Base DBにログインし、oracleユーザに切り替えます。</p>
     >
         1.3 スキーマの作成
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/management/database-management_tuning-advisor/#13-スキーマの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.3 スキーマの作成" aria-label="アンカー先: 1.3 スキーマの作成" href="#13-%e3%82%b9%e3%82%ad%e3%83%bc%e3%83%9e%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/management/database-management_tuning-advisor/#13-スキーマの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.3 スキーマの作成" aria-label="アンカー先: 1.3 スキーマの作成" href="#13-%e3%82%b9%e3%82%ad%e3%83%bc%e3%83%9e%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -553,7 +553,7 @@ Base DBにログインし、oracleユーザに切り替えます。</p>
     >
         1.4 表領域の作成
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/management/database-management_tuning-advisor/#14-表領域の作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.4 表領域の作成" aria-label="アンカー先: 1.4 表領域の作成" href="#14-%e8%a1%a8%e9%a0%98%e5%9f%9f%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/management/database-management_tuning-advisor/#14-表領域の作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.4 表領域の作成" aria-label="アンカー先: 1.4 表領域の作成" href="#14-%e8%a1%a8%e9%a0%98%e5%9f%9f%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -569,7 +569,7 @@ sysdbaユーザなどでCDBにログインします。</p>
     >
         1.5 サンプルスキーマの作成
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/management/database-management_tuning-advisor/#15-サンプルスキーマの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.5 サンプルスキーマの作成" aria-label="アンカー先: 1.5 サンプルスキーマの作成" href="#15-%e3%82%b5%e3%83%b3%e3%83%97%e3%83%ab%e3%82%b9%e3%82%ad%e3%83%bc%e3%83%9e%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/management/database-management_tuning-advisor/#15-サンプルスキーマの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.5 サンプルスキーマの作成" aria-label="アンカー先: 1.5 サンプルスキーマの作成" href="#15-%e3%82%b5%e3%83%b3%e3%83%97%e3%83%ab%e3%82%b9%e3%82%ad%e3%83%bc%e3%83%9e%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -586,7 +586,7 @@ hr, oe, pm, ix, sh, biユーザのパスワードはそれぞれ上記のコマ�
     >
         1.6 データの増幅
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/management/database-management_tuning-advisor/#16-データの増幅" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.6 データの増幅" aria-label="アンカー先: 1.6 データの増幅" href="#16-%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e5%a2%97%e5%b9%85">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/management/database-management_tuning-advisor/#16-データの増幅" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.6 データの増幅" aria-label="アンカー先: 1.6 データの増幅" href="#16-%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e5%a2%97%e5%b9%85">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -641,7 +641,7 @@ SHユーザでPDBにログインします。</p>
     >
         2.SQLチューニング・アドバイザを利用したパフォーマンス・チューニング
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/management/database-management_tuning-advisor/#2sqlチューニングアドバイザを利用したパフォーマンスチューニング" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.SQLチューニング・アドバイザを利用したパフォーマンス・チューニング" aria-label="アンカー先: 2.SQLチューニング・アドバイザを利用したパフォーマンス・チューニング" href="#2sql%e3%83%81%e3%83%a5%e3%83%bc%e3%83%8b%e3%83%b3%e3%82%b0%e3%82%a2%e3%83%89%e3%83%90%e3%82%a4%e3%82%b6%e3%82%92%e5%88%a9%e7%94%a8%e3%81%97%e3%81%9f%e3%83%91%e3%83%95%e3%82%a9%e3%83%bc%e3%83%9e%e3%83%b3%e3%82%b9%e3%83%81%e3%83%a5%e3%83%bc%e3%83%8b%e3%83%b3%e3%82%b0">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/management/database-management_tuning-advisor/#2sqlチューニングアドバイザを利用したパフォーマンスチューニング" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.SQLチューニング・アドバイザを利用したパフォーマンス・チューニング" aria-label="アンカー先: 2.SQLチューニング・アドバイザを利用したパフォーマンス・チューニング" href="#2sql%e3%83%81%e3%83%a5%e3%83%bc%e3%83%8b%e3%83%b3%e3%82%b0%e3%82%a2%e3%83%89%e3%83%90%e3%82%a4%e3%82%b6%e3%82%92%e5%88%a9%e7%94%a8%e3%81%97%e3%81%9f%e3%83%91%e3%83%95%e3%82%a9%e3%83%bc%e3%83%9e%e3%83%b3%e3%82%b9%e3%83%81%e3%83%a5%e3%83%bc%e3%83%8b%e3%83%b3%e3%82%b0">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -650,7 +650,7 @@ SHユーザでPDBにログインします。</p>
     >
         2.1 バケットの作成
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/management/database-management_tuning-advisor/#21-バケットの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.1 バケットの作成" aria-label="アンカー先: 2.1 バケットの作成" href="#21-%e3%83%90%e3%82%b1%e3%83%83%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/management/database-management_tuning-advisor/#21-バケットの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.1 バケットの作成" aria-label="アンカー先: 2.1 バケットの作成" href="#21-%e3%83%90%e3%82%b1%e3%83%83%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -672,7 +672,7 @@ SHユーザでPDBにログインします。</p>
     >
         2.2 SQL(チューニング対象のSQL)の実行
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/management/database-management_tuning-advisor/#22-sqlチューニング対象のsqlの実行" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.2 SQL(チューニング対象のSQL)の実行" aria-label="アンカー先: 2.2 SQL(チューニング対象のSQL)の実行" href="#22-sql%e3%83%81%e3%83%a5%e3%83%bc%e3%83%8b%e3%83%b3%e3%82%b0%e5%af%be%e8%b1%a1%e3%81%aesql%e3%81%ae%e5%ae%9f%e8%a1%8c">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/management/database-management_tuning-advisor/#22-sqlチューニング対象のsqlの実行" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.2 SQL(チューニング対象のSQL)の実行" aria-label="アンカー先: 2.2 SQL(チューニング対象のSQL)の実行" href="#22-sql%e3%83%81%e3%83%a5%e3%83%bc%e3%83%8b%e3%83%b3%e3%82%b0%e5%af%be%e8%b1%a1%e3%81%aesql%e3%81%ae%e5%ae%9f%e8%a1%8c">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -685,7 +685,7 @@ SHユーザでPDBにログインします。</p>
     >
         2.3 実行したSQLをSQLモニタリングで確認
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/management/database-management_tuning-advisor/#23-実行したsqlをsqlモニタリングで確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.3 実行したSQLをSQLモニタリングで確認" aria-label="アンカー先: 2.3 実行したSQLをSQLモニタリングで確認" href="#23-%e5%ae%9f%e8%a1%8c%e3%81%97%e3%81%9fsql%e3%82%92sql%e3%83%a2%e3%83%8b%e3%82%bf%e3%83%aa%e3%83%b3%e3%82%b0%e3%81%a7%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/management/database-management_tuning-advisor/#23-実行したsqlをsqlモニタリングで確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.3 実行したSQLをSQLモニタリングで確認" aria-label="アンカー先: 2.3 実行したSQLをSQLモニタリングで確認" href="#23-%e5%ae%9f%e8%a1%8c%e3%81%97%e3%81%9fsql%e3%82%92sql%e3%83%a2%e3%83%8b%e3%82%bf%e3%83%aa%e3%83%b3%e3%82%b0%e3%81%a7%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -720,7 +720,7 @@ SHユーザでPDBにログインします。</p>
     >
         2.4 SQLチューニング・アドバイザの実行
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/management/database-management_tuning-advisor/#24-sqlチューニングアドバイザの実行" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.4 SQLチューニング・アドバイザの実行" aria-label="アンカー先: 2.4 SQLチューニング・アドバイザの実行" href="#24-sql%e3%83%81%e3%83%a5%e3%83%bc%e3%83%8b%e3%83%b3%e3%82%b0%e3%82%a2%e3%83%89%e3%83%90%e3%82%a4%e3%82%b6%e3%81%ae%e5%ae%9f%e8%a1%8c">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/management/database-management_tuning-advisor/#24-sqlチューニングアドバイザの実行" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.4 SQLチューニング・アドバイザの実行" aria-label="アンカー先: 2.4 SQLチューニング・アドバイザの実行" href="#24-sql%e3%83%81%e3%83%a5%e3%83%bc%e3%83%8b%e3%83%b3%e3%82%b0%e3%82%a2%e3%83%89%e3%83%90%e3%82%a4%e3%82%b6%e3%81%ae%e5%ae%9f%e8%a1%8c">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -753,7 +753,7 @@ SHユーザでPDBにログインします。</p>
     >
         2.4 推奨事項の実装
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/management/database-management_tuning-advisor/#24-推奨事項の実装" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.4 推奨事項の実装" aria-label="アンカー先: 2.4 推奨事項の実装" href="#24-%e6%8e%a8%e5%a5%a8%e4%ba%8b%e9%a0%85%e3%81%ae%e5%ae%9f%e8%a3%85">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/management/database-management_tuning-advisor/#24-推奨事項の実装" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.4 推奨事項の実装" aria-label="アンカー先: 2.4 推奨事項の実装" href="#24-%e6%8e%a8%e5%a5%a8%e4%ba%8b%e9%a0%85%e3%81%ae%e5%ae%9f%e8%a3%85">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -805,7 +805,7 @@ SHユーザでPDBにログインします。</p>
     >
         2.5　SQLを再実行
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/management/database-management_tuning-advisor/#25sqlを再実行" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.5　SQLを再実行" aria-label="アンカー先: 2.5　SQLを再実行" href="#25sql%e3%82%92%e5%86%8d%e5%ae%9f%e8%a1%8c">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/management/database-management_tuning-advisor/#25sqlを再実行" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.5　SQLを再実行" aria-label="アンカー先: 2.5　SQLを再実行" href="#25sql%e3%82%92%e5%86%8d%e5%ae%9f%e8%a1%8c">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -816,7 +816,7 @@ SHユーザでPDBにログインします。</p>
     >
         2.6 SQLモニタリングで確認
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/management/database-management_tuning-advisor/#26-sqlモニタリングで確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.6 SQLモニタリングで確認" aria-label="アンカー先: 2.6 SQLモニタリングで確認" href="#26-sql%e3%83%a2%e3%83%8b%e3%82%bf%e3%83%aa%e3%83%b3%e3%82%b0%e3%81%a7%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/management/database-management_tuning-advisor/#26-sqlモニタリングで確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.6 SQLモニタリングで確認" aria-label="アンカー先: 2.6 SQLモニタリングで確認" href="#26-sql%e3%83%a2%e3%83%8b%e3%82%bf%e3%83%aa%e3%83%b3%e3%82%b0%e3%81%a7%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9073,7 +9073,7 @@ SHユーザでPDBにログインします。</p>
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/management/logginganalytics_adb_log/"
+      href="/ocitutorial-geekdocs/management/logginganalytics_adb_log/"
       title="Logging AnalyticsでAutonomous Databaseのログを収集する"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9085,7 +9085,7 @@ SHユーザでPDBにログインします。</p>
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/management/dbcs_operations_insights/"
+      href="/ocitutorial-geekdocs/management/dbcs_operations_insights/"
       title="OCIのBase Database ServiceでOperations Insightsを有効化する"
     >
       OCIのBase Database ServiceでOperations Insightsを有効化する
@@ -9139,7 +9139,7 @@ SHユーザでPDBにログインします。</p>
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

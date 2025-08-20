@@ -20,18 +20,18 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
 
   <title>104: クレデンシャル・ウォレットを利用して接続してみよう | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -53,7 +53,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
 1. クレデンシャル・ウォレットのダウンロード 2. 設定ファイルの編集 3. ADBに接続 3-1. SQL*Plus を使った接続 3-2. SQLcl を使った接続 3-3. SQL Developer を使った接続 3-4. Database Actions を使った接続 所要時間 : 約20分
 1. クレデンシャル・ウォレットのダウンロード ウォレットを利用したADBインスタンスへの接続には、対象インスタンスへの接続情報が格納された クレデンシャル・ウォレット を利用する必要があります。 （より高いセキュリティを担保するために、ADBインスタンスはcredential.ssoファイルを利用した接続のみを受け入れます。） まず、ADBへの接続情報が格納されるCredential.zipファイルをお手元のPCにダウンロードしましょう。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/adb/adb104-connect-using-wallet/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb104-connect-using-wallet/" />
 
 <meta property="article:section" content="Adb" />
     <meta
@@ -82,7 +82,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
       "@type": "TechArticle",
       "articleSection": "Adb",
       "name": "104: クレデンシャル・ウォレットを利用して接続してみよう",
-      "url" : "https://oracle-japan.github.io/ocitutorials/adb/adb104-connect-using-wallet/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb104-connect-using-wallet/",
       "headline": "104: クレデンシャル・ウォレットを利用して接続してみよう",
       "description": "\nはじめに Autonomous Database にはさまざまなツールが同梱されており、簡単にご利用いただけますが、 一方で、これまでお使いのアプリケーションからの接続するときはどのように接続するのでしょうか？\nAutonomous Databaseには暗号化およびSSL相互認証を利用した接続が前提としており、そのため接続する際はクレデンシャル・ウォレット（Credential.zipファイル）を利用する必要があります。\n本章ではこのクレデンシャル・ウォレットを使用した接続方法について確認していきます。 尚、クレデンシャル・ウォレットの扱いに慣れてしまえば、Autonomous だからと言って特別なことはありません。\n前提条件\nADBインスタンスが構成済みであること ※ADBインタンスを作成方法については、101:ADBインスタンスを作成してみようを参照ください。 SQL Developerを使用した接続を行いたい場合には、当該クライアントツールがインストール済みであること。インストールはこちらから\n目次\n1. クレデンシャル・ウォレットのダウンロード 2. 設定ファイルの編集 3. ADBに接続 3-1. SQL*Plus を使った接続 3-2. SQLcl を使った接続 3-3. SQL Developer を使った接続 3-4. Database Actions を使った接続 所要時間 : 約20分\n1. クレデンシャル・ウォレットのダウンロード ウォレットを利用したADBインスタンスへの接続には、対象インスタンスへの接続情報が格納された クレデンシャル・ウォレット を利用する必要があります。 （より高いセキュリティを担保するために、ADBインスタンスはcredential.ssoファイルを利用した接続のみを受け入れます。） まず、ADBへの接続情報が格納されるCredential.zipファイルをお手元のPCにダウンロードしましょう。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -92,7 +92,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/adb/adb104-connect-using-wallet/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb104-connect-using-wallet/"
       },
       "copyrightHolder" : "OCIチュートリアル",
       "copyrightYear" : "0001",
@@ -102,10 +102,10 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -115,73 +115,73 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/adb/adb104-connect-using-wallet/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb104-connect-using-wallet/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/adb/adb104-connect-using-wallet/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb104-connect-using-wallet/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="104: クレデンシャル・ウォレットを利用して接続してみよう">
   <meta property="og:description" content="はじめに Autonomous Database にはさまざまなツールが同梱されており、簡単にご利用いただけますが、 一方で、これまでお使いのアプリケーションからの接続するときはどのように接続するのでしょうか？
@@ -253,11 +253,11 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -274,7 +274,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -286,7 +286,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -418,7 +418,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/adb/' href='/ocitutorials/adb/'><span itemprop='name'>Oracle Database編 - Autonomous Database (ADB)を使ってみよう</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>104: クレデンシャル・ウォレットを利用して接続してみよう</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/adb/' href='/ocitutorial-geekdocs/adb/'><span itemprop='name'>Oracle Database編 - Autonomous Database (ADB)を使ってみよう</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>104: クレデンシャル・ウォレットを利用して接続してみよう</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -450,7 +450,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
     >
         はじめに
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb104-connect-using-wallet/#はじめに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: はじめに" aria-label="アンカー先: はじめに" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb104-connect-using-wallet/#はじめに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: はじめに" aria-label="アンカー先: はじめに" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -516,7 +516,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
     >
         1. クレデンシャル・ウォレットのダウンロード
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb104-connect-using-wallet/#1-クレデンシャルウォレットのダウンロード" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. クレデンシャル・ウォレットのダウンロード" aria-label="アンカー先: 1. クレデンシャル・ウォレットのダウンロード" href="#1-%e3%82%af%e3%83%ac%e3%83%87%e3%83%b3%e3%82%b7%e3%83%a3%e3%83%ab%e3%82%a6%e3%82%a9%e3%83%ac%e3%83%83%e3%83%88%e3%81%ae%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb104-connect-using-wallet/#1-クレデンシャルウォレットのダウンロード" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. クレデンシャル・ウォレットのダウンロード" aria-label="アンカー先: 1. クレデンシャル・ウォレットのダウンロード" href="#1-%e3%82%af%e3%83%ac%e3%83%87%e3%83%b3%e3%82%b7%e3%83%a3%e3%83%ab%e3%82%a6%e3%82%a9%e3%83%ac%e3%83%83%e3%83%88%e3%81%ae%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -574,7 +574,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスを作�
     >
         2. 設定ファイルの編集
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb104-connect-using-wallet/#2-設定ファイルの編集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. 設定ファイルの編集" aria-label="アンカー先: 2. 設定ファイルの編集" href="#2-%e8%a8%ad%e5%ae%9a%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%81%ae%e7%b7%a8%e9%9b%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb104-connect-using-wallet/#2-設定ファイルの編集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. 設定ファイルの編集" aria-label="アンカー先: 2. 設定ファイルの編集" href="#2-%e8%a8%ad%e5%ae%9a%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%81%ae%e7%b7%a8%e9%9b%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -728,7 +728,7 @@ Cloud Shellから接続する場合、SQL*Plus (<a
     >
         3. ADBに接続
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb104-connect-using-wallet/#3-adbに接続" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. ADBに接続" aria-label="アンカー先: 3. ADBに接続" href="#3-adb%e3%81%ab%e6%8e%a5%e7%b6%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb104-connect-using-wallet/#3-adbに接続" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. ADBに接続" aria-label="アンカー先: 3. ADBに接続" href="#3-adb%e3%81%ab%e6%8e%a5%e7%b6%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -738,7 +738,7 @@ Cloud Shellから接続する場合、SQL*Plus (<a
     >
         3-1. SQL*Plus を使った接続
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb104-connect-using-wallet/#3-1-sqlplus-を使った接続" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-1. SQL*Plus を使った接続" aria-label="アンカー先: 3-1. SQL*Plus を使った接続" href="#3-1-sqlplus-%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%9f%e6%8e%a5%e7%b6%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb104-connect-using-wallet/#3-1-sqlplus-を使った接続" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-1. SQL*Plus を使った接続" aria-label="アンカー先: 3-1. SQL*Plus を使った接続" href="#3-1-sqlplus-%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%9f%e6%8e%a5%e7%b6%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -792,7 +792,7 @@ Cloud Shellから接続する場合、SQL*Plus (<a
     >
         3-2. SQLcl を使った接続
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb104-connect-using-wallet/#3-2-sqlcl-を使った接続" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-2. SQLcl を使った接続" aria-label="アンカー先: 3-2. SQLcl を使った接続" href="#3-2-sqlcl-%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%9f%e6%8e%a5%e7%b6%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb104-connect-using-wallet/#3-2-sqlcl-を使った接続" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-2. SQLcl を使った接続" aria-label="アンカー先: 3-2. SQLcl を使った接続" href="#3-2-sqlcl-%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%9f%e6%8e%a5%e7%b6%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -822,7 +822,7 @@ SQL＊Plusに似ていますがSQL*Plusよりも多くの機能が備わって�
     >
         3-3. SQL Developer を使った接続
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb104-connect-using-wallet/#3-3-sql-developer-を使った接続" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-3. SQL Developer を使った接続" aria-label="アンカー先: 3-3. SQL Developer を使った接続" href="#3-3-sql-developer-%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%9f%e6%8e%a5%e7%b6%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb104-connect-using-wallet/#3-3-sql-developer-を使った接続" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-3. SQL Developer を使った接続" aria-label="アンカー先: 3-3. SQL Developer を使った接続" href="#3-3-sql-developer-%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%9f%e6%8e%a5%e7%b6%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -921,7 +921,7 @@ SQL Developerを起動し、管理者アカウント(ADMIN)でADBへ接続しま
     >
         3-4. Database Actions を使った接続
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb104-connect-using-wallet/#3-4-database-actions-を使った接続" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-4. Database Actions を使った接続" aria-label="アンカー先: 3-4. Database Actions を使った接続" href="#3-4-database-actions-%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%9f%e6%8e%a5%e7%b6%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb104-connect-using-wallet/#3-4-database-actions-を使った接続" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-4. Database Actions を使った接続" aria-label="アンカー先: 3-4. Database Actions を使った接続" href="#3-4-database-actions-%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%9f%e6%8e%a5%e7%b6%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9177,7 +9177,7 @@ SQL Developerを起動し、管理者アカウント(ADMIN)でADBへ接続しま
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/adb/adb103-livelabs/"
+      href="/ocitutorial-geekdocs/adb/adb103-livelabs/"
       title="103: Oracle LiveLabsのご紹介"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9189,7 +9189,7 @@ SQL Developerを起動し、管理者アカウント(ADMIN)でADBへ接続しま
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/adb/adb105-create-apex-app/"
+      href="/ocitutorial-geekdocs/adb/adb105-create-apex-app/"
       title="105: ADBの付属ツールで簡易アプリを作成しよう(APEX)"
     >
       105: ADBの付属ツールで簡易アプリを作成しよう(APEX)
@@ -9243,7 +9243,7 @@ SQL Developerを起動し、管理者アカウント(ADMIN)でADBへ接続しま
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

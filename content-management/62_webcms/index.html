@@ -26,18 +26,18 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
 
   <title>Oracle Content ManagementをWebコンテンツ管理(WebCMS)として利用しよう【初級編】 | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -65,7 +65,7 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
 作成するWebサイトは以下の通りです
 サイト名: firstSite" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/content-management/62_webcms/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/62_webcms/" />
 
 <meta property="article:section" content="Content Management" />
     <meta
@@ -100,7 +100,7 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
       "@type": "TechArticle",
       "articleSection": "Content Management",
       "name": "Oracle Content ManagementをWebコンテンツ管理(WebCMS)として利用しよう【初級編】",
-      "url" : "https://oracle-japan.github.io/ocitutorials/content-management/62_webcms/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/62_webcms/",
       "headline": "Oracle Content ManagementをWebコンテンツ管理(WebCMS)として利用しよう【初級編】",
       "description": "\nこの文書はOracle Content Management(OCM)のサイト作成機能を利用し、Web サイトを作成・公開する方法をステップ・バイ・ステップで紹介するチュートリアル【初級編】です。また、サイト上で公開するコンテンツは、アセット管理機能で管理されるコンテンツ・アイテムを利用します\n【お知らせ】\nこの文書は、2023年8月時点での最新バージョン(23.7.2)を元に作成されてます。\nチュートリアル内の画面ショットについてはOracle Content Managementの現在のコンソール画面と異なっている場合があります。\n{: .notice–info}\n前提条件\nOCMインスタンスが作成済であること(以下の作成手順参照)\nOCI IAM Identity Domain環境でOracle Content Managementインスタンスを作成する Oracle Content Management インスタンスを作成する 少なくとも下記4つのOCMインスタンスのアプリケーション・ロールが付与された管理ユーザーを用意すること\nCECContentAdministrator CECDeveloperUser CECEnterpriseUser CECRepositoryAdminisrrator [Memo]\nユーザーの作成とアプリケーションロールの付与手順は、OCI IAM Identity Domain環境でOracle Content Managementインスタンスの利用ユーザーを作成するもしくはOracle Content Managementインスタンスの利用ユーザーを作成するをご確認ください。\nOracle Content ManagementをHeadless CMSとして使ってみよう【初級編】が完了していること\n0. 説明 このチュートリアルでは、OCMのサイト機能を利用してWebサイトを作成・公開します。また、Webサイト上で公開するコンテンツは、以前のチュートリアルで作成したリポジトリ(Sample Content Repository)とコンテンツ・タイプ(sampleNewsType)を利用します。\n作成するWebサイトは以下の通りです\nサイト名: firstSite",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -110,7 +110,7 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/content-management/62_webcms/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/62_webcms/"
       },
       "keywords" : [ "OCE" , "OCM" ],
       "copyrightHolder" : "OCIチュートリアル",
@@ -121,10 +121,10 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -134,73 +134,73 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/content-management/62_webcms/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/62_webcms/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/content-management/62_webcms/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/62_webcms/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="Oracle Content ManagementをWebコンテンツ管理(WebCMS)として利用しよう【初級編】">
   <meta property="og:description" content="この文書はOracle Content Management(OCM)のサイト作成機能を利用し、Web サイトを作成・公開する方法をステップ・バイ・ステップで紹介するチュートリアル【初級編】です。また、サイト上で公開するコンテンツは、アセット管理機能で管理されるコンテンツ・アイテムを利用します
@@ -286,11 +286,11 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -307,7 +307,7 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -319,7 +319,7 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -473,7 +473,7 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/content-management/' href='/ocitutorials/content-management/'><span itemprop='name'>コンテンツ管理編</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Oracle Content ManagementをWebコンテンツ管理(WebCMS)として利用しよう【初級編】</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/content-management/' href='/ocitutorial-geekdocs/content-management/'><span itemprop='name'>コンテンツ管理編</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Oracle Content ManagementをWebコンテンツ管理(WebCMS)として利用しよう【初級編】</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -564,7 +564,7 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
     >
         0. 説明
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/62_webcms/#0-説明" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0. 説明" aria-label="アンカー先: 0. 説明" href="#0-%e8%aa%ac%e6%98%8e">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/62_webcms/#0-説明" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0. 説明" aria-label="アンカー先: 0. 説明" href="#0-%e8%aa%ac%e6%98%8e">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -592,7 +592,7 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
     >
         1. サイト作成の準備
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/62_webcms/#1-サイト作成の準備" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. サイト作成の準備" aria-label="アンカー先: 1. サイト作成の準備" href="#1-%e3%82%b5%e3%82%a4%e3%83%88%e4%bd%9c%e6%88%90%e3%81%ae%e6%ba%96%e5%82%99">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/62_webcms/#1-サイト作成の準備" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. サイト作成の準備" aria-label="アンカー先: 1. サイト作成の準備" href="#1-%e3%82%b5%e3%82%a4%e3%83%88%e4%bd%9c%e6%88%90%e3%81%ae%e6%ba%96%e5%82%99">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -601,7 +601,7 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
     >
         1.1 ローカリゼーションポリシーの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/62_webcms/#11-ローカリゼーションポリシーの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.1 ローカリゼーションポリシーの作成" aria-label="アンカー先: 1.1 ローカリゼーションポリシーの作成" href="#11-%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%aa%e3%82%bc%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%83%9d%e3%83%aa%e3%82%b7%e3%83%bc%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/62_webcms/#11-ローカリゼーションポリシーの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.1 ローカリゼーションポリシーの作成" aria-label="アンカー先: 1.1 ローカリゼーションポリシーの作成" href="#11-%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%aa%e3%82%bc%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%83%9d%e3%83%aa%e3%82%b7%e3%83%bc%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -657,7 +657,7 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
     >
         1.2 コンテンツ・レイアウトの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/62_webcms/#12-コンテンツレイアウトの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.2 コンテンツ・レイアウトの作成" aria-label="アンカー先: 1.2 コンテンツ・レイアウトの作成" href="#12-%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%e3%83%ac%e3%82%a4%e3%82%a2%e3%82%a6%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/62_webcms/#12-コンテンツレイアウトの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.2 コンテンツ・レイアウトの作成" aria-label="アンカー先: 1.2 コンテンツ・レイアウトの作成" href="#12-%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%e3%83%ac%e3%82%a4%e3%82%a2%e3%82%a6%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -737,7 +737,7 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
     >
         1.3 コンテンツ・レイアウトとコンテンツ・タイプを関連付け
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/62_webcms/#13-コンテンツレイアウトとコンテンツタイプを関連付け" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.3 コンテンツ・レイアウトとコンテンツ・タイプを関連付け" aria-label="アンカー先: 1.3 コンテンツ・レイアウトとコンテンツ・タイプを関連付け" href="#13-%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%e3%83%ac%e3%82%a4%e3%82%a2%e3%82%a6%e3%83%88%e3%81%a8%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%e3%82%bf%e3%82%a4%e3%83%97%e3%82%92%e9%96%a2%e9%80%a3%e4%bb%98%e3%81%91">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/62_webcms/#13-コンテンツレイアウトとコンテンツタイプを関連付け" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.3 コンテンツ・レイアウトとコンテンツ・タイプを関連付け" aria-label="アンカー先: 1.3 コンテンツ・レイアウトとコンテンツ・タイプを関連付け" href="#13-%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%e3%83%ac%e3%82%a4%e3%82%a2%e3%82%a6%e3%83%88%e3%81%a8%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%e3%82%bf%e3%82%a4%e3%83%97%e3%82%92%e9%96%a2%e9%80%a3%e4%bb%98%e3%81%91">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -791,7 +791,7 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
     >
         2.  サイトの作成
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/62_webcms/#2--サイトの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.  サイトの作成" aria-label="アンカー先: 2.  サイトの作成" href="#2--%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/62_webcms/#2--サイトの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.  サイトの作成" aria-label="アンカー先: 2.  サイトの作成" href="#2--%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -817,7 +817,7 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
     >
         2.1 サイトの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/62_webcms/#21-サイトの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.1 サイトの作成" aria-label="アンカー先: 2.1 サイトの作成" href="#21-%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/62_webcms/#21-サイトの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.1 サイトの作成" aria-label="アンカー先: 2.1 サイトの作成" href="#21-%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -896,7 +896,7 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
     >
         2.2 作成された公開チャネルの確認
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/62_webcms/#22-作成された公開チャネルの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.2 作成された公開チャネルの確認" aria-label="アンカー先: 2.2 作成された公開チャネルの確認" href="#22-%e4%bd%9c%e6%88%90%e3%81%95%e3%82%8c%e3%81%9f%e5%85%ac%e9%96%8b%e3%83%81%e3%83%a3%e3%83%8d%e3%83%ab%e3%81%ae%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/62_webcms/#22-作成された公開チャネルの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.2 作成された公開チャネルの確認" aria-label="アンカー先: 2.2 作成された公開チャネルの確認" href="#22-%e4%bd%9c%e6%88%90%e3%81%95%e3%82%8c%e3%81%9f%e5%85%ac%e9%96%8b%e3%83%81%e3%83%a3%e3%83%8d%e3%83%ab%e3%81%ae%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -942,7 +942,7 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
     >
         3. サイト上で利用するアセットの作成と公開
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/62_webcms/#3-サイト上で利用するアセットの作成と公開" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. サイト上で利用するアセットの作成と公開" aria-label="アンカー先: 3. サイト上で利用するアセットの作成と公開" href="#3-%e3%82%b5%e3%82%a4%e3%83%88%e4%b8%8a%e3%81%a7%e5%88%a9%e7%94%a8%e3%81%99%e3%82%8b%e3%82%a2%e3%82%bb%e3%83%83%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90%e3%81%a8%e5%85%ac%e9%96%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/62_webcms/#3-サイト上で利用するアセットの作成と公開" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. サイト上で利用するアセットの作成と公開" aria-label="アンカー先: 3. サイト上で利用するアセットの作成と公開" href="#3-%e3%82%b5%e3%82%a4%e3%83%88%e4%b8%8a%e3%81%a7%e5%88%a9%e7%94%a8%e3%81%99%e3%82%8b%e3%82%a2%e3%82%bb%e3%83%83%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90%e3%81%a8%e5%85%ac%e9%96%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1021,7 +1021,7 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
     >
         4. サイトの編集・公開
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/62_webcms/#4-サイトの編集公開" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. サイトの編集・公開" aria-label="アンカー先: 4. サイトの編集・公開" href="#4-%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e7%b7%a8%e9%9b%86%e5%85%ac%e9%96%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/62_webcms/#4-サイトの編集公開" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. サイトの編集・公開" aria-label="アンカー先: 4. サイトの編集・公開" href="#4-%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e7%b7%a8%e9%9b%86%e5%85%ac%e9%96%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1031,7 +1031,7 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
     >
         4.1 サイトの編集
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/62_webcms/#41-サイトの編集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.1 サイトの編集" aria-label="アンカー先: 4.1 サイトの編集" href="#41-%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e7%b7%a8%e9%9b%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/62_webcms/#41-サイトの編集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.1 サイトの編集" aria-label="アンカー先: 4.1 サイトの編集" href="#41-%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e7%b7%a8%e9%9b%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1040,7 +1040,7 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
     >
         4.1.1 編集モードへの切り替え
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/62_webcms/#411-編集モードへの切り替え" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.1.1 編集モードへの切り替え" aria-label="アンカー先: 4.1.1 編集モードへの切り替え" href="#411-%e7%b7%a8%e9%9b%86%e3%83%a2%e3%83%bc%e3%83%89%e3%81%b8%e3%81%ae%e5%88%87%e3%82%8a%e6%9b%bf%e3%81%88">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/62_webcms/#411-編集モードへの切り替え" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.1.1 編集モードへの切り替え" aria-label="アンカー先: 4.1.1 編集モードへの切り替え" href="#411-%e7%b7%a8%e9%9b%86%e3%83%a2%e3%83%bc%e3%83%89%e3%81%b8%e3%81%ae%e5%88%87%e3%82%8a%e6%9b%bf%e3%81%88">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1086,7 +1086,7 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
     >
         4.1.2 不要ページの削除
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/62_webcms/#412-不要ページの削除" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.1.2 不要ページの削除" aria-label="アンカー先: 4.1.2 不要ページの削除" href="#412-%e4%b8%8d%e8%a6%81%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%ae%e5%89%8a%e9%99%a4">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/62_webcms/#412-不要ページの削除" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.1.2 不要ページの削除" aria-label="アンカー先: 4.1.2 不要ページの削除" href="#412-%e4%b8%8d%e8%a6%81%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%ae%e5%89%8a%e9%99%a4">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1132,7 +1132,7 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
     >
         4.1.3 Homeページの編集
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/62_webcms/#413-homeページの編集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.1.3 Homeページの編集" aria-label="アンカー先: 4.1.3 Homeページの編集" href="#413-home%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%ae%e7%b7%a8%e9%9b%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/62_webcms/#413-homeページの編集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.1.3 Homeページの編集" aria-label="アンカー先: 4.1.3 Homeページの編集" href="#413-home%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%ae%e7%b7%a8%e9%9b%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1248,7 +1248,7 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
     >
         4.1.4 Detailページの追加および編集
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/62_webcms/#414-detailページの追加および編集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.1.4 Detailページの追加および編集" aria-label="アンカー先: 4.1.4 Detailページの追加および編集" href="#414-detail%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%ae%e8%bf%bd%e5%8a%a0%e3%81%8a%e3%82%88%e3%81%b3%e7%b7%a8%e9%9b%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/62_webcms/#414-detailページの追加および編集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.1.4 Detailページの追加および編集" aria-label="アンカー先: 4.1.4 Detailページの追加および編集" href="#414-detail%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%ae%e8%bf%bd%e5%8a%a0%e3%81%8a%e3%82%88%e3%81%b3%e7%b7%a8%e9%9b%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1349,7 +1349,7 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
     >
         4.1.5 サイト編集のコミット
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/62_webcms/#415-サイト編集のコミット" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.1.5 サイト編集のコミット" aria-label="アンカー先: 4.1.5 サイト編集のコミット" href="#415-%e3%82%b5%e3%82%a4%e3%83%88%e7%b7%a8%e9%9b%86%e3%81%ae%e3%82%b3%e3%83%9f%e3%83%83%e3%83%88">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/62_webcms/#415-サイト編集のコミット" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.1.5 サイト編集のコミット" aria-label="アンカー先: 4.1.5 サイト編集のコミット" href="#415-%e3%82%b5%e3%82%a4%e3%83%88%e7%b7%a8%e9%9b%86%e3%81%ae%e3%82%b3%e3%83%9f%e3%83%83%e3%83%88">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1382,7 +1382,7 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
     >
         4.2 サイトの公開
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/62_webcms/#42-サイトの公開" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.2 サイトの公開" aria-label="アンカー先: 4.2 サイトの公開" href="#42-%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e5%85%ac%e9%96%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/62_webcms/#42-サイトの公開" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.2 サイトの公開" aria-label="アンカー先: 4.2 サイトの公開" href="#42-%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e5%85%ac%e9%96%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1429,7 +1429,7 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
     >
         4.3 サイトのオンライン化
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/62_webcms/#43-サイトのオンライン化" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.3 サイトのオンライン化" aria-label="アンカー先: 4.3 サイトのオンライン化" href="#43-%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e3%82%aa%e3%83%b3%e3%83%a9%e3%82%a4%e3%83%b3%e5%8c%96">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/62_webcms/#43-サイトのオンライン化" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.3 サイトのオンライン化" aria-label="アンカー先: 4.3 サイトのオンライン化" href="#43-%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e3%82%aa%e3%83%b3%e3%83%a9%e3%82%a4%e3%83%b3%e5%8c%96">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1471,7 +1471,7 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
     >
         5. 公開サイトの確認
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/62_webcms/#5-公開サイトの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5. 公開サイトの確認" aria-label="アンカー先: 5. 公開サイトの確認" href="#5-%e5%85%ac%e9%96%8b%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/62_webcms/#5-公開サイトの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5. 公開サイトの確認" aria-label="アンカー先: 5. 公開サイトの確認" href="#5-%e5%85%ac%e9%96%8b%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9765,7 +9765,7 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/content-management/41_asset_headless/"
+      href="/ocitutorial-geekdocs/content-management/41_asset_headless/"
       title="Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編】"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9777,7 +9777,7 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/content-management/91_compile_site_ocmtoolkit/"
+      href="/ocitutorial-geekdocs/content-management/91_compile_site_ocmtoolkit/"
       title="Oracle Content Toolkitを利用して Oracle Content Management のサイトをコンパイルしよう"
     >
       Oracle Content Toolkitを利用して Oracle Content Management のサイトをコンパイルしよう
@@ -9831,7 +9831,7 @@ Oracle Content ManagementをHeadless CMSとして使ってみよう【初級編�
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

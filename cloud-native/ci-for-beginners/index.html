@@ -17,18 +17,18 @@ OCI Container Instances上でWordPress環境を構築して、実際にアプリ
 
   <title>OCI Container Instances をプロビジョニングしよう | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -46,7 +46,7 @@ OCI Container Instances上でWordPress環境を構築して、実際にアプリ
 ハンバーガーメニューをクリックします。
 開発者サービス-コンテナ・インスタンスを選択します。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/cloud-native/ci-for-beginners/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/ci-for-beginners/" />
 
 <meta property="article:section" content="Cloud Native" />
     <meta
@@ -71,7 +71,7 @@ OCI Container Instances上でWordPress環境を構築して、実際にアプリ
       "@type": "TechArticle",
       "articleSection": "Cloud Native",
       "name": "OCI Container Instances をプロビジョニングしよう",
-      "url" : "https://oracle-japan.github.io/ocitutorials/cloud-native/ci-for-beginners/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/ci-for-beginners/",
       "headline": "OCI Container Instances をプロビジョニングしよう",
       "description": "OCI Container Instances は、コンテナ用に最適化されたサーバレス・コンピューティングでアプリケーションを実行できます。OCIの管理コンソールからコンピュートシェイプ、リソース割り当て、ネットワーク構成をプロビジョニングして、複数のコンテナをローンチできます。Kubernetes をはじめとするコンテナ・オーケストレーション・プラットフォームを必要としないコンテナベースのワークロードに適したサービスです。\nOCI Container Instances上でWordPress環境を構築して、実際にアプリケーションを動かす流れを体験します。\n前提条件 クラウド環境 Oracle Cloudのアカウントを取得済みであること ハンズオン環境のイメージ 1.OCI Container Instancesのプロビジョニング ここでは、OCI Container Instancesのプロビジョニングを行います。\nハンバーガーメニューをクリックします。\n開発者サービス-コンテナ・インスタンスを選択します。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -81,7 +81,7 @@ OCI Container Instances上でWordPress環境を構築して、実際にアプリ
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/cloud-native/ci-for-beginners/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/ci-for-beginners/"
       },
       "copyrightHolder" : "OCIチュートリアル",
       "copyrightYear" : "0001",
@@ -91,10 +91,10 @@ OCI Container Instances上でWordPress環境を構築して、実際にアプリ
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -104,73 +104,73 @@ OCI Container Instances上でWordPress環境を構築して、実際にアプリ
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/cloud-native/ci-for-beginners/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/ci-for-beginners/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/cloud-native/ci-for-beginners/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/ci-for-beginners/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="OCI Container Instances をプロビジョニングしよう">
   <meta property="og:description" content="OCI Container Instances は、コンテナ用に最適化されたサーバレス・コンピューティングでアプリケーションを実行できます。OCIの管理コンソールからコンピュートシェイプ、リソース割り当て、ネットワーク構成をプロビジョニングして、複数のコンテナをローンチできます。Kubernetes をはじめとするコンテナ・オーケストレーション・プラットフォームを必要としないコンテナベースのワークロードに適したサービスです。
@@ -236,11 +236,11 @@ OCI Container Instances上でWordPress環境を構築して、実際にアプリ
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -257,7 +257,7 @@ OCI Container Instances上でWordPress環境を構築して、実際にアプリ
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -269,7 +269,7 @@ OCI Container Instances上でWordPress環境を構築して、実際にアプリ
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -396,7 +396,7 @@ OCI Container Instances上でWordPress環境を構築して、実際にアプリ
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/cloud-native/' href='/ocitutorials/cloud-native/'><span itemprop='name'>Cloud Nativeチュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>OCI Container Instances をプロビジョニングしよう</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/cloud-native/' href='/ocitutorial-geekdocs/cloud-native/'><span itemprop='name'>Cloud Nativeチュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>OCI Container Instances をプロビジョニングしよう</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -429,7 +429,7 @@ OCI Container Instances上でWordPress環境を構築して、実際にアプリ
     >
         前提条件
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/ci-for-beginners/#前提条件" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 前提条件" aria-label="アンカー先: 前提条件" href="#%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/ci-for-beginners/#前提条件" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 前提条件" aria-label="アンカー先: 前提条件" href="#%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -445,7 +445,7 @@ OCI Container Instances上でWordPress環境を構築して、実際にアプリ
     >
         ハンズオン環境のイメージ
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/ci-for-beginners/#ハンズオン環境のイメージ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ハンズオン環境のイメージ" aria-label="アンカー先: ハンズオン環境のイメージ" href="#%e3%83%8f%e3%83%b3%e3%82%ba%e3%82%aa%e3%83%b3%e7%92%b0%e5%a2%83%e3%81%ae%e3%82%a4%e3%83%a1%e3%83%bc%e3%82%b8">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/ci-for-beginners/#ハンズオン環境のイメージ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ハンズオン環境のイメージ" aria-label="アンカー先: ハンズオン環境のイメージ" href="#%e3%83%8f%e3%83%b3%e3%82%ba%e3%82%aa%e3%83%b3%e7%92%b0%e5%a2%83%e3%81%ae%e3%82%a4%e3%83%a1%e3%83%bc%e3%82%b8">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -459,7 +459,7 @@ OCI Container Instances上でWordPress環境を構築して、実際にアプリ
     >
         1.OCI Container Instancesのプロビジョニング
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/ci-for-beginners/#1oci-container-instancesのプロビジョニング" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.OCI Container Instancesのプロビジョニング" aria-label="アンカー先: 1.OCI Container Instancesのプロビジョニング" href="#1oci-container-instances%e3%81%ae%e3%83%97%e3%83%ad%e3%83%93%e3%82%b8%e3%83%a7%e3%83%8b%e3%83%b3%e3%82%b0">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/ci-for-beginners/#1oci-container-instancesのプロビジョニング" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.OCI Container Instancesのプロビジョニング" aria-label="アンカー先: 1.OCI Container Instancesのプロビジョニング" href="#1oci-container-instances%e3%81%ae%e3%83%97%e3%83%ad%e3%83%93%e3%82%b8%e3%83%a7%e3%83%8b%e3%83%b3%e3%82%b0">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -631,7 +631,7 @@ OCI Container Instances上でWordPress環境を構築して、実際にアプリ
     >
         2.Netowrk Security Groupの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/ci-for-beginners/#2netowrk-security-groupの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.Netowrk Security Groupの作成" aria-label="アンカー先: 2.Netowrk Security Groupの作成" href="#2netowrk-security-group%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/ci-for-beginners/#2netowrk-security-groupの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.Netowrk Security Groupの作成" aria-label="アンカー先: 2.Netowrk Security Groupの作成" href="#2netowrk-security-group%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -754,7 +754,7 @@ OCI Container Instances上でWordPress環境を構築して、実際にアプリ
     >
         3.WordPressのセットアップ
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/cloud-native/ci-for-beginners/#3wordpressのセットアップ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3.WordPressのセットアップ" aria-label="アンカー先: 3.WordPressのセットアップ" href="#3wordpress%e3%81%ae%e3%82%bb%e3%83%83%e3%83%88%e3%82%a2%e3%83%83%e3%83%97">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/cloud-native/ci-for-beginners/#3wordpressのセットアップ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3.WordPressのセットアップ" aria-label="アンカー先: 3.WordPressのセットアップ" href="#3wordpress%e3%81%ae%e3%82%bb%e3%83%83%e3%83%88%e3%82%a2%e3%83%83%e3%83%97">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9047,7 +9047,7 @@ OCI Container Instances上でWordPress環境を構築して、実際にアプリ
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/cloud-native/ocicache-for-commons/"
+      href="/ocitutorial-geekdocs/cloud-native/ocicache-for-commons/"
       title="OCI Cacheを使ってレスポンス・キャッシングをしてみよう"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9059,7 +9059,7 @@ OCI Container Instances上でWordPress環境を構築して、実際にアプリ
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/cloud-native/osm-for-beginners/"
+      href="/ocitutorial-geekdocs/cloud-native/osm-for-beginners/"
       title="OCI Service Meshを使ってサービスメッシュ環境を作ろう"
     >
       OCI Service Meshを使ってサービスメッシュ環境を作ろう
@@ -9113,7 +9113,7 @@ OCI Container Instances上でWordPress環境を構築して、実際にアプリ
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

@@ -18,18 +18,18 @@ OCIコンソール画面左上のメニュー → 監視および管理 → ロ�
 
   <title>OCI Load Balancerに直接アタッチするタイプのWeb Application Firewallのログを分析する | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -48,7 +48,7 @@ OCIコンソール画面左上のメニュー → 監視および管理 → ロ�
 1. ログ・グループの作成 WAFポリシーのログの転送先となるLogging Analyticsの「ログ・グループ」を作成します。 Logging Analyticsではログを「ログ・グループ」単位で管理することができます。
 OCIコンソール画面左上のメニュー → 監視および管理 → ログ・アナリティクス → 管理 → ログ・グループ → 「ログ・グループの作成」ボタンをクリックします。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/security/waf-v2-loganalytics/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/security/waf-v2-loganalytics/" />
 
 <meta property="article:section" content="Security" />
     <meta
@@ -74,7 +74,7 @@ OCIコンソール画面左上のメニュー → 監視および管理 → ロ�
       "@type": "TechArticle",
       "articleSection": "Security",
       "name": "OCI Load Balancerに直接アタッチするタイプのWeb Application Firewallのログを分析する",
-      "url" : "https://oracle-japan.github.io/ocitutorials/security/waf-v2-loganalytics/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/security/waf-v2-loganalytics/",
       "headline": "OCI Load Balancerに直接アタッチするタイプのWeb Application Firewallのログを分析する",
       "description": "OCIでは、OCI Load Balancerに直接デプロイするWAF、”WAFポリシー”と、お客様のアプリケーションのドメインに構築するWAF、”エッジポリシー”の2種類のWAFを提供しています。 本チュートリアルでは、「OCIのLoad BalancerにアタッチするタイプのWeb Application Firewallを構築する」の続編として、有効化したログをOCIのログ分析サービス「Logging Analytics」に転送し、ログを可視化、分析する手順を紹介します。\n所要時間 : 約20分\n前提条件 :\n「OCI Load Balancerに直接アタッチするタイプのWeb Application Firewallを構築する」を参考に、WAFポリシーの作成およびログの有効化（手順3）が完了していること Logging Analyticsが有効化されていること OCIコンソールのメニューボタン→監視および管理→ログ・アナリティクス→ログ・エクスプローラを選択し、「ログ・アナリティクスの使用の開始」を選択することで、Logging Analyticsを有効化させることができます。 ユーザーがLogging Analyticsを使用するためのポリシーが作成されていること。ポリシーの詳細はOCIチュートリアル「OCIのLogging AnalyticsでOCIの監査ログを可視化・分析する」もしくは、ドキュメントをご参照ください。 ユーザーがService Connectorを作成するためのポリシーが作成されていること。ポリシーの詳細はドキュメントをご参照ください。 注意 : ※チュートリアル内の画面ショットについてはOracle Cloud Infrastructureの現在のコンソール画面と異なっている場合があります。\n1. ログ・グループの作成 WAFポリシーのログの転送先となるLogging Analyticsの「ログ・グループ」を作成します。 Logging Analyticsではログを「ログ・グループ」単位で管理することができます。\nOCIコンソール画面左上のメニュー → 監視および管理 → ログ・アナリティクス → 管理 → ログ・グループ → 「ログ・グループの作成」ボタンをクリックします。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -84,7 +84,7 @@ OCIコンソール画面左上のメニュー → 監視および管理 → ロ�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/security/waf-v2-loganalytics/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/security/waf-v2-loganalytics/"
       },
       "keywords" : [ "intermediate" ],
       "copyrightHolder" : "OCIチュートリアル",
@@ -95,10 +95,10 @@ OCIコンソール画面左上のメニュー → 監視および管理 → ロ�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -108,73 +108,73 @@ OCIコンソール画面左上のメニュー → 監視および管理 → ロ�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/security/waf-v2-loganalytics/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/security/waf-v2-loganalytics/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/security/waf-v2-loganalytics/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/security/waf-v2-loganalytics/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="OCI Load Balancerに直接アタッチするタイプのWeb Application Firewallのログを分析する">
   <meta property="og:description" content="OCIでは、OCI Load Balancerに直接デプロイするWAF、”WAFポリシー”と、お客様のアプリケーションのドメインに構築するWAF、”エッジポリシー”の2種類のWAFを提供しています。 本チュートリアルでは、「OCIのLoad BalancerにアタッチするタイプのWeb Application Firewallを構築する」の続編として、有効化したログをOCIのログ分析サービス「Logging Analytics」に転送し、ログを可視化、分析する手順を紹介します。
@@ -243,11 +243,11 @@ OCIコンソール画面左上のメニュー → 監視および管理 → ロ�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -264,7 +264,7 @@ OCIコンソール画面左上のメニュー → 監視および管理 → ロ�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -276,7 +276,7 @@ OCIコンソール画面左上のメニュー → 監視および管理 → ロ�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -408,7 +408,7 @@ OCIコンソール画面左上のメニュー → 監視および管理 → ロ�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/security/' href='/ocitutorials/security/'><span itemprop='name'>OCI セキュリティ チュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>OCI Load Balancerに直接アタッチするタイプのWeb Application Firewallのログを分析する</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/security/' href='/ocitutorial-geekdocs/security/'><span itemprop='name'>OCI セキュリティ チュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>OCI Load Balancerに直接アタッチするタイプのWeb Application Firewallのログを分析する</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -486,7 +486,7 @@ OCIコンソール画面左上のメニュー → 監視および管理 → ロ�
     >
         1. ログ・グループの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/waf-v2-loganalytics/#1-ロググループの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. ログ・グループの作成" aria-label="アンカー先: 1. ログ・グループの作成" href="#1-%e3%83%ad%e3%82%b0%e3%82%b0%e3%83%ab%e3%83%bc%e3%83%97%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/waf-v2-loganalytics/#1-ロググループの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. ログ・グループの作成" aria-label="アンカー先: 1. ログ・グループの作成" href="#1-%e3%83%ad%e3%82%b0%e3%82%b0%e3%83%ab%e3%83%bc%e3%83%97%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -505,7 +505,7 @@ Logging Analyticsではログを「ログ・グループ」単位で管理する
     >
         2. サービス・コネクタの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/waf-v2-loganalytics/#2-サービスコネクタの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. サービス・コネクタの作成" aria-label="アンカー先: 2. サービス・コネクタの作成" href="#2-%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9%e3%82%b3%e3%83%8d%e3%82%af%e3%82%bf%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/waf-v2-loganalytics/#2-サービスコネクタの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. サービス・コネクタの作成" aria-label="アンカー先: 2. サービス・コネクタの作成" href="#2-%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9%e3%82%b3%e3%83%8d%e3%82%af%e3%82%bf%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -555,7 +555,7 @@ Logging Analyticsではログを「ログ・グループ」単位で管理する
     >
         3. WAFログのダッシュボード定義のインポート
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/waf-v2-loganalytics/#3-wafログのダッシュボード定義のインポート" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. WAFログのダッシュボード定義のインポート" aria-label="アンカー先: 3. WAFログのダッシュボード定義のインポート" href="#3-waf%e3%83%ad%e3%82%b0%e3%81%ae%e3%83%80%e3%83%83%e3%82%b7%e3%83%a5%e3%83%9c%e3%83%bc%e3%83%89%e5%ae%9a%e7%be%a9%e3%81%ae%e3%82%a4%e3%83%b3%e3%83%9d%e3%83%bc%e3%83%88">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/waf-v2-loganalytics/#3-wafログのダッシュボード定義のインポート" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. WAFログのダッシュボード定義のインポート" aria-label="アンカー先: 3. WAFログのダッシュボード定義のインポート" href="#3-waf%e3%83%ad%e3%82%b0%e3%81%ae%e3%83%80%e3%83%83%e3%82%b7%e3%83%a5%e3%83%9c%e3%83%bc%e3%83%89%e5%ae%9a%e7%be%a9%e3%81%ae%e3%82%a4%e3%83%b3%e3%83%9d%e3%83%bc%e3%83%88">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -600,7 +600,7 @@ WAFログのダッシュボード定義ファイルは以下Githubにあリま�
     >
         4. ログの分析
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/waf-v2-loganalytics/#4-ログの分析" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. ログの分析" aria-label="アンカー先: 4. ログの分析" href="#4-%e3%83%ad%e3%82%b0%e3%81%ae%e5%88%86%e6%9e%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/waf-v2-loganalytics/#4-ログの分析" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. ログの分析" aria-label="アンカー先: 4. ログの分析" href="#4-%e3%83%ad%e3%82%b0%e3%81%ae%e5%88%86%e6%9e%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -622,7 +622,7 @@ WAFログのダッシュボード定義ファイルは以下Githubにあリま�
     >
         4-1. WAFへのアクセス元地域を世界地図で表示する（例1）
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/waf-v2-loganalytics/#4-1-wafへのアクセス元地域を世界地図で表示する例1" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-1. WAFへのアクセス元地域を世界地図で表示する（例1）" aria-label="アンカー先: 4-1. WAFへのアクセス元地域を世界地図で表示する（例1）" href="#4-1-waf%e3%81%b8%e3%81%ae%e3%82%a2%e3%82%af%e3%82%bb%e3%82%b9%e5%85%83%e5%9c%b0%e5%9f%9f%e3%82%92%e4%b8%96%e7%95%8c%e5%9c%b0%e5%9b%b3%e3%81%a7%e8%a1%a8%e7%a4%ba%e3%81%99%e3%82%8b%e4%be%8b1">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/waf-v2-loganalytics/#4-1-wafへのアクセス元地域を世界地図で表示する例1" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-1. WAFへのアクセス元地域を世界地図で表示する（例1）" aria-label="アンカー先: 4-1. WAFへのアクセス元地域を世界地図で表示する（例1）" href="#4-1-waf%e3%81%b8%e3%81%ae%e3%82%a2%e3%82%af%e3%82%bb%e3%82%b9%e5%85%83%e5%9c%b0%e5%9f%9f%e3%82%92%e4%b8%96%e7%95%8c%e5%9c%b0%e5%9b%b3%e3%81%a7%e8%a1%a8%e7%a4%ba%e3%81%99%e3%82%8b%e4%be%8b1">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -651,7 +651,7 @@ WAFログのダッシュボード定義ファイルは以下Githubにあリま�
     >
         4-2. WAFによるアクションを確認する（例2）
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/waf-v2-loganalytics/#4-2-wafによるアクションを確認する例2" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-2. WAFによるアクションを確認する（例2）" aria-label="アンカー先: 4-2. WAFによるアクションを確認する（例2）" href="#4-2-waf%e3%81%ab%e3%82%88%e3%82%8b%e3%82%a2%e3%82%af%e3%82%b7%e3%83%a7%e3%83%b3%e3%82%92%e7%a2%ba%e8%aa%8d%e3%81%99%e3%82%8b%e4%be%8b2">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/waf-v2-loganalytics/#4-2-wafによるアクションを確認する例2" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-2. WAFによるアクションを確認する（例2）" aria-label="アンカー先: 4-2. WAFによるアクションを確認する（例2）" href="#4-2-waf%e3%81%ab%e3%82%88%e3%82%8b%e3%82%a2%e3%82%af%e3%82%b7%e3%83%a7%e3%83%b3%e3%82%92%e7%a2%ba%e8%aa%8d%e3%81%99%e3%82%8b%e4%be%8b2">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -700,7 +700,7 @@ WAFを通過したリクエストのうち、WAFによって取られた各ア�
     >
         4-3. ダッシュボードを利用する（例3）
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/waf-v2-loganalytics/#4-3-ダッシュボードを利用する例3" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-3. ダッシュボードを利用する（例3）" aria-label="アンカー先: 4-3. ダッシュボードを利用する（例3）" href="#4-3-%e3%83%80%e3%83%83%e3%82%b7%e3%83%a5%e3%83%9c%e3%83%bc%e3%83%89%e3%82%92%e5%88%a9%e7%94%a8%e3%81%99%e3%82%8b%e4%be%8b3">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/waf-v2-loganalytics/#4-3-ダッシュボードを利用する例3" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4-3. ダッシュボードを利用する（例3）" aria-label="アンカー先: 4-3. ダッシュボードを利用する（例3）" href="#4-3-%e3%83%80%e3%83%83%e3%82%b7%e3%83%a5%e3%83%9c%e3%83%bc%e3%83%89%e3%82%92%e5%88%a9%e7%94%a8%e3%81%99%e3%82%8b%e4%be%8b3">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9015,7 +9015,7 @@ WAFを通過したリクエストのクライアントの位置情報を基に�
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/security/waf-v2-setup/"
+      href="/ocitutorial-geekdocs/security/waf-v2-setup/"
       title="OCI Load Balancerに直接アタッチするタイプのWeb Application Firewallを構成する"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9027,7 +9027,7 @@ WAFを通過したリクエストのクライアントの位置情報を基に�
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/blockchain/"
+      href="/ocitutorial-geekdocs/blockchain/"
       title="Oracle Blockchain Platformチュートリアル"
     >
       Oracle Blockchain Platformチュートリアル
@@ -9081,7 +9081,7 @@ WAFを通過したリクエストのクライアントの位置情報を基に�
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

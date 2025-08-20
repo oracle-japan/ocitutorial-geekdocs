@@ -20,18 +20,18 @@ ChatGPTを使って沢山の質問を投げていると、無意識に主語を�
 
   <title>107 : 会話履歴保持の仕組みを取り入れたRAGの実装をしてみよう | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -52,7 +52,7 @@ ChatGPTを使って沢山の質問を投げていると、無意識に主語を�
 オーケストレーションツール：LangChain ベクトルデータベース：Oracle Database 23ai(AI Vector Search) Autonomous Database Base Database Service Oracle Database 23ai Free(Computeインスタンスへインストール) 大規模言語モデル：OCI Generative AI Service 会話履歴保持用データベース：OCI PostgreSQL Database Service RAGのフローや上述した会話履歴データベースの参照処理などは全てLangChainにお任せ状態になるためこちらの実装もいたってシンプルです。この構成では、会話履歴保持用データベースにPostgreSQLを使っていますが、データベースを使わずメモリに保持することもできます。その場合、多数のユーザーがたくさん質問するような環境ではメモリを圧迫しますし、システムが落ちてしまうと会話履歴が保持されませんのでやはりデータベースを使うのがよいと思います。
 ドキュメントデータ ベクトルデータベースにロードするドキュメントデータは下図のような内容のPDFファイルです。テキストの内容としては架空の製品であるロケットエンジンOraBoosterの説明文章です。企業内のデータを想定し、テキストの内容としては、存在しない製品かつ完全な創作文章、ということでLLMが学習しているはずのないデータということになります。後の手順でこちらのPDFファイルをベクトルデータベースにロードします。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/ai-vector-search/ai-vector107-rag-chat-history/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/ai-vector-search/ai-vector107-rag-chat-history/" />
 
 <meta property="article:section" content="Ai Vector Search" />
     <meta
@@ -80,7 +80,7 @@ ChatGPTを使って沢山の質問を投げていると、無意識に主語を�
       "@type": "TechArticle",
       "articleSection": "Ai Vector Search",
       "name": "107 : 会話履歴保持の仕組みを取り入れたRAGの実装をしてみよう",
-      "url" : "https://oracle-japan.github.io/ocitutorials/ai-vector-search/ai-vector107-rag-chat-history/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/ai-vector-search/ai-vector107-rag-chat-history/",
       "headline": "107 : 会話履歴保持の仕組みを取り入れたRAGの実装をしてみよう",
       "description": " はじめに 106 : Oracle Database 23aiとLangChainでRAGを構成してみようではLangChainを利用したシンプルな検索拡張生成(RAG)の実装をご紹介しました。\n今回は、その基本実装にチャット会話履歴を保持する仕組みを取り入れた構成をご紹介します。(※RAGって何ですか？という方はこちらの記事を事前にご参照ください。)\nChatGPTを使って沢山の質問を投げていると、無意識に主語を省略したり、「それ」、「あれ」、「彼」、「彼女」など代名詞などを使って以前の質問を指し示すような質問をする場合が多々あります。そんな適当に入力した質問でもLLMがちゃんと応答してくれるのは、そのセッションで入力されたプロンプトと出力された応答テキストをデータベースに保存し、新しい質問が入力されると、その前までの会話と関連性がある質問なのかどうかを判断し、必要に応じて過去の会話から必要なテキストを参照する仕組みがあるからです。\n構成としては、RAGの基本コンポーネント(LLMとベクトルデータベース)に加えて、チャット履歴を保持するデータベースを追加するだけです。上図の例は、プロンプト2で主語を省略した形で質問をしていますが、プロンプト1の質問とその応答テキストがチャット履歴としてデータベースに保存されており、その内容からプロンプト2の主語が何になるかを補完して返答2として正確な応答をしているという例です。\n仮に会話履歴が保持されていないと、プロンプト2の主語が何になるのかがわからず、誤った応答をしてしまう可能性が高くなるため、それを回避するためチャットボット系のアプリでは必ずこの仕組みを実装することになります。本チュートリアルではそのサンプル実装をご紹介します。\n構成 今回の実装で利用する構成図が下記になります。\nオーケストレーションツール：LangChain ベクトルデータベース：Oracle Database 23ai(AI Vector Search) Autonomous Database Base Database Service Oracle Database 23ai Free(Computeインスタンスへインストール) 大規模言語モデル：OCI Generative AI Service 会話履歴保持用データベース：OCI PostgreSQL Database Service RAGのフローや上述した会話履歴データベースの参照処理などは全てLangChainにお任せ状態になるためこちらの実装もいたってシンプルです。この構成では、会話履歴保持用データベースにPostgreSQLを使っていますが、データベースを使わずメモリに保持することもできます。その場合、多数のユーザーがたくさん質問するような環境ではメモリを圧迫しますし、システムが落ちてしまうと会話履歴が保持されませんのでやはりデータベースを使うのがよいと思います。\nドキュメントデータ ベクトルデータベースにロードするドキュメントデータは下図のような内容のPDFファイルです。テキストの内容としては架空の製品であるロケットエンジンOraBoosterの説明文章です。企業内のデータを想定し、テキストの内容としては、存在しない製品かつ完全な創作文章、ということでLLMが学習しているはずのないデータということになります。後の手順でこちらのPDFファイルをベクトルデータベースにロードします。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -90,7 +90,7 @@ ChatGPTを使って沢山の質問を投げていると、無意識に主語を�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/ai-vector-search/ai-vector107-rag-chat-history/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/ai-vector-search/ai-vector107-rag-chat-history/"
       },
       "copyrightHolder" : "OCIチュートリアル",
       "copyrightYear" : "0001",
@@ -100,10 +100,10 @@ ChatGPTを使って沢山の質問を投げていると、無意識に主語を�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -113,73 +113,73 @@ ChatGPTを使って沢山の質問を投げていると、無意識に主語を�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/ai-vector-search/ai-vector107-rag-chat-history/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/ai-vector-search/ai-vector107-rag-chat-history/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/ai-vector-search/ai-vector107-rag-chat-history/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/ai-vector-search/ai-vector107-rag-chat-history/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="107 : 会話履歴保持の仕組みを取り入れたRAGの実装をしてみよう">
   <meta property="og:description" content="はじめに 106 : Oracle Database 23aiとLangChainでRAGを構成してみようではLangChainを利用したシンプルな検索拡張生成(RAG)の実装をご紹介しました。
@@ -251,11 +251,11 @@ ChatGPTを使って沢山の質問を投げていると、無意識に主語を�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -272,7 +272,7 @@ ChatGPTを使って沢山の質問を投げていると、無意識に主語を�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -284,7 +284,7 @@ ChatGPTを使って沢山の質問を投げていると、無意識に主語を�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -421,7 +421,7 @@ ChatGPTを使って沢山の質問を投げていると、無意識に主語を�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/ai-vector-search/' href='/ocitutorials/ai-vector-search/'><span itemprop='name'>Oracle Database - Oracle AI Vector Searchを使ってみよう</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>107 : 会話履歴保持の仕組みを取り入れたRAGの実装をしてみよう</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/ai-vector-search/' href='/ocitutorial-geekdocs/ai-vector-search/'><span itemprop='name'>Oracle Database - Oracle AI Vector Searchを使ってみよう</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>107 : 会話履歴保持の仕組みを取り入れたRAGの実装をしてみよう</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -452,7 +452,7 @@ ChatGPTを使って沢山の質問を投げていると、無意識に主語を�
     >
         はじめに
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/ai-vector-search/ai-vector107-rag-chat-history/#はじめに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: はじめに" aria-label="アンカー先: はじめに" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/ai-vector-search/ai-vector107-rag-chat-history/#はじめに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: はじめに" aria-label="アンカー先: はじめに" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -477,7 +477,7 @@ ChatGPTを使って沢山の質問を投げていると、無意識に主語を�
     >
         構成
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/ai-vector-search/ai-vector107-rag-chat-history/#構成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 構成" aria-label="アンカー先: 構成" href="#%e6%a7%8b%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/ai-vector-search/ai-vector107-rag-chat-history/#構成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 構成" aria-label="アンカー先: 構成" href="#%e6%a7%8b%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -505,7 +505,7 @@ ChatGPTを使って沢山の質問を投げていると、無意識に主語を�
     >
         ドキュメントデータ
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/ai-vector-search/ai-vector107-rag-chat-history/#ドキュメントデータ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ドキュメントデータ" aria-label="アンカー先: ドキュメントデータ" href="#%e3%83%89%e3%82%ad%e3%83%a5%e3%83%a1%e3%83%b3%e3%83%88%e3%83%87%e3%83%bc%e3%82%bf">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/ai-vector-search/ai-vector107-rag-chat-history/#ドキュメントデータ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ドキュメントデータ" aria-label="アンカー先: ドキュメントデータ" href="#%e3%83%89%e3%82%ad%e3%83%a5%e3%83%a1%e3%83%b3%e3%83%88%e3%83%87%e3%83%bc%e3%82%bf">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -531,7 +531,7 @@ ChatGPTを使って沢山の質問を投げていると、無意識に主語を�
     >
         実装
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/ai-vector-search/ai-vector107-rag-chat-history/#実装" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 実装" aria-label="アンカー先: 実装" href="#%e5%ae%9f%e8%a3%85">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/ai-vector-search/ai-vector107-rag-chat-history/#実装" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 実装" aria-label="アンカー先: 実装" href="#%e5%ae%9f%e8%a3%85">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -540,7 +540,7 @@ ChatGPTを使って沢山の質問を投げていると、無意識に主語を�
     >
         Python環境のセットアップ
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/ai-vector-search/ai-vector107-rag-chat-history/#python環境のセットアップ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Python環境のセットアップ" aria-label="アンカー先: Python環境のセットアップ" href="#python%e7%92%b0%e5%a2%83%e3%81%ae%e3%82%bb%e3%83%83%e3%83%88%e3%82%a2%e3%83%83%e3%83%97">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/ai-vector-search/ai-vector107-rag-chat-history/#python環境のセットアップ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Python環境のセットアップ" aria-label="アンカー先: Python環境のセットアップ" href="#python%e7%92%b0%e5%a2%83%e3%81%ae%e3%82%bb%e3%83%83%e3%83%88%e3%82%a2%e3%83%83%e3%83%97">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -553,7 +553,7 @@ ChatGPTを使って沢山の質問を投げていると、無意識に主語を�
     >
         Oracle Database へのデータ・ロード
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/ai-vector-search/ai-vector107-rag-chat-history/#oracle-database-へのデータロード" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Oracle Database へのデータ・ロード" aria-label="アンカー先: Oracle Database へのデータ・ロード" href="#oracle-database-%e3%81%b8%e3%81%ae%e3%83%87%e3%83%bc%e3%82%bf%e3%83%ad%e3%83%bc%e3%83%89">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/ai-vector-search/ai-vector107-rag-chat-history/#oracle-database-へのデータロード" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Oracle Database へのデータ・ロード" aria-label="アンカー先: Oracle Database へのデータ・ロード" href="#oracle-database-%e3%81%b8%e3%81%ae%e3%83%87%e3%83%bc%e3%82%bf%e3%83%ad%e3%83%bc%e3%83%89">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -643,7 +643,7 @@ __root__
     >
         会話履歴保存用データベース(PostgreSQL)のセットアップ
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/ai-vector-search/ai-vector107-rag-chat-history/#会話履歴保存用データベースpostgresqlのセットアップ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 会話履歴保存用データベース(PostgreSQL)のセットアップ" aria-label="アンカー先: 会話履歴保存用データベース(PostgreSQL)のセットアップ" href="#%e4%bc%9a%e8%a9%b1%e5%b1%a5%e6%ad%b4%e4%bf%9d%e5%ad%98%e7%94%a8%e3%83%87%e3%83%bc%e3%82%bf%e3%83%99%e3%83%bc%e3%82%b9postgresql%e3%81%ae%e3%82%bb%e3%83%83%e3%83%88%e3%82%a2%e3%83%83%e3%83%97">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/ai-vector-search/ai-vector107-rag-chat-history/#会話履歴保存用データベースpostgresqlのセットアップ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 会話履歴保存用データベース(PostgreSQL)のセットアップ" aria-label="アンカー先: 会話履歴保存用データベース(PostgreSQL)のセットアップ" href="#%e4%bc%9a%e8%a9%b1%e5%b1%a5%e6%ad%b4%e4%bf%9d%e5%ad%98%e7%94%a8%e3%83%87%e3%83%bc%e3%82%bf%e3%83%99%e3%83%bc%e3%82%b9postgresql%e3%81%ae%e3%82%bb%e3%83%83%e3%83%88%e3%82%a2%e3%83%83%e3%83%97">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -704,7 +704,7 @@ __root__
     >
         RAGの実装
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/ai-vector-search/ai-vector107-rag-chat-history/#ragの実装" class="gdoc-page__anchor clip flex align-center" title="アンカー先: RAGの実装" aria-label="アンカー先: RAGの実装" href="#rag%e3%81%ae%e5%ae%9f%e8%a3%85">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/ai-vector-search/ai-vector107-rag-chat-history/#ragの実装" class="gdoc-page__anchor clip flex align-center" title="アンカー先: RAGの実装" aria-label="アンカー先: RAGの実装" href="#rag%e3%81%ae%e5%ae%9f%e8%a3%85">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9228,7 +9228,7 @@ __root__
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/ai-vector-search/ai-vector106-23ai-langchain-rag/"
+      href="/ocitutorial-geekdocs/ai-vector-search/ai-vector106-23ai-langchain-rag/"
       title="106 : Oracle Database 23aiとLangChainでRAGを構成してみよう"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9240,7 +9240,7 @@ __root__
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/ai-vector-search/ai-vector108-select-ai-with-rag/"
+      href="/ocitutorial-geekdocs/ai-vector-search/ai-vector108-select-ai-with-rag/"
       title="108 : SELECT AI with RAGを試してみよう"
     >
       108 : SELECT AI with RAGを試してみよう
@@ -9294,7 +9294,7 @@ __root__
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

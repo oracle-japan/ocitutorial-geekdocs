@@ -22,18 +22,18 @@ Webアプリケーションの作成 このパートでは、VBCSで Web アプ�
 
   <title>Oracle Integration - Visual Builder で簡単なWebアプリケーションを作成してみよう | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -56,7 +56,7 @@ OIC インスタンスの ServiceAdministrator ロールが付与されたユー
 https://docs.oracle.com/en/cloud/paas/integration-cloud/integration-cloud-auton/oracle-integration-cloud-roles-and-privileges.html#GUID-44661068-C31A-4AB5-BC24-B4B90F951A34
 Webアプリケーションの作成 このパートでは、VBCSで Web アプリケーションを作成する際に、最初に定義する ビジュアル・アプリケーション と Web アプリケーション を作成する手順を説明します。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/" />
 
 <meta property="article:section" content="Integration" />
     <meta
@@ -86,7 +86,7 @@ Webアプリケーションの作成 このパートでは、VBCSで Web アプ�
       "@type": "TechArticle",
       "articleSection": "Integration",
       "name": "Oracle Integration - Visual Builder で簡単なWebアプリケーションを作成してみよう",
-      "url" : "https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/",
       "headline": "Oracle Integration - Visual Builder で簡単なWebアプリケーションを作成してみよう",
       "description": "Visual Builder Cloud Service　(VBCS) は、ユーザー・インタフェース(UI)・コンポーネントをページにドラッグ＆ドロップするだけで、Webアプリケーションやモバイル・アプリケーションを作成するためのビジュアル開発ツールです。 ボタンをクリックしてビジネス・オブジェクトを作成し、アプリケーションにCSVファイルをインポートしてデータを追加することができます。\nこのチュートリアルでは、部門と従業員のレコードを参照および作成、編集、削除するアプリケーションを作成します。\nTIPS\nVBCSは単体でサービスをご利用することが可能ですが、Integration Cloud Serviceの一機能としてもご利用可能です。どちらも機能としては同じですが課金体系が異なります。詳細は以下のリンクをご確認ください。 ・ Integration Cloud Service 価格 (※VBCSの利用に関しては1時間当たりのアクティブユーザー数に対して課金が発生します。詳しくはこちら) ・ Visual Builder Cloud Service 価格 {: .notice–info}\n前提条件 Oracle Integration Cloud インスタンスの作成\nOracle Integration(OIC) を使い始めるための準備作業として、OIC インスタンスの作成が必要になります。この文書は OIC インスタンスの作成方法を ステップ・バイ・ステップで紹介するチュートリアルです。\nOIC インスタンスの ServiceAdministrator ロールが付与されたユーザーが準備されていること\n(参考) Oracle Integration Roles and Privileges\nhttps:\/\/docs.oracle.com\/en\/cloud\/paas\/integration-cloud\/integration-cloud-auton\/oracle-integration-cloud-roles-and-privileges.html#GUID-44661068-C31A-4AB5-BC24-B4B90F951A34\nWebアプリケーションの作成 このパートでは、VBCSで Web アプリケーションを作成する際に、最初に定義する ビジュアル・アプリケーション と Web アプリケーション を作成する手順を説明します。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -96,7 +96,7 @@ Webアプリケーションの作成 このパートでは、VBCSで Web アプ�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/"
       },
       "copyrightHolder" : "OCIチュートリアル",
       "copyrightYear" : "0001",
@@ -106,10 +106,10 @@ Webアプリケーションの作成 このパートでは、VBCSで Web アプ�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -119,73 +119,73 @@ Webアプリケーションの作成 このパートでは、VBCSで Web アプ�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="Oracle Integration - Visual Builder で簡単なWebアプリケーションを作成してみよう">
   <meta property="og:description" content="Visual Builder Cloud Service　(VBCS) は、ユーザー・インタフェース(UI)・コンポーネントをページにドラッグ＆ドロップするだけで、Webアプリケーションやモバイル・アプリケーションを作成するためのビジュアル開発ツールです。 ボタンをクリックしてビジネス・オブジェクトを作成し、アプリケーションにCSVファイルをインポートしてデータを追加することができます。
@@ -261,11 +261,11 @@ Webアプリケーションの作成 このパートでは、VBCSで Web アプ�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -282,7 +282,7 @@ Webアプリケーションの作成 このパートでは、VBCSで Web アプ�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -294,7 +294,7 @@ Webアプリケーションの作成 このパートでは、VBCSで Web アプ�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -462,7 +462,7 @@ Webアプリケーションの作成 このパートでは、VBCSで Web アプ�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/integration/' href='/ocitutorials/integration/'><span itemprop='name'>Oracle Integration チュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Oracle Integration - Visual Builder で簡単なWebアプリケーションを作成してみよう</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/integration/' href='/ocitutorial-geekdocs/integration/'><span itemprop='name'>Oracle Integration チュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Oracle Integration - Visual Builder で簡単なWebアプリケーションを作成してみよう</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -509,7 +509,7 @@ VBCSは単体でサービスをご利用することが可能ですが、Integra
     >
         前提条件
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/#前提条件" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 前提条件" aria-label="アンカー先: 前提条件" href="#%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/#前提条件" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 前提条件" aria-label="アンカー先: 前提条件" href="#%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -535,7 +535,7 @@ Oracle Integration(OIC) を使い始めるための準備作業として、OIC �
     >
         Webアプリケーションの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/#webアプリケーションの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Webアプリケーションの作成" aria-label="アンカー先: Webアプリケーションの作成" href="#web%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/#webアプリケーションの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Webアプリケーションの作成" aria-label="アンカー先: Webアプリケーションの作成" href="#web%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -545,7 +545,7 @@ Oracle Integration(OIC) を使い始めるための準備作業として、OIC �
     >
         ビジュアル・アプリケーションの作成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/#ビジュアルアプリケーションの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ビジュアル・アプリケーションの作成" aria-label="アンカー先: ビジュアル・アプリケーションの作成" href="#%e3%83%93%e3%82%b8%e3%83%a5%e3%82%a2%e3%83%ab%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/#ビジュアルアプリケーションの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ビジュアル・アプリケーションの作成" aria-label="アンカー先: ビジュアル・アプリケーションの作成" href="#%e3%83%93%e3%82%b8%e3%83%a5%e3%82%a2%e3%83%ab%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -632,7 +632,7 @@ Source View| <img
     >
         Web アプリケーションの作成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/#web-アプリケーションの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Web アプリケーションの作成" aria-label="アンカー先: Web アプリケーションの作成" href="#web-%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/#web-アプリケーションの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Web アプリケーションの作成" aria-label="アンカー先: Web アプリケーションの作成" href="#web-%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -667,7 +667,7 @@ Source View| <img
     >
         ビジネス・オブジェクトの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/#ビジネスオブジェクトの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ビジネス・オブジェクトの作成" aria-label="アンカー先: ビジネス・オブジェクトの作成" href="#%e3%83%93%e3%82%b8%e3%83%8d%e3%82%b9%e3%82%aa%e3%83%96%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/#ビジネスオブジェクトの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ビジネス・オブジェクトの作成" aria-label="アンカー先: ビジネス・オブジェクトの作成" href="#%e3%83%93%e3%82%b8%e3%83%8d%e3%82%b9%e3%82%aa%e3%83%96%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -706,7 +706,7 @@ Source View| <img
     >
         ビジネス・オブジェクト Location の作成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/#ビジネスオブジェクト-location-の作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ビジネス・オブジェクト Location の作成" aria-label="アンカー先: ビジネス・オブジェクト Location の作成" href="#%e3%83%93%e3%82%b8%e3%83%8d%e3%82%b9%e3%82%aa%e3%83%96%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88-location-%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/#ビジネスオブジェクト-location-の作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ビジネス・オブジェクト Location の作成" aria-label="アンカー先: ビジネス・オブジェクト Location の作成" href="#%e3%83%93%e3%82%b8%e3%83%8d%e3%82%b9%e3%82%aa%e3%83%96%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88-location-%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -896,7 +896,7 @@ Source View| <img
     >
         ビジネス・オブジェクト Department の作成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/#ビジネスオブジェクト-department-の作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ビジネス・オブジェクト Department の作成" aria-label="アンカー先: ビジネス・オブジェクト Department の作成" href="#%e3%83%93%e3%82%b8%e3%83%8d%e3%82%b9%e3%82%aa%e3%83%96%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88-department-%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/#ビジネスオブジェクト-department-の作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ビジネス・オブジェクト Department の作成" aria-label="アンカー先: ビジネス・オブジェクト Department の作成" href="#%e3%83%93%e3%82%b8%e3%83%8d%e3%82%b9%e3%82%aa%e3%83%96%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88-department-%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1047,7 +1047,7 @@ Source View| <img
     >
         ビジネス・オブジェクト Employee の作成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/#ビジネスオブジェクト-employee-の作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ビジネス・オブジェクト Employee の作成" aria-label="アンカー先: ビジネス・オブジェクト Employee の作成" href="#%e3%83%93%e3%82%b8%e3%83%8d%e3%82%b9%e3%82%aa%e3%83%96%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88-employee-%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/#ビジネスオブジェクト-employee-の作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ビジネス・オブジェクト Employee の作成" aria-label="アンカー先: ビジネス・オブジェクト Employee の作成" href="#%e3%83%93%e3%82%b8%e3%83%8d%e3%82%b9%e3%82%aa%e3%83%96%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88-employee-%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1268,7 +1268,7 @@ Source View| <img
     >
         データを参照・作成するページの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/#データを参照作成するページの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: データを参照・作成するページの作成" aria-label="アンカー先: データを参照・作成するページの作成" href="#%e3%83%87%e3%83%bc%e3%82%bf%e3%82%92%e5%8f%82%e7%85%a7%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/#データを参照作成するページの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: データを参照・作成するページの作成" aria-label="アンカー先: データを参照・作成するページの作成" href="#%e3%83%87%e3%83%bc%e3%82%bf%e3%82%92%e5%8f%82%e7%85%a7%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1278,7 +1278,7 @@ Source View| <img
     >
         Department のレコードの一覧を表示するテーブルの追加
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/#department-のレコードの一覧を表示するテーブルの追加" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Department のレコードの一覧を表示するテーブルの追加" aria-label="アンカー先: Department のレコードの一覧を表示するテーブルの追加" href="#department-%e3%81%ae%e3%83%ac%e3%82%b3%e3%83%bc%e3%83%89%e3%81%ae%e4%b8%80%e8%a6%a7%e3%82%92%e8%a1%a8%e7%a4%ba%e3%81%99%e3%82%8b%e3%83%86%e3%83%bc%e3%83%96%e3%83%ab%e3%81%ae%e8%bf%bd%e5%8a%a0">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/#department-のレコードの一覧を表示するテーブルの追加" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Department のレコードの一覧を表示するテーブルの追加" aria-label="アンカー先: Department のレコードの一覧を表示するテーブルの追加" href="#department-%e3%81%ae%e3%83%ac%e3%82%b3%e3%83%bc%e3%83%89%e3%81%ae%e4%b8%80%e8%a6%a7%e3%82%92%e8%a1%a8%e7%a4%ba%e3%81%99%e3%82%8b%e3%83%86%e3%83%bc%e3%83%96%e3%83%ab%e3%81%ae%e8%bf%bd%e5%8a%a0">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1366,7 +1366,7 @@ Source View| <img
     >
         追加されたテーブルの設定の確認と変更
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/#追加されたテーブルの設定の確認と変更" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 追加されたテーブルの設定の確認と変更" aria-label="アンカー先: 追加されたテーブルの設定の確認と変更" href="#%e8%bf%bd%e5%8a%a0%e3%81%95%e3%82%8c%e3%81%9f%e3%83%86%e3%83%bc%e3%83%96%e3%83%ab%e3%81%ae%e8%a8%ad%e5%ae%9a%e3%81%ae%e7%a2%ba%e8%aa%8d%e3%81%a8%e5%a4%89%e6%9b%b4">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/#追加されたテーブルの設定の確認と変更" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 追加されたテーブルの設定の確認と変更" aria-label="アンカー先: 追加されたテーブルの設定の確認と変更" href="#%e8%bf%bd%e5%8a%a0%e3%81%95%e3%82%8c%e3%81%9f%e3%83%86%e3%83%bc%e3%83%96%e3%83%ab%e3%81%ae%e8%a8%ad%e5%ae%9a%e3%81%ae%e7%a2%ba%e8%aa%8d%e3%81%a8%e5%a4%89%e6%9b%b4">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1398,7 +1398,7 @@ Source View| <img
     >
         Department のレコードを作成するページの追加
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/#department-のレコードを作成するページの追加" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Department のレコードを作成するページの追加" aria-label="アンカー先: Department のレコードを作成するページの追加" href="#department-%e3%81%ae%e3%83%ac%e3%82%b3%e3%83%bc%e3%83%89%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%ae%e8%bf%bd%e5%8a%a0">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/#department-のレコードを作成するページの追加" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Department のレコードを作成するページの追加" aria-label="アンカー先: Department のレコードを作成するページの追加" href="#department-%e3%81%ae%e3%83%ac%e3%82%b3%e3%83%bc%e3%83%89%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%ae%e8%bf%bd%e5%8a%a0">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1548,7 +1548,7 @@ Source View| <img
     >
         Employee のレコードの一覧を表示するページの追加
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/#employee-のレコードの一覧を表示するページの追加" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Employee のレコードの一覧を表示するページの追加" aria-label="アンカー先: Employee のレコードの一覧を表示するページの追加" href="#employee-%e3%81%ae%e3%83%ac%e3%82%b3%e3%83%bc%e3%83%89%e3%81%ae%e4%b8%80%e8%a6%a7%e3%82%92%e8%a1%a8%e7%a4%ba%e3%81%99%e3%82%8b%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%ae%e8%bf%bd%e5%8a%a0">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/#employee-のレコードの一覧を表示するページの追加" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Employee のレコードの一覧を表示するページの追加" aria-label="アンカー先: Employee のレコードの一覧を表示するページの追加" href="#employee-%e3%81%ae%e3%83%ac%e3%82%b3%e3%83%bc%e3%83%89%e3%81%ae%e4%b8%80%e8%a6%a7%e3%82%92%e8%a1%a8%e7%a4%ba%e3%81%99%e3%82%8b%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%ae%e8%bf%bd%e5%8a%a0">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1650,7 +1650,7 @@ Source View| <img
     >
         Employee のレコードを作成するページの追加
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/#employee-のレコードを作成するページの追加" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Employee のレコードを作成するページの追加" aria-label="アンカー先: Employee のレコードを作成するページの追加" href="#employee-%e3%81%ae%e3%83%ac%e3%82%b3%e3%83%bc%e3%83%89%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%ae%e8%bf%bd%e5%8a%a0">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/#employee-のレコードを作成するページの追加" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Employee のレコードを作成するページの追加" aria-label="アンカー先: Employee のレコードを作成するページの追加" href="#employee-%e3%81%ae%e3%83%ac%e3%82%b3%e3%83%bc%e3%83%89%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%ae%e8%bf%bd%e5%8a%a0">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1758,7 +1758,7 @@ Source View| <img
     >
         ページの名前の変更
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/#ページの名前の変更" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ページの名前の変更" aria-label="アンカー先: ページの名前の変更" href="#%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%ae%e5%90%8d%e5%89%8d%e3%81%ae%e5%a4%89%e6%9b%b4">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/#ページの名前の変更" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ページの名前の変更" aria-label="アンカー先: ページの名前の変更" href="#%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%ae%e5%90%8d%e5%89%8d%e3%81%ae%e5%a4%89%e6%9b%b4">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1816,7 +1816,7 @@ Source View| <img
     >
         ページ間のナビゲーションの設定
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/#ページ間のナビゲーションの設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ページ間のナビゲーションの設定" aria-label="アンカー先: ページ間のナビゲーションの設定" href="#%e3%83%9a%e3%83%bc%e3%82%b8%e9%96%93%e3%81%ae%e3%83%8a%e3%83%93%e3%82%b2%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e8%a8%ad%e5%ae%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/#ページ間のナビゲーションの設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ページ間のナビゲーションの設定" aria-label="アンカー先: ページ間のナビゲーションの設定" href="#%e3%83%9a%e3%83%bc%e3%82%b8%e9%96%93%e3%81%ae%e3%83%8a%e3%83%93%e3%82%b2%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e8%a8%ad%e5%ae%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1826,7 +1826,7 @@ Source View| <img
     >
         Departments ページから Employees ページへのナビゲーション
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/#departments-ページから-employees-ページへのナビゲーション" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Departments ページから Employees ページへのナビゲーション" aria-label="アンカー先: Departments ページから Employees ページへのナビゲーション" href="#departments-%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%8b%e3%82%89-employees-%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%b8%e3%81%ae%e3%83%8a%e3%83%93%e3%82%b2%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/#departments-ページから-employees-ページへのナビゲーション" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Departments ページから Employees ページへのナビゲーション" aria-label="アンカー先: Departments ページから Employees ページへのナビゲーション" href="#departments-%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%8b%e3%82%89-employees-%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%b8%e3%81%ae%e3%83%8a%e3%83%93%e3%82%b2%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1887,7 +1887,7 @@ Source View| <img
     >
         Employees ページから Departments ページへのナビゲーション
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/#employees-ページから-departments-ページへのナビゲーション" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Employees ページから Departments ページへのナビゲーション" aria-label="アンカー先: Employees ページから Departments ページへのナビゲーション" href="#employees-%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%8b%e3%82%89-departments-%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%b8%e3%81%ae%e3%83%8a%e3%83%93%e3%82%b2%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/#employees-ページから-departments-ページへのナビゲーション" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Employees ページから Departments ページへのナビゲーション" aria-label="アンカー先: Employees ページから Departments ページへのナビゲーション" href="#employees-%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%8b%e3%82%89-departments-%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%b8%e3%81%ae%e3%83%8a%e3%83%93%e3%82%b2%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1946,7 +1946,7 @@ Source View| <img
     >
         Department のレコードの編集、詳細ページの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/#department-のレコードの編集詳細ページの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Department のレコードの編集、詳細ページの作成" aria-label="アンカー先: Department のレコードの編集、詳細ページの作成" href="#department-%e3%81%ae%e3%83%ac%e3%82%b3%e3%83%bc%e3%83%89%e3%81%ae%e7%b7%a8%e9%9b%86%e8%a9%b3%e7%b4%b0%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/#department-のレコードの編集詳細ページの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Department のレコードの編集、詳細ページの作成" aria-label="アンカー先: Department のレコードの編集、詳細ページの作成" href="#department-%e3%81%ae%e3%83%ac%e3%82%b3%e3%83%bc%e3%83%89%e3%81%ae%e7%b7%a8%e9%9b%86%e8%a9%b3%e7%b4%b0%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1956,7 +1956,7 @@ Source View| <img
     >
         データのインポート
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/#データのインポート" class="gdoc-page__anchor clip flex align-center" title="アンカー先: データのインポート" aria-label="アンカー先: データのインポート" href="#%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e3%82%a4%e3%83%b3%e3%83%9d%e3%83%bc%e3%83%88">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/#データのインポート" class="gdoc-page__anchor clip flex align-center" title="アンカー先: データのインポート" aria-label="アンカー先: データのインポート" href="#%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e3%82%a4%e3%83%b3%e3%83%9d%e3%83%bc%e3%83%88">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -2008,7 +2008,7 @@ Source View| <img
     >
         レコードを編集するページの作成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/#レコードを編集するページの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: レコードを編集するページの作成" aria-label="アンカー先: レコードを編集するページの作成" href="#%e3%83%ac%e3%82%b3%e3%83%bc%e3%83%89%e3%82%92%e7%b7%a8%e9%9b%86%e3%81%99%e3%82%8b%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/#レコードを編集するページの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: レコードを編集するページの作成" aria-label="アンカー先: レコードを編集するページの作成" href="#%e3%83%ac%e3%82%b3%e3%83%bc%e3%83%89%e3%82%92%e7%b7%a8%e9%9b%86%e3%81%99%e3%82%8b%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -2061,7 +2061,7 @@ Source View| <img
     >
         レコードの詳細を表示するページの作成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/#レコードの詳細を表示するページの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: レコードの詳細を表示するページの作成" aria-label="アンカー先: レコードの詳細を表示するページの作成" href="#%e3%83%ac%e3%82%b3%e3%83%bc%e3%83%89%e3%81%ae%e8%a9%b3%e7%b4%b0%e3%82%92%e8%a1%a8%e7%a4%ba%e3%81%99%e3%82%8b%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/#レコードの詳細を表示するページの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: レコードの詳細を表示するページの作成" aria-label="アンカー先: レコードの詳細を表示するページの作成" href="#%e3%83%ac%e3%82%b3%e3%83%bc%e3%83%89%e3%81%ae%e8%a9%b3%e7%b4%b0%e3%82%92%e8%a1%a8%e7%a4%ba%e3%81%99%e3%82%8b%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -2111,7 +2111,7 @@ Source View| <img
     >
         Employee のレコードの編集、詳細、削除処理の実装
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/#employee-のレコードの編集詳細削除処理の実装" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Employee のレコードの編集、詳細、削除処理の実装" aria-label="アンカー先: Employee のレコードの編集、詳細、削除処理の実装" href="#employee-%e3%81%ae%e3%83%ac%e3%82%b3%e3%83%bc%e3%83%89%e3%81%ae%e7%b7%a8%e9%9b%86%e8%a9%b3%e7%b4%b0%e5%89%8a%e9%99%a4%e5%87%a6%e7%90%86%e3%81%ae%e5%ae%9f%e8%a3%85">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/#employee-のレコードの編集詳細削除処理の実装" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Employee のレコードの編集、詳細、削除処理の実装" aria-label="アンカー先: Employee のレコードの編集、詳細、削除処理の実装" href="#employee-%e3%81%ae%e3%83%ac%e3%82%b3%e3%83%bc%e3%83%89%e3%81%ae%e7%b7%a8%e9%9b%86%e8%a9%b3%e7%b4%b0%e5%89%8a%e9%99%a4%e5%87%a6%e7%90%86%e3%81%ae%e5%ae%9f%e8%a3%85">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -2121,7 +2121,7 @@ Source View| <img
     >
         データのインポート
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/#データのインポート-1" class="gdoc-page__anchor clip flex align-center" title="アンカー先: データのインポート" aria-label="アンカー先: データのインポート" href="#%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e3%82%a4%e3%83%b3%e3%83%9d%e3%83%bc%e3%83%88-1">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/#データのインポート-1" class="gdoc-page__anchor clip flex align-center" title="アンカー先: データのインポート" aria-label="アンカー先: データのインポート" href="#%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e3%82%a4%e3%83%b3%e3%83%9d%e3%83%bc%e3%83%88-1">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -2173,7 +2173,7 @@ Source View| <img
     >
         レコードを編集するページの作成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/#レコードを編集するページの作成-1" class="gdoc-page__anchor clip flex align-center" title="アンカー先: レコードを編集するページの作成" aria-label="アンカー先: レコードを編集するページの作成" href="#%e3%83%ac%e3%82%b3%e3%83%bc%e3%83%89%e3%82%92%e7%b7%a8%e9%9b%86%e3%81%99%e3%82%8b%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%ae%e4%bd%9c%e6%88%90-1">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/#レコードを編集するページの作成-1" class="gdoc-page__anchor clip flex align-center" title="アンカー先: レコードを編集するページの作成" aria-label="アンカー先: レコードを編集するページの作成" href="#%e3%83%ac%e3%82%b3%e3%83%bc%e3%83%89%e3%82%92%e7%b7%a8%e9%9b%86%e3%81%99%e3%82%8b%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%ae%e4%bd%9c%e6%88%90-1">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -2226,7 +2226,7 @@ Source View| <img
     >
         レコードの詳細を表示するページの作成
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/#レコードの詳細を表示するページの作成-1" class="gdoc-page__anchor clip flex align-center" title="アンカー先: レコードの詳細を表示するページの作成" aria-label="アンカー先: レコードの詳細を表示するページの作成" href="#%e3%83%ac%e3%82%b3%e3%83%bc%e3%83%89%e3%81%ae%e8%a9%b3%e7%b4%b0%e3%82%92%e8%a1%a8%e7%a4%ba%e3%81%99%e3%82%8b%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%ae%e4%bd%9c%e6%88%90-1">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/#レコードの詳細を表示するページの作成-1" class="gdoc-page__anchor clip flex align-center" title="アンカー先: レコードの詳細を表示するページの作成" aria-label="アンカー先: レコードの詳細を表示するページの作成" href="#%e3%83%ac%e3%82%b3%e3%83%bc%e3%83%89%e3%81%ae%e8%a9%b3%e7%b4%b0%e3%82%92%e8%a1%a8%e7%a4%ba%e3%81%99%e3%82%8b%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%ae%e4%bd%9c%e6%88%90-1">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -2276,7 +2276,7 @@ Source View| <img
     >
         レコードを削除するボタンの追加
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/#レコードを削除するボタンの追加" class="gdoc-page__anchor clip flex align-center" title="アンカー先: レコードを削除するボタンの追加" aria-label="アンカー先: レコードを削除するボタンの追加" href="#%e3%83%ac%e3%82%b3%e3%83%bc%e3%83%89%e3%82%92%e5%89%8a%e9%99%a4%e3%81%99%e3%82%8b%e3%83%9c%e3%82%bf%e3%83%b3%e3%81%ae%e8%bf%bd%e5%8a%a0">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/#レコードを削除するボタンの追加" class="gdoc-page__anchor clip flex align-center" title="アンカー先: レコードを削除するボタンの追加" aria-label="アンカー先: レコードを削除するボタンの追加" href="#%e3%83%ac%e3%82%b3%e3%83%bc%e3%83%89%e3%82%92%e5%89%8a%e9%99%a4%e3%81%99%e3%82%8b%e3%83%9c%e3%82%bf%e3%83%b3%e3%81%ae%e8%bf%bd%e5%8a%a0">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -2312,7 +2312,7 @@ Source View| <img
     >
         作成した画面の確認
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/integration/vbcs-for-beginners-1/#作成した画面の確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 作成した画面の確認" aria-label="アンカー先: 作成した画面の確認" href="#%e4%bd%9c%e6%88%90%e3%81%97%e3%81%9f%e7%94%bb%e9%9d%a2%e3%81%ae%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/integration/vbcs-for-beginners-1/#作成した画面の確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 作成した画面の確認" aria-label="アンカー先: 作成した画面の確認" href="#%e4%bd%9c%e6%88%90%e3%81%97%e3%81%9f%e7%94%bb%e9%9d%a2%e3%81%ae%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -10618,7 +10618,7 @@ Source View| <img
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/integration/vbcs-for-beginners-2-vbs/"
+      href="/ocitutorial-geekdocs/integration/vbcs-for-beginners-2-vbs/"
       title="Oracle Integration - Visual Builder Studio でVBCSアプリケーションを管理してみよう"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -10630,7 +10630,7 @@ Source View| <img
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/integration/app-integration3-for-beginners-4-resas2adw/"
+      href="/ocitutorial-geekdocs/integration/app-integration3-for-beginners-4-resas2adw/"
       title="RESAS-API のデータを Oracle ADW に保存する(OIC3)"
     >
       RESAS-API のデータを Oracle ADW に保存する(OIC3)
@@ -10684,7 +10684,7 @@ Source View| <img
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

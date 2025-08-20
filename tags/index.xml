@@ -2,241 +2,241 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on OCIチュートリアル</title>
-    <link>https://oracle-japan.github.io/ocitutorials/tags/</link>
+    <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/</link>
     <description>Recent content in Tags on OCIチュートリアル</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Thu, 14 Aug 2025 14:13:48 +0900</lastBuildDate>
-    <atom:link href="https://oracle-japan.github.io/ocitutorials/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://oracle-japan.github.io/ocitutorial-geekdocs/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Vmware</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/vmware/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/vmware/</link>
       <pubDate>Wed, 04 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/vmware/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/vmware/</guid>
       <description></description>
     </item>
     <item>
       <title>Opensearch</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/opensearch/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/opensearch/</link>
       <pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/opensearch/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/opensearch/</guid>
       <description></description>
     </item>
     <item>
       <title>Streaming</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/streaming/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/streaming/</link>
       <pubDate>Mon, 30 May 2022 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/streaming/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/streaming/</guid>
       <description></description>
     </item>
     <item>
       <title>Cloudnative</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/cloudnative/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/cloudnative/</link>
       <pubDate>Wed, 06 Apr 2022 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/cloudnative/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/cloudnative/</guid>
       <description></description>
     </item>
     <item>
       <title>Devops Functions</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/devops-functions/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/devops-functions/</link>
       <pubDate>Wed, 06 Apr 2022 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/devops-functions/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/devops-functions/</guid>
       <description></description>
     </item>
     <item>
       <title>Dataflow</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/dataflow/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/dataflow/</link>
       <pubDate>Mon, 14 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/dataflow/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/dataflow/</guid>
       <description></description>
     </item>
     <item>
       <title>Ai</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/ai/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/ai/</link>
       <pubDate>Mon, 18 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/ai/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/ai/</guid>
       <description></description>
     </item>
     <item>
       <title>Anomaly-Detection</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/anomaly-detection/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/anomaly-detection/</link>
       <pubDate>Mon, 18 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/anomaly-detection/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/anomaly-detection/</guid>
       <description></description>
     </item>
     <item>
       <title>Vision</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/vision/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/vision/</link>
       <pubDate>Thu, 14 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/vision/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/vision/</guid>
       <description></description>
     </item>
     <item>
       <title>Ggsa</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/ggsa/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/ggsa/</link>
       <pubDate>Tue, 14 Sep 2021 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/ggsa/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/ggsa/</guid>
       <description></description>
     </item>
     <item>
       <title>API Gateway</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/API-Gateway/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/API-Gateway/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/API-Gateway/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/API-Gateway/</guid>
       <description></description>
     </item>
     <item>
       <title>ATP</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/ATP/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/ATP/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/ATP/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/ATP/</guid>
       <description></description>
     </item>
     <item>
       <title>Autonomous Database</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/Autonomous-Database/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/Autonomous-Database/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/Autonomous-Database/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/Autonomous-Database/</guid>
       <description></description>
     </item>
     <item>
       <title>Autonomous_database</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/autonomous_database/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/autonomous_database/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/autonomous_database/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/autonomous_database/</guid>
       <description></description>
     </item>
     <item>
       <title>Beginner</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/beginner/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/beginner/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/beginner/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/beginner/</guid>
       <description></description>
     </item>
     <item>
       <title>Blockchain</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/Blockchain/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/Blockchain/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/Blockchain/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/Blockchain/</guid>
       <description></description>
     </item>
     <item>
       <title>Database</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/Database/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/Database/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/Database/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/Database/</guid>
       <description></description>
     </item>
     <item>
       <title>Datascience</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/datascience/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/datascience/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/datascience/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/datascience/</guid>
       <description></description>
     </item>
     <item>
       <title>Graph</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/graph/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/graph/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/graph/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/graph/</guid>
       <description></description>
     </item>
     <item>
       <title>Hpc</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/hpc/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/hpc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/hpc/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/hpc/</guid>
       <description></description>
     </item>
     <item>
       <title>Identity</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/identity/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/identity/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/identity/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/identity/</guid>
       <description></description>
     </item>
     <item>
       <title>Integration</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/integration/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/integration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/integration/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/integration/</guid>
       <description></description>
     </item>
     <item>
       <title>Intermediate</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/intermediate/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/intermediate/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/intermediate/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/intermediate/</guid>
       <description></description>
     </item>
     <item>
       <title>Management</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/management/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/management/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/management/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/management/</guid>
       <description></description>
     </item>
     <item>
       <title>Network</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/network/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/network/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/network/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/network/</guid>
       <description></description>
     </item>
     <item>
       <title>OCE</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/OCE/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/OCE/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/OCE/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/OCE/</guid>
       <description></description>
     </item>
     <item>
       <title>OCI</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/OCI/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/OCI/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/OCI/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/OCI/</guid>
       <description></description>
     </item>
     <item>
       <title>OCI Functions</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/OCI-Functions/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/OCI-Functions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/OCI-Functions/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/OCI-Functions/</guid>
       <description></description>
     </item>
     <item>
       <title>OCM</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/OCM/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/OCM/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/OCM/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/OCM/</guid>
       <description></description>
     </item>
     <item>
       <title>Oraclecloud</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/oraclecloud/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/oraclecloud/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/oraclecloud/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/oraclecloud/</guid>
       <description></description>
     </item>
     <item>
       <title>PGQL</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/PGQL/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/PGQL/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/PGQL/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/PGQL/</guid>
       <description></description>
     </item>
     <item>
       <title>Python</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/Python/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/Python/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/Python/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/Python/</guid>
       <description></description>
     </item>
     <item>
       <title>Security</title>
-      <link>https://oracle-japan.github.io/ocitutorials/tags/security/</link>
+      <link>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/security/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://oracle-japan.github.io/ocitutorials/tags/security/</guid>
+      <guid>https://oracle-japan.github.io/ocitutorial-geekdocs/tags/security/</guid>
       <description></description>
     </item>
   </channel>

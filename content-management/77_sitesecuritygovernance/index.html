@@ -19,18 +19,18 @@ Oracle Content and Experience のサイト機能を使ってみよう【初級�
 
   <title>OCEのサイト・セキュリティとサイト・ガバナンスを理解する | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -50,7 +50,7 @@ Oracle Content and Experience のサイト機能を使ってみよう【初級�
 公開範囲の制限なし 誰でも参照可能なWebサイト 主な利用例 コーポレートサイト、ブランドサイト、キャンペーンサイトなど セキュア
 公開範囲の制限あり IDCSに登録されるユーザーIDおよびパスワードにより認証され、サイト管理者により設定されたアクセス権限を持つユーザーのみが参照できるWebサイト 公開範囲は「クラウド・ユーザー」「訪問者」「サービス・ユーザー」「特定のユーザー」より選択（以下の表を参照） 主な利用例 イントラサイト、代理店専用サイト、会員専用サイトなど" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/content-management/77_sitesecuritygovernance/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/77_sitesecuritygovernance/" />
 
 <meta property="article:section" content="Content Management" />
     <meta
@@ -77,7 +77,7 @@ Oracle Content and Experience のサイト機能を使ってみよう【初級�
       "@type": "TechArticle",
       "articleSection": "Content Management",
       "name": "OCEのサイト・セキュリティとサイト・ガバナンスを理解する",
-      "url" : "https://oracle-japan.github.io/ocitutorials/content-management/77_sitesecuritygovernance/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/77_sitesecuritygovernance/",
       "headline": "OCEのサイト・セキュリティとサイト・ガバナンスを理解する",
       "description": "このチュートリアルはOracle Content and Experience(OCE)で作成するWebサイトの サイト・セキュリティ と サイト・ガバナンス の設定方法をステップ・バイ・ステップで紹介するチュートリアルです\nこの文書は、2021年5月時点での最新バージョン(21.2.2)を元に作成されてます 前提条件\nOracle Content and Experience インスタンスを作成する また、以下のチュートリアルを実施済みで、OCEのサイト作成と公開の手順について習得済みであることが望ましい\nOracle Content and Experience のサイト機能を使ってみよう【初級編】 1. サイト・セキュリティ 1.1 説明 OCEのサービス管理者は、ユーザーが作成・公開するWebサイトの サイト・セキュリティ(=公開範囲) を制限できます。サイトの公開範囲は パブリック と セキュア の2パターンで、それぞれの特徴は以下の通りです。\nパブリック\n公開範囲の制限なし 誰でも参照可能なWebサイト 主な利用例 コーポレートサイト、ブランドサイト、キャンペーンサイトなど セキュア\n公開範囲の制限あり IDCSに登録されるユーザーIDおよびパスワードにより認証され、サイト管理者により設定されたアクセス権限を持つユーザーのみが参照できるWebサイト 公開範囲は「クラウド・ユーザー」「訪問者」「サービス・ユーザー」「特定のユーザー」より選択（以下の表を参照） 主な利用例 イントラサイト、代理店専用サイト、会員専用サイトなど",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -87,7 +87,7 @@ Oracle Content and Experience のサイト機能を使ってみよう【初級�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/content-management/77_sitesecuritygovernance/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/77_sitesecuritygovernance/"
       },
       "keywords" : [ "OCE" ],
       "copyrightHolder" : "OCIチュートリアル",
@@ -98,10 +98,10 @@ Oracle Content and Experience のサイト機能を使ってみよう【初級�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -111,73 +111,73 @@ Oracle Content and Experience のサイト機能を使ってみよう【初級�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/content-management/77_sitesecuritygovernance/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/77_sitesecuritygovernance/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/content-management/77_sitesecuritygovernance/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/77_sitesecuritygovernance/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="OCEのサイト・セキュリティとサイト・ガバナンスを理解する">
   <meta property="og:description" content="このチュートリアルはOracle Content and Experience(OCE)で作成するWebサイトの サイト・セキュリティ と サイト・ガバナンス の設定方法をステップ・バイ・ステップで紹介するチュートリアルです
@@ -248,11 +248,11 @@ Oracle Content and Experience のサイト機能を使ってみよう【初級�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -269,7 +269,7 @@ Oracle Content and Experience のサイト機能を使ってみよう【初級�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -281,7 +281,7 @@ Oracle Content and Experience のサイト機能を使ってみよう【初級�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -428,7 +428,7 @@ Oracle Content and Experience のサイト機能を使ってみよう【初級�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/content-management/' href='/ocitutorials/content-management/'><span itemprop='name'>コンテンツ管理編</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>OCEのサイト・セキュリティとサイト・ガバナンスを理解する</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/content-management/' href='/ocitutorial-geekdocs/content-management/'><span itemprop='name'>コンテンツ管理編</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>OCEのサイト・セキュリティとサイト・ガバナンスを理解する</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -486,7 +486,7 @@ Oracle Content and Experience のサイト機能を使ってみよう【初級�
     >
         1. サイト・セキュリティ
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/77_sitesecuritygovernance/#1-サイトセキュリティ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. サイト・セキュリティ" aria-label="アンカー先: 1. サイト・セキュリティ" href="#1-%e3%82%b5%e3%82%a4%e3%83%88%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/77_sitesecuritygovernance/#1-サイトセキュリティ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. サイト・セキュリティ" aria-label="アンカー先: 1. サイト・セキュリティ" href="#1-%e3%82%b5%e3%82%a4%e3%83%88%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -495,7 +495,7 @@ Oracle Content and Experience のサイト機能を使ってみよう【初級�
     >
         1.1 説明
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/77_sitesecuritygovernance/#11-説明" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.1 説明" aria-label="アンカー先: 1.1 説明" href="#11-%e8%aa%ac%e6%98%8e">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/77_sitesecuritygovernance/#11-説明" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.1 説明" aria-label="アンカー先: 1.1 説明" href="#11-%e8%aa%ac%e6%98%8e">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -566,7 +566,7 @@ Oracle Content and Experience のサイト機能を使ってみよう【初級�
     >
         1.1.1 インスタンス単位でのサイト・セキュリティ設定
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/77_sitesecuritygovernance/#111-インスタンス単位でのサイトセキュリティ設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.1.1 インスタンス単位でのサイト・セキュリティ設定" aria-label="アンカー先: 1.1.1 インスタンス単位でのサイト・セキュリティ設定" href="#111-%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e5%8d%98%e4%bd%8d%e3%81%a7%e3%81%ae%e3%82%b5%e3%82%a4%e3%83%88%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e8%a8%ad%e5%ae%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/77_sitesecuritygovernance/#111-インスタンス単位でのサイトセキュリティ設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.1.1 インスタンス単位でのサイト・セキュリティ設定" aria-label="アンカー先: 1.1.1 インスタンス単位でのサイト・セキュリティ設定" href="#111-%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e5%8d%98%e4%bd%8d%e3%81%a7%e3%81%ae%e3%82%b5%e3%82%a4%e3%83%88%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e8%a8%ad%e5%ae%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -655,7 +655,7 @@ Oracle Content and Experience のサイト機能を使ってみよう【初級�
     >
         1.1.2【重要】サイト・セキュリティの設定
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/77_sitesecuritygovernance/#112重要サイトセキュリティの設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.1.2【重要】サイト・セキュリティの設定" aria-label="アンカー先: 1.1.2【重要】サイト・セキュリティの設定" href="#112%e9%87%8d%e8%a6%81%e3%82%b5%e3%82%a4%e3%83%88%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e3%81%ae%e8%a8%ad%e5%ae%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/77_sitesecuritygovernance/#112重要サイトセキュリティの設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.1.2【重要】サイト・セキュリティの設定" aria-label="アンカー先: 1.1.2【重要】サイト・セキュリティの設定" href="#112%e9%87%8d%e8%a6%81%e3%82%b5%e3%82%a4%e3%83%88%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e3%81%ae%e8%a8%ad%e5%ae%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -686,7 +686,7 @@ Oracle Content and Experience のサイト機能を使ってみよう【初級�
     >
         1.2. サイト・セキュリティを構成する
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/77_sitesecuritygovernance/#12-サイトセキュリティを構成する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.2. サイト・セキュリティを構成する" aria-label="アンカー先: 1.2. サイト・セキュリティを構成する" href="#12-%e3%82%b5%e3%82%a4%e3%83%88%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e3%82%92%e6%a7%8b%e6%88%90%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/77_sitesecuritygovernance/#12-サイトセキュリティを構成する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.2. サイト・セキュリティを構成する" aria-label="アンカー先: 1.2. サイト・セキュリティを構成する" href="#12-%e3%82%b5%e3%82%a4%e3%83%88%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e3%82%92%e6%a7%8b%e6%88%90%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -755,7 +755,7 @@ Oracle Content and Experience のサイト機能を使ってみよう【初級�
     >
         1.3 サイトを作成する
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/77_sitesecuritygovernance/#13-サイトを作成する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.3 サイトを作成する" aria-label="アンカー先: 1.3 サイトを作成する" href="#13-%e3%82%b5%e3%82%a4%e3%83%88%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/77_sitesecuritygovernance/#13-サイトを作成する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.3 サイトを作成する" aria-label="アンカー先: 1.3 サイトを作成する" href="#13-%e3%82%b5%e3%82%a4%e3%83%88%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -827,7 +827,7 @@ Oracle Content and Experience のサイト機能を使ってみよう【初級�
     >
         【説明】サイト単位のサイトセキュリティの設定
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/77_sitesecuritygovernance/#説明サイト単位のサイトセキュリティの設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 【説明】サイト単位のサイトセキュリティの設定" aria-label="アンカー先: 【説明】サイト単位のサイトセキュリティの設定" href="#%e8%aa%ac%e6%98%8e%e3%82%b5%e3%82%a4%e3%83%88%e5%8d%98%e4%bd%8d%e3%81%ae%e3%82%b5%e3%82%a4%e3%83%88%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e3%81%ae%e8%a8%ad%e5%ae%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/77_sitesecuritygovernance/#説明サイト単位のサイトセキュリティの設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 【説明】サイト単位のサイトセキュリティの設定" aria-label="アンカー先: 【説明】サイト単位のサイトセキュリティの設定" href="#%e8%aa%ac%e6%98%8e%e3%82%b5%e3%82%a4%e3%83%88%e5%8d%98%e4%bd%8d%e3%81%ae%e3%82%b5%e3%82%a4%e3%83%88%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e3%81%ae%e8%a8%ad%e5%ae%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -852,7 +852,7 @@ Oracle Content and Experience のサイト機能を使ってみよう【初級�
     >
         1.4 サイトを公開する
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/77_sitesecuritygovernance/#14-サイトを公開する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.4 サイトを公開する" aria-label="アンカー先: 1.4 サイトを公開する" href="#14-%e3%82%b5%e3%82%a4%e3%83%88%e3%82%92%e5%85%ac%e9%96%8b%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/77_sitesecuritygovernance/#14-サイトを公開する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.4 サイトを公開する" aria-label="アンカー先: 1.4 サイトを公開する" href="#14-%e3%82%b5%e3%82%a4%e3%83%88%e3%82%92%e5%85%ac%e9%96%8b%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -890,7 +890,7 @@ Oracle Content and Experience のサイト機能を使ってみよう【初級�
     >
         2. サイト・ガバナンス
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/77_sitesecuritygovernance/#2-サイトガバナンス" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. サイト・ガバナンス" aria-label="アンカー先: 2. サイト・ガバナンス" href="#2-%e3%82%b5%e3%82%a4%e3%83%88%e3%82%ac%e3%83%90%e3%83%8a%e3%83%b3%e3%82%b9">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/77_sitesecuritygovernance/#2-サイトガバナンス" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. サイト・ガバナンス" aria-label="アンカー先: 2. サイト・ガバナンス" href="#2-%e3%82%b5%e3%82%a4%e3%83%88%e3%82%ac%e3%83%90%e3%83%8a%e3%83%b3%e3%82%b9">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -899,7 +899,7 @@ Oracle Content and Experience のサイト機能を使ってみよう【初級�
     >
         2.1 説明
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/77_sitesecuritygovernance/#21-説明" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.1 説明" aria-label="アンカー先: 2.1 説明" href="#21-%e8%aa%ac%e6%98%8e">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/77_sitesecuritygovernance/#21-説明" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.1 説明" aria-label="アンカー先: 2.1 説明" href="#21-%e8%aa%ac%e6%98%8e">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -934,7 +934,7 @@ Oracle Content and Experience のサイト機能を使ってみよう【初級�
     >
         2.2 サイト・ガバナンス機能の有効化
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/77_sitesecuritygovernance/#22-サイトガバナンス機能の有効化" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.2 サイト・ガバナンス機能の有効化" aria-label="アンカー先: 2.2 サイト・ガバナンス機能の有効化" href="#22-%e3%82%b5%e3%82%a4%e3%83%88%e3%82%ac%e3%83%90%e3%83%8a%e3%83%b3%e3%82%b9%e6%a9%9f%e8%83%bd%e3%81%ae%e6%9c%89%e5%8a%b9%e5%8c%96">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/77_sitesecuritygovernance/#22-サイトガバナンス機能の有効化" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.2 サイト・ガバナンス機能の有効化" aria-label="アンカー先: 2.2 サイト・ガバナンス機能の有効化" href="#22-%e3%82%b5%e3%82%a4%e3%83%88%e3%82%ac%e3%83%90%e3%83%8a%e3%83%b3%e3%82%b9%e6%a9%9f%e8%83%bd%e3%81%ae%e6%9c%89%e5%8a%b9%e5%8c%96">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -967,7 +967,7 @@ Oracle Content and Experience のサイト機能を使ってみよう【初級�
     >
         2.3 テンプレートの構成と有効化
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/77_sitesecuritygovernance/#23-テンプレートの構成と有効化" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.3 テンプレートの構成と有効化" aria-label="アンカー先: 2.3 テンプレートの構成と有効化" href="#23-%e3%83%86%e3%83%b3%e3%83%97%e3%83%ac%e3%83%bc%e3%83%88%e3%81%ae%e6%a7%8b%e6%88%90%e3%81%a8%e6%9c%89%e5%8a%b9%e5%8c%96">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/77_sitesecuritygovernance/#23-テンプレートの構成と有効化" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.3 テンプレートの構成と有効化" aria-label="アンカー先: 2.3 テンプレートの構成と有効化" href="#23-%e3%83%86%e3%83%b3%e3%83%97%e3%83%ac%e3%83%bc%e3%83%88%e3%81%ae%e6%a7%8b%e6%88%90%e3%81%a8%e6%9c%89%e5%8a%b9%e5%8c%96">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1035,7 +1035,7 @@ Oracle Content and Experience のサイト機能を使ってみよう【初級�
     >
         2.4 サイト作成リクエストの送信
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/77_sitesecuritygovernance/#24-サイト作成リクエストの送信" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.4 サイト作成リクエストの送信" aria-label="アンカー先: 2.4 サイト作成リクエストの送信" href="#24-%e3%82%b5%e3%82%a4%e3%83%88%e4%bd%9c%e6%88%90%e3%83%aa%e3%82%af%e3%82%a8%e3%82%b9%e3%83%88%e3%81%ae%e9%80%81%e4%bf%a1">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/77_sitesecuritygovernance/#24-サイト作成リクエストの送信" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.4 サイト作成リクエストの送信" aria-label="アンカー先: 2.4 サイト作成リクエストの送信" href="#24-%e3%82%b5%e3%82%a4%e3%83%88%e4%bd%9c%e6%88%90%e3%83%aa%e3%82%af%e3%82%a8%e3%82%b9%e3%83%88%e3%81%ae%e9%80%81%e4%bf%a1">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1109,7 +1109,7 @@ Oracle Content and Experience のサイト機能を使ってみよう【初級�
     >
         2.5 サイト作成リクエストの承認
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/77_sitesecuritygovernance/#25-サイト作成リクエストの承認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.5 サイト作成リクエストの承認" aria-label="アンカー先: 2.5 サイト作成リクエストの承認" href="#25-%e3%82%b5%e3%82%a4%e3%83%88%e4%bd%9c%e6%88%90%e3%83%aa%e3%82%af%e3%82%a8%e3%82%b9%e3%83%88%e3%81%ae%e6%89%bf%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/77_sitesecuritygovernance/#25-サイト作成リクエストの承認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.5 サイト作成リクエストの承認" aria-label="アンカー先: 2.5 サイト作成リクエストの承認" href="#25-%e3%82%b5%e3%82%a4%e3%83%88%e4%bd%9c%e6%88%90%e3%83%aa%e3%82%af%e3%82%a8%e3%82%b9%e3%83%88%e3%81%ae%e6%89%bf%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9388,7 +9388,7 @@ Oracle Content and Experience のサイト機能を使ってみよう【初級�
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/content-management/"
+      href="/ocitutorial-geekdocs/content-management/"
       title="コンテンツ管理編"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9400,7 +9400,7 @@ Oracle Content and Experience のサイト機能を使ってみよう【初級�
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/content-management/create_identitydomain_group_user/"
+      href="/ocitutorial-geekdocs/content-management/create_identitydomain_group_user/"
       title="OCI IAM Identity Domain環境でOracle Content Managementインスタンスの利用ユーザーを作成する"
     >
       OCI IAM Identity Domain環境でOracle Content Managementインスタンスの利用ユーザーを作成する
@@ -9454,7 +9454,7 @@ Oracle Content and Experience のサイト機能を使ってみよう【初級�
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

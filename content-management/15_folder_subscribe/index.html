@@ -22,18 +22,18 @@ OCMインスタンスが作成済であること(以下の作成手順参照) OC
 
   <title>その15: フォルダのサブスクライブ（Oracle Content Management のファイル共有機能を利用しよう） | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -56,7 +56,7 @@ OCMインスタンスが作成済であること(以下の作成手順参照) OC
 前提条件
 OCMインスタンスが作成済であること(以下の作成手順参照) OCI IAM Identity Domain環境でOracle Content Managementインスタンスを作成する Oracle Content Management インスタンスを作成する OCMの利用ユーザーにOCMインスタンスのCECStandardUserもしくはCECEnterpriseUserアプリケーション・ロールが付与されていること OCI IAM Identity Domain環境でOracle Content Managementインスタンスの利用ユーザーを作成する Oracle Content Management インスタンスの利用ユーザーを作成するをご確認ください。 1. フォルダのサブスクライブによる通知を有効化する フォルダ・サブスクライブ時に受信するイベントを設定します。ここでは、「フォルダのサブスクリプション」のすべてのイベントを、電子メールで受信します" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/content-management/15_folder_subscribe/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/15_folder_subscribe/" />
 
 <meta property="article:section" content="Content Management" />
     <meta
@@ -86,7 +86,7 @@ OCMインスタンスが作成済であること(以下の作成手順参照) OC
       "@type": "TechArticle",
       "articleSection": "Content Management",
       "name": "その15: フォルダのサブスクライブ（Oracle Content Management のファイル共有機能を利用しよう）",
-      "url" : "https://oracle-japan.github.io/ocitutorials/content-management/15_folder_subscribe/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/15_folder_subscribe/",
       "headline": "その15: フォルダのサブスクライブ（Oracle Content Management のファイル共有機能を利用しよう）",
       "description": "目次に戻る: Oracle Content Management のファイル共有機能を使ってみよう【初級編】\nフォルダをサブスクライブすることで、指定フォルダに何らかの更新が発生した場合に、その通知を受けることができます。通知の受信方法は2種類あります\n電子メール Slack (※サービス管理者により、Slack連携機能が有効化されている場合のみ選択可) 通知を受け取るイベントは、右上のユーザーアイコン→プリファレンス→通知→フォルダのサブスクリプションより選択できます。2023年7月時点では、以下のイベントを選択できます\nフォルダを名前変更、移動または削除する。 フォルダのメンバーシップを変更する。 フォルダまたはその内容の一部のパブリック・リンクを共有する。 フォルダへのフォルダまたはドキュメントの追加。 フォルダ内のドキュメントの名前変更、移動または削除。 フォルダ内のドキュメントの編集。 フォルダ内のドキュメントにコメントする。 サブスクライブ利用時の注意点\nサブスクライブは下位階層に継承されます サブスクライブしたフォルダ配下の全てのフォルダおよびファイルが通知対象となります サブスクライブを実行したユーザー自身による操作は通知対象外です サブスクライブを実行したユーザーではない別のユーザーによる操作は通知対象です 【お知らせ】\nこの文書は、2023年7月時点での最新バージョン(23.7.1)を元に作成されてます。\nチュートリアル内の画面ショットについては、現在のコンソール画面と異なっている場合があります。\n{: .notice–info}\n前提条件\nOCMインスタンスが作成済であること(以下の作成手順参照) OCI IAM Identity Domain環境でOracle Content Managementインスタンスを作成する Oracle Content Management インスタンスを作成する OCMの利用ユーザーにOCMインスタンスのCECStandardUserもしくはCECEnterpriseUserアプリケーション・ロールが付与されていること OCI IAM Identity Domain環境でOracle Content Managementインスタンスの利用ユーザーを作成する Oracle Content Management インスタンスの利用ユーザーを作成するをご確認ください。 1. フォルダのサブスクライブによる通知を有効化する フォルダ・サブスクライブ時に受信するイベントを設定します。ここでは、「フォルダのサブスクリプション」のすべてのイベントを、電子メールで受信します",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -96,7 +96,7 @@ OCMインスタンスが作成済であること(以下の作成手順参照) OC
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/content-management/15_folder_subscribe/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/15_folder_subscribe/"
       },
       "keywords" : [ "OCE" , "OCM" ],
       "copyrightHolder" : "OCIチュートリアル",
@@ -107,10 +107,10 @@ OCMインスタンスが作成済であること(以下の作成手順参照) OC
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -120,73 +120,73 @@ OCMインスタンスが作成済であること(以下の作成手順参照) OC
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/content-management/15_folder_subscribe/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/15_folder_subscribe/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/content-management/15_folder_subscribe/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/15_folder_subscribe/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="その15: フォルダのサブスクライブ（Oracle Content Management のファイル共有機能を利用しよう）">
   <meta property="og:description" content="目次に戻る: Oracle Content Management のファイル共有機能を使ってみよう【初級編】
@@ -264,11 +264,11 @@ OCMインスタンスが作成済であること(以下の作成手順参照) OC
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -285,7 +285,7 @@ OCMインスタンスが作成済であること(以下の作成手順参照) OC
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -297,7 +297,7 @@ OCMインスタンスが作成済であること(以下の作成手順参照) OC
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -424,7 +424,7 @@ OCMインスタンスが作成済であること(以下の作成手順参照) OC
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/content-management/' href='/ocitutorials/content-management/'><span itemprop='name'>コンテンツ管理編</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>その15: フォルダのサブスクライブ（Oracle Content Management のファイル共有機能を利用しよう）</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/content-management/' href='/ocitutorial-geekdocs/content-management/'><span itemprop='name'>コンテンツ管理編</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>その15: フォルダのサブスクライブ（Oracle Content Management のファイル共有機能を利用しよう）</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -537,7 +537,7 @@ OCMインスタンスが作成済であること(以下の作成手順参照) OC
     >
         1. フォルダのサブスクライブによる通知を有効化する
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/15_folder_subscribe/#1-フォルダのサブスクライブによる通知を有効化する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. フォルダのサブスクライブによる通知を有効化する" aria-label="アンカー先: 1. フォルダのサブスクライブによる通知を有効化する" href="#1-%e3%83%95%e3%82%a9%e3%83%ab%e3%83%80%e3%81%ae%e3%82%b5%e3%83%96%e3%82%b9%e3%82%af%e3%83%a9%e3%82%a4%e3%83%96%e3%81%ab%e3%82%88%e3%82%8b%e9%80%9a%e7%9f%a5%e3%82%92%e6%9c%89%e5%8a%b9%e5%8c%96%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/15_folder_subscribe/#1-フォルダのサブスクライブによる通知を有効化する" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. フォルダのサブスクライブによる通知を有効化する" aria-label="アンカー先: 1. フォルダのサブスクライブによる通知を有効化する" href="#1-%e3%83%95%e3%82%a9%e3%83%ab%e3%83%80%e3%81%ae%e3%82%b5%e3%83%96%e3%82%b9%e3%82%af%e3%83%a9%e3%82%a4%e3%83%96%e3%81%ab%e3%82%88%e3%82%8b%e9%80%9a%e7%9f%a5%e3%82%92%e6%9c%89%e5%8a%b9%e5%8c%96%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -578,7 +578,7 @@ OCMインスタンスが作成済であること(以下の作成手順参照) OC
     >
         2. フォルダのサブスクライブ
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/15_folder_subscribe/#2-フォルダのサブスクライブ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. フォルダのサブスクライブ" aria-label="アンカー先: 2. フォルダのサブスクライブ" href="#2-%e3%83%95%e3%82%a9%e3%83%ab%e3%83%80%e3%81%ae%e3%82%b5%e3%83%96%e3%82%b9%e3%82%af%e3%83%a9%e3%82%a4%e3%83%96">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/15_folder_subscribe/#2-フォルダのサブスクライブ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. フォルダのサブスクライブ" aria-label="アンカー先: 2. フォルダのサブスクライブ" href="#2-%e3%83%95%e3%82%a9%e3%83%ab%e3%83%80%e3%81%ae%e3%82%b5%e3%83%96%e3%82%b9%e3%82%af%e3%83%a9%e3%82%a4%e3%83%96">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -639,7 +639,7 @@ OCMインスタンスが作成済であること(以下の作成手順参照) OC
     >
         3. 確認(電子メールによる通知の受信)
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/15_folder_subscribe/#3-確認電子メールによる通知の受信" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. 確認(電子メールによる通知の受信)" aria-label="アンカー先: 3. 確認(電子メールによる通知の受信)" href="#3-%e7%a2%ba%e8%aa%8d%e9%9b%bb%e5%ad%90%e3%83%a1%e3%83%bc%e3%83%ab%e3%81%ab%e3%82%88%e3%82%8b%e9%80%9a%e7%9f%a5%e3%81%ae%e5%8f%97%e4%bf%a1">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/15_folder_subscribe/#3-確認電子メールによる通知の受信" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. 確認(電子メールによる通知の受信)" aria-label="アンカー先: 3. 確認(電子メールによる通知の受信)" href="#3-%e7%a2%ba%e8%aa%8d%e9%9b%bb%e5%ad%90%e3%83%a1%e3%83%bc%e3%83%ab%e3%81%ab%e3%82%88%e3%82%8b%e9%80%9a%e7%9f%a5%e3%81%ae%e5%8f%97%e4%bf%a1">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -689,7 +689,7 @@ OCMインスタンスが作成済であること(以下の作成手順参照) OC
     >
         4. サブスクライブの解除
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/15_folder_subscribe/#4-サブスクライブの解除" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. サブスクライブの解除" aria-label="アンカー先: 4. サブスクライブの解除" href="#4-%e3%82%b5%e3%83%96%e3%82%b9%e3%82%af%e3%83%a9%e3%82%a4%e3%83%96%e3%81%ae%e8%a7%a3%e9%99%a4">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/15_folder_subscribe/#4-サブスクライブの解除" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. サブスクライブの解除" aria-label="アンカー先: 4. サブスクライブの解除" href="#4-%e3%82%b5%e3%83%96%e3%82%b9%e3%82%af%e3%83%a9%e3%82%a4%e3%83%96%e3%81%ae%e8%a7%a3%e9%99%a4">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -8967,7 +8967,7 @@ OCMインスタンスが作成済であること(以下の作成手順参照) OC
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/content-management/14_external_user/"
+      href="/ocitutorial-geekdocs/content-management/14_external_user/"
       title="その14: 外部ユーザー（Oracle Content Management のファイル共有機能を利用しよう）"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -8979,7 +8979,7 @@ OCMインスタンスが作成済であること(以下の作成手順参照) OC
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/content-management/2_create_folder/"
+      href="/ocitutorial-geekdocs/content-management/2_create_folder/"
       title="その2: フォルダの作成（Oracle Content Management のファイル共有機能を使ってみよう）"
     >
       その2: フォルダの作成（Oracle Content Management のファイル共有機能を使ってみよう）
@@ -9033,7 +9033,7 @@ OCMインスタンスが作成済であること(以下の作成手順参照) OC
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

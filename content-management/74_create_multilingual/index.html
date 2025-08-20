@@ -21,18 +21,18 @@ Oracle Content and Experience を Webコンテンツ管理(Web CMS) として利
 
   <title>Oracle Content and Experience で多言語サイトを作成しよう | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -54,7 +54,7 @@ CECContentAdministrator CECDeveloperUser CECEnterpriseUser CECRepositoryAdminisr
 なお、以下のチュートリアルを実施済みで、OCEのサイト作成と公開、アセットの作成と公開、それぞれの手順について習得済みであることが望ましい
 Oracle Content and Experience を Webコンテンツ管理(Web CMS) として利用しよう【初級編】 0. 説明 0.1 このチュートリアルで実施すること このチュートリアルでは、OCE のサイト機能を利用し、多言語（マルチリンガル）サイトを作成・公開します。また、Web サイト上で公開するコンテンツは、以前のチュートリアルで作成したリポジトリ (Sample Content Repository) とコンテンツ・タイプ (sampleNewsType) を利用します。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/content-management/74_create_multilingual/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/74_create_multilingual/" />
 
 <meta property="article:section" content="Content Management" />
     <meta
@@ -83,7 +83,7 @@ Oracle Content and Experience を Webコンテンツ管理(Web CMS) として利
       "@type": "TechArticle",
       "articleSection": "Content Management",
       "name": "Oracle Content and Experience で多言語サイトを作成しよう",
-      "url" : "https://oracle-japan.github.io/ocitutorials/content-management/74_create_multilingual/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/74_create_multilingual/",
       "headline": "Oracle Content and Experience で多言語サイトを作成しよう",
       "description": "このチュートリアルは Oracle Content and Experience (OCE) のサイト作成機能を利用し、多言語サイトを作成・公開する方法をステップ・バイ・ステップで紹介するチュートリアルです。また、サイト上で公開するコンテンツは、アセット・リポジトリで管理されるコンテンツ・アイテム（多言語）を利用します\nこの文書は、2021年4月時点での最新バージョン(21.2.1)を元に作成されてます 前提条件\nOracle Content and Experience インスタンスを作成する\nOracle Content and Experience を Headless CMS として使ってみよう【初級編】\nOCE の利用ユーザーに、少なくとも下記4つのOCE インスタンスのアプリケーション・ロールが付与されていること\nCECContentAdministrator CECDeveloperUser CECEnterpriseUser CECRepositoryAdminisrrator [Memo]\nユーザーの作成とアプリケーションロールの付与手順は、Oracle Content and Experience インスタンスの利用ユーザーを作成する をご確認ください。\nなお、以下のチュートリアルを実施済みで、OCEのサイト作成と公開、アセットの作成と公開、それぞれの手順について習得済みであることが望ましい\nOracle Content and Experience を Webコンテンツ管理(Web CMS) として利用しよう【初級編】 0. 説明 0.1 このチュートリアルで実施すること このチュートリアルでは、OCE のサイト機能を利用し、多言語（マルチリンガル）サイトを作成・公開します。また、Web サイト上で公開するコンテンツは、以前のチュートリアルで作成したリポジトリ (Sample Content Repository) とコンテンツ・タイプ (sampleNewsType) を利用します。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -93,7 +93,7 @@ Oracle Content and Experience を Webコンテンツ管理(Web CMS) として利
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/content-management/74_create_multilingual/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/74_create_multilingual/"
       },
       "keywords" : [ "OCE" ],
       "copyrightHolder" : "OCIチュートリアル",
@@ -104,10 +104,10 @@ Oracle Content and Experience を Webコンテンツ管理(Web CMS) として利
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -117,73 +117,73 @@ Oracle Content and Experience を Webコンテンツ管理(Web CMS) として利
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/content-management/74_create_multilingual/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/74_create_multilingual/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/content-management/74_create_multilingual/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/74_create_multilingual/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="Oracle Content and Experience で多言語サイトを作成しよう">
   <meta property="og:description" content="このチュートリアルは Oracle Content and Experience (OCE) のサイト作成機能を利用し、多言語サイトを作成・公開する方法をステップ・バイ・ステップで紹介するチュートリアルです。また、サイト上で公開するコンテンツは、アセット・リポジトリで管理されるコンテンツ・アイテム（多言語）を利用します
@@ -258,11 +258,11 @@ Oracle Content and Experience を Webコンテンツ管理(Web CMS) として利
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -279,7 +279,7 @@ Oracle Content and Experience を Webコンテンツ管理(Web CMS) として利
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -291,7 +291,7 @@ Oracle Content and Experience を Webコンテンツ管理(Web CMS) として利
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -456,7 +456,7 @@ Oracle Content and Experience を Webコンテンツ管理(Web CMS) として利
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/content-management/' href='/ocitutorials/content-management/'><span itemprop='name'>コンテンツ管理編</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Oracle Content and Experience で多言語サイトを作成しよう</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/content-management/' href='/ocitutorial-geekdocs/content-management/'><span itemprop='name'>コンテンツ管理編</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Oracle Content and Experience で多言語サイトを作成しよう</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -536,7 +536,7 @@ Oracle Content and Experience を Webコンテンツ管理(Web CMS) として利
     >
         0. 説明
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/74_create_multilingual/#0-説明" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0. 説明" aria-label="アンカー先: 0. 説明" href="#0-%e8%aa%ac%e6%98%8e">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/74_create_multilingual/#0-説明" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0. 説明" aria-label="アンカー先: 0. 説明" href="#0-%e8%aa%ac%e6%98%8e">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -545,7 +545,7 @@ Oracle Content and Experience を Webコンテンツ管理(Web CMS) として利
     >
         0.1 このチュートリアルで実施すること
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/74_create_multilingual/#01-このチュートリアルで実施すること" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0.1 このチュートリアルで実施すること" aria-label="アンカー先: 0.1 このチュートリアルで実施すること" href="#01-%e3%81%93%e3%81%ae%e3%83%81%e3%83%a5%e3%83%bc%e3%83%88%e3%83%aa%e3%82%a2%e3%83%ab%e3%81%a7%e5%ae%9f%e6%96%bd%e3%81%99%e3%82%8b%e3%81%93%e3%81%a8">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/74_create_multilingual/#01-このチュートリアルで実施すること" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0.1 このチュートリアルで実施すること" aria-label="アンカー先: 0.1 このチュートリアルで実施すること" href="#01-%e3%81%93%e3%81%ae%e3%83%81%e3%83%a5%e3%83%bc%e3%83%88%e3%83%aa%e3%82%a2%e3%83%ab%e3%81%a7%e5%ae%9f%e6%96%bd%e3%81%99%e3%82%8b%e3%81%93%e3%81%a8">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -567,7 +567,7 @@ Oracle Content and Experience を Webコンテンツ管理(Web CMS) として利
     >
         0.2 チュートリアルの流れ
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/74_create_multilingual/#02-チュートリアルの流れ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0.2 チュートリアルの流れ" aria-label="アンカー先: 0.2 チュートリアルの流れ" href="#02-%e3%83%81%e3%83%a5%e3%83%bc%e3%83%88%e3%83%aa%e3%82%a2%e3%83%ab%e3%81%ae%e6%b5%81%e3%82%8c">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/74_create_multilingual/#02-チュートリアルの流れ" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0.2 チュートリアルの流れ" aria-label="アンカー先: 0.2 チュートリアルの流れ" href="#02-%e3%83%81%e3%83%a5%e3%83%bc%e3%83%88%e3%83%aa%e3%82%a2%e3%83%ab%e3%81%ae%e6%b5%81%e3%82%8c">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -604,7 +604,7 @@ Oracle Content and Experience を Webコンテンツ管理(Web CMS) として利
     >
         1. サイト作成の準備
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/74_create_multilingual/#1-サイト作成の準備" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. サイト作成の準備" aria-label="アンカー先: 1. サイト作成の準備" href="#1-%e3%82%b5%e3%82%a4%e3%83%88%e4%bd%9c%e6%88%90%e3%81%ae%e6%ba%96%e5%82%99">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/74_create_multilingual/#1-サイト作成の準備" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. サイト作成の準備" aria-label="アンカー先: 1. サイト作成の準備" href="#1-%e3%82%b5%e3%82%a4%e3%83%88%e4%bd%9c%e6%88%90%e3%81%ae%e6%ba%96%e5%82%99">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -613,7 +613,7 @@ Oracle Content and Experience を Webコンテンツ管理(Web CMS) として利
     >
         1.1 ローカリゼーション・ポリシーの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/74_create_multilingual/#11-ローカリゼーションポリシーの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.1 ローカリゼーション・ポリシーの作成" aria-label="アンカー先: 1.1 ローカリゼーション・ポリシーの作成" href="#11-%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%aa%e3%82%bc%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%83%9d%e3%83%aa%e3%82%b7%e3%83%bc%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/74_create_multilingual/#11-ローカリゼーションポリシーの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.1 ローカリゼーション・ポリシーの作成" aria-label="アンカー先: 1.1 ローカリゼーション・ポリシーの作成" href="#11-%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%aa%e3%82%bc%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%83%9d%e3%83%aa%e3%82%b7%e3%83%bc%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -675,7 +675,7 @@ Oracle Content and Experience を Webコンテンツ管理(Web CMS) として利
     >
         2. サイトの作成
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/74_create_multilingual/#2-サイトの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. サイトの作成" aria-label="アンカー先: 2. サイトの作成" href="#2-%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/74_create_multilingual/#2-サイトの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. サイトの作成" aria-label="アンカー先: 2. サイトの作成" href="#2-%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -684,7 +684,7 @@ Oracle Content and Experience を Webコンテンツ管理(Web CMS) として利
     >
         2.1 サイトの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/74_create_multilingual/#21-サイトの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.1 サイトの作成" aria-label="アンカー先: 2.1 サイトの作成" href="#21-%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/74_create_multilingual/#21-サイトの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.1 サイトの作成" aria-label="アンカー先: 2.1 サイトの作成" href="#21-%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -756,7 +756,7 @@ Oracle Content and Experience を Webコンテンツ管理(Web CMS) として利
     >
         2.2 作成された公開チャネルの確認
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/74_create_multilingual/#22-作成された公開チャネルの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.2 作成された公開チャネルの確認" aria-label="アンカー先: 2.2 作成された公開チャネルの確認" href="#22-%e4%bd%9c%e6%88%90%e3%81%95%e3%82%8c%e3%81%9f%e5%85%ac%e9%96%8b%e3%83%81%e3%83%a3%e3%83%8d%e3%83%ab%e3%81%ae%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/74_create_multilingual/#22-作成された公開チャネルの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2.2 作成された公開チャネルの確認" aria-label="アンカー先: 2.2 作成された公開チャネルの確認" href="#22-%e4%bd%9c%e6%88%90%e3%81%95%e3%82%8c%e3%81%9f%e5%85%ac%e9%96%8b%e3%83%81%e3%83%a3%e3%83%8d%e3%83%ab%e3%81%ae%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -799,7 +799,7 @@ Oracle Content and Experience を Webコンテンツ管理(Web CMS) として利
     >
         3. サイトの編集・翻訳
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/74_create_multilingual/#3-サイトの編集翻訳" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. サイトの編集・翻訳" aria-label="アンカー先: 3. サイトの編集・翻訳" href="#3-%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e7%b7%a8%e9%9b%86%e7%bf%bb%e8%a8%b3">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/74_create_multilingual/#3-サイトの編集翻訳" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. サイトの編集・翻訳" aria-label="アンカー先: 3. サイトの編集・翻訳" href="#3-%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e7%b7%a8%e9%9b%86%e7%bf%bb%e8%a8%b3">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -809,7 +809,7 @@ Oracle Content and Experience を Webコンテンツ管理(Web CMS) として利
     >
         3.1 日本語サイトの編集
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/74_create_multilingual/#31-日本語サイトの編集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3.1 日本語サイトの編集" aria-label="アンカー先: 3.1 日本語サイトの編集" href="#31-%e6%97%a5%e6%9c%ac%e8%aa%9e%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e7%b7%a8%e9%9b%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/74_create_multilingual/#31-日本語サイトの編集" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3.1 日本語サイトの編集" aria-label="アンカー先: 3.1 日本語サイトの編集" href="#31-%e6%97%a5%e6%9c%ac%e8%aa%9e%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e7%b7%a8%e9%9b%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1000,7 +1000,7 @@ Oracle Content and Experience を Webコンテンツ管理(Web CMS) として利
     >
         3.2 サイトの翻訳（日本語→英語）
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/74_create_multilingual/#32-サイトの翻訳日本語英語" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3.2 サイトの翻訳（日本語→英語）" aria-label="アンカー先: 3.2 サイトの翻訳（日本語→英語）" href="#32-%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e7%bf%bb%e8%a8%b3%e6%97%a5%e6%9c%ac%e8%aa%9e%e8%8b%b1%e8%aa%9e">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/74_create_multilingual/#32-サイトの翻訳日本語英語" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3.2 サイトの翻訳（日本語→英語）" aria-label="アンカー先: 3.2 サイトの翻訳（日本語→英語）" href="#32-%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e7%bf%bb%e8%a8%b3%e6%97%a5%e6%9c%ac%e8%aa%9e%e8%8b%b1%e8%aa%9e">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1201,7 +1201,7 @@ Oracle Content and Experience を Webコンテンツ管理(Web CMS) として利
     >
         4. サイトの公開と確認
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/74_create_multilingual/#4-サイトの公開と確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. サイトの公開と確認" aria-label="アンカー先: 4. サイトの公開と確認" href="#4-%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e5%85%ac%e9%96%8b%e3%81%a8%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/74_create_multilingual/#4-サイトの公開と確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. サイトの公開と確認" aria-label="アンカー先: 4. サイトの公開と確認" href="#4-%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e5%85%ac%e9%96%8b%e3%81%a8%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1210,7 +1210,7 @@ Oracle Content and Experience を Webコンテンツ管理(Web CMS) として利
     >
         4.1 サイトの公開
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/74_create_multilingual/#41-サイトの公開" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.1 サイトの公開" aria-label="アンカー先: 4.1 サイトの公開" href="#41-%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e5%85%ac%e9%96%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/74_create_multilingual/#41-サイトの公開" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.1 サイトの公開" aria-label="アンカー先: 4.1 サイトの公開" href="#41-%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e5%85%ac%e9%96%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1257,7 +1257,7 @@ Oracle Content and Experience を Webコンテンツ管理(Web CMS) として利
     >
         4.2 サイトをオンラインにする
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/74_create_multilingual/#42-サイトをオンラインにする" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.2 サイトをオンラインにする" aria-label="アンカー先: 4.2 サイトをオンラインにする" href="#42-%e3%82%b5%e3%82%a4%e3%83%88%e3%82%92%e3%82%aa%e3%83%b3%e3%83%a9%e3%82%a4%e3%83%b3%e3%81%ab%e3%81%99%e3%82%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/74_create_multilingual/#42-サイトをオンラインにする" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.2 サイトをオンラインにする" aria-label="アンカー先: 4.2 サイトをオンラインにする" href="#42-%e3%82%b5%e3%82%a4%e3%83%88%e3%82%92%e3%82%aa%e3%83%b3%e3%83%a9%e3%82%a4%e3%83%b3%e3%81%ab%e3%81%99%e3%82%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1289,7 +1289,7 @@ Oracle Content and Experience を Webコンテンツ管理(Web CMS) として利
     >
         4.3 確認
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/74_create_multilingual/#43-確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.3 確認" aria-label="アンカー先: 4.3 確認" href="#43-%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/74_create_multilingual/#43-確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4.3 確認" aria-label="アンカー先: 4.3 確認" href="#43-%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1321,7 +1321,7 @@ Oracle Content and Experience を Webコンテンツ管理(Web CMS) として利
     >
         5. サイト上で利用するアセットの作成と公開
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/74_create_multilingual/#5-サイト上で利用するアセットの作成と公開" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5. サイト上で利用するアセットの作成と公開" aria-label="アンカー先: 5. サイト上で利用するアセットの作成と公開" href="#5-%e3%82%b5%e3%82%a4%e3%83%88%e4%b8%8a%e3%81%a7%e5%88%a9%e7%94%a8%e3%81%99%e3%82%8b%e3%82%a2%e3%82%bb%e3%83%83%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90%e3%81%a8%e5%85%ac%e9%96%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/74_create_multilingual/#5-サイト上で利用するアセットの作成と公開" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5. サイト上で利用するアセットの作成と公開" aria-label="アンカー先: 5. サイト上で利用するアセットの作成と公開" href="#5-%e3%82%b5%e3%82%a4%e3%83%88%e4%b8%8a%e3%81%a7%e5%88%a9%e7%94%a8%e3%81%99%e3%82%8b%e3%82%a2%e3%82%bb%e3%83%83%e3%83%88%e3%81%ae%e4%bd%9c%e6%88%90%e3%81%a8%e5%85%ac%e9%96%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1330,7 +1330,7 @@ Oracle Content and Experience を Webコンテンツ管理(Web CMS) として利
     >
         5.1 説明
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/74_create_multilingual/#51-説明" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5.1 説明" aria-label="アンカー先: 5.1 説明" href="#51-%e8%aa%ac%e6%98%8e">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/74_create_multilingual/#51-説明" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5.1 説明" aria-label="アンカー先: 5.1 説明" href="#51-%e8%aa%ac%e6%98%8e">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1365,7 +1365,7 @@ Oracle Content and Experience を Webコンテンツ管理(Web CMS) として利
     >
         5.2 コンテンツ・アイテム（日本語）の作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/74_create_multilingual/#52-コンテンツアイテム日本語の作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5.2 コンテンツ・アイテム（日本語）の作成" aria-label="アンカー先: 5.2 コンテンツ・アイテム（日本語）の作成" href="#52-%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%e3%82%a2%e3%82%a4%e3%83%86%e3%83%a0%e6%97%a5%e6%9c%ac%e8%aa%9e%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/74_create_multilingual/#52-コンテンツアイテム日本語の作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5.2 コンテンツ・アイテム（日本語）の作成" aria-label="アンカー先: 5.2 コンテンツ・アイテム（日本語）の作成" href="#52-%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%e3%82%a2%e3%82%a4%e3%83%86%e3%83%a0%e6%97%a5%e6%9c%ac%e8%aa%9e%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1447,7 +1447,7 @@ Oracle Content and Experience を Webコンテンツ管理(Web CMS) として利
     >
         5.3 コンテンツ・アイテム（英語翻訳版）の作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/74_create_multilingual/#53-コンテンツアイテム英語翻訳版の作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5.3 コンテンツ・アイテム（英語翻訳版）の作成" aria-label="アンカー先: 5.3 コンテンツ・アイテム（英語翻訳版）の作成" href="#53-%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%e3%82%a2%e3%82%a4%e3%83%86%e3%83%a0%e8%8b%b1%e8%aa%9e%e7%bf%bb%e8%a8%b3%e7%89%88%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/74_create_multilingual/#53-コンテンツアイテム英語翻訳版の作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5.3 コンテンツ・アイテム（英語翻訳版）の作成" aria-label="アンカー先: 5.3 コンテンツ・アイテム（英語翻訳版）の作成" href="#53-%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%e3%82%a2%e3%82%a4%e3%83%86%e3%83%a0%e8%8b%b1%e8%aa%9e%e7%bf%bb%e8%a8%b3%e7%89%88%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1556,7 +1556,7 @@ Oracle Content and Experience を Webコンテンツ管理(Web CMS) として利
     >
         5.4 コンテンツ・アイテムの公開
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/74_create_multilingual/#54-コンテンツアイテムの公開" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5.4 コンテンツ・アイテムの公開" aria-label="アンカー先: 5.4 コンテンツ・アイテムの公開" href="#54-%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%e3%82%a2%e3%82%a4%e3%83%86%e3%83%a0%e3%81%ae%e5%85%ac%e9%96%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/74_create_multilingual/#54-コンテンツアイテムの公開" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5.4 コンテンツ・アイテムの公開" aria-label="アンカー先: 5.4 コンテンツ・アイテムの公開" href="#54-%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%e3%82%a2%e3%82%a4%e3%83%86%e3%83%a0%e3%81%ae%e5%85%ac%e9%96%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1602,7 +1602,7 @@ OCEのバージョン21.2.1 より、アセットの公開は「即時公開」�
     >
         6 アセットをサイト上に配置
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/74_create_multilingual/#6-アセットをサイト上に配置" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 6 アセットをサイト上に配置" aria-label="アンカー先: 6 アセットをサイト上に配置" href="#6-%e3%82%a2%e3%82%bb%e3%83%83%e3%83%88%e3%82%92%e3%82%b5%e3%82%a4%e3%83%88%e4%b8%8a%e3%81%ab%e9%85%8d%e7%bd%ae">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/74_create_multilingual/#6-アセットをサイト上に配置" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 6 アセットをサイト上に配置" aria-label="アンカー先: 6 アセットをサイト上に配置" href="#6-%e3%82%a2%e3%82%bb%e3%83%83%e3%83%88%e3%82%92%e3%82%b5%e3%82%a4%e3%83%88%e4%b8%8a%e3%81%ab%e9%85%8d%e7%bd%ae">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1611,7 +1611,7 @@ OCEのバージョン21.2.1 より、アセットの公開は「即時公開」�
     >
         6.1 サイトの編集と公開
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/74_create_multilingual/#61-サイトの編集と公開" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 6.1 サイトの編集と公開" aria-label="アンカー先: 6.1 サイトの編集と公開" href="#61-%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e7%b7%a8%e9%9b%86%e3%81%a8%e5%85%ac%e9%96%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/74_create_multilingual/#61-サイトの編集と公開" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 6.1 サイトの編集と公開" aria-label="アンカー先: 6.1 サイトの編集と公開" href="#61-%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e7%b7%a8%e9%9b%86%e3%81%a8%e5%85%ac%e9%96%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1696,7 +1696,7 @@ OCEのバージョン21.2.1 より、アセットの公開は「即時公開」�
     >
         6.2 サイトの再公開
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/content-management/74_create_multilingual/#62-サイトの再公開" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 6.2 サイトの再公開" aria-label="アンカー先: 6.2 サイトの再公開" href="#62-%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e5%86%8d%e5%85%ac%e9%96%8b">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/content-management/74_create_multilingual/#62-サイトの再公開" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 6.2 サイトの再公開" aria-label="アンカー先: 6.2 サイトの再公開" href="#62-%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e5%86%8d%e5%85%ac%e9%96%8b">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9973,7 +9973,7 @@ OCEのバージョン21.2.1 より、アセットの公開は「即時公開」�
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/content-management/72_change_banner/"
+      href="/ocitutorial-geekdocs/content-management/72_change_banner/"
       title="Oracle Content and Experience で作成したサイトのバナー画像を変更しよう"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9985,7 +9985,7 @@ OCEのバージョン21.2.1 より、アセットの公開は「即時公開」�
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/content-management/75_taxonomy/"
+      href="/ocitutorial-geekdocs/content-management/75_taxonomy/"
       title="Oracle Content and Experience のタクソノミを使ってみよう"
     >
       Oracle Content and Experience のタクソノミを使ってみよう
@@ -10039,7 +10039,7 @@ OCEのバージョン21.2.1 より、アセットの公開は「即時公開」�
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

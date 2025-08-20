@@ -19,18 +19,18 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
 
   <title>205: オンライン・トランザクション系のアプリを実行してみよう(Swingbench) | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -51,7 +51,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
 ADBインスタンスが構成済みであること ※ADBインタンスの作成方法については、 101:ADBインスタンスを作成してみよう を参照ください。 所要時間: 約1時間30分
 1.Swingbenchをセットアップしよう Swingbenchをダウンロード、データ生成 まずはSwingbenchを仮想マシン上にダウンロードし、ベンチマーク・データをADBインスタンス内に生成しましょう。 OCIで仮想マシンを作成する場合は、こちらの204: 開発者向け仮想マシンのセットアップ方法を参考にしてください。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/adb/adb205-swingbench/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb205-swingbench/" />
 
 <meta property="article:section" content="Adb" />
     <meta
@@ -79,7 +79,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
       "@type": "TechArticle",
       "articleSection": "Adb",
       "name": "205: オンライン・トランザクション系のアプリを実行してみよう(Swingbench)",
-      "url" : "https://oracle-japan.github.io/ocitutorials/adb/adb205-swingbench/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb205-swingbench/",
       "headline": "205: オンライン・トランザクション系のアプリを実行してみよう(Swingbench)",
       "description": "\nはじめに Oracle Exadataをベースに構成されるAutonomous Database(ADB)は、分析系の処理だけでなく、バッチ処理、OLTP（オンライン・トランザクション）処理といった様々なワークロードに対応可能です。\nこの章ではOracle Databaseのベンチマークツールとして利用されることの多いSwingbenchを利用し、OLTP処理をATPで動かしてみます。\n併せて、データベースの負荷状況に応じて自動的にCPUをスケールさせる、自動スケーリング（Auto Scaling）の動作を確認します。\n目次\n1.Swingbenchをセットアップしよう Swingbenchをダウンロード、データ生成 生成されたスキーマ・オブジェクトの確認 2.Swingbenchを実行し、ECPUをスケールアップしてみよう ECPU=2 (自動スケーリング無効) ECPU=16 (自動スケーリング無効) ECPU=16 (自動スケーリング有効) 前提条件\nADBインスタンスが構成済みであること ※ADBインタンスの作成方法については、 101:ADBインスタンスを作成してみよう を参照ください。 所要時間: 約1時間30分\n1.Swingbenchをセットアップしよう Swingbenchをダウンロード、データ生成 まずはSwingbenchを仮想マシン上にダウンロードし、ベンチマーク・データをADBインスタンス内に生成しましょう。 OCIで仮想マシンを作成する場合は、こちらの204: 開発者向け仮想マシンのセットアップ方法を参考にしてください。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -89,7 +89,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/adb/adb205-swingbench/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb205-swingbench/"
       },
       "copyrightHolder" : "OCIチュートリアル",
       "copyrightYear" : "0001",
@@ -99,10 +99,10 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -112,73 +112,73 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/adb/adb205-swingbench/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb205-swingbench/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/adb/adb205-swingbench/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb205-swingbench/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="205: オンライン・トランザクション系のアプリを実行してみよう(Swingbench)">
   <meta property="og:description" content="はじめに Oracle Exadataをベースに構成されるAutonomous Database(ADB)は、分析系の処理だけでなく、バッチ処理、OLTP（オンライン・トランザクション）処理といった様々なワークロードに対応可能です。
@@ -248,11 +248,11 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -269,7 +269,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -281,7 +281,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -416,7 +416,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/adb/' href='/ocitutorials/adb/'><span itemprop='name'>Oracle Database編 - Autonomous Database (ADB)を使ってみよう</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>205: オンライン・トランザクション系のアプリを実行してみよう(Swingbench)</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/adb/' href='/ocitutorial-geekdocs/adb/'><span itemprop='name'>Oracle Database編 - Autonomous Database (ADB)を使ってみよう</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>205: オンライン・トランザクション系のアプリを実行してみよう(Swingbench)</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -448,7 +448,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
     >
         はじめに
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb205-swingbench/#はじめに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: はじめに" aria-label="アンカー先: はじめに" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb205-swingbench/#はじめに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: はじめに" aria-label="アンカー先: はじめに" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -510,7 +510,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
     >
         1.Swingbenchをセットアップしよう
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb205-swingbench/#1swingbenchをセットアップしよう" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.Swingbenchをセットアップしよう" aria-label="アンカー先: 1.Swingbenchをセットアップしよう" href="#1swingbench%e3%82%92%e3%82%bb%e3%83%83%e3%83%88%e3%82%a2%e3%83%83%e3%83%97%e3%81%97%e3%82%88%e3%81%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb205-swingbench/#1swingbenchをセットアップしよう" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1.Swingbenchをセットアップしよう" aria-label="アンカー先: 1.Swingbenchをセットアップしよう" href="#1swingbench%e3%82%92%e3%82%bb%e3%83%83%e3%83%88%e3%82%a2%e3%83%83%e3%83%97%e3%81%97%e3%82%88%e3%81%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -520,7 +520,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
     >
         Swingbenchをダウンロード、データ生成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb205-swingbench/#swingbenchをダウンロードデータ生成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Swingbenchをダウンロード、データ生成" aria-label="アンカー先: Swingbenchをダウンロード、データ生成" href="#swingbench%e3%82%92%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89%e3%83%87%e3%83%bc%e3%82%bf%e7%94%9f%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb205-swingbench/#swingbenchをダウンロードデータ生成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: Swingbenchをダウンロード、データ生成" aria-label="アンカー先: Swingbenchをダウンロード、データ生成" href="#swingbench%e3%82%92%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89%e3%83%87%e3%83%bc%e3%82%bf%e7%94%9f%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -668,7 +668,7 @@ export TNS_ADMIN=/home/oracle/labs/wallets
     >
         生成されたスキーマ・オブジェクトの確認
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb205-swingbench/#生成されたスキーマオブジェクトの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 生成されたスキーマ・オブジェクトの確認" aria-label="アンカー先: 生成されたスキーマ・オブジェクトの確認" href="#%e7%94%9f%e6%88%90%e3%81%95%e3%82%8c%e3%81%9f%e3%82%b9%e3%82%ad%e3%83%bc%e3%83%9e%e3%82%aa%e3%83%96%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%81%ae%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb205-swingbench/#生成されたスキーマオブジェクトの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 生成されたスキーマ・オブジェクトの確認" aria-label="アンカー先: 生成されたスキーマ・オブジェクトの確認" href="#%e7%94%9f%e6%88%90%e3%81%95%e3%82%8c%e3%81%9f%e3%82%b9%e3%82%ad%e3%83%bc%e3%83%9e%e3%82%aa%e3%83%96%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%81%ae%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -735,7 +735,7 @@ export TNS_ADMIN=/home/oracle/labs/wallets
     >
         2. Swingbenchを実行し、ECPUをスケールアップしてみよう
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb205-swingbench/#2-swingbenchを実行しecpuをスケールアップしてみよう" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. Swingbenchを実行し、ECPUをスケールアップしてみよう" aria-label="アンカー先: 2. Swingbenchを実行し、ECPUをスケールアップしてみよう" href="#2-swingbench%e3%82%92%e5%ae%9f%e8%a1%8c%e3%81%97ecpu%e3%82%92%e3%82%b9%e3%82%b1%e3%83%bc%e3%83%ab%e3%82%a2%e3%83%83%e3%83%97%e3%81%97%e3%81%a6%e3%81%bf%e3%82%88%e3%81%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb205-swingbench/#2-swingbenchを実行しecpuをスケールアップしてみよう" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. Swingbenchを実行し、ECPUをスケールアップしてみよう" aria-label="アンカー先: 2. Swingbenchを実行し、ECPUをスケールアップしてみよう" href="#2-swingbench%e3%82%92%e5%ae%9f%e8%a1%8c%e3%81%97ecpu%e3%82%92%e3%82%b9%e3%82%b1%e3%83%bc%e3%83%ab%e3%82%a2%e3%83%83%e3%83%97%e3%81%97%e3%81%a6%e3%81%bf%e3%82%88%e3%81%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -746,7 +746,7 @@ export TNS_ADMIN=/home/oracle/labs/wallets
     >
         ECPU=2 (自動スケーリング無効)
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb205-swingbench/#ecpu2-自動スケーリング無効" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ECPU=2 (自動スケーリング無効)" aria-label="アンカー先: ECPU=2 (自動スケーリング無効)" href="#ecpu2-%e8%87%aa%e5%8b%95%e3%82%b9%e3%82%b1%e3%83%bc%e3%83%aa%e3%83%b3%e3%82%b0%e7%84%a1%e5%8a%b9">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb205-swingbench/#ecpu2-自動スケーリング無効" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ECPU=2 (自動スケーリング無効)" aria-label="アンカー先: ECPU=2 (自動スケーリング無効)" href="#ecpu2-%e8%87%aa%e5%8b%95%e3%82%b9%e3%82%b1%e3%83%bc%e3%83%aa%e3%83%b3%e3%82%b0%e7%84%a1%e5%8a%b9">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -823,7 +823,7 @@ export TNS_ADMIN=/home/oracle/labs/wallets
     >
         ECPU=16 (自動スケーリング無効)
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb205-swingbench/#ecpu16-自動スケーリング無効" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ECPU=16 (自動スケーリング無効)" aria-label="アンカー先: ECPU=16 (自動スケーリング無効)" href="#ecpu16-%e8%87%aa%e5%8b%95%e3%82%b9%e3%82%b1%e3%83%bc%e3%83%aa%e3%83%b3%e3%82%b0%e7%84%a1%e5%8a%b9">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb205-swingbench/#ecpu16-自動スケーリング無効" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ECPU=16 (自動スケーリング無効)" aria-label="アンカー先: ECPU=16 (自動スケーリング無効)" href="#ecpu16-%e8%87%aa%e5%8b%95%e3%82%b9%e3%82%b1%e3%83%bc%e3%83%aa%e3%83%b3%e3%82%b0%e7%84%a1%e5%8a%b9">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -860,7 +860,7 @@ export TNS_ADMIN=/home/oracle/labs/wallets
     >
         ECPU=16 (自動スケーリング有効)
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb205-swingbench/#ecpu16-自動スケーリング有効" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ECPU=16 (自動スケーリング有効)" aria-label="アンカー先: ECPU=16 (自動スケーリング有効)" href="#ecpu16-%e8%87%aa%e5%8b%95%e3%82%b9%e3%82%b1%e3%83%bc%e3%83%aa%e3%83%b3%e3%82%b0%e6%9c%89%e5%8a%b9">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb205-swingbench/#ecpu16-自動スケーリング有効" class="gdoc-page__anchor clip flex align-center" title="アンカー先: ECPU=16 (自動スケーリング有効)" aria-label="アンカー先: ECPU=16 (自動スケーリング有効)" href="#ecpu16-%e8%87%aa%e5%8b%95%e3%82%b9%e3%82%b1%e3%83%bc%e3%83%aa%e3%83%b3%e3%82%b0%e6%9c%89%e5%8a%b9">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9146,7 +9146,7 @@ export TNS_ADMIN=/home/oracle/labs/wallets
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/adb/adb204-setup-VM/"
+      href="/ocitutorial-geekdocs/adb/adb204-setup-VM/"
       title="204: 開発者向け仮想マシンのセットアップ方法"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9158,7 +9158,7 @@ export TNS_ADMIN=/home/oracle/labs/wallets
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/adb/adb206-appdev-nodejs/"
+      href="/ocitutorial-geekdocs/adb/adb206-appdev-nodejs/"
       title="206: Node.jsによるADB上でのアプリ開発"
     >
       206: Node.jsによるADB上でのアプリ開発
@@ -9212,7 +9212,7 @@ export TNS_ADMIN=/home/oracle/labs/wallets
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

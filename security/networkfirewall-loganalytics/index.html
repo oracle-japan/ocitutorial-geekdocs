@@ -20,18 +20,18 @@ Logging Analyticsが有効化されていること OCIコンソールのメニ�
 
   <title>OCI Network Firewallのログを分析する | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -52,7 +52,7 @@ Logging Analyticsでは、様々なOCIサービスのログ、Oracle製品のロ
 Logging Analyticsが有効化されていること OCIコンソールのメニューボタン→監視および管理→ログ・アナリティクス→ログ・エクスプローラを選択し、「ログ・アナリティクスの使用の開始」を選択することで、Logging Analyticsを有効化させることができます。 ユーザーがLoggingサービスを使用するためのポリシーが作成されていること。ポリシーの詳細はドキュメントをご参照ください。 ユーザーがLogging Analyticsを使用するためのポリシーが作成されていること。ポリシーの詳細はOCIチュートリアル「OCIのLogging AnalyticsでOCIの監査ログを可視化・分析する」もしくは、ドキュメントをご参照ください。 ユーザーがService Connectorを作成するためのポリシーが作成されていること。ポリシーの詳細はドキュメントをご参照ください。 OCIチュートリアル「OCI Network Firewallを構築する」を参考に、Network Firewallインスタンスの作成およびコンピュートインスタンス（LinuxまたはWindows）の作成が終わっていること OCIチュートリアル「OCI Network FirewallのIPS/IDS機能を検証する」を参考に、侵入検知（IDS）もしくは侵入防止（IPS）のセキュリティ・ルールが設定されていること OCIチュートリアル「コマンドライン(CLI)でOCIを操作する」を参考に、OCI CLIコマンドのインストールと構成が終わっていること。 注意 :
 ※チュートリアル内の画面ショットについてはOracle Cloud Infrastructureの現在のコンソール画面と異なっている場合があります。 1. OCI Network Firewallのログの有効化 本手順では、Network Firewallインスタンスのログを有効化します。 Network Firewallでは、以下2種類のログを出力します。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-loganalytics/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-loganalytics/" />
 
 <meta property="article:section" content="Security" />
     <meta
@@ -80,7 +80,7 @@ Logging Analyticsが有効化されていること OCIコンソールのメニ�
       "@type": "TechArticle",
       "articleSection": "Security",
       "name": "OCI Network Firewallのログを分析する",
-      "url" : "https://oracle-japan.github.io/ocitutorials/security/networkfirewall-loganalytics/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-loganalytics/",
       "headline": "OCI Network Firewallのログを分析する",
       "description": "パロアルトネットワークスの次世代ファイアウォール技術を基に構築されたOCIクラウドネイティブのマネージド・ファイアウォール「OCI Network Firewall」が2022年7月にリリースされました。「OCI Network Firewall」はURLフィルタリングやTSL\/SSL検査などの機能を提供します。 本チュートリアルでは、「OCI Network Firewallを構築する」の続編として、Network Firewallのログを分析し、Network Firewallを通過するトラフィックの傾向、脅威の有無を確認します。\nNetwork Firewallのログの収集にはLoggingサービス、分析にはOCIが提供するログ分析サービス「Logging Analytics」を使用します。\nLogging Analyticsでは、様々なOCIサービスのログ、Oracle製品のログに対応したログの解析文が用意されていますが、Network Firewallのログにはまだ対応していないので、本チュートリアルではNetwork Firewallのログに対応した解析文をカスタムで作成します。\n通常はLoggingサービスで収集したログは「Service Connector Hub」と呼ばれるサービスを使用して、直接Logging Analyticsに連携することも可能です。しかし、今回はLoggingサービスから直接Logging Analyticsにログを転送してしまうと、カスタムで作成したログの解析文でログを読み取ることが出来なくなってしまうため、Loggingサービスのログを一度Object Storageに転送します。 Object Storageに格納されたログは、Logging Analyticsの「ObjectCollectionRule」と呼ばれるルールを作成することで、Logging Analyticsに転送されます。\n所要時間 : 約60分\n前提条件 :\nLogging Analyticsが有効化されていること OCIコンソールのメニューボタン→監視および管理→ログ・アナリティクス→ログ・エクスプローラを選択し、「ログ・アナリティクスの使用の開始」を選択することで、Logging Analyticsを有効化させることができます。 ユーザーがLoggingサービスを使用するためのポリシーが作成されていること。ポリシーの詳細はドキュメントをご参照ください。 ユーザーがLogging Analyticsを使用するためのポリシーが作成されていること。ポリシーの詳細はOCIチュートリアル「OCIのLogging AnalyticsでOCIの監査ログを可視化・分析する」もしくは、ドキュメントをご参照ください。 ユーザーがService Connectorを作成するためのポリシーが作成されていること。ポリシーの詳細はドキュメントをご参照ください。 OCIチュートリアル「OCI Network Firewallを構築する」を参考に、Network Firewallインスタンスの作成およびコンピュートインスタンス（LinuxまたはWindows）の作成が終わっていること OCIチュートリアル「OCI Network FirewallのIPS\/IDS機能を検証する」を参考に、侵入検知（IDS）もしくは侵入防止（IPS）のセキュリティ・ルールが設定されていること OCIチュートリアル「コマンドライン(CLI)でOCIを操作する」を参考に、OCI CLIコマンドのインストールと構成が終わっていること。 注意 :\n※チュートリアル内の画面ショットについてはOracle Cloud Infrastructureの現在のコンソール画面と異なっている場合があります。 1. OCI Network Firewallのログの有効化 本手順では、Network Firewallインスタンスのログを有効化します。 Network Firewallでは、以下2種類のログを出力します。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -90,7 +90,7 @@ Logging Analyticsが有効化されていること OCIコンソールのメニ�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/security/networkfirewall-loganalytics/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-loganalytics/"
       },
       "keywords" : [ "intermediate" ],
       "copyrightHolder" : "OCIチュートリアル",
@@ -101,10 +101,10 @@ Logging Analyticsが有効化されていること OCIコンソールのメニ�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -114,73 +114,73 @@ Logging Analyticsが有効化されていること OCIコンソールのメニ�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-loganalytics/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-loganalytics/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-loganalytics/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-loganalytics/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="OCI Network Firewallのログを分析する">
   <meta property="og:description" content="パロアルトネットワークスの次世代ファイアウォール技術を基に構築されたOCIクラウドネイティブのマネージド・ファイアウォール「OCI Network Firewall」が2022年7月にリリースされました。「OCI Network Firewall」はURLフィルタリングやTSL/SSL検査などの機能を提供します。 本チュートリアルでは、「OCI Network Firewallを構築する」の続編として、Network Firewallのログを分析し、Network Firewallを通過するトラフィックの傾向、脅威の有無を確認します。
@@ -253,11 +253,11 @@ Logging Analyticsが有効化されていること OCIコンソールのメニ�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -274,7 +274,7 @@ Logging Analyticsが有効化されていること OCIコンソールのメニ�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -286,7 +286,7 @@ Logging Analyticsが有効化されていること OCIコンソールのメニ�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -423,7 +423,7 @@ Logging Analyticsが有効化されていること OCIコンソールのメニ�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/security/' href='/ocitutorials/security/'><span itemprop='name'>OCI セキュリティ チュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>OCI Network Firewallのログを分析する</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/security/' href='/ocitutorial-geekdocs/security/'><span itemprop='name'>OCI セキュリティ チュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>OCI Network Firewallのログを分析する</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -519,7 +519,7 @@ Object Storageに格納されたログは、Logging Analyticsの「ObjectCollect
     >
         1. OCI Network Firewallのログの有効化
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-loganalytics/#1-oci-network-firewallのログの有効化" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. OCI Network Firewallのログの有効化" aria-label="アンカー先: 1. OCI Network Firewallのログの有効化" href="#1-oci-network-firewall%e3%81%ae%e3%83%ad%e3%82%b0%e3%81%ae%e6%9c%89%e5%8a%b9%e5%8c%96">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-loganalytics/#1-oci-network-firewallのログの有効化" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. OCI Network Firewallのログの有効化" aria-label="アンカー先: 1. OCI Network Firewallのログの有効化" href="#1-oci-network-firewall%e3%81%ae%e3%83%ad%e3%82%b0%e3%81%ae%e6%9c%89%e5%8a%b9%e5%8c%96">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -571,7 +571,7 @@ Threat Logの「無効」となっているボタンをクリックします。
     >
         2. ログ・グループの作成
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-loganalytics/#2-ロググループの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. ログ・グループの作成" aria-label="アンカー先: 2. ログ・グループの作成" href="#2-%e3%83%ad%e3%82%b0%e3%82%b0%e3%83%ab%e3%83%bc%e3%83%97%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-loganalytics/#2-ロググループの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. ログ・グループの作成" aria-label="アンカー先: 2. ログ・グループの作成" href="#2-%e3%83%ad%e3%82%b0%e3%82%b0%e3%83%ab%e3%83%bc%e3%83%97%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -589,7 +589,7 @@ Threat Logの「無効」となっているボタンをクリックします。
     >
         3. Service Connectorの作成
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-loganalytics/#3-service-connectorの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. Service Connectorの作成" aria-label="アンカー先: 3. Service Connectorの作成" href="#3-service-connector%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-loganalytics/#3-service-connectorの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. Service Connectorの作成" aria-label="アンカー先: 3. Service Connectorの作成" href="#3-service-connector%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -646,7 +646,7 @@ Threat Logの「無効」となっているボタンをクリックします。
     >
         4. OCI Network Firewallのダッシュボード定義のインポート
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-loganalytics/#4-oci-network-firewallのダッシュボード定義のインポート" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. OCI Network Firewallのダッシュボード定義のインポート" aria-label="アンカー先: 4. OCI Network Firewallのダッシュボード定義のインポート" href="#4-oci-network-firewall%e3%81%ae%e3%83%80%e3%83%83%e3%82%b7%e3%83%a5%e3%83%9c%e3%83%bc%e3%83%89%e5%ae%9a%e7%be%a9%e3%81%ae%e3%82%a4%e3%83%b3%e3%83%9d%e3%83%bc%e3%83%88">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-loganalytics/#4-oci-network-firewallのダッシュボード定義のインポート" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. OCI Network Firewallのダッシュボード定義のインポート" aria-label="アンカー先: 4. OCI Network Firewallのダッシュボード定義のインポート" href="#4-oci-network-firewall%e3%81%ae%e3%83%80%e3%83%83%e3%82%b7%e3%83%a5%e3%83%9c%e3%83%bc%e3%83%89%e5%ae%9a%e7%be%a9%e3%81%ae%e3%82%a4%e3%83%b3%e3%83%9d%e3%83%bc%e3%83%88">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -691,7 +691,7 @@ Threat Logの「無効」となっているボタンをクリックします。
     >
         5. ログの分析
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-loganalytics/#5-ログの分析" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5. ログの分析" aria-label="アンカー先: 5. ログの分析" href="#5-%e3%83%ad%e3%82%b0%e3%81%ae%e5%88%86%e6%9e%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-loganalytics/#5-ログの分析" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5. ログの分析" aria-label="アンカー先: 5. ログの分析" href="#5-%e3%83%ad%e3%82%b0%e3%81%ae%e5%88%86%e6%9e%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -713,7 +713,7 @@ Threat Logの「無効」となっているボタンをクリックします。
     >
         5-1. Network Firewallへのアクセス元地域を世界地図で表示する（例1）
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-loganalytics/#5-1-network-firewallへのアクセス元地域を世界地図で表示する例1" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5-1. Network Firewallへのアクセス元地域を世界地図で表示する（例1）" aria-label="アンカー先: 5-1. Network Firewallへのアクセス元地域を世界地図で表示する（例1）" href="#5-1-network-firewall%e3%81%b8%e3%81%ae%e3%82%a2%e3%82%af%e3%82%bb%e3%82%b9%e5%85%83%e5%9c%b0%e5%9f%9f%e3%82%92%e4%b8%96%e7%95%8c%e5%9c%b0%e5%9b%b3%e3%81%a7%e8%a1%a8%e7%a4%ba%e3%81%99%e3%82%8b%e4%be%8b1">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-loganalytics/#5-1-network-firewallへのアクセス元地域を世界地図で表示する例1" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5-1. Network Firewallへのアクセス元地域を世界地図で表示する（例1）" aria-label="アンカー先: 5-1. Network Firewallへのアクセス元地域を世界地図で表示する（例1）" href="#5-1-network-firewall%e3%81%b8%e3%81%ae%e3%82%a2%e3%82%af%e3%82%bb%e3%82%b9%e5%85%83%e5%9c%b0%e5%9f%9f%e3%82%92%e4%b8%96%e7%95%8c%e5%9c%b0%e5%9b%b3%e3%81%a7%e8%a1%a8%e7%a4%ba%e3%81%99%e3%82%8b%e4%be%8b1">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -754,7 +754,7 @@ Threat Logの「無効」となっているボタンをクリックします。
     >
         5-2. 脅威の重要度を可視化する（例2）
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-loganalytics/#5-2-脅威の重要度を可視化する例2" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5-2. 脅威の重要度を可視化する（例2）" aria-label="アンカー先: 5-2. 脅威の重要度を可視化する（例2）" href="#5-2-%e8%84%85%e5%a8%81%e3%81%ae%e9%87%8d%e8%a6%81%e5%ba%a6%e3%82%92%e5%8f%af%e8%a6%96%e5%8c%96%e3%81%99%e3%82%8b%e4%be%8b2">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-loganalytics/#5-2-脅威の重要度を可視化する例2" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5-2. 脅威の重要度を可視化する（例2）" aria-label="アンカー先: 5-2. 脅威の重要度を可視化する（例2）" href="#5-2-%e8%84%85%e5%a8%81%e3%81%ae%e9%87%8d%e8%a6%81%e5%ba%a6%e3%82%92%e5%8f%af%e8%a6%96%e5%8c%96%e3%81%99%e3%82%8b%e4%be%8b2">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -784,7 +784,7 @@ Threat Logの「無効」となっているボタンをクリックします。
     >
         5-3. ダッシュボードを利用する（例3）
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-loganalytics/#5-3-ダッシュボードを利用する例3" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5-3. ダッシュボードを利用する（例3）" aria-label="アンカー先: 5-3. ダッシュボードを利用する（例3）" href="#5-3-%e3%83%80%e3%83%83%e3%82%b7%e3%83%a5%e3%83%9c%e3%83%bc%e3%83%89%e3%82%92%e5%88%a9%e7%94%a8%e3%81%99%e3%82%8b%e4%be%8b3">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-loganalytics/#5-3-ダッシュボードを利用する例3" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5-3. ダッシュボードを利用する（例3）" aria-label="アンカー先: 5-3. ダッシュボードを利用する（例3）" href="#5-3-%e3%83%80%e3%83%83%e3%82%b7%e3%83%a5%e3%83%9c%e3%83%bc%e3%83%89%e3%82%92%e5%88%a9%e7%94%a8%e3%81%99%e3%82%8b%e4%be%8b3">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -873,7 +873,7 @@ Threat Logの「無効」となっているボタンをクリックします。
     >
         6. 補足
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-loganalytics/#6-補足" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 6. 補足" aria-label="アンカー先: 6. 補足" href="#6-%e8%a3%9c%e8%b6%b3">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-loganalytics/#6-補足" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 6. 補足" aria-label="アンカー先: 6. 補足" href="#6-%e8%a3%9c%e8%b6%b3">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -882,7 +882,7 @@ Threat Logの「無効」となっているボタンをクリックします。
     >
         6-1. Service Connectorの非アクティブ化、削除方法について
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/networkfirewall-loganalytics/#6-1-service-connectorの非アクティブ化削除方法について" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 6-1. Service Connectorの非アクティブ化、削除方法について" aria-label="アンカー先: 6-1. Service Connectorの非アクティブ化、削除方法について" href="#6-1-service-connector%e3%81%ae%e9%9d%9e%e3%82%a2%e3%82%af%e3%83%86%e3%82%a3%e3%83%96%e5%8c%96%e5%89%8a%e9%99%a4%e6%96%b9%e6%b3%95%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/networkfirewall-loganalytics/#6-1-service-connectorの非アクティブ化削除方法について" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 6-1. Service Connectorの非アクティブ化、削除方法について" aria-label="アンカー先: 6-1. Service Connectorの非アクティブ化、削除方法について" href="#6-1-service-connector%e3%81%ae%e9%9d%9e%e3%82%a2%e3%82%af%e3%83%86%e3%82%a3%e3%83%96%e5%8c%96%e5%89%8a%e9%99%a4%e6%96%b9%e6%b3%95%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9140,7 +9140,7 @@ Threat Logの「無効」となっているボタンをクリックします。
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/security/networkfirewall-sslinspect-fwd/"
+      href="/ocitutorial-geekdocs/security/networkfirewall-sslinspect-fwd/"
       title="OCI Network FirewallのSSLインスペクション（転送プロキシモード）を行う"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9152,7 +9152,7 @@ Threat Logの「無効」となっているボタンをクリックします。
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/security/networkfirewall-policycheck/"
+      href="/ocitutorial-geekdocs/security/networkfirewall-policycheck/"
       title="OCI Network Firewallの動作を検証する"
     >
       OCI Network Firewallの動作を検証する
@@ -9206,7 +9206,7 @@ Threat Logの「無効」となっているボタンをクリックします。
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

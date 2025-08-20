@@ -23,18 +23,18 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
 
   <title>220 : 自動ワークロード・リプレイによるパッチ適用のテストソリューション | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -59,7 +59,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
 開発者向けの仮想マシンが構成済みであること ※作成方法については、 204: 開発者向け仮想マシンのセットアップ方法 を参照ください。
 作成した仮想マシンからADBへSQL*Plusで接続ができること ※接続方法については、 104: クレデンシャル・ウォレットを利用して接続してみよう を参照ください。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/adb/adb220-autoworkload-replay/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb220-autoworkload-replay/" />
 
 <meta property="article:section" content="Adb" />
     <meta
@@ -91,7 +91,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
       "@type": "TechArticle",
       "articleSection": "Adb",
       "name": "220 : 自動ワークロード・リプレイによるパッチ適用のテストソリューション",
-      "url" : "https://oracle-japan.github.io/ocitutorials/adb/adb220-autoworkload-replay/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb220-autoworkload-replay/",
       "headline": "220 : 自動ワークロード・リプレイによるパッチ適用のテストソリューション",
       "description": "\nはじめに Autonomous Database(ADB)は、毎週末事前定義されたメンテナンス・ウィンドウの中でデータベースに自動的にパッチを適用します。\n通常のパッチ周期に先行して1週早くパッチを適用できる早期パッチという機能があります。テスト環境用ADBを早期パッチで作成しておくことで、本番環境適用前にパッチ適用の影響テストを行うことができます。\nまた、ADBでは、Oracle Databaseオプション「Real Application Testing(RAT)」に含まれる機能の1つであるDatabase Replay(DB Replay)を使用することができます。 さらにDB Replayを自動で毎週行う自動ワークロード・リプレイという機能があります。こちらを使用すると、毎週決まった時間に本番環境のワークロードをキャプチャして、早期パッチを適用したテスト環境にそのワークロードをリプレイすることができます。\nこちらでパッチの影響を確認し、もしエラーが発生した場合はOracle社にサポート・リクエストを発行し報告することで、Oracle社が該当パッチを修正もしくは通常パッチでは適用しないなどの対応を行います。\nこちらが早期パッチと自動ワークロード・リプレイを利用したテストフローになります。\n本チュートリアルでは、早期パッチと自動ワークロード・リプレイを併用することで、本番環境へのパッチ適用の影響をテスト環境で事前に確認する手順をご紹介します。\n目次 :\nはじめに 1. 環境の準備 2. 本番環境で使用するデータの準備 3. テスト環境用ADBの作成 4. 自動ワークロード・リプレイの有効化 5. イベント通知の設定 6. 本番環境へのワークロードの実行 7. レポートの確認 おわりに 前提条件\nADBインスタンスが構成済みであること ※ADBインタンスの作成方法については、 101:ADBインスタンスを作成してみよう を参照ください。\n開発者向けの仮想マシンが構成済みであること ※作成方法については、 204: 開発者向け仮想マシンのセットアップ方法 を参照ください。\n作成した仮想マシンからADBへSQL*Plusで接続ができること ※接続方法については、 104: クレデンシャル・ウォレットを利用して接続してみよう を参照ください。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -101,7 +101,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/adb/adb220-autoworkload-replay/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb220-autoworkload-replay/"
       },
       "copyrightHolder" : "OCIチュートリアル",
       "copyrightYear" : "0001",
@@ -111,10 +111,10 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -124,73 +124,73 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/adb/adb220-autoworkload-replay/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb220-autoworkload-replay/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/adb/adb220-autoworkload-replay/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb220-autoworkload-replay/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="220 : 自動ワークロード・リプレイによるパッチ適用のテストソリューション">
   <meta property="og:description" content="はじめに Autonomous Database(ADB)は、毎週末事前定義されたメンテナンス・ウィンドウの中でデータベースに自動的にパッチを適用します。
@@ -268,11 +268,11 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -289,7 +289,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -301,7 +301,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -433,7 +433,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/adb/' href='/ocitutorials/adb/'><span itemprop='name'>Oracle Database編 - Autonomous Database (ADB)を使ってみよう</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>220 : 自動ワークロード・リプレイによるパッチ適用のテストソリューション</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/adb/' href='/ocitutorial-geekdocs/adb/'><span itemprop='name'>Oracle Database編 - Autonomous Database (ADB)を使ってみよう</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>220 : 自動ワークロード・リプレイによるパッチ適用のテストソリューション</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -465,7 +465,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
     >
         はじめに
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb220-autoworkload-replay/#はじめに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: はじめに" aria-label="アンカー先: はじめに" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb220-autoworkload-replay/#はじめに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: はじめに" aria-label="アンカー先: はじめに" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -556,7 +556,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
     >
         1. 環境の準備
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb220-autoworkload-replay/#1-環境の準備" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. 環境の準備" aria-label="アンカー先: 1. 環境の準備" href="#1-%e7%92%b0%e5%a2%83%e3%81%ae%e6%ba%96%e5%82%99">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb220-autoworkload-replay/#1-環境の準備" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. 環境の準備" aria-label="アンカー先: 1. 環境の準備" href="#1-%e7%92%b0%e5%a2%83%e3%81%ae%e6%ba%96%e5%82%99">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -582,7 +582,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
     >
         2. 本番環境で使用するデータの準備
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb220-autoworkload-replay/#2-本番環境で使用するデータの準備" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. 本番環境で使用するデータの準備" aria-label="アンカー先: 2. 本番環境で使用するデータの準備" href="#2-%e6%9c%ac%e7%95%aa%e7%92%b0%e5%a2%83%e3%81%a7%e4%bd%bf%e7%94%a8%e3%81%99%e3%82%8b%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e6%ba%96%e5%82%99">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb220-autoworkload-replay/#2-本番環境で使用するデータの準備" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. 本番環境で使用するデータの準備" aria-label="アンカー先: 2. 本番環境で使用するデータの準備" href="#2-%e6%9c%ac%e7%95%aa%e7%92%b0%e5%a2%83%e3%81%a7%e4%bd%bf%e7%94%a8%e3%81%99%e3%82%8b%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e6%ba%96%e5%82%99">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -683,7 +683,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
     >
         3. テスト環境用ADBの作成
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb220-autoworkload-replay/#3-テスト環境用adbの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. テスト環境用ADBの作成" aria-label="アンカー先: 3. テスト環境用ADBの作成" href="#3-%e3%83%86%e3%82%b9%e3%83%88%e7%92%b0%e5%a2%83%e7%94%a8adb%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb220-autoworkload-replay/#3-テスト環境用adbの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. テスト環境用ADBの作成" aria-label="アンカー先: 3. テスト環境用ADBの作成" href="#3-%e3%83%86%e3%82%b9%e3%83%88%e7%92%b0%e5%a2%83%e7%94%a8adb%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -744,7 +744,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
     >
         4. 自動ワークロード・リプレイの有効化
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb220-autoworkload-replay/#4-自動ワークロードリプレイの有効化" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. 自動ワークロード・リプレイの有効化" aria-label="アンカー先: 4. 自動ワークロード・リプレイの有効化" href="#4-%e8%87%aa%e5%8b%95%e3%83%af%e3%83%bc%e3%82%af%e3%83%ad%e3%83%bc%e3%83%89%e3%83%aa%e3%83%97%e3%83%ac%e3%82%a4%e3%81%ae%e6%9c%89%e5%8a%b9%e5%8c%96">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb220-autoworkload-replay/#4-自動ワークロードリプレイの有効化" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. 自動ワークロード・リプレイの有効化" aria-label="アンカー先: 4. 自動ワークロード・リプレイの有効化" href="#4-%e8%87%aa%e5%8b%95%e3%83%af%e3%83%bc%e3%82%af%e3%83%ad%e3%83%bc%e3%83%89%e3%83%aa%e3%83%97%e3%83%ac%e3%82%a4%e3%81%ae%e6%9c%89%e5%8a%b9%e5%8c%96">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -794,7 +794,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
     >
         5. イベント通知の設定
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb220-autoworkload-replay/#5-イベント通知の設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5. イベント通知の設定" aria-label="アンカー先: 5. イベント通知の設定" href="#5-%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e9%80%9a%e7%9f%a5%e3%81%ae%e8%a8%ad%e5%ae%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb220-autoworkload-replay/#5-イベント通知の設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5. イベント通知の設定" aria-label="アンカー先: 5. イベント通知の設定" href="#5-%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e9%80%9a%e7%9f%a5%e3%81%ae%e8%a8%ad%e5%ae%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -837,7 +837,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
     >
         6. 本番環境へのワークロードの実行
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb220-autoworkload-replay/#6-本番環境へのワークロードの実行" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 6. 本番環境へのワークロードの実行" aria-label="アンカー先: 6. 本番環境へのワークロードの実行" href="#6-%e6%9c%ac%e7%95%aa%e7%92%b0%e5%a2%83%e3%81%b8%e3%81%ae%e3%83%af%e3%83%bc%e3%82%af%e3%83%ad%e3%83%bc%e3%83%89%e3%81%ae%e5%ae%9f%e8%a1%8c">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb220-autoworkload-replay/#6-本番環境へのワークロードの実行" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 6. 本番環境へのワークロードの実行" aria-label="アンカー先: 6. 本番環境へのワークロードの実行" href="#6-%e6%9c%ac%e7%95%aa%e7%92%b0%e5%a2%83%e3%81%b8%e3%81%ae%e3%83%af%e3%83%bc%e3%82%af%e3%83%ad%e3%83%bc%e3%83%89%e3%81%ae%e5%ae%9f%e8%a1%8c">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -870,7 +870,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
     >
         7. レポートの確認
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb220-autoworkload-replay/#7-レポートの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 7. レポートの確認" aria-label="アンカー先: 7. レポートの確認" href="#7-%e3%83%ac%e3%83%9d%e3%83%bc%e3%83%88%e3%81%ae%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb220-autoworkload-replay/#7-レポートの確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 7. レポートの確認" aria-label="アンカー先: 7. レポートの確認" href="#7-%e3%83%ac%e3%83%9d%e3%83%bc%e3%83%88%e3%81%ae%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -1016,7 +1016,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
     >
         おわりに
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/adb/adb220-autoworkload-replay/#おわりに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: おわりに" aria-label="アンカー先: おわりに" href="#%e3%81%8a%e3%82%8f%e3%82%8a%e3%81%ab">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/adb/adb220-autoworkload-replay/#おわりに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: おわりに" aria-label="アンカー先: おわりに" href="#%e3%81%8a%e3%82%8f%e3%82%8a%e3%81%ab">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9272,7 +9272,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/adb/adb219-autoindexing/"
+      href="/ocitutorial-geekdocs/adb/adb219-autoindexing/"
       title="219: Automatic Indexingを体験してみよう "
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9284,7 +9284,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/adb/adb221-autopartitioning/"
+      href="/ocitutorial-geekdocs/adb/adb221-autopartitioning/"
       title="221 : 自動パーティション化（Automatic Partitioning）を使ってみよう"
     >
       221 : 自動パーティション化（Automatic Partitioning）を使ってみよう
@@ -9338,7 +9338,7 @@ ADBインスタンスが構成済みであること ※ADBインタンスの作�
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

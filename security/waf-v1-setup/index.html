@@ -22,18 +22,18 @@ sudo firewall-cmd --permanent --add-port=80/tcp sudo firewall-cmd --permanent --
 
   <title>OCI Web Application Firewallのエッジポリシーを使ってWebサーバを保護する | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -56,7 +56,7 @@ Apache HTTPサーバーをインストールする。
 sudo yum -y install httpd TCPの80番(http)および443番(https)ポートをオープンにする。
 sudo firewall-cmd --permanent --add-port=80/tcp sudo firewall-cmd --permanent --add-port=443/tcp ファイアウォールを再ロードする。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/security/waf-v1-setup/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/security/waf-v1-setup/" />
 
 <meta property="article:section" content="Security" />
     <meta
@@ -86,7 +86,7 @@ sudo firewall-cmd --permanent --add-port=80/tcp sudo firewall-cmd --permanent --
       "@type": "TechArticle",
       "articleSection": "Security",
       "name": "OCI Web Application Firewallのエッジポリシーを使ってWebサーバを保護する",
-      "url" : "https://oracle-japan.github.io/ocitutorials/security/waf-v1-setup/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/security/waf-v1-setup/",
       "headline": "OCI Web Application Firewallのエッジポリシーを使ってWebサーバを保護する",
       "description": "OCIにはエッジポリシーとWAFポリシーの2種類のWeb Application Firewallがあります。 本チュートリアルでは、OCI世界各リージョンのエッジに設定されているWAFサーバにデプロイするタイプの「エッジポリシー」を実際に作成して、Webアプリケーションへの攻撃を検知、防御しているところを確認します。\n所要時間： 約90分\n前提条件：\nユーザーに必要なIAMポリシーが割り当てられていること。ポリシーの詳細はドキュメントをご参照ください。 Webアプリケーションのドメインを取得していること 注意 :\n※チュートリアル内の画面ショットについてはOracle Cloud Infrastructureの現在のコンソール画面と異なっている場合があります。 ※本チュートリアルはOCI上でコンピュートを立ち上げてWebサーバーをインストールするところから始めます。既に手元にWebサーバがインストールされ、ドメインが構成されている環境がある場合は手順4から始めてください。 1. コンピュートインスタンスの作成 OCIチュートリアル入門編「その3-インスタンスを作成する」を参考に、Webサーバ用のコンピュートインスタンスを1つ作成する。\n2. Webサーバのインストールと起動 sshでインスタンスにアクセスする。\nインスタンスへのsshでのアクセス方法が不明な場合は、「その3 - インスタンスを作成する」を参考にしてください。\nApache HTTPサーバーをインストールする。\nsudo yum -y install httpd TCPの80番(http)および443番(https)ポートをオープンにする。\nsudo firewall-cmd --permanent --add-port=80\/tcp sudo firewall-cmd --permanent --add-port=443\/tcp ファイアウォールを再ロードする。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -96,7 +96,7 @@ sudo firewall-cmd --permanent --add-port=80/tcp sudo firewall-cmd --permanent --
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/security/waf-v1-setup/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/security/waf-v1-setup/"
       },
       "keywords" : [ "security" ],
       "copyrightHolder" : "OCIチュートリアル",
@@ -107,10 +107,10 @@ sudo firewall-cmd --permanent --add-port=80/tcp sudo firewall-cmd --permanent --
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -120,73 +120,73 @@ sudo firewall-cmd --permanent --add-port=80/tcp sudo firewall-cmd --permanent --
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/security/waf-v1-setup/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/security/waf-v1-setup/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/security/waf-v1-setup/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/security/waf-v1-setup/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="OCI Web Application Firewallのエッジポリシーを使ってWebサーバを保護する">
   <meta property="og:description" content="OCIにはエッジポリシーとWAFポリシーの2種類のWeb Application Firewallがあります。 本チュートリアルでは、OCI世界各リージョンのエッジに設定されているWAFサーバにデプロイするタイプの「エッジポリシー」を実際に作成して、Webアプリケーションへの攻撃を検知、防御しているところを確認します。
@@ -263,11 +263,11 @@ sudo firewall-cmd --permanent --add-port=80/tcp sudo firewall-cmd --permanent --
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -284,7 +284,7 @@ sudo firewall-cmd --permanent --add-port=80/tcp sudo firewall-cmd --permanent --
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -296,7 +296,7 @@ sudo firewall-cmd --permanent --add-port=80/tcp sudo firewall-cmd --permanent --
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -431,7 +431,7 @@ sudo firewall-cmd --permanent --add-port=80/tcp sudo firewall-cmd --permanent --
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/security/' href='/ocitutorials/security/'><span itemprop='name'>OCI セキュリティ チュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>OCI Web Application Firewallのエッジポリシーを使ってWebサーバを保護する</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/security/' href='/ocitutorial-geekdocs/security/'><span itemprop='name'>OCI セキュリティ チュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>OCI Web Application Firewallのエッジポリシーを使ってWebサーバを保護する</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -488,7 +488,7 @@ sudo firewall-cmd --permanent --add-port=80/tcp sudo firewall-cmd --permanent --
     >
         1. コンピュートインスタンスの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/waf-v1-setup/#1-コンピュートインスタンスの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. コンピュートインスタンスの作成" aria-label="アンカー先: 1. コンピュートインスタンスの作成" href="#1-%e3%82%b3%e3%83%b3%e3%83%94%e3%83%a5%e3%83%bc%e3%83%88%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/waf-v1-setup/#1-コンピュートインスタンスの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. コンピュートインスタンスの作成" aria-label="アンカー先: 1. コンピュートインスタンスの作成" href="#1-%e3%82%b3%e3%83%b3%e3%83%94%e3%83%a5%e3%83%bc%e3%83%88%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -502,7 +502,7 @@ sudo firewall-cmd --permanent --add-port=80/tcp sudo firewall-cmd --permanent --
     >
         2. Webサーバのインストールと起動
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/waf-v1-setup/#2-webサーバのインストールと起動" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. Webサーバのインストールと起動" aria-label="アンカー先: 2. Webサーバのインストールと起動" href="#2-web%e3%82%b5%e3%83%bc%e3%83%90%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%a8%e8%b5%b7%e5%8b%95">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/waf-v1-setup/#2-webサーバのインストールと起動" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. Webサーバのインストールと起動" aria-label="アンカー先: 2. Webサーバのインストールと起動" href="#2-web%e3%82%b5%e3%83%bc%e3%83%90%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%a8%e8%b5%b7%e5%8b%95">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -548,7 +548,7 @@ sudo firewall-cmd --permanent --add-port=80/tcp sudo firewall-cmd --permanent --
     >
         3. DNSサーバの構成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/waf-v1-setup/#3-dnsサーバの構成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. DNSサーバの構成" aria-label="アンカー先: 3. DNSサーバの構成" href="#3-dns%e3%82%b5%e3%83%bc%e3%83%90%e3%81%ae%e6%a7%8b%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/waf-v1-setup/#3-dnsサーバの構成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. DNSサーバの構成" aria-label="アンカー先: 3. DNSサーバの構成" href="#3-dns%e3%82%b5%e3%83%bc%e3%83%90%e3%81%ae%e6%a7%8b%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -557,7 +557,7 @@ sudo firewall-cmd --permanent --add-port=80/tcp sudo firewall-cmd --permanent --
     >
         3-1. DNSの設定（Aレコードの登録）
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/waf-v1-setup/#3-1-dnsの設定aレコードの登録" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-1. DNSの設定（Aレコードの登録）" aria-label="アンカー先: 3-1. DNSの設定（Aレコードの登録）" href="#3-1-dns%e3%81%ae%e8%a8%ad%e5%ae%9aa%e3%83%ac%e3%82%b3%e3%83%bc%e3%83%89%e3%81%ae%e7%99%bb%e9%8c%b2">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/waf-v1-setup/#3-1-dnsの設定aレコードの登録" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-1. DNSの設定（Aレコードの登録）" aria-label="アンカー先: 3-1. DNSの設定（Aレコードの登録）" href="#3-1-dns%e3%81%ae%e8%a8%ad%e5%ae%9aa%e3%83%ac%e3%82%b3%e3%83%bc%e3%83%89%e3%81%ae%e7%99%bb%e9%8c%b2">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -583,7 +583,7 @@ sudo firewall-cmd --permanent --add-port=80/tcp sudo firewall-cmd --permanent --
     >
         3-2. ドメインの動作確認
     </h3>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/waf-v1-setup/#3-2-ドメインの動作確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-2. ドメインの動作確認" aria-label="アンカー先: 3-2. ドメインの動作確認" href="#3-2-%e3%83%89%e3%83%a1%e3%82%a4%e3%83%b3%e3%81%ae%e5%8b%95%e4%bd%9c%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/waf-v1-setup/#3-2-ドメインの動作確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3-2. ドメインの動作確認" aria-label="アンカー先: 3-2. ドメインの動作確認" href="#3-2-%e3%83%89%e3%83%a1%e3%82%a4%e3%83%b3%e3%81%ae%e5%8b%95%e4%bd%9c%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -600,7 +600,7 @@ sudo firewall-cmd --permanent --add-port=80/tcp sudo firewall-cmd --permanent --
     >
         4. ネットワークの設定
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/waf-v1-setup/#4-ネットワークの設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. ネットワークの設定" aria-label="アンカー先: 4. ネットワークの設定" href="#4-%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e3%81%ae%e8%a8%ad%e5%ae%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/waf-v1-setup/#4-ネットワークの設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. ネットワークの設定" aria-label="アンカー先: 4. ネットワークの設定" href="#4-%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e3%81%ae%e8%a8%ad%e5%ae%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -631,7 +631,7 @@ OCI CLIによるセキュリティ・リストの編集方法については<a
     >
         5. エッジポリシーの作成
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/waf-v1-setup/#5-エッジポリシーの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5. エッジポリシーの作成" aria-label="アンカー先: 5. エッジポリシーの作成" href="#5-%e3%82%a8%e3%83%83%e3%82%b8%e3%83%9d%e3%83%aa%e3%82%b7%e3%83%bc%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/waf-v1-setup/#5-エッジポリシーの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5. エッジポリシーの作成" aria-label="アンカー先: 5. エッジポリシーの作成" href="#5-%e3%82%a8%e3%83%83%e3%82%b8%e3%83%9d%e3%83%aa%e3%82%b7%e3%83%bc%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -665,7 +665,7 @@ OCI CLIによるセキュリティ・リストの編集方法については<a
     >
         6. CNAMEレコードの登録
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/waf-v1-setup/#6-cnameレコードの登録" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 6. CNAMEレコードの登録" aria-label="アンカー先: 6. CNAMEレコードの登録" href="#6-cname%e3%83%ac%e3%82%b3%e3%83%bc%e3%83%89%e3%81%ae%e7%99%bb%e9%8c%b2">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/waf-v1-setup/#6-cnameレコードの登録" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 6. CNAMEレコードの登録" aria-label="アンカー先: 6. CNAMEレコードの登録" href="#6-cname%e3%83%ac%e3%82%b3%e3%83%bc%e3%83%89%e3%81%ae%e7%99%bb%e9%8c%b2">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -694,7 +694,7 @@ OCIコンソール → アイデンティティとセキュリティ → Web ア
     >
         7. 保護ルールの設定
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/waf-v1-setup/#7-保護ルールの設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 7. 保護ルールの設定" aria-label="アンカー先: 7. 保護ルールの設定" href="#7-%e4%bf%9d%e8%ad%b7%e3%83%ab%e3%83%bc%e3%83%ab%e3%81%ae%e8%a8%ad%e5%ae%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/waf-v1-setup/#7-保護ルールの設定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 7. 保護ルールの設定" aria-label="アンカー先: 7. 保護ルールの設定" href="#7-%e4%bf%9d%e8%ad%b7%e3%83%ab%e3%83%bc%e3%83%ab%e3%81%ae%e8%a8%ad%e5%ae%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -738,7 +738,7 @@ OCIコンソール → アイデンティティとセキュリティ → Web ア
     >
         8. WAFの動作確認
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/security/waf-v1-setup/#8-wafの動作確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 8. WAFの動作確認" aria-label="アンカー先: 8. WAFの動作確認" href="#8-waf%e3%81%ae%e5%8b%95%e4%bd%9c%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/security/waf-v1-setup/#8-wafの動作確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 8. WAFの動作確認" aria-label="アンカー先: 8. WAFの動作確認" href="#8-waf%e3%81%ae%e5%8b%95%e4%bd%9c%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9012,7 +9012,7 @@ OCIコンソール → アイデンティティとセキュリティ → Web ア
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/security/networkfirewall-setup-hubspoke/"
+      href="/ocitutorial-geekdocs/security/networkfirewall-setup-hubspoke/"
       title="ハブアンドスポーク構成でOCI Network Firewallを構築する"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9024,7 +9024,7 @@ OCIコンソール → アイデンティティとセキュリティ → Web ア
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/security/waf-v1-loganalytics/"
+      href="/ocitutorial-geekdocs/security/waf-v1-loganalytics/"
       title="エッジポリシーのWeb Application Firewallのログを分析する"
     >
       エッジポリシーのWeb Application Firewallのログを分析する
@@ -9078,7 +9078,7 @@ OCIコンソール → アイデンティティとセキュリティ → Web ア
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

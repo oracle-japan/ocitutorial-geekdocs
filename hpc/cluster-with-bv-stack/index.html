@@ -38,18 +38,18 @@ Slurmジョブスケジュール・計算リソース管理 所要時間 : 約2�
 
   <title>ブロック・ボリュームNFSサーバと自動構築編HPC/GPUクラスタを組み合わせる | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -88,7 +88,7 @@ Slurmジョブスケジュール・計算リソース管理 所要時間 : 約2�
 0. 概要 本チュートリアルは、チュートリアル ブロック・ボリュームでNFSサーバを構築する とHPC/GPUクラスタを構築するチュートリアルを組み合わせて、以下のシステムを構築します。
 この図中、左側の一点鎖線で囲まれたリソースを HPC/GPUクラスタを構築する(スタティック/オンデマンドクラスタ自動構築編) で構築し、それ以外のリソースを ブロック・ボリュームでNFSサーバを構築する で構築します。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/hpc/cluster-with-bv-stack/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/cluster-with-bv-stack/" />
 
 <meta property="article:section" content="Hpc" />
     <meta
@@ -134,7 +134,7 @@ Slurmジョブスケジュール・計算リソース管理 所要時間 : 約2�
       "@type": "TechArticle",
       "articleSection": "Hpc",
       "name": "ブロック・ボリュームNFSサーバと自動構築編HPC/GPUクラスタを組み合わせる",
-      "url" : "https://oracle-japan.github.io/ocitutorials/hpc/cluster-with-bv-stack/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/cluster-with-bv-stack/",
       "headline": "ブロック・ボリュームNFSサーバと自動構築編HPC/GPUクラスタを組み合わせる",
       "description": " HPCクラスタやGPUクラスタは、そのフロントエンドとなるBastionノードを含む全てのノードで利用できるファイル共有ストレージが運用上必須です。\n代表的なファイル共有ストレージの用途は、ユーザホームディレクトリですが、この領域は通常高いパフォーマンスより安定したサービスの提供が重視されるため、NFSがその有力な候補です。\nOCIは、NFSのマネージドサービスとしてファイル・ストレージを提供しており、ファイルサーバ構築の必要無く簡単に利用できるため、HPC\/GPUクラスタ用ユーザホームディレクトリの有力な候補です。\nHPCクラスタスタック は、ファイル・ストレージの構築・セットアップを行う機能を持っており、ファイル・ストレージをユーザホームディレクトリに利用するHPC\/GPUクラスタを自動構築することが出来ます。\nこれに対し、OCIのブロックストレージサービスであるブロック・ボリュームを使用してNFSサーバを構築し、この領域をユーザホームディレクトリとして使用することも可能です。\nこの手法は、ファイル・ストレージを使用する場合と比較して構築の手間がかかりますが、価格性能比の圧倒的に高いブロック・ボリュームの特徴を利用して、コストパフォーマンスを大幅に高めることが可能です。\nファイル・ストレージとブロック・ボリュームを使用したNFSサーバの価格と性能の比較は、チュートリアル ブロック・ボリュームでNFSサーバを構築する 前段の比較表を参照ください。\nこのチュートリアルは、チュートリアル ブロック・ボリュームでNFSサーバを構築する でブロック・ボリュームをアタッチしたベアメタルインスタンス BM.Optimized3.36 をNFSサーバとするファイル共有ストレージを構築し、以下のように組み合わせたチュートリアルで構築するHPC\/GPUクラスタのファイル共有ストレージとして利用します。\nファイル共有ストレージ\n構築チュートリアル HPC\/GPUクラスタ\n構築チュートリアル 構築するシステム概要 ブロック・ボリュームで\nNFSサーバを構築する HPCクラスタを構築する\n(スタティッククラスタ自動構築編) BM.Optimized3.36を計算ノードとするスタティックHPCクラスタ\nブロック・ボリュームファイル共有ストレージ\nLDAPユーザ統合管理\nSlurmジョブスケジュール・計算リソース管理 同上 GPUクラスタを構築する\n(スタティッククラスタ自動構築編) BM.GPU4.8\/BM.GPU.GM4.8をGPUノードとするスタティックGPUクラスタ\nブロック・ボリュームファイル共有ストレージ\nLDAPユーザ統合管理\nSlurmジョブスケジュール・計算リソース管理 同上 GPUクラスタを構築する\n(オンデマンドクラスタ自動構築編) BM.GPU4.8\/BM.GPU.GM4.8をGPUノードとするオンデマンドGPUクラスタ\nブロック・ボリュームファイル共有ストレージ\nLDAPユーザ統合管理\nSlurmジョブスケジュール・計算リソース管理 所要時間 : 約2時間\n0. 概要 本チュートリアルは、チュートリアル ブロック・ボリュームでNFSサーバを構築する とHPC\/GPUクラスタを構築するチュートリアルを組み合わせて、以下のシステムを構築します。\nこの図中、左側の一点鎖線で囲まれたリソースを HPC\/GPUクラスタを構築する(スタティック\/オンデマンドクラスタ自動構築編) で構築し、それ以外のリソースを ブロック・ボリュームでNFSサーバを構築する で構築します。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -144,7 +144,7 @@ Slurmジョブスケジュール・計算リソース管理 所要時間 : 約2�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/hpc/cluster-with-bv-stack/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/cluster-with-bv-stack/"
       },
       "copyrightHolder" : "OCIチュートリアル",
       "copyrightYear" : "0001",
@@ -154,10 +154,10 @@ Slurmジョブスケジュール・計算リソース管理 所要時間 : 約2�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -167,73 +167,73 @@ Slurmジョブスケジュール・計算リソース管理 所要時間 : 約2�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/hpc/cluster-with-bv-stack/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/cluster-with-bv-stack/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/hpc/cluster-with-bv-stack/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/cluster-with-bv-stack/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="ブロック・ボリュームNFSサーバと自動構築編HPC/GPUクラスタを組み合わせる">
   <meta property="og:description" content="HPCクラスタやGPUクラスタは、そのフロントエンドとなるBastionノードを含む全てのノードで利用できるファイル共有ストレージが運用上必須です。
@@ -341,11 +341,11 @@ Slurmジョブスケジュール・計算リソース管理 所要時間 : 約2�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -362,7 +362,7 @@ Slurmジョブスケジュール・計算リソース管理 所要時間 : 約2�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -374,7 +374,7 @@ Slurmジョブスケジュール・計算リソース管理 所要時間 : 約2�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -503,7 +503,7 @@ Slurmジョブスケジュール・計算リソース管理 所要時間 : 約2�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/hpc/' href='/ocitutorials/hpc/'><span itemprop='name'>OCI HPCポータル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>ブロック・ボリュームNFSサーバと自動構築編HPC/GPUクラスタを組み合わせる</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/hpc/' href='/ocitutorial-geekdocs/hpc/'><span itemprop='name'>OCI HPCポータル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>ブロック・ボリュームNFSサーバと自動構築編HPC/GPUクラスタを組み合わせる</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -599,7 +599,7 @@ table, th, td {
     >
         0. 概要
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/cluster-with-bv-stack/#0-概要" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0. 概要" aria-label="アンカー先: 0. 概要" href="#0-%e6%a6%82%e8%a6%81">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/cluster-with-bv-stack/#0-概要" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0. 概要" aria-label="アンカー先: 0. 概要" href="#0-%e6%a6%82%e8%a6%81">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -641,7 +641,7 @@ table, th, td {
     >
         1. NFSサーバ構築
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/cluster-with-bv-stack/#1-nfsサーバ構築" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. NFSサーバ構築" aria-label="アンカー先: 1. NFSサーバ構築" href="#1-nfs%e3%82%b5%e3%83%bc%e3%83%90%e6%a7%8b%e7%af%89">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/cluster-with-bv-stack/#1-nfsサーバ構築" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. NFSサーバ構築" aria-label="アンカー先: 1. NFSサーバ構築" href="#1-nfs%e3%82%b5%e3%83%bc%e3%83%90%e6%a7%8b%e7%af%89">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -672,7 +672,7 @@ table, th, td {
     >
         2. パブリックサブネット用セキュリティリスト修正
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/cluster-with-bv-stack/#2-パブリックサブネット用セキュリティリスト修正" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. パブリックサブネット用セキュリティリスト修正" aria-label="アンカー先: 2. パブリックサブネット用セキュリティリスト修正" href="#2-%e3%83%91%e3%83%96%e3%83%aa%e3%83%83%e3%82%af%e3%82%b5%e3%83%96%e3%83%8d%e3%83%83%e3%83%88%e7%94%a8%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e3%83%aa%e3%82%b9%e3%83%88%e4%bf%ae%e6%ad%a3">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/cluster-with-bv-stack/#2-パブリックサブネット用セキュリティリスト修正" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. パブリックサブネット用セキュリティリスト修正" aria-label="アンカー先: 2. パブリックサブネット用セキュリティリスト修正" href="#2-%e3%83%91%e3%83%96%e3%83%aa%e3%83%83%e3%82%af%e3%82%b5%e3%83%96%e3%83%8d%e3%83%83%e3%83%88%e7%94%a8%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e3%83%aa%e3%82%b9%e3%83%88%e4%bf%ae%e6%ad%a3">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -700,7 +700,7 @@ table, th, td {
     >
         3. NFSサーバ環境確認
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/cluster-with-bv-stack/#3-nfsサーバ環境確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. NFSサーバ環境確認" aria-label="アンカー先: 3. NFSサーバ環境確認" href="#3-nfs%e3%82%b5%e3%83%bc%e3%83%90%e7%92%b0%e5%a2%83%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/cluster-with-bv-stack/#3-nfsサーバ環境確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. NFSサーバ環境確認" aria-label="アンカー先: 3. NFSサーバ環境確認" href="#3-nfs%e3%82%b5%e3%83%bc%e3%83%90%e7%92%b0%e5%a2%83%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -725,7 +725,7 @@ table, th, td {
     >
         4. HPC/GPUクラスタ構築
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/cluster-with-bv-stack/#4-hpcgpuクラスタ構築" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. HPC/GPUクラスタ構築" aria-label="アンカー先: 4. HPC/GPUクラスタ構築" href="#4-hpcgpu%e3%82%af%e3%83%a9%e3%82%b9%e3%82%bf%e6%a7%8b%e7%af%89">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/cluster-with-bv-stack/#4-hpcgpuクラスタ構築" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. HPC/GPUクラスタ構築" aria-label="アンカー先: 4. HPC/GPUクラスタ構築" href="#4-hpcgpu%e3%82%af%e3%83%a9%e3%82%b9%e3%82%bf%e6%a7%8b%e7%af%89">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -779,7 +779,7 @@ table, th, td {
     >
         5. HPC/GPUクラスタ環境確認
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/cluster-with-bv-stack/#5-hpcgpuクラスタ環境確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5. HPC/GPUクラスタ環境確認" aria-label="アンカー先: 5. HPC/GPUクラスタ環境確認" href="#5-hpcgpu%e3%82%af%e3%83%a9%e3%82%b9%e3%82%bf%e7%92%b0%e5%a2%83%e7%a2%ba%e8%aa%8d">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/cluster-with-bv-stack/#5-hpcgpuクラスタ環境確認" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 5. HPC/GPUクラスタ環境確認" aria-label="アンカー先: 5. HPC/GPUクラスタ環境確認" href="#5-hpcgpu%e3%82%af%e3%83%a9%e3%82%b9%e3%82%bf%e7%92%b0%e5%a2%83%e7%a2%ba%e8%aa%8d">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9033,7 +9033,7 @@ table, th, td {
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/hpc/cluster-with-bv-base/"
+      href="/ocitutorial-geekdocs/hpc/cluster-with-bv-base/"
       title="ブロック・ボリュームNFSサーバと基礎インフラ編HPC/GPUクラスタを組み合わせる"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9045,7 +9045,7 @@ table, th, td {
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/opensearch/"
+      href="/ocitutorial-geekdocs/opensearch/"
       title="OCI Search Service with OpenSearchチュートリアル"
     >
       OCI Search Service with OpenSearchチュートリアル
@@ -9099,7 +9099,7 @@ table, th, td {
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

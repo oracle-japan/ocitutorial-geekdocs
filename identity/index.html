@@ -24,18 +24,18 @@ OCI IAM Identity DomainでAPEXで作成したアプリに認証と認可をす�
 
   <title>アイデンティティ チュートリアル | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -60,7 +60,7 @@ OCI IAM Identity DomainsとAzure ADとの認証連携（外部IDP連携）を設
 OCI IAM Identity DomainでAPEXで作成したアプリに認証と認可をする
 本チュートリアルでは、Oracle Application Express（APEX）で作成したアプリケーションとIdentity Domainsの認証連携、およびIdentity Domainsのグループに基づくアクセス制御（認可）の実装手順を紹介します。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/identity/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/identity/" />
 
 <meta property="article:section" content="Identity" />
     <meta
@@ -92,7 +92,7 @@ OCI IAM Identity DomainでAPEXで作成したアプリに認証と認可をす�
       "@type": "TechArticle",
       "articleSection": "Identity",
       "name": "アイデンティティ チュートリアル",
-      "url" : "https://oracle-japan.github.io/ocitutorials/identity/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/identity/",
       "headline": "アイデンティティ チュートリアル",
       "description": " Oracle Cloud Infrastructureは、設計段階からセキュリティを考慮して開発されたクラウドサービスになります。 セキュリティに非常に力を入れて取り組んでおり、無償でご利用いただけるクラウドサービスも多数提供しています。\nこのページではアイデンティティ編として、Oracle Cloud Infrastructureにて提供しているIDaaSサービス「Identity Domains」のチュートリアルをまとめています。\nOCI IAM Identity Domainsチュートリアル OCI IAM Identity Domainsのドメインの追加とライセンスタイプを変更する\n本チュートリアルでは、Identity Domainsのドメインタイプを新規作成する手順と、ドメインのライセンスタイプの変更手順を紹介します。\nOCI IAM Identity Domains - テナント管理者・一般ユーザーを作成する\n本チュートリアルではIdentity DomainsでのOCIテナント管理者ユーザーと、一般ユーザーの作成手順を紹介します。\nOCI IAM Identity DomainでユーザーのMFAを有効化する\n本チュートリアルでは、Identity Domainsの特定のグループに属しているユーザーに二要素認証を要求するための設定手順を紹介します。\nOCI IAM Identity DomainsとAzure ADとの認証連携（外部IDP連携）を設定する\n本チュートリアルでは、SAMLによるIdentity DomainsとAzure ADとの認証連携を設定する手順を紹介します。本チュートリアルを完了することで、Azure ADのIDとパスワードでOCIにサインオンすることが可能になります。\nOCI IAM Identity DomainでAPEXで作成したアプリに認証と認可をする\n本チュートリアルでは、Oracle Application Express（APEX）で作成したアプリケーションとIdentity Domainsの認証連携、およびIdentity Domainsのグループに基づくアクセス制御（認可）の実装手順を紹介します。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -102,7 +102,7 @@ OCI IAM Identity DomainでAPEXで作成したアプリに認証と認可をす�
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/identity/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/identity/"
       },
       "copyrightHolder" : "OCIチュートリアル",
       "copyrightYear" : "0001",
@@ -112,10 +112,10 @@ OCI IAM Identity DomainでAPEXで作成したアプリに認証と認可をす�
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -125,73 +125,73 @@ OCI IAM Identity DomainでAPEXで作成したアプリに認証と認可をす�
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/identity/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/identity/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/identity/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/identity/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="アイデンティティ チュートリアル">
   <meta property="og:description" content="Oracle Cloud Infrastructureは、設計段階からセキュリティを考慮して開発されたクラウドサービスになります。 セキュリティに非常に力を入れて取り組んでおり、無償でご利用いただけるクラウドサービスも多数提供しています。
@@ -269,11 +269,11 @@ OCI IAM Identity DomainでAPEXで作成したアプリに認証と認可をす�
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -290,7 +290,7 @@ OCI IAM Identity DomainでAPEXで作成したアプリに認証と認可をす�
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -302,7 +302,7 @@ OCI IAM Identity DomainでAPEXで作成したアプリに認証と認可をす�
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -420,7 +420,7 @@ OCI IAM Identity DomainでAPEXで作成したアプリに認証と認可をす�
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>アイデンティティ チュートリアル</span><meta itemprop='position' content='3' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>アイデンティティ チュートリアル</span><meta itemprop='position' content='3' /></li>
   
 
   
@@ -457,7 +457,7 @@ OCI IAM Identity DomainでAPEXで作成したアプリに認証と認可をす�
     >
         OCI IAM Identity Domainsチュートリアル
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/identity/#oci-iam-identity-domainsチュートリアル" class="gdoc-page__anchor clip flex align-center" title="アンカー先: OCI IAM Identity Domainsチュートリアル" aria-label="アンカー先: OCI IAM Identity Domainsチュートリアル" href="#oci-iam-identity-domains%e3%83%81%e3%83%a5%e3%83%bc%e3%83%88%e3%83%aa%e3%82%a2%e3%83%ab">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/identity/#oci-iam-identity-domainsチュートリアル" class="gdoc-page__anchor clip flex align-center" title="アンカー先: OCI IAM Identity Domainsチュートリアル" aria-label="アンカー先: OCI IAM Identity Domainsチュートリアル" href="#oci-iam-identity-domains%e3%83%81%e3%83%a5%e3%83%bc%e3%83%88%e3%83%aa%e3%82%a2%e3%83%ab">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -8819,7 +8819,7 @@ OCI IAM Identity DomainでAPEXで作成したアプリに認証と認可をす�
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/integration/vbcs-for-beginners-5-gmap/"
+      href="/ocitutorial-geekdocs/integration/vbcs-for-beginners-5-gmap/"
       title="住所の値を基に地図上にピンマークを設置する"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -8831,7 +8831,7 @@ OCI IAM Identity DomainでAPEXで作成したアプリに認証と認可をす�
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/identity/identitydomain-setup-users/"
+      href="/ocitutorial-geekdocs/identity/identitydomain-setup-users/"
       title="OCI IAM Identity Domains - テナント管理者・一般ユーザーを作成する"
     >
       OCI IAM Identity Domains - テナント管理者・一般ユーザーを作成する
@@ -8885,7 +8885,7 @@ OCI IAM Identity DomainでAPEXで作成したアプリに認証と認可をす�
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

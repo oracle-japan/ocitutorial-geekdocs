@@ -17,18 +17,18 @@ Oracle CloudでOracle Databaseを使おうを通じて Oracle Database の作成
 
   <title>102: BaseDB上のPDBを管理しよう | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -47,7 +47,7 @@ Oracle CloudでOracle Databaseを使おうを通じて Oracle Database の作成
 目次
 1. PDB を起動・停止してみよう 2. PDB を新規作成してみよう 3. 既存 PDB からクローン PDB を作成してみよう **所要時間 :** 約15分 1. PDB を起動・停止してみよう まずは、コンソール上で作成済みの PDB を確認する画面への遷移、および PDB の起動・停止について確認していきましょう。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/basedb/dbcs102-managing-pdb/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/basedb/dbcs102-managing-pdb/" />
 
 <meta property="article:section" content="Basedb" />
     <meta
@@ -73,7 +73,7 @@ Oracle CloudでOracle Databaseを使おうを通じて Oracle Database の作成
       "@type": "TechArticle",
       "articleSection": "Basedb",
       "name": "102: BaseDB上のPDBを管理しよう",
-      "url" : "https://oracle-japan.github.io/ocitutorials/basedb/dbcs102-managing-pdb/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/basedb/dbcs102-managing-pdb/",
       "headline": "102: BaseDB上のPDBを管理しよう",
       "description": "\nはじめに Oracle Base Database Service(BaseDB)では、Oracle Cloud Infrastructure の上で稼働する Oracle Database の PDB を OCI コンソールから停止したり、起動したり、既存 PDB からクローンするなどの操作が簡単に行う事が可能です。この章では実際にどのように操作するのか確認していきます。\n前提条件 :\nOracle CloudでOracle Databaseを使おうを通じて Oracle Database の作成が完了していること 注意 チュートリアル内の画面ショットについては現在の画面と異なっている場合があります。\n目次\n1. PDB を起動・停止してみよう 2. PDB を新規作成してみよう 3. 既存 PDB からクローン PDB を作成してみよう **所要時間 :** 約15分 1. PDB を起動・停止してみよう まずは、コンソール上で作成済みの PDB を確認する画面への遷移、および PDB の起動・停止について確認していきましょう。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -83,7 +83,7 @@ Oracle CloudでOracle Databaseを使おうを通じて Oracle Database の作成
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/basedb/dbcs102-managing-pdb/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/basedb/dbcs102-managing-pdb/"
       },
       "copyrightHolder" : "OCIチュートリアル",
       "copyrightYear" : "0001",
@@ -93,10 +93,10 @@ Oracle CloudでOracle Databaseを使おうを通じて Oracle Database の作成
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -106,73 +106,73 @@ Oracle CloudでOracle Databaseを使おうを通じて Oracle Database の作成
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/basedb/dbcs102-managing-pdb/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/basedb/dbcs102-managing-pdb/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/basedb/dbcs102-managing-pdb/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/basedb/dbcs102-managing-pdb/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="102: BaseDB上のPDBを管理しよう">
   <meta property="og:description" content="はじめに Oracle Base Database Service(BaseDB)では、Oracle Cloud Infrastructure の上で稼働する Oracle Database の PDB を OCI コンソールから停止したり、起動したり、既存 PDB からクローンするなどの操作が簡単に行う事が可能です。この章では実際にどのように操作するのか確認していきます。
@@ -238,11 +238,11 @@ Oracle CloudでOracle Databaseを使おうを通じて Oracle Database の作成
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -259,7 +259,7 @@ Oracle CloudでOracle Databaseを使おうを通じて Oracle Database の作成
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -271,7 +271,7 @@ Oracle CloudでOracle Databaseを使おうを通じて Oracle Database の作成
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -398,7 +398,7 @@ Oracle CloudでOracle Databaseを使おうを通じて Oracle Database の作成
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/basedb/' href='/ocitutorials/basedb/'><span itemprop='name'>Oracle Database編 - Base Database Service (BaseDB) を使ってみよう</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>102: BaseDB上のPDBを管理しよう</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/basedb/' href='/ocitutorial-geekdocs/basedb/'><span itemprop='name'>Oracle Database編 - Base Database Service (BaseDB) を使ってみよう</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>102: BaseDB上のPDBを管理しよう</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -430,7 +430,7 @@ Oracle CloudでOracle Databaseを使おうを通じて Oracle Database の作成
     >
         はじめに
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/basedb/dbcs102-managing-pdb/#はじめに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: はじめに" aria-label="アンカー先: はじめに" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/basedb/dbcs102-managing-pdb/#はじめに" class="gdoc-page__anchor clip flex align-center" title="アンカー先: はじめに" aria-label="アンカー先: はじめに" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -470,7 +470,7 @@ Oracle CloudでOracle Databaseを使おうを通じて Oracle Database の作成
     >
         1. PDB を起動・停止してみよう
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/basedb/dbcs102-managing-pdb/#1-pdb-を起動停止してみよう" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. PDB を起動・停止してみよう" aria-label="アンカー先: 1. PDB を起動・停止してみよう" href="#1-pdb-%e3%82%92%e8%b5%b7%e5%8b%95%e5%81%9c%e6%ad%a2%e3%81%97%e3%81%a6%e3%81%bf%e3%82%88%e3%81%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/basedb/dbcs102-managing-pdb/#1-pdb-を起動停止してみよう" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. PDB を起動・停止してみよう" aria-label="アンカー先: 1. PDB を起動・停止してみよう" href="#1-pdb-%e3%82%92%e8%b5%b7%e5%8b%95%e5%81%9c%e6%ad%a2%e3%81%97%e3%81%a6%e3%81%bf%e3%82%88%e3%81%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -529,7 +529,7 @@ Oracle CloudでOracle Databaseを使おうを通じて Oracle Database の作成
     >
         2. PDB を新規作成してみよう
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/basedb/dbcs102-managing-pdb/#2-pdb-を新規作成してみよう" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. PDB を新規作成してみよう" aria-label="アンカー先: 2. PDB を新規作成してみよう" href="#2-pdb-%e3%82%92%e6%96%b0%e8%a6%8f%e4%bd%9c%e6%88%90%e3%81%97%e3%81%a6%e3%81%bf%e3%82%88%e3%81%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/basedb/dbcs102-managing-pdb/#2-pdb-を新規作成してみよう" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. PDB を新規作成してみよう" aria-label="アンカー先: 2. PDB を新規作成してみよう" href="#2-pdb-%e3%82%92%e6%96%b0%e8%a6%8f%e4%bd%9c%e6%88%90%e3%81%97%e3%81%a6%e3%81%bf%e3%82%88%e3%81%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -577,7 +577,7 @@ Oracle CloudでOracle Databaseを使おうを通じて Oracle Database の作成
     >
         3. 既存 PDB からクローン PDB を作成してみよう
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/basedb/dbcs102-managing-pdb/#3-既存-pdb-からクローン-pdb-を作成してみよう" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. 既存 PDB からクローン PDB を作成してみよう" aria-label="アンカー先: 3. 既存 PDB からクローン PDB を作成してみよう" href="#3-%e6%97%a2%e5%ad%98-pdb-%e3%81%8b%e3%82%89%e3%82%af%e3%83%ad%e3%83%bc%e3%83%b3-pdb-%e3%82%92%e4%bd%9c%e6%88%90%e3%81%97%e3%81%a6%e3%81%bf%e3%82%88%e3%81%86">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/basedb/dbcs102-managing-pdb/#3-既存-pdb-からクローン-pdb-を作成してみよう" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. 既存 PDB からクローン PDB を作成してみよう" aria-label="アンカー先: 3. 既存 PDB からクローン PDB を作成してみよう" href="#3-%e6%97%a2%e5%ad%98-pdb-%e3%81%8b%e3%82%89%e3%82%af%e3%83%ad%e3%83%bc%e3%83%b3-pdb-%e3%82%92%e4%bd%9c%e6%88%90%e3%81%97%e3%81%a6%e3%81%bf%e3%82%88%e3%81%86">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -8870,7 +8870,7 @@ Oracle CloudでOracle Databaseを使おうを通じて Oracle Database の作成
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/basedb/dbcs101-create-db/"
+      href="/ocitutorial-geekdocs/basedb/dbcs101-create-db/"
       title="101: Oracle Cloud で Oracle Database を使おう(BaseDB)"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -8882,7 +8882,7 @@ Oracle CloudでOracle Databaseを使おうを通じて Oracle Database の作成
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/basedb/dbcs103-patch/"
+      href="/ocitutorial-geekdocs/basedb/dbcs103-patch/"
       title="103: パッチを適用しよう"
     >
       103: パッチを適用しよう
@@ -8936,7 +8936,7 @@ Oracle CloudでOracle Databaseを使おうを通じて Oracle Database の作成
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

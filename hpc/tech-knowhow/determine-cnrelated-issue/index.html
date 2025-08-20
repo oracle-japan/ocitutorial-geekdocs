@@ -23,18 +23,18 @@ HPCクラスタを構築する(スタティッククラスタ自動構築編) HP
 
   <title>クラスタ・ネットワークに接続する計算/GPUノード作成時の問題判別方法 | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -58,7 +58,7 @@ HPCクラスタを構築する(基礎インフラ手動構築編) GPUクラス�
 HPCクラスタを構築する(スタティッククラスタ自動構築編) HPCクラスタを構築する(オンデマンドクラスタ自動構築編) HPCクラスタを構築する(基礎インフラ自動構築編) の リソース・マネージャ を使用する方法 GPUクラスタを構築する(スタティッククラスタ自動構築編) GPUクラスタを構築する(オンデマンドクラスタ自動構築編) GPUクラスタを構築する(基礎インフラ自動構築編) の リソース・マネージャ を使用する方法 Terraform CLI
 以下の OCI HPCチュートリアル集 に従って構築したHPC/GPUクラスタのように、 Terraform 実行環境で Terraform CLIから クラスタ・ネットワーク を作成するケースです。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/hpc/tech-knowhow/determine-cnrelated-issue/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/tech-knowhow/determine-cnrelated-issue/" />
 
 <meta property="article:section" content="Hpc" />
     <meta
@@ -89,7 +89,7 @@ HPCクラスタを構築する(スタティッククラスタ自動構築編) HP
       "@type": "TechArticle",
       "articleSection": "Hpc",
       "name": "クラスタ・ネットワークに接続する計算/GPUノード作成時の問題判別方法",
-      "url" : "https://oracle-japan.github.io/ocitutorials/hpc/tech-knowhow/determine-cnrelated-issue/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/tech-knowhow/determine-cnrelated-issue/",
       "headline": "クラスタ・ネットワークに接続する計算/GPUノード作成時の問題判別方法",
       "description": " 0. 概要 クラスタ・ネットワーク と共に計算\/GPUノードを新規に作成する場合や、既に作成された クラスタ・ネットワーク に計算\/GPUノードを追加する場合、また既に作成された クラスタ・ネットワーク の計算\/GPUノードを置き換える場合、そのノード数によってはリソース不足により失敗する場合があります。\n新規に作成するケースで失敗の原因として考えられるのは、データセンター内に存在する クラスタ・ネットワーク のどの論理的なパーティションにおいても、指定したシェイプの指定したインスタンス数の空きがない場合です。\nまた、計算\/GPUノードを追加するケースや置き換えるケースで失敗の原因として考えられるのは、既に作成されている クラスタ・ネットワーク の論理的なパーティションにおいて、指定したシェイプの指定したインスタンス数の空きがない場合です。\nこれらの問題が発生するケースは、出力されるエラーメッセージを確認することにより、前述のシナリオで失敗したことを特定することが出来ます。\nただこのエラーメッセージは、以下どの方法で クラスタ・ネットワーク の作成を行ったかにより、エラーメッセージの確認方法が異なります。\nOCIコンソール\n以下の OCI HPCチュートリアル集 に従って構築したHPC\/GPUクラスタのように、OCIコンソールの コンピュート → クラスタ・ネットワーク → クラスタ・ネットワークの作成 ボタン から クラスタ・ネットワーク を作成するケースです。\nHPCクラスタを構築する(基礎インフラ手動構築編) GPUクラスタを構築する(基礎インフラ手動構築編) リソース・マネージャ\n以下の OCI HPCチュートリアル集 に従って構築したHPC\/GPUクラスタのように、 リソース・マネージャ に作成した スタック から クラスタ・ネットワーク を作成するケースです。\nHPCクラスタを構築する(スタティッククラスタ自動構築編) HPCクラスタを構築する(オンデマンドクラスタ自動構築編) HPCクラスタを構築する(基礎インフラ自動構築編) の リソース・マネージャ を使用する方法 GPUクラスタを構築する(スタティッククラスタ自動構築編) GPUクラスタを構築する(オンデマンドクラスタ自動構築編) GPUクラスタを構築する(基礎インフラ自動構築編) の リソース・マネージャ を使用する方法 Terraform CLI\n以下の OCI HPCチュートリアル集 に従って構築したHPC\/GPUクラスタのように、 Terraform 実行環境で Terraform CLIから クラスタ・ネットワーク を作成するケースです。",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -99,7 +99,7 @@ HPCクラスタを構築する(スタティッククラスタ自動構築編) HP
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/hpc/tech-knowhow/determine-cnrelated-issue/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/tech-knowhow/determine-cnrelated-issue/"
       },
       "copyrightHolder" : "OCIチュートリアル",
       "copyrightYear" : "0001",
@@ -109,10 +109,10 @@ HPCクラスタを構築する(スタティッククラスタ自動構築編) HP
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -122,73 +122,73 @@ HPCクラスタを構築する(スタティッククラスタ自動構築編) HP
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/hpc/tech-knowhow/determine-cnrelated-issue/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/tech-knowhow/determine-cnrelated-issue/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/hpc/tech-knowhow/determine-cnrelated-issue/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/tech-knowhow/determine-cnrelated-issue/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="クラスタ・ネットワークに接続する計算/GPUノード作成時の問題判別方法">
   <meta property="og:description" content="0. 概要 クラスタ・ネットワーク と共に計算/GPUノードを新規に作成する場合や、既に作成された クラスタ・ネットワーク に計算/GPUノードを追加する場合、また既に作成された クラスタ・ネットワーク の計算/GPUノードを置き換える場合、そのノード数によってはリソース不足により失敗する場合があります。
@@ -266,11 +266,11 @@ HPCクラスタを構築する(スタティッククラスタ自動構築編) HP
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -287,7 +287,7 @@ HPCクラスタを構築する(スタティッククラスタ自動構築編) HP
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -299,7 +299,7 @@ HPCクラスタを構築する(スタティッククラスタ自動構築編) HP
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -435,7 +435,7 @@ HPCクラスタを構築する(スタティッククラスタ自動構築編) HP
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/hpc/' href='/ocitutorials/hpc/'><span itemprop='name'>OCI HPCポータル</span></a><meta itemprop='position' content='4' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>クラスタ・ネットワークに接続する計算/GPUノード作成時の問題判別方法</span><meta itemprop='position' content='5' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/hpc/' href='/ocitutorial-geekdocs/hpc/'><span itemprop='name'>OCI HPCポータル</span></a><meta itemprop='position' content='4' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>クラスタ・ネットワークに接続する計算/GPUノード作成時の問題判別方法</span><meta itemprop='position' content='5' /></li>
   
 
   
@@ -467,7 +467,7 @@ HPCクラスタを構築する(スタティッククラスタ自動構築編) HP
     >
         0. 概要
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/tech-knowhow/determine-cnrelated-issue/#0-概要" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0. 概要" aria-label="アンカー先: 0. 概要" href="#0-%e6%a6%82%e8%a6%81">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/tech-knowhow/determine-cnrelated-issue/#0-概要" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 0. 概要" aria-label="アンカー先: 0. 概要" href="#0-%e6%a6%82%e8%a6%81">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -564,7 +564,7 @@ HPCクラスタを構築する(スタティッククラスタ自動構築編) HP
     >
         1. 作成方法毎のエラーメッセージ確認方法
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/tech-knowhow/determine-cnrelated-issue/#1-作成方法毎のエラーメッセージ確認方法" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. 作成方法毎のエラーメッセージ確認方法" aria-label="アンカー先: 1. 作成方法毎のエラーメッセージ確認方法" href="#1-%e4%bd%9c%e6%88%90%e6%96%b9%e6%b3%95%e6%af%8e%e3%81%ae%e3%82%a8%e3%83%a9%e3%83%bc%e3%83%a1%e3%83%83%e3%82%bb%e3%83%bc%e3%82%b8%e7%a2%ba%e8%aa%8d%e6%96%b9%e6%b3%95">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/tech-knowhow/determine-cnrelated-issue/#1-作成方法毎のエラーメッセージ確認方法" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. 作成方法毎のエラーメッセージ確認方法" aria-label="アンカー先: 1. 作成方法毎のエラーメッセージ確認方法" href="#1-%e4%bd%9c%e6%88%90%e6%96%b9%e6%b3%95%e6%af%8e%e3%81%ae%e3%82%a8%e3%83%a9%e3%83%bc%e3%83%a1%e3%83%83%e3%82%bb%e3%83%bc%e3%82%b8%e7%a2%ba%e8%aa%8d%e6%96%b9%e6%b3%95">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -573,7 +573,7 @@ HPCクラスタを構築する(スタティッククラスタ自動構築編) HP
     >
         1-1. OCIコンソールを使用する場合
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/tech-knowhow/determine-cnrelated-issue/#1-1-ociコンソールを使用する場合" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-1. OCIコンソールを使用する場合" aria-label="アンカー先: 1-1. OCIコンソールを使用する場合" href="#1-1-oci%e3%82%b3%e3%83%b3%e3%82%bd%e3%83%bc%e3%83%ab%e3%82%92%e4%bd%bf%e7%94%a8%e3%81%99%e3%82%8b%e5%a0%b4%e5%90%88">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/tech-knowhow/determine-cnrelated-issue/#1-1-ociコンソールを使用する場合" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-1. OCIコンソールを使用する場合" aria-label="アンカー先: 1-1. OCIコンソールを使用する場合" href="#1-1-oci%e3%82%b3%e3%83%b3%e3%82%bd%e3%83%bc%e3%83%ab%e3%82%92%e4%bd%bf%e7%94%a8%e3%81%99%e3%82%8b%e5%a0%b4%e5%90%88">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -620,7 +620,7 @@ HPCクラスタを構築する(スタティッククラスタ自動構築編) HP
     >
         1-2. リソース・マネージャを使用する場合
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/tech-knowhow/determine-cnrelated-issue/#1-2-リソースマネージャを使用する場合" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-2. リソース・マネージャを使用する場合" aria-label="アンカー先: 1-2. リソース・マネージャを使用する場合" href="#1-2-%e3%83%aa%e3%82%bd%e3%83%bc%e3%82%b9%e3%83%9e%e3%83%8d%e3%83%bc%e3%82%b8%e3%83%a3%e3%82%92%e4%bd%bf%e7%94%a8%e3%81%99%e3%82%8b%e5%a0%b4%e5%90%88">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/tech-knowhow/determine-cnrelated-issue/#1-2-リソースマネージャを使用する場合" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-2. リソース・マネージャを使用する場合" aria-label="アンカー先: 1-2. リソース・マネージャを使用する場合" href="#1-2-%e3%83%aa%e3%82%bd%e3%83%bc%e3%82%b9%e3%83%9e%e3%83%8d%e3%83%bc%e3%82%b8%e3%83%a3%e3%82%92%e4%bd%bf%e7%94%a8%e3%81%99%e3%82%8b%e5%a0%b4%e5%90%88">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -678,7 +678,7 @@ HPCクラスタを構築する(スタティッククラスタ自動構築編) HP
     >
         1-3. Terraform CLIを使用する場合
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/tech-knowhow/determine-cnrelated-issue/#1-3-terraform-cliを使用する場合" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-3. Terraform CLIを使用する場合" aria-label="アンカー先: 1-3. Terraform CLIを使用する場合" href="#1-3-terraform-cli%e3%82%92%e4%bd%bf%e7%94%a8%e3%81%99%e3%82%8b%e5%a0%b4%e5%90%88">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/tech-knowhow/determine-cnrelated-issue/#1-3-terraform-cliを使用する場合" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1-3. Terraform CLIを使用する場合" aria-label="アンカー先: 1-3. Terraform CLIを使用する場合" href="#1-3-terraform-cli%e3%82%92%e4%bd%bf%e7%94%a8%e3%81%99%e3%82%8b%e5%a0%b4%e5%90%88">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -732,7 +732,7 @@ HPCクラスタを構築する(スタティッククラスタ自動構築編) HP
     >
         2. エラーメッセージによる原因の特定
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/tech-knowhow/determine-cnrelated-issue/#2-エラーメッセージによる原因の特定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. エラーメッセージによる原因の特定" aria-label="アンカー先: 2. エラーメッセージによる原因の特定" href="#2-%e3%82%a8%e3%83%a9%e3%83%bc%e3%83%a1%e3%83%83%e3%82%bb%e3%83%bc%e3%82%b8%e3%81%ab%e3%82%88%e3%82%8b%e5%8e%9f%e5%9b%a0%e3%81%ae%e7%89%b9%e5%ae%9a">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/tech-knowhow/determine-cnrelated-issue/#2-エラーメッセージによる原因の特定" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. エラーメッセージによる原因の特定" aria-label="アンカー先: 2. エラーメッセージによる原因の特定" href="#2-%e3%82%a8%e3%83%a9%e3%83%bc%e3%83%a1%e3%83%83%e3%82%bb%e3%83%bc%e3%82%b8%e3%81%ab%e3%82%88%e3%82%8b%e5%8e%9f%e5%9b%a0%e3%81%ae%e7%89%b9%e5%ae%9a">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -741,7 +741,7 @@ HPCクラスタを構築する(スタティッククラスタ自動構築編) HP
     >
         2-0. 概要
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/tech-knowhow/determine-cnrelated-issue/#2-0-概要" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-0. 概要" aria-label="アンカー先: 2-0. 概要" href="#2-0-%e6%a6%82%e8%a6%81">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/tech-knowhow/determine-cnrelated-issue/#2-0-概要" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-0. 概要" aria-label="アンカー先: 2-0. 概要" href="#2-0-%e6%a6%82%e8%a6%81">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -754,7 +754,7 @@ HPCクラスタを構築する(スタティッククラスタ自動構築編) HP
     >
         2-1. Insufficient capacity for cluster network
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/tech-knowhow/determine-cnrelated-issue/#2-1-insufficient-capacity-for-cluster-network" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-1. Insufficient capacity for cluster network" aria-label="アンカー先: 2-1. Insufficient capacity for cluster network" href="#2-1-insufficient-capacity-for-cluster-network">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/tech-knowhow/determine-cnrelated-issue/#2-1-insufficient-capacity-for-cluster-network" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-1. Insufficient capacity for cluster network" aria-label="アンカー先: 2-1. Insufficient capacity for cluster network" href="#2-1-insufficient-capacity-for-cluster-network">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -778,7 +778,7 @@ HPCクラスタを構築する(スタティッククラスタ自動構築編) HP
     >
         2-2. Insufficient capacity for cluster network based on the cluster network placement constraints
     </h2>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/hpc/tech-knowhow/determine-cnrelated-issue/#2-2-insufficient-capacity-for-cluster-network-based-on-the-cluster-network-placement-constraints" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-2. Insufficient capacity for cluster network based on the cluster network placement constraints" aria-label="アンカー先: 2-2. Insufficient capacity for cluster network based on the cluster network placement constraints" href="#2-2-insufficient-capacity-for-cluster-network-based-on-the-cluster-network-placement-constraints">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/hpc/tech-knowhow/determine-cnrelated-issue/#2-2-insufficient-capacity-for-cluster-network-based-on-the-cluster-network-placement-constraints" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2-2. Insufficient capacity for cluster network based on the cluster network placement constraints" aria-label="アンカー先: 2-2. Insufficient capacity for cluster network based on the cluster network placement constraints" href="#2-2-insufficient-capacity-for-cluster-network-based-on-the-cluster-network-placement-constraints">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -9048,7 +9048,7 @@ HPCクラスタを構築する(スタティッククラスタ自動構築編) HP
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/hpc/tech-knowhow/instance-principal-auth/"
+      href="/ocitutorial-geekdocs/hpc/tech-knowhow/instance-principal-auth/"
       title="オンデマンドクラスタ実現のためのインスタンス・プリンシパル認証設定方法"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -9060,7 +9060,7 @@ HPCクラスタを構築する(スタティッククラスタ自動構築編) HP
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/hpc/benchmark/topology-aware-cn-tuning/"
+      href="/ocitutorial-geekdocs/hpc/benchmark/topology-aware-cn-tuning/"
       title="クラスタ・ネットワークのトポロジーを考慮したノード間通信最適化方法"
     >
       クラスタ・ネットワークのトポロジーを考慮したノード間通信最適化方法
@@ -9114,7 +9114,7 @@ HPCクラスタを構築する(スタティッククラスタ自動構築編) HP
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   

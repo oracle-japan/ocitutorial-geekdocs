@@ -22,18 +22,18 @@ allow group &lt;IAMグループ名&gt; to MANAGE logging-family in tenancy/compa
 
   <title>OCIのLogging AnalyticsでOCIの監査ログを可視化・分析する | OCIチュートリアル</title>
 
-  <link rel="icon" type="image/ico" href="/ocitutorials/favicon/favicon.ico" />
+  <link rel="icon" type="image/ico" href="/ocitutorial-geekdocs/favicon/favicon.ico" />
 <link
   rel="icon"
   type="image/ico"
   sizes="32x32"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 <link
   rel="icon"
   type="image/ico"
   sizes="16x16"
-  href="/ocitutorials/favicon/favicon.ico"
+  href="/ocitutorial-geekdocs/favicon/favicon.ico"
 />
 
   
@@ -56,7 +56,7 @@ Logging Analyticsが有効化されていること OCIコンソールのメニ�
 1-1. Loggingサービスを利用するためのポリシー
 allow group &lt;IAMグループ名&gt; to MANAGE logging-family in tenancy/compartment &lt;コンパートメント名&gt; allow group &lt;IAMグループ名&gt; to READ audit-events in tenancy/compartment&lt;コンパートメント名&gt; 1-2. Logging Analyticsサービスへのポリシー" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/management/audit-log-analytics/" />
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/management/audit-log-analytics/" />
 
 <meta property="article:section" content="Management" />
     <meta
@@ -86,7 +86,7 @@ allow group &lt;IAMグループ名&gt; to MANAGE logging-family in tenancy/compa
       "@type": "TechArticle",
       "articleSection": "Management",
       "name": "OCIのLogging AnalyticsでOCIの監査ログを可視化・分析する",
-      "url" : "https://oracle-japan.github.io/ocitutorials/management/audit-log-analytics/",
+      "url" : "https://oracle-japan.github.io/ocitutorial-geekdocs/management/audit-log-analytics/",
       "headline": "OCIのLogging AnalyticsでOCIの監査ログを可視化・分析する",
       "description": "OCI Observability\u0026Managementのサービスの1つ、Logging Analyticsでは様々なログを可視化、分析する機能を提供します。 Logging AnalyticsではOCIの各種ログ(VCN, Load Balancer, Audit…)だけでなく、エージェントを使用することでOSやデータベース、Webサーバーなどのログを可視化、分析することが可能です。 この章では、エージェントは利用せず簡単な操作でOCIの監査ログをLogging Analyticsで分析する手順をご紹介します。\n所要時間 : 約20分\n前提条件 :\nLogging Analyticsが有効化されていること OCIコンソールのメニューボタン→監視および管理→ログ・アナリティクス→ログ・エクスプローラを選択し、「ログ・アナリティクスの使用の開始」を選択することで、Logging Analyticsを有効化させることができます。 注意 :\n※チュートリアル内の画面ショットについてはOracle Cloud Infrastructureの現在のコンソール画面と異なっている場合があります。\n1. IAMポリシーの作成 Logging Analyticsを利用するためにはOCIの他のサービスと同様に、IAMポリシーによってアクセス権限が付与されている必要があります。 以下のポリシーをテナンシで作成してください。\n※この章では、ユーザーにLogging Analyticsの管理権限を付与します。ユーザーはログ・アナリティクスの構成やログファイルのアップロード、削除を含む全ての管理権限を行うことができます。ドキュメント を参考にユーザーの役割、ロールごとにIAMポリシーの権限を調整してください。\n※OCIのテナンシ管理者がLogging Analyticsを利用する場合は、作成するポリシーは「1-2.Logging Analyticsサービスへのポリシー」のみになります。その他のポリシーは作成する必要はありません。\n1-1. Loggingサービスを利用するためのポリシー\nallow group \u003cIAMグループ名\u003e to MANAGE logging-family in tenancy\/compartment \u003cコンパートメント名\u003e allow group \u003cIAMグループ名\u003e to READ audit-events in tenancy\/compartment\u003cコンパートメント名\u003e 1-2. Logging Analyticsサービスへのポリシー",
       "thumbnailUrl": "https://oracle-japan.github.io/ocitutorials/img/hero/Infrastructure_1.png",
@@ -96,7 +96,7 @@ allow group &lt;IAMグループ名&gt; to MANAGE logging-family in tenancy/compa
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://oracle-japan.github.io/ocitutorials/management/audit-log-analytics/"
+          "@id": "https://oracle-japan.github.io/ocitutorial-geekdocs/management/audit-log-analytics/"
       },
       "keywords" : [ "management" ],
       "copyrightHolder" : "OCIチュートリアル",
@@ -107,10 +107,10 @@ allow group &lt;IAMグループ名&gt; to MANAGE logging-family in tenancy/compa
       "publisher":{
           "@type":"Organization",
           "name": "OCIチュートリアル",
-          "url": "https://oracle-japan.github.io/ocitutorials/",
+          "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/",
           "logo": {
               "@type": "ImageObject",
-              "url": "https://oracle-japan.github.io/ocitutorials/brand.svg",
+              "url": "https://oracle-japan.github.io/ocitutorial-geekdocs/brand.svg",
               "width":"32",
               "height":"32"
           }
@@ -120,73 +120,73 @@ allow group &lt;IAMグループ名&gt; to MANAGE logging-family in tenancy/compa
 
 
   
-  <script src="/ocitutorials/js/colortheme-01ea3db1.bundle.min.js"></script>
-<script src="/ocitutorials/js/main-2e274343.bundle.min.js"></script>
+  <script src="/ocitutorial-geekdocs/js/colortheme-01ea3db1.bundle.min.js"></script>
+<script src="/ocitutorial-geekdocs/js/main-2e274343.bundle.min.js"></script>
 
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/Metropolis.woff2"
+  href="/ocitutorial-geekdocs/fonts/Metropolis.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 <link
   rel="preload"
   as="font"
-  href="/ocitutorials/fonts/LiberationSans.woff2"
+  href="/ocitutorial-geekdocs/fonts/LiberationSans.woff2"
   type="font/woff2"
   crossorigin="anonymous"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/main-86b8c207.min.css"
+  href="/ocitutorial-geekdocs/main-86b8c207.min.css"
   media="all"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/mobile-79ddc617.min.css"
+  href="/ocitutorial-geekdocs/mobile-79ddc617.min.css"
   media="screen and (max-width: 45rem)"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/print-735ccc12.min.css"
+  href="/ocitutorial-geekdocs/print-735ccc12.min.css"
   media="print"
 />
 
 <link
   rel="preload"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   as="style"
 />
 <link
   rel="stylesheet"
-  href="/ocitutorials/custom.css"
+  href="/ocitutorial-geekdocs/custom.css"
   media="all"
 />
-  <link href="https://oracle-japan.github.io/ocitutorials/management/audit-log-analytics/" rel="canonical" type="text/html" />
+  <link href="https://oracle-japan.github.io/ocitutorial-geekdocs/management/audit-log-analytics/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
   
-<meta property="og:url" content="https://oracle-japan.github.io/ocitutorials/management/audit-log-analytics/">
+<meta property="og:url" content="https://oracle-japan.github.io/ocitutorial-geekdocs/management/audit-log-analytics/">
   <meta property="og:site_name" content="OCIチュートリアル">
   <meta property="og:title" content="OCIのLogging AnalyticsでOCIの監査ログを可視化・分析する">
   <meta property="og:description" content="OCI Observability&amp;Managementのサービスの1つ、Logging Analyticsでは様々なログを可視化、分析する機能を提供します。 Logging AnalyticsではOCIの各種ログ(VCN, Load Balancer, Audit…)だけでなく、エージェントを使用することでOSやデータベース、Webサーバーなどのログを可視化、分析することが可能です。 この章では、エージェントは利用せず簡単な操作でOCIの監査ログをLogging Analyticsで分析する手順をご紹介します。
@@ -263,11 +263,11 @@ allow group &lt;IAMグループ名&gt; to MANAGE logging-family in tenancy/compa
       </label>
     
     <div>
-      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorials/">
+      <a class="gdoc-brand gdoc-header__link" href="https://oracle-japan.github.io/ocitutorial-geekdocs/">
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="/ocitutorials/img/theo_white.png"
+            src="/ocitutorial-geekdocs/img/theo_white.png"
             alt=""
           />
           <span class="gdoc-brand__title">OCIチュートリアル</span>
@@ -284,7 +284,7 @@ allow group &lt;IAMグループ名&gt; to MANAGE logging-family in tenancy/compa
       placeholder="検索..."
       aria-label="検索"
       maxlength="64"
-      data-site-base-url="https://oracle-japan.github.io/ocitutorials/"
+      data-site-base-url="https://oracle-japan.github.io/ocitutorial-geekdocs/"
       data-site-lang="ja"
     />
     <ul id="gdoc-search-results" class="gdoc-search__list"></ul>
@@ -296,7 +296,7 @@ allow group &lt;IAMグループ名&gt; to MANAGE logging-family in tenancy/compa
         
 
         <span class="gdoc-menu-header__home">
-          <a href="https://oracle-japan.github.io/ocitutorials/" class="gdoc-header__link">
+          <a href="https://oracle-japan.github.io/ocitutorial-geekdocs/" class="gdoc-header__link">
             <svg class="gdoc-icon gdoc_home">
               <title>トップページへ戻る</title>
               <use xlink:href="#gdoc_home"></use>
@@ -423,7 +423,7 @@ allow group &lt;IAMグループ名&gt; to MANAGE logging-family in tenancy/compa
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/' href='/ocitutorials/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorials/management/' href='/ocitutorials/management/'><span itemprop='name'>監視・管理チュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>OCIのLogging AnalyticsでOCIの監査ログを可視化・分析する</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/' href='/ocitutorial-geekdocs/'><span itemprop='name'>Oracle Cloud Infrastructure チュートリアル</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/ocitutorial-geekdocs/management/' href='/ocitutorial-geekdocs/management/'><span itemprop='name'>監視・管理チュートリアル</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>OCIのLogging AnalyticsでOCIの監査ログを可視化・分析する</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -481,7 +481,7 @@ Logging AnalyticsではOCIの各種ログ(VCN, Load Balancer, Audit&hellip;)だ�
     >
         1. IAMポリシーの作成
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/management/audit-log-analytics/#1-iamポリシーの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. IAMポリシーの作成" aria-label="アンカー先: 1. IAMポリシーの作成" href="#1-iam%e3%83%9d%e3%83%aa%e3%82%b7%e3%83%bc%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/management/audit-log-analytics/#1-iamポリシーの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 1. IAMポリシーの作成" aria-label="アンカー先: 1. IAMポリシーの作成" href="#1-iam%e3%83%9d%e3%83%aa%e3%82%b7%e3%83%bc%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -511,7 +511,7 @@ allow group &lt;IAMグループ名&gt; to MANAGE loganalytics-resources-family i
     >
         2. ログ・グループの作成
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/management/audit-log-analytics/#2-ロググループの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. ログ・グループの作成" aria-label="アンカー先: 2. ログ・グループの作成" href="#2-%e3%83%ad%e3%82%b0%e3%82%b0%e3%83%ab%e3%83%bc%e3%83%97%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/management/audit-log-analytics/#2-ロググループの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 2. ログ・グループの作成" aria-label="アンカー先: 2. ログ・グループの作成" href="#2-%e3%83%ad%e3%82%b0%e3%82%b0%e3%83%ab%e3%83%bc%e3%83%97%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -542,7 +542,7 @@ allow group &lt;IAMグループ名&gt; to MANAGE loganalytics-resources-family i
     >
         3. サービス・コネクタの作成
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/management/audit-log-analytics/#3-サービスコネクタの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. サービス・コネクタの作成" aria-label="アンカー先: 3. サービス・コネクタの作成" href="#3-%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9%e3%82%b3%e3%83%8d%e3%82%af%e3%82%bf%e3%81%ae%e4%bd%9c%e6%88%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/management/audit-log-analytics/#3-サービスコネクタの作成" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 3. サービス・コネクタの作成" aria-label="アンカー先: 3. サービス・コネクタの作成" href="#3-%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9%e3%82%b3%e3%83%8d%e3%82%af%e3%82%bf%e3%81%ae%e4%bd%9c%e6%88%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -593,7 +593,7 @@ allow group &lt;IAMグループ名&gt; to MANAGE loganalytics-resources-family i
     >
         4. ログの分析
     </h1>
-    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorials/management/audit-log-analytics/#4-ログの分析" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. ログの分析" aria-label="アンカー先: 4. ログの分析" href="#4-%e3%83%ad%e3%82%b0%e3%81%ae%e5%88%86%e6%9e%90">
+    <a data-clipboard-text="https://oracle-japan.github.io/ocitutorial-geekdocs/management/audit-log-analytics/#4-ログの分析" class="gdoc-page__anchor clip flex align-center" title="アンカー先: 4. ログの分析" aria-label="アンカー先: 4. ログの分析" href="#4-%e3%83%ad%e3%82%b0%e3%81%ae%e5%88%86%e6%9e%90">
         <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
     </a>
 </div>
@@ -8968,7 +8968,7 @@ Logging Analyticsにはご紹介したクラスタ分析、ツリーマップ、
   
     <a
       class="gdoc-page__nav--prev flex align-center"
-      href="/ocitutorials/management/dbcs_operations_insights/"
+      href="/ocitutorial-geekdocs/management/dbcs_operations_insights/"
       title="OCIのBase Database ServiceでOperations Insightsを有効化する"
     >
       <i class="gdoc-icon">gdoc_arrow_left_alt</i>
@@ -8980,7 +8980,7 @@ Logging Analyticsにはご紹介したクラスタ分析、ツリーマップ、
   
     <a
       class="gdoc-page__nav--next flex align-center"
-      href="/ocitutorials/management/logging_datadog/"
+      href="/ocitutorial-geekdocs/management/logging_datadog/"
       title="OCIのログをDataDogで監視する"
     >
       OCIのログをDataDogで監視する
@@ -9034,7 +9034,7 @@ Logging Analyticsにはご紹介したクラスタ分析、ツリーマップ、
   </div>
 
   
-  <script defer src="/ocitutorials/js/search-7db5e115.bundle.min.js"></script>
+  <script defer src="/ocitutorial-geekdocs/js/search-7db5e115.bundle.min.js"></script>
 
 
   
