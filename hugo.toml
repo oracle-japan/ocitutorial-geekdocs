@@ -55,3 +55,7 @@ geekdocRepo = "https://github.com/oracle-japan/ocitutorial-geekdocs"
 [params.geekdocContentLicense]
   name = "日本オラクル株式会社"
   link = "https://www.oracle.com/jp/"
+
+[services]
+  [services.googleAnalytics]
+    id = 'G-6W7FEC5CEH'
